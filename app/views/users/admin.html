@@ -1,0 +1,10 @@
+{% extends '../layouts/default.html' %}
+
+{% block content %}
+{% if user.admin %}
+	<div> Hello, {{ user.name }} This is the admin page. </div>
+
+{% else %}
+<div> FUCK YOU </div>
+{% endif %}
+{% endblock %}
