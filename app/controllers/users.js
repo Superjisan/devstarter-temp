@@ -26,7 +26,7 @@ exports.signin = function(req, res) {
 };
 
 exports.connect = function(req, res){
-    res.render('index')
+    res.render('profile')
 }
 
 /**
@@ -113,8 +113,7 @@ exports.admin = function(req, res) {
 		title: 'Admin Page'
 	});
 };
-<<<<<<< HEAD
-=======
+
 
 /**
  * Show user profile
@@ -126,4 +125,3 @@ exports.profile = function(req, res) {
 		user: req.user
 	});
 }
->>>>>>> upstream/master
