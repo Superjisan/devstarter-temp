@@ -124,4 +124,4 @@ exports.profile = function(req, res) {
 		title: req.user.name,
 		user: req.user
 	});
-}
+};
