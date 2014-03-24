@@ -10,8 +10,9 @@ var mongoose = require('mongoose'),
  * Auth callback
  */
 exports.authCallback = function(req, res) {
-    var github = req.doc
-    res.redirect('/');
+
+    res.redirect('/profile');
+
 };
 
 /**
@@ -112,3 +113,17 @@ exports.admin = function(req, res) {
 		title: 'Admin Page'
 	});
 };
+<<<<<<< HEAD
+=======
+
+/**
+ * Show user profile
+ */
+exports.profile = function(req, res) {
+	console.log(req.user);
+	res.render('profile', {
+		title: req.user.name,
+		user: req.user
+	});
+}
+>>>>>>> upstream/master
