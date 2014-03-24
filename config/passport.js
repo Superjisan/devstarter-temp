@@ -180,19 +180,19 @@ module.exports = function(passport) {
             consumerKey: config.linkedin.clientID,
             consumerSecret: config.linkedin.clientSecret,
             callbackURL: config.linkedin.callbackURL,
-            profileFields: ['id', 'first-name', 'last-name', 'email-address']
+            profileFields: config.linkedin.profileFields
         },
         function(accessToken, refreshToken, profile, done) {
+        	console.log(profile);
             User.findOne({
                 'linkedin.id': profile.id
             }, function(err, user) {
                 if (!user) {
                     user = new User({
                         name: profile.displayName,
-                        email: profile.emails[0].value,
-                        username: profile.emails[0].value,
+                        email: profile._json.emailAddress,
                         provider: 'linkedin',
-                        linkedin: profile
+                        linkedin: profile._json
                     });
                     user.save(function(err) {
                         if (err) console.log(err);
