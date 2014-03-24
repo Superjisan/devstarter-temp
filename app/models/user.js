@@ -16,13 +16,7 @@ var UserSchema = new Schema({
         required: true
     },
     email: String,
-    username: {
-        type: String,
-        unique: true
-    },
-    hashed_password: String,
     provider: String,
-    salt: String,
     admin: Boolean,
     developer: Boolean,
     facebook: {},
@@ -63,17 +57,17 @@ UserSchema.path('email').validate(function(email) {
     return (typeof email === 'string' && email.length > 0);
 }, 'Email cannot be blank');
 
-UserSchema.path('username').validate(function(username) {
-    // If you are authenticating by any of the oauth strategies, don't validate.
-    if (!this.provider) return true;
-    return (typeof username === 'string' && username.length > 0);
-}, 'Username cannot be blank');
+// UserSchema.path('username').validate(function(username) {
+//     // If you are authenticating by any of the oauth strategies, don't validate.
+//     if (!this.provider) return true;
+//     return (typeof username === 'string' && username.length > 0);
+// }, 'Username cannot be blank');
 
-UserSchema.path('hashed_password').validate(function(hashed_password) {
-    // If you are authenticating by any of the oauth strategies, don't validate.
-    if (!this.provider) return true;
-    return (typeof hashed_password === 'string' && hashed_password.length > 0);
-}, 'Password cannot be blank');
+// UserSchema.path('hashed_password').validate(function(hashed_password) {
+//     // If you are authenticating by any of the oauth strategies, don't validate.
+//     if (!this.provider) return true;
+//     return (typeof hashed_password === 'string' && hashed_password.length > 0);
+// }, 'Password cannot be blank');
 
 
 /**
