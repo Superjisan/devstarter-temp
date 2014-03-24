@@ -28,6 +28,7 @@ module.exports = {
     linkedin: {
         clientID: 'API_KEY',
         clientSecret: 'SECRET_KEY',
-        callbackURL: 'http://localhost:3000/auth/linkedin/callback'
+        callbackURL: 'http://localhost:3000/auth/linkedin/callback',
+        profileFields: ['id', 'first-name', 'last-name', 'email-address', 'headline', 'distance', 'summary', 'specialties', 'picture-url', 'site-standard-profile-request', 'phone-numbers', 'primary-twitter-account']
     }
 };

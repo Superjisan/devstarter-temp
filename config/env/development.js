@@ -28,6 +28,10 @@ module.exports = {
     linkedin: {
         clientID: '77qy5d9cyaxg74',
         clientSecret: 'DIfXoYralsxVMTZN',
-        callbackURL: 'http://localhost:3000/auth/linkedin/callback'
+        callbackURL: 'http://localhost:3000/auth/linkedin/callback',
+        profileFields: ['id','first-name', 'last-name', 'email-address', 'headline', 'distance', 'summary', 'specialties', 'picture-url', 'site-standard-profile-request', 'phone-numbers', 'primary-twitter-account', 'interests', 'languages', 'skills', 'certifications', 'educations', 'courses', 'volunteer', 'three-current-positions', 'three-past-positions', 'num-recommenders', 'recommendations-received', 'date-of-birth', 'related-profile-views', 'honors-awards']
+        // OAuth_user_token = bdd02e57-3d83-4e6a-80aa-2b5fab07445f,
+        // OAuth_user_secret = 1f4ce2ea-64c9-4494-b638-d12d104c1b92
+        // don't know what to do with these but they came with LI credentials
     }
 };
