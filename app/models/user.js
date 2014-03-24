@@ -17,6 +17,8 @@ var UserSchema = new Schema({
     },
     email: String,
     provider: String,
+    admin: Boolean,
+    developer: Boolean,
     facebook: {},
     twitter: {},
     github: {},

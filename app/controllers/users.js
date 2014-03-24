@@ -101,3 +101,9 @@ exports.user = function(req, res, next, id) {
             next();
         });
 };
+
+exports.admin = function(req, res) {
+	res.render('users/admin', {
+		title: 'Admin Page'
+	});
+};
