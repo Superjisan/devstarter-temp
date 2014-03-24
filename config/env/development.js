@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean-dev',
+    db: 'mongodb://localhost/devstarter',
     app: {
-        name: 'MEAN - A Modern Stack - Development'
+        name: 'Dev Starter - Dynamic resume site for Junior Developers'
     },
     facebook: {
         clientID: 'APP_ID',
@@ -26,8 +26,8 @@ module.exports = {
         callbackURL: 'http://localhost:3000/auth/google/callback'
     },
     linkedin: {
-        clientID: 'API_KEY',
-        clientSecret: 'SECRET_KEY',
+        clientID: '77qy5d9cyaxg74',
+        clientSecret: 'DIfXoYralsxVMTZN',
         callbackURL: 'http://localhost:3000/auth/linkedin/callback'
     }
 };

@@ -191,7 +191,8 @@ module.exports = function(passport) {
                         name: profile.displayName,
                         email: profile.emails[0].value,
                         username: profile.emails[0].value,
-                        provider: 'linkedin'
+                        provider: 'linkedin',
+                        linkedin: profile
                     });
                     user.save(function(err) {
                         if (err) console.log(err);
