@@ -74,4 +74,8 @@ module.exports = function(app, passport) {
         failureRedirect: '/siginin'
     }), users.authCallback);
 
+
+    // Profile Routes
+    app.get('/profile', users.profile);
+
 };

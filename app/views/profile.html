@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/css/cover.css"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  	<div class="container">
+  		<img class="img-responsive" src="{{ user.linkedin.pictureUrl }}">
+			  <h1>{{ user.name }}</h1>
+			  <h1>{{ user.email }}</h1>
+			<ul>
+				{% for i in user.linkedin %}
+				<li> {{ i }}</li>
+				{% endfor %}
+			</ul>
+  	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+			<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+			<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+			<script type="text/javascript" src="/lib/jquery-backstretch/jquery.backstretch.js"></script>
+			<script>
+			$(function() {
+				// Or, to start a slideshow, just pass in an array of images
+				$(".site-wrapper").backstretch([
+					"https://pbs.twimg.com/media/BjdpGaiIYAA-Rel.jpg:large",
+				  "https://pbs.twimg.com/media/BgEMfL-IUAAaC_r.jpg:large"
+				], {fade: 500, duration: 2000});
+			});
+			</script>
+			<script>
+			var foo = {{ user.linkedin }};
+			console.log(foo);
+			</script>
+  </body>
+</html>

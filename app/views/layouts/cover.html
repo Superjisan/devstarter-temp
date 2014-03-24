@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/cover.css">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><a href="/"><img src="img/fullstack-logo.png"></a></h3>
+<!--               <ul class="nav masthead-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul> -->
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Looking for awesome developers?</h1>
+            <p class="lead">Just connect with Linkedin. It's that simple.</p>
+            <p class="lead">
+              <a href="/auth/linkedin" class="btn btn-lg btn-primary">Login</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p><a href="http://getbootstrap.com">Fullstack Academy, Making Great People into Great Developers</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+			<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+			<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+			<script type="text/javascript" src="/lib/jquery-backstretch/jquery.backstretch.js"></script>
+			<script>
+			$(function() {
+				// Or, to start a slideshow, just pass in an array of images
+				$(".site-wrapper").backstretch([
+					"https://pbs.twimg.com/media/BjdpGaiIYAA-Rel.jpg:large",
+				  "https://pbs.twimg.com/media/BgEMfL-IUAAaC_r.jpg:large"
+				], {fade: 500, duration: 2000});
+			});
+			</script>
+  </body>
+</html>
