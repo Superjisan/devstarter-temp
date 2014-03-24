@@ -19,23 +19,20 @@ var UserSchema = new Schema({
     provider: String,
     admin: Boolean,
     developer: Boolean,
-    facebook: {},
-    twitter: {},
     github: {},
-    google: {},
     linkedin: {}
 });
 
 /**
  * Virtuals
  */
-UserSchema.virtual('password').set(function(password) {
-    this._password = password;
-    this.salt = this.makeSalt();
-    this.hashed_password = this.encryptPassword(password);
-}).get(function() {
-    return this._password;
-});
+// UserSchema.virtual('password').set(function(password) {
+//     this._password = password;
+//     this.salt = this.makeSalt();
+//     this.hashed_password = this.encryptPassword(password);
+// }).get(function() {
+//     return this._password;
+// });
 
 /**
  * Validations
@@ -73,52 +70,52 @@ UserSchema.path('email').validate(function(email) {
 /**
  * Pre-save hook
  */
-UserSchema.pre('save', function(next) {
-    if (!this.isNew) return next();
+// UserSchema.pre('save', function(next) {
+//     if (!this.isNew) return next();
 
-    if (!validatePresenceOf(this.password) && !this.provider)
-        next(new Error('Invalid password'));
-    else
-        next();
-});
+//     if (!validatePresenceOf(this.password) && !this.provider)
+//         next(new Error('Invalid password'));
+//     else
+//         next();
+// });
 
 /**
  * Methods
  */
-UserSchema.methods = {
-    /**
-     * Authenticate - check if the passwords are the same
-     *
-     * @param {String} plainText
-     * @return {Boolean}
-     * @api public
-     */
-    authenticate: function(plainText) {
-        return this.encryptPassword(plainText) === this.hashed_password;
-    },
+// UserSchema.methods = {
+//     /**
+//      * Authenticate - check if the passwords are the same
+//      *
+//      * @param {String} plainText
+//      * @return {Boolean}
+//      * @api public
+//      */
+//     authenticate: function(plainText) {
+//         return this.encryptPassword(plainText) === this.hashed_password;
+//     },
 
-    /**
-     * Make salt
-     *
-     * @return {String}
-     * @api public
-     */
-    makeSalt: function() {
-        return crypto.randomBytes(16).toString('base64');
-    },
+//     /**
+//      * Make salt
+//      *
+//      * @return {String}
+//      * @api public
+//      */
+//     makeSalt: function() {
+//         return crypto.randomBytes(16).toString('base64');
+//     },
 
-    /**
-     * Encrypt password
-     *
-     * @param {String} password
-     * @return {String}
-     * @api public
-     */
-    encryptPassword: function(password) {
-        if (!password || !this.salt) return '';
-        var salt = new Buffer(this.salt, 'base64');
-        return crypto.pbkdf2Sync(password, salt, 10000, 64).toString('base64');
-    }
-};
+//     /**
+//      * Encrypt password
+//      *
+//      * @param {String} password
+//      * @return {String}
+//      * @api public
+//      */
+//     encryptPassword: function(password) {
+//         if (!password || !this.salt) return '';
+//         var salt = new Buffer(this.salt, 'base64');
+//         return crypto.pbkdf2Sync(password, salt, 10000, 64).toString('base64');
+//     }
+// };
 
 mongoose.model('User', UserSchema);
