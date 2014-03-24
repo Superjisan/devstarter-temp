@@ -10,7 +10,9 @@ var mongoose = require('mongoose'),
  * Auth callback
  */
 exports.authCallback = function(req, res) {
+
     res.redirect('/profile');
+
 };
 
 /**
@@ -22,6 +24,10 @@ exports.signin = function(req, res) {
         message: req.flash('error')
     });
 };
+
+exports.connect = function(req, res){
+    res.render('profile')
+}
 
 /**
  * Show sign up form
@@ -107,6 +113,7 @@ exports.admin = function(req, res) {
 		title: 'Admin Page'
 	});
 };
+
 
 /**
  * Show user profile

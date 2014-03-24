@@ -34,12 +34,12 @@ module.exports = function(app, passport) {
     // }), users.authCallback);
 
     // Setting the github oauth routes
-    app.get('/auth/github', passport.authenticate('github', {
-        failureRedirect: '/signin'
-    }), users.signin);
+    app.get('/auth/github', passport.authorize('github', {
+        failureRedirect: '/'
+    }), users.connect);
 
-    app.get('/auth/github/callback', passport.authenticate('github', {
-        failureRedirect: '/signin'
+    app.get('/auth/github/callback', passport.authorize('github', {
+        failureRedirect: '/'
     }), users.authCallback);
 
     // Setting the twitter oauth routes

@@ -121,27 +121,30 @@ module.exports = function(passport) {
     passport.use(new GitHubStrategy({
             clientID: config.github.clientID,
             clientSecret: config.github.clientSecret,
-            callbackURL: config.github.callbackURL
+            callbackURL: config.github.callbackURL,
+            passReqToCallback: true
         },
-        function(accessToken, refreshToken, profile, done) {
+        function(req, accessToken, refreshToken, profile, done) {
         	console.log(profile);
             User.findOne({
                 'github.id': profile.id
-            }, function(err, user) {
-                if (!user) {
-                    user = new User({
-                        name: profile.displayName,
-                        email: profile.emails[0].value,
-                        username: profile.username,
-                        provider: 'github',
-                        github: profile._json
-                    });
-                    user.save(function(err) {
-                        if (err) console.log(err);
-                        return done(err, user);
-                    });
-                } else {
-                    return done(err, user);
+            }, function(err, github) {
+                if (!github) {
+                    // console.log(req.user)
+                 User.findOne({ 'linkedin.id' : req.user.linkedin.id},
+                    function(err, user){
+                      if(err) console.log(err);
+                        user.github = profile._json;
+                        console.log(user);
+                        user.save(function(err){
+                            if(err) console.log(err);
+                            return done(err, github)
+                        }
+                      )
+                    }
+                 )}
+                else {
+                    return done(err, github);
                 }
             });
         }
