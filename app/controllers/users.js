@@ -103,7 +103,5 @@ exports.user = function(req, res, next, id) {
 };
 
 exports.admin = function(req, res) {
-	res.render('users/admin', {
-		title: 'Admin Page'
-	});
+	res.jsonp(req.user||null);
 };

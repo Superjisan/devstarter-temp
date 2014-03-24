@@ -1,3 +1,7 @@
 <section data-ng-controller="IndexController">
-	<h1>This is the home view</h1>
+	<h1 data-ng-hide="global.authenticated">Please log in</h1>
+	<div data-ng-show="global.authenticated">
+		<h1>This is the home view for {{global.user.name}}</h1>
+		<h2>Put homepage stuff on here.</h2>
+	</div>
 </section>
