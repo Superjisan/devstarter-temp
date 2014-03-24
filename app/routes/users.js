@@ -71,7 +71,7 @@ module.exports = function(app, passport) {
     }), users.signin);
 
     app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
-        failureRedirect: '/siginin'
+        failureRedirect: '/signin'
     }), users.authCallback);
 
 

@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/cover.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,7 +35,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand"><a href="/"><img src="img/fullstack-logo.png"></a></h3>
+              <h3 class="masthead-brand"><a href="http://fullstackacademy.com"><img src="img/fullstack-logo.png"></a></h3>
 <!--               <ul class="nav masthead-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Features</a></li>
@@ -42,7 +43,7 @@
               </ul> -->
             </div>
           </div>
-
+					{% if !req.user %}
           <div class="inner cover">
             <h1 class="cover-heading">Looking for awesome developers?</h1>
             <p class="lead">Just connect with Linkedin. It's that simple.</p>
@@ -50,7 +51,14 @@
               <a href="/auth/linkedin" class="btn btn-lg btn-primary">Login</a>
             </p>
           </div>
-
+					{% else %}
+          <div class="inner cover">
+          	<a href="/#!/browse" class="btn btn-lg btn-danger">Danger, awesomeness ahead!</a>
+          </div>
+					<div class="inner cover">
+						<a href="/auth/github" class="btn btn-lg btn-social btn-github"><i class="fa fa-github"></i>Connect with GitHub</a>
+					</div>
+					{% endif %}
           <div class="mastfoot">
             <div class="inner">
               <p><a href="http://getbootstrap.com">Fullstack Academy, Making Great People into Great Developers</a></p>
