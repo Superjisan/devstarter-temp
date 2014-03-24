@@ -10,6 +10,7 @@ var mongoose = require('mongoose'),
  * Auth callback
  */
 exports.authCallback = function(req, res) {
+    var github = req.doc
     res.redirect('/');
 };
 
@@ -22,6 +23,10 @@ exports.signin = function(req, res) {
         message: req.flash('error')
     });
 };
+
+exports.connect = function(req, res){
+    res.render('index')
+}
 
 /**
  * Show sign up form
