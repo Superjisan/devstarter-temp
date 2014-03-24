@@ -61,6 +61,8 @@ module.exports = function(app, passport, db) {
         assetmanager.init({
             js: assets.js,
             css: assets.css,
+            // cover_js: assets.cover_js,
+            // cover_css: assets.cover_css,
             debug: (process.env.NODE_ENV !== 'production'),
             webroot: 'public'
         });
