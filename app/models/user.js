@@ -5,8 +5,9 @@
  */
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    crypto = require('crypto');
-
+    crypto = require('crypto'),
+    WorkExperienceSchema = require('./work_experience').WorkExperienceSchema,
+		EducationSchema = require('./work_experience').EducationSchema;
 /**
  * User Schema
  */
@@ -20,8 +21,13 @@ var UserSchema = new Schema({
     admin: Boolean,
     developer: Boolean,
     github: {},
-    linkedin: {}
+    linkedin: {},
+    educations: [EducationSchema],
+    work_experiences: [WorkExperienceSchema],
+    auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}]
 });
+
+
 
 /**
  * Virtuals
@@ -82,6 +88,22 @@ UserSchema.path('email').validate(function(email) {
 /**
  * Methods
  */
+
+UserSchema.methods = {
+	getAuthMethod: function(method) {
+		for(var i=0; i < this.auth_methods.length; i++) {
+			if (this.auth_methods[i].provider === method) {
+				return this.auth_methods[i];
+			}
+		}
+	},
+	githubAccessToken: function() {
+		var githubAuth = this.getAuthMethod("github");
+		if(githubAuth) {
+			return githubAuth.accessToken;
+		}
+	}
+};
 // UserSchema.methods = {
 //     /**
 //      * Authenticate - check if the passwords are the same

@@ -35,6 +35,7 @@ module.exports = function(app, passport) {
 
     // Setting the github oauth routes
     app.get('/auth/github', passport.authorize('github', {
+    		scope: ['user', 'repo','read:org'],
         failureRedirect: '/'
     }), users.connect);
 
