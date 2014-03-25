@@ -16,7 +16,7 @@ exports.all = function(req, res) {
       });
     } else {
 
-      res.render('browse', {developers: developers})
+      res.render('browse', {developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'})
     }
   })
 };
