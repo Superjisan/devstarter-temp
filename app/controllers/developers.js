@@ -8,14 +8,15 @@ var mongoose = require('mongoose'),
     _ = require('lodash');
 
 exports.all = function(req, res) {
-  User.find({ roles: 'developer'}).exec(function(err, users){
-    console.log(users)
+  User.find({ roles: 'developer'}).exec(function(err, developers){
+    console.log(developers)
     if(err) {
       res.render('error', {
         status: 500
       });
     } else {
-      res.render('browse', {users: users})
+
+      res.render('browse', {developers: developers})
     }
   })
 };
