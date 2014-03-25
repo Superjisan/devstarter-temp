@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-  <title>Bracket Responsive Bootstrap3 Admin</title>
+  <title>Profile Page</title>
 	{% include '../includes/head.html' %}
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,7 @@
             <div class="media userlogged">
                 <img alt="" src="images/photos/loggeduser.png" class="media-object">
                 <div class="media-body">
-                    <h4>John Doe</h4>
+                    <h4>{{user.name}}</h4>
                     <span>"Life is so..."</span>
                 </div>
             </div>
@@ -60,7 +60,7 @@
       <div class="header-left">
 
         <div class="logopanel">
-            <h1><span>[</span> bracket <span>]</span></h1>
+            <h1><span>[</span> hire fullstack <span>]</span></h1>
         </div><!-- logopanel -->
 
         <div class="topnav">
@@ -260,7 +260,7 @@
             <div class="btn-group">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                 <img src="images/photos/loggeduser.png" alt="" />
-                John Doe
+                {{user.name}}
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
