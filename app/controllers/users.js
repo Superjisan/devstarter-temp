@@ -121,11 +121,14 @@ exports.admin = function(req, res) {
  * Show user profile
  */
 exports.profile = function(req, res) {
-	console.log(req.user);
-	res.render('profile', {
-		title: req.user.name,
-		user: req.user
-	});
+	User.findOne({ name: 'Russell Ingram'}, function(err, user){
+			console.log(user);
+			res.render('profile', {
+				title: user.name,
+				user: user
+			});
+		}
+	);
 };
 
 exports.edit = function (req, res) {

@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-  <title>Profile Page</title>
+  <title>{{user.name}}</title>
 	{% include '../includes/head.html' %}
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,13 +27,21 @@
 
   	<!-- Pageheader -->
     <div class="pageheader">
-      <h2><i class="fa fa-user"></i> Profile <span>Subtitle goes here...</span></h2>
+     <h2><i class="fa fa-user"></i> hire fullstack <span>Find your Fullstack developer...</span></h2>
+      <div class="breadcrumb-wrapper">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Search</a></li>
+          <li class="active">My Profile</li>
+        </ol>
+      </div>
     </div>
     <!-- end pageheader -->
 
     <!-- Content Panel -->
     <div class="contentpanel">
-      <div class="row">
+			<div class="row">
       	<!-- Col-sm-3 -->
         <div class="col-sm-3">
           <img src="images/photos/profile-1.png" class="thumbnail img-responsive" alt=""/>
@@ -70,9 +78,9 @@
 
         	<!-- Profile Header -->
           <div class="profile-header">
-            <h2 class="profile-name">Eileen Sideways</h2>
-            <div class="profile-location"><i class="fa fa-map-marker"></i> San Francisco, California, USA</div>
-            <div class="profile-position"><i class="fa fa-briefcase"></i> Software Engineer at <a href="">SomeCompany, Inc.</a></div>
+            <h2 class="profile-name">{{user.name}}</h2>
+            <div class="profile-location"><i class="fa fa-map-marker"></i> {{user.linkedin.location || user.github.location }}</div>
+            <div class="profile-position"><i class="fa fa-briefcase"></i>{{user.linkedin.headline}}</a></div>
 
             <div class="mb20"></div>
 
@@ -93,155 +101,24 @@
         <!-- Tab Panes -->
         <div class="tab-content">
 
-        	<!-- Work Experience List -->
+	<!-- Work Experience List -->
+
+
           <div class="tab-pane active" id="activities">
-            <div class="activity-list">
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/user1.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Ray Sin</strong> started following <strong>Eileen Sideways</strong>. <br />
-                  <small class="text-muted">Yesterday at 3:30pm</small>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> posted a new blog. <br />
-                  <small class="text-muted">Today at 3:18pm</small>
-
-                  <div class="media blog-media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="images/photos/media5.png" alt="" />
-                    </a>
-                    <div class="media-body">
-                      <h4 class="media-title"><a href="">Ut Enim Ad Minim Veniam</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">Read more</a></p>
-                    </div>
-                  </div><!-- media -->
-
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/user2.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Chris Anthemum</strong> started following <strong>Eileen Sideways</strong>. <br />
-                  <small class="text-muted">2 days ago at 8:30am</small>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> uploaded <a href="">5 photos</a>. <br />
-                  <small class="text-muted">5 days ago at 12:30pm</small>
-
-                  <ul class="uploadphoto-list">
-                    <li><a href="images/photos/media1.jpg" data-rel="prettyPhoto"><img src="images/photos/media1.jpg" class="img-responsive" alt="" /></a></li>
-                    <li><a href="images/photos/media2.png" data-rel="prettyPhoto"><img src="images/photos/media2.png" class="img-responsive" alt="" /></a></li>
-                    <li><a href="images/photos/media3.png" data-rel="prettyPhoto"><img src="images/photos/media3.png" class="img-responsive" alt="" /></a></li>
-                  </ul>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/user4.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Frank Furter</strong> started following <strong>Eileen Sideways</strong>. <br />
-                  <small class="text-muted">6 days ago at 8:15am</small>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> posted a new note. <br />
-                  <small class="text-muted">6 days ago at 6:18am</small>
-                  <h4 class="media-title"><a href="">Consectetur Adipisicing Elit</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">Read more</a></p>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> posted a new blog. <br />
-                  <small class="text-muted">December 25 at 3:18pm</small>
-
-                  <div class="media blog-media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="images/photos/media4.png" alt="" />
-                    </a>
-                    <div class="media-body">
-                      <h4 class="media-title"><a href="">Ut Enim Ad Minim Veniam</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">Read more</a></p>
-                    </div>
-                  </div><!-- media -->
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> added new photo. <br />
-                  <small class="text-muted">December 24 at 1:30pm</small>
-                  <div class="mb20"></div>
-                  <a href="images/photos/media6.png" data-rel="prettyPhoto" class="img-single"><img src="images/photos/media6.png" class="img-responsive" alt="" /></a>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/user5.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Weno Carasbong</strong> started following <strong>Eileen Sideways</strong>. <br />
-                  <small class="text-muted">December 15 at 3:30pm</small>
-                </div>
-              </div><!-- media -->
-
-              <div class="media act-media">
-                <a class="pull-left" href="#">
-                  <img class="media-object act-thumb" src="images/photos/userprofile.png" alt="" />
-                </a>
-                <div class="media-body act-media-body">
-                  <strong>Eileen Sideways</strong> posted a new blog. <br />
-                  <small class="text-muted">December 15 at 3:18pm</small>
-
-                  <div class="media blog-media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="images/photos/media7.png" alt="" />
-                    </a>
-                    <div class="media-body">
-                      <h4 class="media-title"><a href="">Ut Enim Ad Minim Veniam</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">Read more</a></p>
-                    </div>
-                  </div><!-- media -->
-
-                </div>
-              </div><!-- media -->
-            </div>
+          	{% for school in user.linkedin.educations.values %}
+          	<li>{{school.schoolName}}
+          		<ul> {{school.fieldOfStudy}} </ul>
+          		<ul> {{school.degree}} </ul>
+          	</li>
+						{% endfor %}
             <!-- <button class="btn btn-white btn-block">Show More</button> -->
           </div>
-           <!-- end work experience list -->
+
+
+
+<!-- end work experience list -->
+
+
 
           <!-- Education List -->
           <div class="tab-pane" id="followers">
@@ -532,80 +409,6 @@
                   </div><!-- media -->
                 </div><!-- col-sm-6 -->
               </div>
-
-              <br />
-
-              <h5 class="subtitle">Past Events</h5>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="holder.js/100x120" alt="" />
-                    </a>
-                    <div class="media-body event-body">
-                      <h4 class="event-title"><a href="">Free Living Trust Seminar</a></h4>
-                      <small class="text-muted"><i class="fa fa-map-marker"></i> Silicon Valley, San Francisco, CA</small>
-                      <small class="text-muted"><i class="fa fa-calendar"></i> Sunday, January 15, 2014 at 11:00am</small>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-                    </div>
-                  </div><!-- media -->
-                </div><!-- col-sm-6 -->
-
-                <div class="col-sm-6">
-                  <div class="media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="holder.js/100x120" alt="" />
-                    </a>
-                    <div class="media-body event-body">
-                      <h4 class="event-title"><a href="">Serious Games Seminar</a></h4>
-                      <small class="text-muted"><i class="fa fa-map-marker"></i> New York City</small>
-                      <small class="text-muted"><i class="fa fa-calendar"></i> Monday, January 14, 2014 at 8:00am</small>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-                    </div>
-                  </div><!-- media -->
-                </div><!-- col-sm-6 -->
-
-                <div class="col-sm-6">
-                  <div class="media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="holder.js/100x120" alt="" />
-                    </a>
-                    <div class="media-body event-body">
-                      <h4 class="event-title"><a href="">Travel &amp; Adventure Show</a></h4>
-                      <small class="text-muted"><i class="fa fa-map-marker"></i> Los Angeles, CA</small>
-                      <small class="text-muted"><i class="fa fa-calendar"></i> Friday, January 12, 2014 at 8:00am</small>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-                    </div>
-                  </div><!-- media -->
-                </div><!-- col-sm-6 -->
-
-                <div class="col-sm-6">
-                  <div class="media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="holder.js/100x120" alt="" />
-                    </a>
-                    <div class="media-body event-body">
-                      <h4 class="event-title"><a href="">Mobile Games Summit</a></h4>
-                      <small class="text-muted"><i class="fa fa-map-marker"></i> Bay Area, San Francisco</small>
-                      <small class="text-muted"><i class="fa fa-calendar"></i> Saturday, January 10, 2014 at 8:00am</small>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-                    </div>
-                  </div><!-- media -->
-                </div><!-- col-sm-6 -->
-              </div>
-
-            </div><!-- events -->
-          </div>
-          <!-- end project 2 list -->
-
-        </div>
-        <!-- end tab panes -->
-
-        </div>
-        <!-- end col-sm-9 -->
-      </div>
-      <!-- end row -->
-
     </div>
     <!-- end content panel -->
   </div>
