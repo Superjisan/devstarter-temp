@@ -5,14 +5,13 @@
  */
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    crypto = require('crypto'),
     WorkExperienceSchema = require('./work_experience').WorkExperienceSchema,
 		EducationSchema = require('./work_experience').EducationSchema;
 /**
  * User Schema
  */
 var UserSchema = new Schema({
-    name: {
+	name: {
         type: String,
         required: true
     },
@@ -105,7 +104,7 @@ UserSchema.methods = {
 		}
 	},
 	githubAccessToken: function() {
-		var githubAuth = this.getAuthMethod("github");
+		var githubAuth = this.getAuthMethod('github');
 		if(githubAuth) {
 			return githubAuth.accessToken;
 		}
