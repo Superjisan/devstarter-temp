@@ -15,18 +15,6 @@
 			"public/css/theme/style.default.css"
 		]
 	},
-	"cover_css": {
-		"public/build/css/cover.min.css": [
-			"public/lib/bootstrap/dist/css/bootstrap.css",
-			"public/cover_css/cover.css"
-		]
-	},
-	"cover_js": {
-		"public/build/js/cover.min.js": [
-			"public/lib/jquery/dist/jquery.js",
-			"public/lib/bootstrap/dist/js/bootstrap.js"
-		]
-	},
 	"js": {
 		"public/build/js/dist.min.js": [
 			"public/lib/jquery/dist/jquery.js",
