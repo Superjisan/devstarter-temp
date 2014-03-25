@@ -2,6 +2,7 @@
 
 // User routes use users controller
 var users = require('../controllers/users');
+var authorization = require('./middlewares/authorization');
 
 module.exports = function(app, passport) {
 
