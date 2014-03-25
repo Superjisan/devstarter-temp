@@ -55,9 +55,15 @@
           <div class="inner cover">
           	<a href="/#!/browse" class="btn btn-lg btn-danger">Danger, awesomeness ahead!</a>
           </div>
+          {% if !req.user.github %}
 					<div class="inner cover">
 						<a href="/auth/github" class="btn btn-lg btn-social btn-github"><i class="fa fa-github"></i>Connect with GitHub</a>
 					</div>
+					{% else %}
+					<div class="inner cover">
+						<a href="/profile" class="btn btn-lg btn-primary">Check out your profile!</a>
+					</div>
+					{% endif %}
 					{% endif %}
           <div class="mastfoot">
             <div class="inner">
