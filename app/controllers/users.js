@@ -110,9 +110,14 @@ exports.user = function(req, res, next, id) {
 	});
 };
 
+//shows pending profile requests
 exports.admin = function(req, res) {
-	res.render('users/admin', {
-		title: 'Admin Page'
+	User.find({roles: 'developer'}, function(err, developers){
+		res.render('users/admin', {
+			title: 'Admin Page',
+			user: req.params.user,
+			users: developers
+		});
 	});
 };
 
