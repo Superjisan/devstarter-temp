@@ -3447,7 +3447,7 @@ div.error label.error:before {
 
 .fixed section {
     margin: auto;
-    /*max-width: 1050px;*/
+    max-width: 1050px;
     width: 80%;
     position: relative;
     background: #1D2939;
