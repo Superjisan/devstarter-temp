@@ -53,7 +53,7 @@
           </div>
 					{% else %}
           <div class="inner cover">
-          	<a href="/#!/browse" class="btn btn-lg btn-danger">Danger, awesomeness ahead!</a>
+          	<a href="/developers" class="btn btn-lg btn-danger">Danger, awesomeness ahead!</a>
           </div>
           {% if !req.user.github %}
 					<div class="inner cover">
@@ -76,6 +76,9 @@
       </div>
 
     </div>
+    {{ req.user | json |safe }}
+    {% block content %}
+    {% endblock %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

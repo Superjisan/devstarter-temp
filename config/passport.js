@@ -61,7 +61,7 @@ module.exports = function(passport) {
                     function(err, user){
                       if(err) console.log(err);
                         user.github = profile._json;
-                        user.developer = true;
+                        user.roles.push('developer')
                         console.log(user);
                         user.save(function(err){
                             if(err) console.log(err);
