@@ -50,5 +50,6 @@ module.exports = function(app, passport) {
 
     // Profile Routes
     app.get('/profile', users.profile);
+    app.get('/profile/edit', users.profileedit);
 
 };

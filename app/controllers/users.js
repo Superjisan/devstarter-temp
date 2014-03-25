@@ -128,3 +128,6 @@ exports.profile = function(req, res) {
 		user: req.user
 	});
 };
+exports.profileedit = function(req, res) {
+	res.render('profile-edit')
+}
