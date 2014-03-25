@@ -15,9 +15,9 @@ var updateReposFromGithub = function(user) {
 };
 
 exports.render = function(req, res) {
-    res.render('index', {
-        user: req.user ? JSON.stringify(req.user) : 'null'
-    });
+	res.render('index', {
+		user: req.user ? JSON.stringify(req.user) : 'null'
+	});
 };
 
 exports.test_route = function(req, res) {
