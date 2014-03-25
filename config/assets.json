@@ -2,6 +2,7 @@
 	"css": {
 		"public/build/css/dist.min.css": [
 			"public/lib/bootstrap/dist/css/bootstrap.css",
+
 			"public/brackets/css/bootstrap-override.css",
 			"public/brackets/css/jquery-ui-1.10.3.css",
 			"public/brackets/css/font-awesome.min.css",
@@ -25,7 +26,9 @@
 			"public/lib/angular-bootstrap/ui-bootstrap-tpls.js",
 			"public/brackets/js/modernizr.min.js",
 			"public/brackets/js/retina.min.js",
-			"public/brackets/js/custom.js"
+			"public/brackets/js/custom.js",
+			"public/js/**/*.js"
+
 		]
 	}
 }

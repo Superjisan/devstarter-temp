@@ -1,0 +1,36 @@
+<section data-ng-controller="DevelopersController" data-ng-init="find()">
+  <br><br>
+  <div id="search" class="container">
+                  <h3> Search Friends</h3>
+                  <input type="text" ng-model="search.name" name="Search Friends" placeholder="Friend Name Here" >
+                  <searchlimit></searchlimit>
+
+              </div>
+  <br><br>
+  <div ng-repeat="developer in developers | filter:search | limitTo: limitct">
+  <div class="col-md-6">
+            <div class="people-item">
+              <div class="media">
+                <a href="#" class="pull-left">
+                  <img alt="" src={{developer.linkedin.pictureUrl}} class="thumbnail media-object">
+                </a>
+                <div class="media-body">
+                  <h4 class="person-name">{{developer.name}}</h4>
+
+                  <div class="text-muted"><i class="fa fa-briefcase"></i> {{developer.linkedin.headline}}</div>
+                  <p> {{developer.linkedin.summary}} </p>
+                  <ul class="social-list">
+                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope-o"></i></a></li>
+                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Skype"><i class="fa fa-skype"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- col-md-6 -->
+        </div>
+
+  <h1 data-ng-hide="!developers || developers.length">No developers yet.</h1>
+</section>
