@@ -9,10 +9,13 @@ var mongoose = require('mongoose'),
 /**
  * Auth callback
  */
+
 exports.authCallback = function(req, res) {
-
-    res.redirect('/profile');
-
+	if (req.user.github){
+  	res.redirect('/profile');
+  } else {
+  	res.redirect('/');
+  }
 };
 
 /**
@@ -124,4 +127,4 @@ exports.profile = function(req, res) {
 		title: req.user.name,
 		user: req.user
 	});
-}
+};

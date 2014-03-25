@@ -8,8 +8,21 @@ var mongoose = require('mongoose'),
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
     LinkedinStrategy = require('passport-linkedin').Strategy,
     User = mongoose.model('User'),
+    _ = require("lodash"),
     config = require('./config');
 
+
+var parseLinkedIn = function(profile) {
+	return {
+    name: profile.displayName,
+    headline: profile._json.headline,
+    email: profile._json.emailAddress,
+    work_experiences: profile._json.positions.values,
+    educations: profile._json.educations.values,
+    auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
+    linkedin: profile._json
+  };
+};
 module.exports = function(passport) {
 
     // Serialize the user id to push into the session
@@ -31,6 +44,7 @@ module.exports = function(passport) {
 
     // Use github strategy
     passport.use(new GitHubStrategy({
+
             clientID: config.github.clientID,
             clientSecret: config.github.clientSecret,
             callbackURL: config.github.callbackURL,
@@ -60,8 +74,9 @@ module.exports = function(passport) {
                     return done(err, github);
                 }
             });
+
         }
-    ));
+      ));
 
 
 
@@ -75,15 +90,12 @@ module.exports = function(passport) {
         function(accessToken, refreshToken, profile, done) {
         	console.log(profile);
             User.findOne({
-                'linkedin.id': profile.id
+                'authMethods.providerId': profile.id,
+                'authMethods.provider'	:	"linkedin"
             }, function(err, user) {
                 if (!user) {
-                    user = new User({
-                        name: profile.displayName,
-                        email: profile._json.emailAddress,
-                        provider: 'linkedin',
-                        linkedin: profile._json
-                    });
+                	var linkedInFields = parseLinkedIn(profile);
+                    user = new User(linkedInFields);
                     user.save(function(err) {
                         if (err) console.log(err);
                         return done(err, user);

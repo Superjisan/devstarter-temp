@@ -2,18 +2,33 @@
 	"css": {
 		"public/build/css/dist.min.css": [
 			"public/lib/bootstrap/dist/css/bootstrap.css",
-			"public/css/**/*.css"
+
+			"public/css/theme/bootstrap.min.css",
+			"public/css/theme/bootstrap-override.css",
+			"public/css/theme/jquery-ui-1.10.3.css",
+			"public/css/theme/font-awesome.min.css",
+			"public/css/theme/animate.min.css",
+			"public/css/theme/animate.delay.css",
+			"public/css/theme/toggles.css",
+			"public/css/theme/chosen.css",
+			"public/css/theme/lato.css",
+			"public/css/theme/roboto.css",
+			"public/css/theme/style.default.css"
+
 		]
 	},
 	"js": {
 		"public/build/js/dist.min.js": [
+			"public/lib/jquery/dist/jquery.js",
 			"public/lib/angular/angular.js",
 			"public/lib/angular-cookies/angular-cookies.js",
 			"public/lib/angular-resource/angular-resource.js",
 			"public/lib/angular-ui-router/release/angular-ui-router.js",
 			"public/lib/angular-bootstrap/ui-bootstrap.js",
 			"public/lib/angular-bootstrap/ui-bootstrap-tpls.js",
-			"public/js/**/*.js"
+			"public/js/theme/js/modernizr.min.js",
+			"public/js/theme/js/retina.min.js",
+			"public/js/theme/js/custom.js"
 		]
 	}
 }

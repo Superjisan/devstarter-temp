@@ -1,0 +1,13 @@
+<section data-ng-controller="IndexController">
+<body>
+	<div ng-show='global.user.admin'>
+		<h1>Hello, {{ global.user.name }} This is the admin page.</h1>
+		<h2> {{global.user.linkedin}} </h2>
+	</div>
+	<div ng-hide='global.user.admin'> FUCK YOU </div>
+
+
+</body>
+
+
+</section>

@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+
 <div class="" data-ng-controller="HeaderController">
     <ul class="navbar-nav nav">
         <li>
@@ -15,6 +31,9 @@
         </li>
     </ul>
     <ul class="navbar-nav nav pull-right" data-ng-show="global.authenticated">
+    		<li data-ng-show="{{global.user.admin}}">
+    			<a href="#!/users/admin">Admin</a>
+    		</li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				{{global.user.name}} <b class="caret"></b>
@@ -26,9 +45,14 @@
         </li>
     </ul>
 </div>
+
 <div class="pageheader">
       <h2><i class="fa fa-user"></i> People Directory</h2>
       <div class="breadcrumb-wrapper">
 
       </div>
     </div>
+
+</body>
+</html>
+
