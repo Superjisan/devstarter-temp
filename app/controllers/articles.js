@@ -94,6 +94,7 @@ exports.all = function(req, res) {
                 status: 500
             });
         } else {
+
             res.jsonp(articles);
         }
     });

@@ -23,6 +23,13 @@ var UserSchema = new Schema({
     linkedin: {}
 });
 
+UserSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).exec(cb);
+};
+
+
 /**
  * Virtuals
  */

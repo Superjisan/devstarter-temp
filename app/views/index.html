@@ -1,6 +1,6 @@
-{% extends 'layouts/cover.html' %}
+{% extends 'layouts/default.html' %}
 {% block content %}
-
+    <div ui-view></div>
     <script type="text/javascript">
         window.user = {{user|safe}};
     </script>
