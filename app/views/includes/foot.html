@@ -1,6 +1,19 @@
 {% for file in assets.js %}
 	<script type="text/javascript" src="{{file}}"></script>
 {% endfor %}
+<script>
+  jQuery(document).ready(function(){
+
+    jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+
+    //Replaces data-rel attribute to rel.
+    //We use data-rel because of w3c validation issue
+    jQuery('a[data-rel]').each(function() {
+        jQuery(this).attr('rel', jQuery(this).data('rel'));
+    });
+
+  });
+</script>
 
 {% if (process.env.NODE_ENV == 'development') %}
 	<!-- Livereload script rendered -->

@@ -7,13 +7,14 @@ var mongoose = require('mongoose'),
 	User = mongoose.model('User');
 
 exports.all = function(req, res) {
-	User.find().exec(function(err, users){
+	User.find({ roles: 'developer'}).exec(function(err, developers){
+		console.log(developers);
 		if(err) {
 			res.render('error', {
 				status: 500
 			});
 		} else {
-			res.jsonp(users);
+			res.render('browse', {developers: developers});
 		}
 	});
 };
