@@ -47,6 +47,6 @@ module.exports = function(app, passport) {
 			failureRedirect: '/signin'
 		}), users.authCallback);
 
-    app.get('/profile', users.profile);
+    app.get('/profile/:name', users.profile);
     app.get('/profile/edit', users.profileedit);
 };
