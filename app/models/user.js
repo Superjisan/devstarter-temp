@@ -28,6 +28,13 @@ var UserSchema = new Schema({
 });
 
 
+UserSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).exec(cb);
+};
+
+
 
 /**
  * Virtuals

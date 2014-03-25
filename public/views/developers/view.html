@@ -1,0 +1,14 @@
+<section data-ng-controller="DevelopersController" data-ng-init="findOne()">
+    <div class="container">
+    <img class="img-responsive" src="{{developer.linkedin.pictureUrl }}">
+      <h1>{{ developer.name }}</h1>
+      <h1>{{ developer.email }}</h1>
+      <h2> Linkedin </h2>
+      <span> <h3>{{developer.linkedin.headline}} </h3> </span>
+      <span> <p>{{developer.linkedin.summary}} </p></span>
+
+    <br>
+    <h2> GitHub </h2>
+    <h3> Total Repositories: {{developer.github.public_repos}} </h3>
+    </div>
+</section>

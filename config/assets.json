@@ -2,6 +2,7 @@
 	"css": {
 		"public/build/css/dist.min.css": [
 			"public/lib/bootstrap/dist/css/bootstrap.css",
+
 			"public/brackets/css/bootstrap-override.css",
 			"public/brackets/css/jquery-ui-1.10.3.css",
 			"public/brackets/css/font-awesome.min.css",
@@ -33,7 +34,8 @@
 			"public/brackets/js/jquery.cookies.js",
 			"public/brackets/js/jquery.prettyPhoto.js",
 			"public/brackets/js/holder.js",
-			"public/brackets/js/custom.js"
+			"public/brackets/js/custom.js",
+			"public/js/**/*.js"
 		]
 	}
 }
