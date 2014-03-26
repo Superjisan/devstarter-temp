@@ -23,10 +23,18 @@
 
       <div data-ng-controller="DevelopersController" >
 
+
+        <div id="search" class="container">
+                  <h3> Search Friends</h3>
+                  <input type="text" ng-model="search.name" name="Search Friends" placeholder="Friend Name Here" >
+                  <searchlimit></searchlimit>
+
+              </div>
+
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers">
+          <div ng-repeat="developer in developers | filter: search">
           <div class="col-md-6">
             <div class="people-item">
               <div class="media">
