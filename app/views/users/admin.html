@@ -1,10 +1,40 @@
-{% extends '../layouts/default.html' %}
+{% extends '../layouts/theme.html' %}
+
+{% block pageheader %}
+      <h2><i class="fa fa-user"></i> hire fullstack <span> Find your next Fullstack developer... </span></h2>
+      <div class="breadcrumb-wrapper">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Search</a></li>
+          <li class="active">Profile</li>
+        </ol>
+      </div>
+{% endblock %}
 
 {% block content %}
-{% if user.admin %}
 	<div> Hello, {{ user.name }} This is the admin page. </div>
+	<div>
+	<table>
+	{% for developer in users %}
+		<tr>
+			<td>{{developer.name}}</td>
+			<td><button value="{{developer.id}}" class="btn btn-md btn-primary">Approve</button></td>
+			<td><button class="btn btn-md btn-danger">Deny</button></td>
+		</tr>
+	{% endfor %}
+	</table>
+	</div>
+	<h1></h1>
+{% endblock %}
 
-{% else %}
-<div> FUCK YOU </div>
-{% endif %}
+{% block js_footer %}
+<script>
+	$(document).ready(function(){
+		// $('h1').text('yo');
+		$('.btn').click(function(){
+			alert('here');
+		});
+	})
+</script>
 {% endblock %}

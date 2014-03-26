@@ -4,18 +4,22 @@
 var users = require('../controllers/users');
 var authorization = require('./middlewares/authorization');
 
+
 module.exports = function(app, passport) {
 	app.get('/signin', users.signin);
 	app.get('/signup', users.signup);
 	app.get('/signout', users.signout);
-	app.get('/users/me', users.me);
+	// app.get('/users/me', users.me);
 	app.get('/users/admin', users.admin);
 
 	// Setting up the users api
-	app.post('/users', users.create);
+	// app.post('/users', users.create);
 
 	// Setting up the userId param
-	app.param('userId', users.user);
+	// app.param('userId', users.user);
+
+	app.get('/profile/edit', authorization.requiresLogin, users.profileedit);
+	app.get('/profile/:id', authorization.requiresLogin, users.profile);
 
 	// Setting the local strategy route
 	app.post('/users/session', passport.authenticate('local', {
@@ -46,8 +50,8 @@ module.exports = function(app, passport) {
 	app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
 			failureRedirect: '/signin'
 		}), users.authCallback);
-	app.get('/profile/edit', users.profileedit);
-	app.get('/profile/:name', users.profile);
+
+
 
 
 };

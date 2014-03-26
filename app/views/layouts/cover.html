@@ -61,7 +61,7 @@
 					</div>
 					{% else %}
 					<div class="inner cover">
-						<a href="/profile/{{req.user.name}}" class="btn btn-lg btn-primary">Check out your profile!</a>
+						<a href="/profile/{{req.user._id.toString()}}" class="btn btn-lg btn-primary">Check out your profile!</a>
 					</div>
 					{% endif %}
 					{% endif %}
@@ -83,7 +83,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-			<script type="text/javascript" src="/lib/jquery/jquery.js"></script>
+			<script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script>
 			<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.js"></script>
 			<script type="text/javascript" src="/lib/jquery-backstretch/jquery.backstretch.js"></script>
 			<script>

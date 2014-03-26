@@ -112,10 +112,9 @@ exports.user = function(req, res, next, id) {
 
 //shows pending profile requests
 exports.admin = function(req, res) {
-	User.find({roles: 'developer'}, function(err, developers){
+	User.find({}, function(err, developers){
 		res.render('users/admin', {
 			title: 'Admin Page',
-			user: req.params.user,
 			users: developers
 		});
 	});
@@ -126,8 +125,8 @@ exports.admin = function(req, res) {
  * Show user profile
  */
 exports.profile = function(req, res) {
-	console.log(req.params.name);
-	User.findOne({name: req.params.name}, function(err, user) {
+	// console.log(req.params.id);
+	User.findOne({_id: req.params.id}, function(err, user) {
 		res.render('profile', {
 			user: user
 		});
