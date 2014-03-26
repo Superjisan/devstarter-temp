@@ -52,9 +52,7 @@ module.exports = function(passport) {
         },
         function(req, accessToken, refreshToken, profile, done) {
         	console.log(profile);
-            User.findOne({
-                'authMethods.providerId': profile.id,
-                'authMethods.provider'  :   "github"            },
+            User.findOne({ 'github.id' : profile.id },
                 function(err, github) {
                     if (!github) {
                         // console.log(req.user)
@@ -91,8 +89,7 @@ module.exports = function(passport) {
         function(accessToken, refreshToken, profile, done) {
         	console.log(profile);
             User.findOne({
-                'authMethods.providerId': profile.id,
-                'authMethods.provider'	:	"linkedin"
+                'linkedin.id' : profile.id
             }, function(err, user) {
                 if (!user) {
                 	var linkedInFields = parseLinkedIn(profile);

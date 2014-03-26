@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
 
 exports.authCallback = function(req, res) {
 	if (req.user.github){
-		res.redirect('/profile');
+		res.redirect('/profile/' + req.user.id);
 	} else {
 		res.redirect('/');
 	}
