@@ -120,6 +120,26 @@ exports.admin = function(req, res) {
 	});
 };
 
+exports.approve = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
+
+exports.deny = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
+
 
 /**
  * Show user profile

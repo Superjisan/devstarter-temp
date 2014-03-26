@@ -19,8 +19,8 @@
 	{% for developer in users %}
 		<tr>
 			<td>{{developer.name}}</td>
-			<td><button value="{{developer.id}}" class="btn btn-md btn-primary">Approve</button></td>
-			<td><button class="btn btn-md btn-danger">Deny</button></td>
+			<td><button value="{{developer.id}}" class="btn btn-md btn-primary approve" id='approve'>Approve</button></td>
+			<td><button value="{{developer.id}}" class="btn btn-md btn-danger deny" id='deny'>Deny</button></td>
 		</tr>
 	{% endfor %}
 	</table>
@@ -31,10 +31,29 @@
 {% block js_footer %}
 <script>
 	$(document).ready(function(){
-		// $('h1').text('yo');
-		$('.btn').click(function(){
-			alert('here');
+		$('tr').click(function(event){
+			var button = $(event.target);
+			var data = $(event.target).val()
+			var type = $(event.target).attr('id');
+			console.log(data);
+			if (type==="approve"){
+				$.post('/users/admin/approve', data, function(result, status, xhr){
+					console.log(result, status, xhr); //remove when working
+				});
+				console.log(button.parent())
+				button.parent().next().remove();
+				button.replaceWith('<p>Approved</p>');
+			} else if (type==="deny"){
+				$.post('/users/admin/deny', data, function(result, status, xhr){
+					console.log(result, status, xhr); //remove when working
+				});
+				button.parent().prev().remove();
+				button.replaceWith('<p>Denied</p>');
+			} else {
+				console.log('nope');
+			}
+			// $(event.target).remove()
 		});
-	})
+	});
 </script>
 {% endblock %}
