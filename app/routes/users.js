@@ -4,12 +4,13 @@
 var users = require('../controllers/users');
 var authorization = require('./middlewares/authorization');
 
+
 module.exports = function(app, passport) {
 	app.get('/signin', users.signin);
 	app.get('/signup', users.signup);
 	app.get('/signout', users.signout);
 	app.get('/users/me', users.me);
-	app.get('/users/admin', users.admin);
+	app.get('/users/admin', authorization.isAdmin, users.admin);
 
 	// Setting up the users api
 	app.post('/users', users.create);

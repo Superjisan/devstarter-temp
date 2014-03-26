@@ -1155,7 +1155,8 @@ User.create(
   },
   "name" : "Migi Domingo",
   "roles" : [
-    "developer"
+    "developer",
+    "admin"
   ],
   "work_experiences" : [
     {
