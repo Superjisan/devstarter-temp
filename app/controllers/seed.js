@@ -6,52 +6,18 @@ var mongoose = require('mongoose'),
 exports.seed = function(req, res) {
     console.log("Inserting data");
 
-User.create({
+
+//Migi's Data
+User.create(
+{
 
   "auth_methods" : [
     {
       "provider" : "linkedin",
-      "providerId" : "PvmfqY724t",
-
+      "providerId" : "hiyN8jWqPW",
     }
   ],
-  "educations" : [
-    {
-      "fieldOfStudy" : "Web Development",
-      "id" : 204678887,
-      "schoolName" : "Fullstack Academy of Code",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "degree" : "Bachelors",
-      "fieldOfStudy" : "History",
-      "id" : 74426792,
-      "schoolName" : "Wesleyan University",
-      "endDate" : {
-        "year" : 2012
-      },
-      "startDate" : {
-        "year" : 2008
-      }
-    },
-    {
-      "id" : 81501045,
-      "notes" : "",
-      "schoolName" : "Stuyvesant High School",
-      "endDate" : {
-        "year" : 2008
-      },
-      "startDate" : {
-        "year" : 2005
-      }
-    }
-  ],
-  "email" : "jzaman@wesleyan.edu",
+  "email" : "migi_72@yahoo.com",
   "github" : {
     "plan" : {
       "private_repos" : 0,
@@ -60,323 +26,127 @@ User.create({
       "name" : "free"
     },
     "collaborators" : 0,
-    "disk_usage" : 89065,
+    "disk_usage" : 1500,
     "owned_private_repos" : 0,
-    "total_private_repos" : 11,
-    "private_gists" : 1,
-    "updated_at" : "2014-03-25T16:07:33Z",
-    "created_at" : "2013-05-22T16:40:57Z",
-    "following" : 29,
-    "followers" : 12,
-    "public_gists" : 15,
-    "public_repos" : 36,
-    "bio" : null,
-    "hireable" : true,
-    "email" : "jzaman@wesleyan.edu",
-    "location" : "New York, NY",
-    "blog" : "jisan-octopress.herokuapp.com",
-    "company" : "",
-    "name" : "Jisan Zaman",
+    "total_private_repos" : 9,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-25T03:15:53Z",
+    "created_at" : "2013-06-29T08:17:38Z",
+    "following" : 5,
+    "followers" : 1,
+    "public_gists" : 4,
+    "public_repos" : 7,
     "site_admin" : false,
     "type" : "User",
-    "received_events_url" : "https://api.github.com/users/Superjisan/received_events",
-    "events_url" : "https://api.github.com/users/Superjisan/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/Superjisan/repos",
-    "organizations_url" : "https://api.github.com/users/Superjisan/orgs",
-    "subscriptions_url" : "https://api.github.com/users/Superjisan/subscriptions",
-    "starred_url" : "https://api.github.com/users/Superjisan/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/Superjisan/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/Superjisan/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/Superjisan/followers",
-    "html_url" : "https://github.com/Superjisan",
-    "url" : "https://api.github.com/users/Superjisan",
-    "gravatar_id" : "a2619a8a1f6182567a9e63521a3bf982",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/4501479?",
-    "id" : 4501479,
-    "login" : "Superjisan"
+    "received_events_url" : "https://api.github.com/users/migidomingo/received_events",
+    "events_url" : "https://api.github.com/users/migidomingo/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/migidomingo/repos",
+    "organizations_url" : "https://api.github.com/users/migidomingo/orgs",
+    "subscriptions_url" : "https://api.github.com/users/migidomingo/subscriptions",
+    "starred_url" : "https://api.github.com/users/migidomingo/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/migidomingo/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/migidomingo/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/migidomingo/followers",
+    "html_url" : "https://github.com/migidomingo",
+    "url" : "https://api.github.com/users/migidomingo",
+    "gravatar_id" : "7cd6ddde82a4bc27c41b211909c75116",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/4880315?",
+    "id" : 4880315,
+    "login" : "migidomingo"
   },
   "linkedin" : {
-    "volunteer" : {
-      "volunteerExperiences" : {
-        "values" : [
-          {
-            "role" : "Big Brother",
-            "organization" : {
-              "name" : "Big Brothers Big Sisters",
-              "id" : 7171
-            },
-            "id" : 62
-          },
-          {
-            "role" : "Google Hangout Current Events Instructor",
-            "organization" : {
-              "name" : "Selfhelp Community Services",
-              "id" : 121309
-            },
-            "id" : 63
-          }
-        ],
-        "_total" : 2
-      }
-    },
-    "summary" : "I am a junior website developer who is well-versed in JavaScript and Ruby. I am trained in the MEAN (MongoDB, Express, Angular.JS, Node.JS) Stack but am also familiar with Ruby on Rails, Ember.JS, Backbone.JS, and the LAMP stack (Linux, Apache, MySQL, and Perl/Python/PHP). My computer is a Linux Ubuntu machine, and my blog is maintained in WordPress.\n\nI am working on several apps right now that showcase my skills in these different platforms as well as in mobile development. Check out my GitHub page: Superjisan.github.com for some of the projects and code I've done.\n\nHere's my blog about my coding adventures at Fullstack Academy: Superjisan.org/devblog.",
     "skills" : {
       "values" : [
         {
           "skill" : {
-            "name" : "Tutoring"
-          },
-          "id" : 16
-        },
-        {
-          "skill" : {
-            "name" : "SPSS"
-          },
-          "id" : 38
-        },
-        {
-          "skill" : {
-            "name" : "Data Analysis"
-          },
-          "id" : 39
-        },
-        {
-          "skill" : {
-            "name" : "Critical Thinking"
-          },
-          "id" : 6
-        },
-        {
-          "skill" : {
-            "name" : "Market Research"
-          },
-          "id" : 42
-        },
-        {
-          "skill" : {
-            "name" : "Small Talk"
-          },
-          "id" : 37
-        },
-        {
-          "skill" : {
-            "name" : "Listening Skills"
-          },
-          "id" : 5
-        },
-        {
-          "skill" : {
-            "name" : "Writing"
-          },
-          "id" : 9
-        },
-        {
-          "skill" : {
-            "name" : "Swing Dancing"
-          },
-          "id" : 10
-        },
-        {
-          "skill" : {
-            "name" : "Money Management"
-          },
-          "id" : 11
-        },
-        {
-          "skill" : {
-            "name" : "Supervising"
-          },
-          "id" : 12
-        },
-        {
-          "skill" : {
-            "name" : "Microsoft Excel"
+            "name" : "Web Development"
           },
           "id" : 30
         },
         {
           "skill" : {
-            "name" : "Microsoft Office"
+            "name" : "Social Media Marketing"
           },
           "id" : 31
         },
         {
           "skill" : {
-            "name" : "Product Management"
+            "name" : "Team Leadership"
           },
           "id" : 32
         },
         {
           "skill" : {
-            "name" : "Mobile Marketing"
-          },
-          "id" : 35
-        },
-        {
-          "skill" : {
-            "name" : "Problem Solving"
-          },
-          "id" : 4
-        },
-        {
-          "skill" : {
-            "name" : "Bengali"
-          },
-          "id" : 14
-        },
-        {
-          "skill" : {
-            "name" : "Youth Mentoring"
-          },
-          "id" : 17
-        },
-        {
-          "skill" : {
-            "name" : "Product Development"
+            "name" : "JavaScript"
           },
           "id" : 33
         },
         {
           "skill" : {
-            "name" : "Editing"
+            "name" : "Public Speaking"
           },
-          "id" : 41
-        },
-        {
-          "skill" : {
-            "name" : "HTML"
-          },
-          "id" : 44
-        },
-        {
-          "skill" : {
-            "name" : "WordPress"
-          },
-          "id" : 51
-        },
-        {
-          "skill" : {
-            "name" : "Blues Dancing"
-          },
-          "id" : 29
-        },
-        {
-          "skill" : {
-            "name" : "HTML 5"
-          },
-          "id" : 45
-        },
-        {
-          "skill" : {
-            "name" : "CSS"
-          },
-          "id" : 46
-        },
-        {
-          "skill" : {
-            "name" : "Ruby"
-          },
-          "id" : 47
-        },
-        {
-          "skill" : {
-            "name" : "Ruby on Rails"
-          },
-          "id" : 48
-        },
-        {
-          "skill" : {
-            "name" : "JavaScript"
-          },
-          "id" : 49
-        },
-        {
-          "skill" : {
-            "name" : "jQuery"
-          },
-          "id" : 50
-        },
-        {
-          "skill" : {
-            "name" : "Web Development"
-          },
-          "id" : 52
+          "id" : 34
         },
         {
           "skill" : {
             "name" : "Node.js"
           },
-          "id" : 54
+          "id" : 35
         },
         {
           "skill" : {
-            "name" : "Backbone.js"
+            "name" : "Social Media"
           },
-          "id" : 55
+          "id" : 36
         },
         {
           "skill" : {
-            "name" : "JSON"
+            "name" : "Entertainment"
           },
-          "id" : 56
+          "id" : 37
         },
         {
           "skill" : {
-            "name" : "SQL"
+            "name" : "Ruby"
           },
-          "id" : 57
+          "id" : 38
         },
         {
           "skill" : {
-            "name" : "SQLite"
+            "name" : "Express.js"
           },
-          "id" : 58
+          "id" : 39
         },
         {
           "skill" : {
-            "name" : "MongoDB"
+            "name" : "Angular.js"
           },
-          "id" : 59
+          "id" : 40
         },
         {
           "skill" : {
-            "name" : "Redis"
+            "name" : "Ruby on Rails"
           },
-          "id" : 60
+          "id" : 41
         },
         {
           "skill" : {
-            "name" : "Cricket"
+            "name" : "Music"
           },
-          "id" : 64
+          "id" : 42
         }
       ],
-      "_total" : 38
+      "_total" : 13
     },
     "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=118698139&authType=name&authToken=3H8C&trk=api*a3226473*s3299743*"
+      "url" : "http://www.linkedin.com/profile/view?id=238483169&authType=name&authToken=X4Qw&trk=api*a3226473*s3299743*"
     },
     "relatedProfileViews" : {
       "values" : [
         {
-          "lastName" : "Domingo",
-          "id" : "hiyN8jWqPW",
-          "firstName" : "Migi"
-        },
-        {
-          "lastName" : "Yu",
-          "id" : "GDSYjeKb_Q",
-          "firstName" : "Kelvin"
-        },
-        {
-          "lastName" : "Cook",
-          "id" : "AjEGjDYQLv",
-          "firstName" : "Eric"
-        },
-        {
-          "lastName" : "Wallace",
-          "id" : "tIxs2lfEnw",
-          "firstName" : "Omari"
+          "lastName" : "Zaman",
+          "id" : "PvmfqY724t",
+          "firstName" : "Jisan"
         },
         {
           "lastName" : "Ingram",
@@ -384,14 +154,24 @@ User.create({
           "firstName" : "Russell"
         },
         {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
+          "lastName" : "Cook",
+          "id" : "AjEGjDYQLv",
+          "firstName" : "Eric"
         },
         {
-          "lastName" : "Tsui",
-          "id" : "JmCfHALEkj",
-          "firstName" : "Jaclyn"
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Drury",
+          "id" : "hne4Az6W6H",
+          "firstName" : "James"
+        },
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
         },
         {
           "lastName" : "Giraldo",
@@ -399,14 +179,19 @@ User.create({
           "firstName" : "Max"
         },
         {
-          "lastName" : "Maru",
-          "id" : "7xiZaujHrb",
-          "firstName" : "Nimit"
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
         },
         {
-          "lastName" : "Drury",
-          "id" : "hne4Az6W6H",
-          "firstName" : "James"
+          "lastName" : "Buchanan",
+          "id" : "fGnvXFc51n",
+          "firstName" : "Hannah Jane"
+        },
+        {
+          "lastName" : "Bayogos",
+          "id" : "RQSP6Wm6m7",
+          "firstName" : "Sammie"
         }
       ],
       "_total" : 10
@@ -414,18 +199,20 @@ User.create({
     "recommendationsReceived" : {
       "_total" : 0
     },
+    "primaryTwitterAccount" : {
+      "providerAccountName" : "finch899",
+      "providerAccountId" : "24293957"
+    },
     "positions" : {
       "values" : [
         {
           "title" : "Student",
           "startDate" : {
-            "year" : 2014
+            "year" : 2014,
+            "month" : 1
           },
-          "isCurrent" : false,
-          "id" : 513835875,
-          "endDate" : {
-            "year" : 2014
-          },
+          "isCurrent" : true,
+          "id" : 514054384,
           "company" : {
             "type" : "Educational Institution",
             "size" : "1-10 employees",
@@ -435,260 +222,83 @@ User.create({
           }
         },
         {
-          "title" : "Student",
-          "startDate" : {
-            "year" : 2014
-          },
-          "isCurrent" : false,
-          "id" : 513838091,
-          "endDate" : {
-            "year" : 2014
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "1-10 employees",
-            "name" : "Fullstack Academy",
-            "industry" : "Internet",
-            "id" : 4985867
-          }
-        },
-        {
-          "title" : "Research Assistant",
-          "summary" : "1. Overseeing Product and App Development; \n2. Recruitment for panel and specific project; \n3. Organizing Support/Service Infrastructure; \n4. Developed Company Metrics and Reports; Testing Specialist; Authored Surveys; \n5. Assisted in  development of new technology Location Based Services; \n6. Creating reporting portals for clients and internal evaluations; \n7. Managed the creation of a new Website; \n8. Managed company project planning via ASANA.\n9. Maintained a panel of 100,000+ people and their demographic datapoints via proprietary technology tool.\n10. Manage client projects, present deliverable to clients.",
+          "title" : "Radio DJ",
+          "summary" : "I play music and entertain people. I manage the content on my the second half of my Sunday show called Positive Note, aimed at helping people feel good through good music and inspirational stories.",
           "startDate" : {
             "year" : 2012,
             "month" : 10
           },
           "isCurrent" : false,
-          "id" : 342035594,
+          "id" : 373551161,
           "endDate" : {
             "year" : 2013,
-            "month" : 10
+            "month" : 5
           },
           "company" : {
-            "type" : "Partnership",
-            "size" : "11-50 employees",
-            "name" : "Paradigm Sample",
-            "industry" : "Market Research",
-            "id" : 252666
+            "name" : "Magic 89.9",
+            "industry" : "Broadcast Media"
           }
         },
         {
-          "title" : "Residential Assistant",
-          "summary" : "1.Assisted students and staff to ensure a safe and fun environment for learning;\n2.Supervised special-needs students with ADHD, Asperger, and Bipolar disorder; \n3.Organized the yearbook committee and created an online yearbook; \n4.Led fun and educational activities during afternoons and weekends; \n5.Supervised students during dances, weekends, quad-time and field trips; \n6.Maintained a high-energy and positive attitude throughout 6 weeks to provide a better work environment; \n7.Handled emergency situations on a 24-hour basis.",
+          "title" : "Cashier",
+          "summary" : "I handled the front end of the store by dealing with customers and their purchases. I also added to customers' experiences by talking with them to make sure that everything went great!",
           "startDate" : {
-            "year" : 2010,
+            "year" : 2009,
             "month" : 6
           },
           "isCurrent" : false,
-          "id" : 214911824,
+          "id" : 373557304,
           "endDate" : {
-            "year" : 2012,
+            "year" : 2009,
             "month" : 8
           },
           "company" : {
-            "type" : "Educational Institution",
+            "type" : "Public Company",
+            "ticker" : "BBBY",
             "size" : "10,001+ employees",
-            "name" : "Johns Hopkins University Center for Talented Youth",
-            "industry" : "Higher Education",
-            "id" : 3528
-          }
-        },
-        {
-          "title" : "Treasurer",
-          "summary" : "1.Managed a $200,000 budget; \n2.Created the budget for the upcoming year; Collected rents and dues from members;\n3. Reported to the Adelphic Literary Society (alumni branch) regarding budgetary concerns; \n4. Managed a  $15,000 fund for the Adelphic Educational Fund (AEF), a 501(c) organization ;\n5. Worked with members of the society to create payment plans for students with financial need in order to make membership more accessible; \n6.Followed up with other officers of the Society, its members, local businesses regarding financial transactions;\n7. Partnered with Alumni members to purchase new equipment to increase office functionality; \n8. Institutionalized the use of software such as Google Docs, Boomerang, Expensify for better record keeping; \n9. Received “The Brown Award for Service to the Community” from the AEF.",
-          "startDate" : {
-            "year" : 2011,
-            "month" : 5
-          },
-          "isCurrent" : false,
-          "id" : 214912397,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "51-200 employees",
-            "name" : "Alpha Delta Phi Society",
-            "industry" : "Higher Education",
-            "id" : 2073909
-          }
-        },
-        {
-          "title" : "Admissions Office Tour Guide",
-          "summary" : "1.Gave over 300 tours to prospective students, parents, alumni, and high school counselors- the most in school history; \n2.Provided a personal and professional perspective about Wesleyan; \n3.Interacted with various people of many different backgrounds; \n4.Showed the facilities that highlighted the university and promoted its reputation, programs and environment;\n5. Acquired knowledge about all aspects of the University thoroughly and incorporated personal stories in order to give factual yet exciting tours; \n6.Earned the “Tour Guide of the Month” award after only one semester.",
-          "startDate" : {
-            "year" : 2009,
-            "month" : 3
-          },
-          "isCurrent" : false,
-          "id" : 214910839,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        },
-        {
-          "title" : "Student",
-          "summary" : "B.A. in History with Honors",
-          "startDate" : {
-            "year" : 2008,
-            "month" : 9
-          },
-          "isCurrent" : false,
-          "id" : 185342794,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        },
-        {
-          "title" : "Van Driver",
-          "startDate" : {
-            "year" : 2008
-          },
-          "isCurrent" : false,
-          "id" : 244958520,
-          "endDate" : {
-            "year" : 2012
-          },
-          "company" : {
-            "name" : "Wesleyan University Office of Community Service",
-            "industry" : "Higher Education"
-          }
-        },
-        {
-          "title" : "Resident Advisor",
-          "summary" : "1.Fostered a community in two different resident halls; \n2. Acted as a liaison between the Office of Residential Life and the residents in the hall; \n3.Advised students on various issues that included policy enforcement, drugs and alcohol, social justice; Updated residents about events on campus;\n4. Raised over $2,000 for community service projects around Wesleyan and Middletown, CT. \n5.Organized various programs that promoted a sense of community; \n6. Earned the “Resident Advisor Of the Year” Award in Spring 2011.",
-          "startDate" : {
-            "year" : 2009,
-            "month" : 8
-          },
-          "isCurrent" : false,
-          "id" : 199950435,
-          "endDate" : {
-            "year" : 2011,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        }
-      ],
-      "_total" : 9
-    },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_jE7gvrM4ZX5CbGoP0muGvtZVs_PCbXVP0HUGvPJo5QbPZ8D1luxlR1SXND1yXiRxpWS_sqFixbuY",
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Zaman",
-    "id" : "PvmfqY724t",
-    "honorsAwards" : {
-      "values" : [
-        {
-          "name" : "Tour Guide of the Month",
-          "issuer" : "Wesleyan University Office of Admissions",
-          "id" : 23
-        },
-        {
-          "name" : "Resident Advisor of The Year",
-          "issuer" : "Wesleyan University Office of Residential Life",
-          "id" : 24
-        },
-        {
-          "name" : "Departmental Honors",
-          "issuer" : "Wesleyan University History Department",
-          "id" : 25
-        },
-        {
-          "name" : "AP Scholar with Distinction",
-          "issuer" : "CollegeBoard",
-          "id" : 26
-        },
-        {
-          "name" : "Gram Award for Service to the Community",
-          "issuer" : "Adelphic Literary Society",
-          "id" : 27
-        },
-        {
-          "name" : "Most Outstanding Cricket Player",
-          "issuer" : "Stuyvesant High School Athletics Department",
-          "id" : 40
-        }
-      ],
-      "_total" : 6
-    },
-    "headline" : "Web Developer, Student at Fullstack Academy of Code",
-    "firstName" : "Jisan",
-    "emailAddress" : "jzaman@wesleyan.edu",
-    "educations" : {
-      "values" : [
-        {
-          "startDate" : {
-            "year" : 2014
-          },
-          "schoolName" : "Fullstack Academy of Code",
-          "id" : 204678887,
-          "fieldOfStudy" : "Web Development",
-          "endDate" : {
-            "year" : 2014
-          }
-        },
-        {
-          "startDate" : {
-            "year" : 2008
-          },
-          "schoolName" : "Wesleyan University",
-          "id" : 74426792,
-          "fieldOfStudy" : "History",
-          "endDate" : {
-            "year" : 2012
-          },
-          "degree" : "Bachelors"
-        },
-        {
-          "startDate" : {
-            "year" : 2005
-          },
-          "schoolName" : "Stuyvesant High School",
-          "notes" : "",
-          "id" : 81501045,
-          "endDate" : {
-            "year" : 2008
+            "name" : "Bed Bath & Beyond",
+            "industry" : "Retail",
+            "id" : 7174
           }
         }
       ],
       "_total" : 3
     },
-    "dateOfBirth" : {
-      "year" : 1990,
-      "month" : 6,
-      "day" : 4
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_-zC9rqnKf9N-Ppk0rrhLrB3p7qCPlVL0rBnWrBAuKAnCmY-xY1tVYc5CTsGS-jX1198H0rfQQfkS",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Domingo",
+    "languages" : {
+      "values" : [
+        {
+          "language" : {
+            "name" : "English"
+          },
+          "id" : 5
+        },
+        {
+          "language" : {
+            "name" : "Filipino"
+          },
+          "id" : 16
+        }
+      ],
+      "_total" : 2
+    },
+    "id" : "hiyN8jWqPW",
+    "headline" : "Web Developer",
+    "firstName" : "Migi",
+    "emailAddress" : "migi_72@yahoo.com",
+    "educations" : {
+      "_total" : 0
     }
   },
-  "name" : "Jisan Zaman",
+  "name" : "Migi Domingo",
   "roles" : [
-    "developer"
+    "developer",
+    "admin"
   ],
   "work_experiences" : [
     {
@@ -699,47 +309,24 @@ User.create({
         "industry" : "Internet",
         "id" : 4985867
       },
-      "id" : 513835875,
-      "isCurrent" : false,
+      "id" : 514054384,
+      "isCurrent" : true,
       "title" : "Student",
-      "endDate" : {
-        "year" : 2014
-      },
       "startDate" : {
+        "month" : 1,
         "year" : 2014
       }
     },
     {
       "company" : {
-        "type" : "Educational Institution",
-        "size" : "1-10 employees",
-        "name" : "Fullstack Academy",
-        "industry" : "Internet",
-        "id" : 4985867
+        "name" : "Magic 89.9",
+        "industry" : "Broadcast Media"
       },
-      "id" : 513838091,
+      "id" : 373551161,
       "isCurrent" : false,
-      "title" : "Student",
+      "title" : "Radio DJ",
       "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "company" : {
-        "type" : "Partnership",
-        "size" : "11-50 employees",
-        "name" : "Paradigm Sample",
-        "industry" : "Market Research",
-        "id" : 252666
-      },
-      "id" : 342035594,
-      "isCurrent" : false,
-      "title" : "Research Assistant",
-      "endDate" : {
-        "month" : 10,
+        "month" : 5,
         "year" : 2013
       },
       "startDate" : {
@@ -749,472 +336,27 @@ User.create({
     },
     {
       "company" : {
-        "type" : "Educational Institution",
+        "type" : "Public Company",
+        "ticker" : "BBBY",
         "size" : "10,001+ employees",
-        "name" : "Johns Hopkins University Center for Talented Youth",
-        "industry" : "Higher Education",
-        "id" : 3528
+        "name" : "Bed Bath & Beyond",
+        "industry" : "Retail",
+        "id" : 7174
       },
-      "id" : 214911824,
+      "id" : 373557304,
       "isCurrent" : false,
-      "title" : "Residential Assistant",
+      "title" : "Cashier",
       "endDate" : {
         "month" : 8,
-        "year" : 2012
+        "year" : 2009
       },
       "startDate" : {
         "month" : 6,
-        "year" : 2010
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "51-200 employees",
-        "name" : "Alpha Delta Phi Society",
-        "industry" : "Higher Education",
-        "id" : 2073909
-      },
-      "id" : 214912397,
-      "isCurrent" : false,
-      "title" : "Treasurer",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 5,
-        "year" : 2011
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 214910839,
-      "isCurrent" : false,
-      "title" : "Admissions Office Tour Guide",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 3,
-        "year" : 2009
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 185342794,
-      "isCurrent" : false,
-      "title" : "Student",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 9,
-        "year" : 2008
-      }
-    },
-    {
-      "company" : {
-        "name" : "Wesleyan University Office of Community Service",
-        "industry" : "Higher Education"
-      },
-      "id" : 244958520,
-      "isCurrent" : false,
-      "title" : "Van Driver",
-      "endDate" : {
-        "year" : 2012
-      },
-      "startDate" : {
-        "year" : 2008
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 199950435,
-      "isCurrent" : false,
-      "title" : "Resident Advisor",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2011
-      },
-      "startDate" : {
-        "month" : 8,
         "year" : 2009
       }
     }
   ]
 });
-
-//Migi's Data
-// User.create(
-// {
-
-//   "auth_methods" : [
-//     {
-//       "provider" : "linkedin",
-//       "providerId" : "hiyN8jWqPW",
-//     }
-//   ],
-//   "email" : "migi_72@yahoo.com",
-//   "github" : {
-//     "plan" : {
-//       "private_repos" : 0,
-//       "collaborators" : 0,
-//       "space" : 307200,
-//       "name" : "free"
-//     },
-//     "collaborators" : 0,
-//     "disk_usage" : 1500,
-//     "owned_private_repos" : 0,
-//     "total_private_repos" : 9,
-//     "private_gists" : 0,
-//     "updated_at" : "2014-03-25T03:15:53Z",
-//     "created_at" : "2013-06-29T08:17:38Z",
-//     "following" : 5,
-//     "followers" : 1,
-//     "public_gists" : 4,
-//     "public_repos" : 7,
-//     "site_admin" : false,
-//     "type" : "User",
-//     "received_events_url" : "https://api.github.com/users/migidomingo/received_events",
-//     "events_url" : "https://api.github.com/users/migidomingo/events{/privacy}",
-//     "repos_url" : "https://api.github.com/users/migidomingo/repos",
-//     "organizations_url" : "https://api.github.com/users/migidomingo/orgs",
-//     "subscriptions_url" : "https://api.github.com/users/migidomingo/subscriptions",
-//     "starred_url" : "https://api.github.com/users/migidomingo/starred{/owner}{/repo}",
-//     "gists_url" : "https://api.github.com/users/migidomingo/gists{/gist_id}",
-//     "following_url" : "https://api.github.com/users/migidomingo/following{/other_user}",
-//     "followers_url" : "https://api.github.com/users/migidomingo/followers",
-//     "html_url" : "https://github.com/migidomingo",
-//     "url" : "https://api.github.com/users/migidomingo",
-//     "gravatar_id" : "7cd6ddde82a4bc27c41b211909c75116",
-//     "avatar_url" : "https://avatars.githubusercontent.com/u/4880315?",
-//     "id" : 4880315,
-//     "login" : "migidomingo"
-//   },
-//   "linkedin" : {
-//     "skills" : {
-//       "values" : [
-//         {
-//           "skill" : {
-//             "name" : "Web Development"
-//           },
-//           "id" : 30
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Social Media Marketing"
-//           },
-//           "id" : 31
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Team Leadership"
-//           },
-//           "id" : 32
-//         },
-//         {
-//           "skill" : {
-//             "name" : "JavaScript"
-//           },
-//           "id" : 33
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Public Speaking"
-//           },
-//           "id" : 34
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Node.js"
-//           },
-//           "id" : 35
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Social Media"
-//           },
-//           "id" : 36
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Entertainment"
-//           },
-//           "id" : 37
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Ruby"
-//           },
-//           "id" : 38
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Express.js"
-//           },
-//           "id" : 39
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Angular.js"
-//           },
-//           "id" : 40
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Ruby on Rails"
-//           },
-//           "id" : 41
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Music"
-//           },
-//           "id" : 42
-//         }
-//       ],
-//       "_total" : 13
-//     },
-//     "siteStandardProfileRequest" : {
-//       "url" : "http://www.linkedin.com/profile/view?id=238483169&authType=name&authToken=X4Qw&trk=api*a3226473*s3299743*"
-//     },
-//     "relatedProfileViews" : {
-//       "values" : [
-//         {
-//           "lastName" : "Zaman",
-//           "id" : "PvmfqY724t",
-//           "firstName" : "Jisan"
-//         },
-//         {
-//           "lastName" : "Ingram",
-//           "id" : "buLJshkhKq",
-//           "firstName" : "Russell"
-//         },
-//         {
-//           "lastName" : "Cook",
-//           "id" : "AjEGjDYQLv",
-//           "firstName" : "Eric"
-//         },
-//         {
-//           "lastName" : "Yu",
-//           "id" : "GDSYjeKb_Q",
-//           "firstName" : "Kelvin"
-//         },
-//         {
-//           "lastName" : "Drury",
-//           "id" : "hne4Az6W6H",
-//           "firstName" : "James"
-//         },
-//         {
-//           "lastName" : "Wallace",
-//           "id" : "tIxs2lfEnw",
-//           "firstName" : "Omari"
-//         },
-//         {
-//           "lastName" : "Giraldo",
-//           "id" : "2qKGhmTNbZ",
-//           "firstName" : "Max"
-//         },
-//         {
-//           "lastName" : "Kim",
-//           "id" : "f3MHAVxhZP",
-//           "firstName" : "Howard Jin"
-//         },
-//         {
-//           "lastName" : "Buchanan",
-//           "id" : "fGnvXFc51n",
-//           "firstName" : "Hannah Jane"
-//         },
-//         {
-//           "lastName" : "Bayogos",
-//           "id" : "RQSP6Wm6m7",
-//           "firstName" : "Sammie"
-//         }
-//       ],
-//       "_total" : 10
-//     },
-//     "recommendationsReceived" : {
-//       "_total" : 0
-//     },
-//     "primaryTwitterAccount" : {
-//       "providerAccountName" : "finch899",
-//       "providerAccountId" : "24293957"
-//     },
-//     "positions" : {
-//       "values" : [
-//         {
-//           "title" : "Student",
-//           "startDate" : {
-//             "year" : 2014,
-//             "month" : 1
-//           },
-//           "isCurrent" : true,
-//           "id" : 514054384,
-//           "company" : {
-//             "type" : "Educational Institution",
-//             "size" : "1-10 employees",
-//             "name" : "Fullstack Academy",
-//             "industry" : "Internet",
-//             "id" : 4985867
-//           }
-//         },
-//         {
-//           "title" : "Radio DJ",
-//           "summary" : "I play music and entertain people. I manage the content on my the second half of my Sunday show called Positive Note, aimed at helping people feel good through good music and inspirational stories.",
-//           "startDate" : {
-//             "year" : 2012,
-//             "month" : 10
-//           },
-//           "isCurrent" : false,
-//           "id" : 373551161,
-//           "endDate" : {
-//             "year" : 2013,
-//             "month" : 5
-//           },
-//           "company" : {
-//             "name" : "Magic 89.9",
-//             "industry" : "Broadcast Media"
-//           }
-//         },
-//         {
-//           "title" : "Cashier",
-//           "summary" : "I handled the front end of the store by dealing with customers and their purchases. I also added to customers' experiences by talking with them to make sure that everything went great!",
-//           "startDate" : {
-//             "year" : 2009,
-//             "month" : 6
-//           },
-//           "isCurrent" : false,
-//           "id" : 373557304,
-//           "endDate" : {
-//             "year" : 2009,
-//             "month" : 8
-//           },
-//           "company" : {
-//             "type" : "Public Company",
-//             "ticker" : "BBBY",
-//             "size" : "10,001+ employees",
-//             "name" : "Bed Bath & Beyond",
-//             "industry" : "Retail",
-//             "id" : 7174
-//           }
-//         }
-//       ],
-//       "_total" : 3
-//     },
-//     "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_-zC9rqnKf9N-Ppk0rrhLrB3p7qCPlVL0rBnWrBAuKAnCmY-xY1tVYc5CTsGS-jX1198H0rfQQfkS",
-//     "phoneNumbers" : {
-//       "_total" : 0
-//     },
-//     "numRecommenders" : 0,
-//     "lastName" : "Domingo",
-//     "languages" : {
-//       "values" : [
-//         {
-//           "language" : {
-//             "name" : "English"
-//           },
-//           "id" : 5
-//         },
-//         {
-//           "language" : {
-//             "name" : "Filipino"
-//           },
-//           "id" : 16
-//         }
-//       ],
-//       "_total" : 2
-//     },
-//     "id" : "hiyN8jWqPW",
-//     "headline" : "Web Developer",
-//     "firstName" : "Migi",
-//     "emailAddress" : "migi_72@yahoo.com",
-//     "educations" : {
-//       "_total" : 0
-//     }
-//   },
-//   "name" : "Migi Domingo",
-//   "roles" : [
-//     "developer",
-//     "admin"
-//   ],
-//   "work_experiences" : [
-//     {
-//       "company" : {
-//         "type" : "Educational Institution",
-//         "size" : "1-10 employees",
-//         "name" : "Fullstack Academy",
-//         "industry" : "Internet",
-//         "id" : 4985867
-//       },
-//       "id" : 514054384,
-//       "isCurrent" : true,
-//       "title" : "Student",
-//       "startDate" : {
-//         "month" : 1,
-//         "year" : 2014
-//       }
-//     },
-//     {
-//       "company" : {
-//         "name" : "Magic 89.9",
-//         "industry" : "Broadcast Media"
-//       },
-//       "id" : 373551161,
-//       "isCurrent" : false,
-//       "title" : "Radio DJ",
-//       "endDate" : {
-//         "month" : 5,
-//         "year" : 2013
-//       },
-//       "startDate" : {
-//         "month" : 10,
-//         "year" : 2012
-//       }
-//     },
-//     {
-//       "company" : {
-//         "type" : "Public Company",
-//         "ticker" : "BBBY",
-//         "size" : "10,001+ employees",
-//         "name" : "Bed Bath & Beyond",
-//         "industry" : "Retail",
-//         "id" : 7174
-//       },
-//       "id" : 373557304,
-//       "isCurrent" : false,
-//       "title" : "Cashier",
-//       "endDate" : {
-//         "month" : 8,
-//         "year" : 2009
-//       },
-//       "startDate" : {
-//         "month" : 6,
-//         "year" : 2009
-//       }
-//     }
-//   ]
-// });
 
 //Howard Kim
 User.create(
@@ -2982,250 +2124,6 @@ User.create({
   ]
 });
 
-//Max Giraldo
-User.create({
-
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "2qKGhmTNbZ",
-    }
-  ],
-  "educations" : [
-    {
-      "id" : 199155650,
-      "notes" : "Intensive, 12-week web development/software engineering immersive course.",
-      "schoolName" : "Fullstack Academy",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "degree" : "BFA",
-      "fieldOfStudy" : "Advertising",
-      "id" : 62842653,
-      "schoolName" : "Art Center College of Design",
-      "endDate" : {
-        "year" : 2013
-      },
-      "startDate" : {
-        "year" : 2011
-      }
-    }
-  ],
-  "email" : "hi@maxgiraldo.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 5,
-      "collaborators" : 1,
-      "space" : 614400,
-      "name" : "micro"
-    },
-    "collaborators" : 3,
-    "disk_usage" : 1587,
-    "owned_private_repos" : 3,
-    "total_private_repos" : 9,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T01:58:48Z",
-    "created_at" : "2013-07-01T23:21:12Z",
-    "following" : 7,
-    "followers" : 6,
-    "public_gists" : 0,
-    "public_repos" : 2,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "",
-    "location" : "nyc",
-    "blog" : "maxgiraldo.com",
-    "company" : "",
-    "name" : "Max",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/maxgiraldo/received_events",
-    "events_url" : "https://api.github.com/users/maxgiraldo/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/maxgiraldo/repos",
-    "organizations_url" : "https://api.github.com/users/maxgiraldo/orgs",
-    "subscriptions_url" : "https://api.github.com/users/maxgiraldo/subscriptions",
-    "starred_url" : "https://api.github.com/users/maxgiraldo/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/maxgiraldo/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/maxgiraldo/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/maxgiraldo/followers",
-    "html_url" : "https://github.com/maxgiraldo",
-    "url" : "https://api.github.com/users/maxgiraldo",
-    "gravatar_id" : "4b1bd19834c6b4adfcf3286d880bba0a",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/4913413?",
-    "id" : 4913413,
-    "login" : "maxgiraldo"
-  },
-  "linkedin" : {
-    "summary" : "maxgiraldo.com",
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=63020039&authType=name&authToken=JuKE&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Wallace",
-          "id" : "tIxs2lfEnw",
-          "firstName" : "Omari"
-        },
-        {
-          "lastName" : "Yu",
-          "id" : "GDSYjeKb_Q",
-          "firstName" : "Kelvin"
-        },
-        {
-          "lastName" : "Koo",
-          "id" : "CSRTpH9PMC",
-          "firstName" : "Ji Ho"
-        },
-        {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
-        },
-        {
-          "lastName" : "Ingram",
-          "id" : "buLJshkhKq",
-          "firstName" : "Russell"
-        },
-        {
-          "lastName" : "Xiang",
-          "id" : "0CbQxKE7yn",
-          "firstName" : "Tong"
-        },
-        {
-          "lastName" : "D'Alessandro",
-          "id" : "WkMxcboGNL",
-          "firstName" : "Scott"
-        },
-        {
-          "lastName" : "Tam",
-          "id" : "yV3QGJfBVK",
-          "firstName" : "Waine"
-        },
-        {
-          "lastName" : "Buchanan",
-          "id" : "fGnvXFc51n",
-          "firstName" : "Hannah Jane"
-        },
-        {
-          "lastName" : "Dorman",
-          "id" : "RA_dFGEbz-",
-          "firstName" : "Kyle"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "primaryTwitterAccount" : {
-      "providerAccountName" : "maxgiraldo",
-      "providerAccountId" : "34191752"
-    },
-    "positions" : {
-      "values" : [
-        {
-          "title" : "Creative",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 10
-          },
-          "isCurrent" : false,
-          "id" : 489641674,
-          "endDate" : {
-            "year" : 2013,
-            "month" : 12
-          },
-          "company" : {
-            "type" : "Public Company",
-            "ticker" : "IPG",
-            "size" : "501-1000 employees",
-            "name" : "Deutsch",
-            "industry" : "Marketing and Advertising",
-            "id" : 6043
-          }
-        }
-      ],
-      "_total" : 1
-    },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0__NWrbZruZEcF-XZsDKEfbVruVeC9OXds3Pg7bRlpLSnF38OVftMpdUL-q6GHgiHnCBwaey7qhEA0",
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Giraldo",
-    "id" : "2qKGhmTNbZ",
-    "headline" : "Student at Fullstack Academy",
-    "firstName" : "Max",
-    "emailAddress" : "hi@maxgiraldo.com",
-    "educations" : {
-      "values" : [
-        {
-          "startDate" : {
-            "year" : 2014
-          },
-          "schoolName" : "Fullstack Academy",
-          "notes" : "Intensive, 12-week web development/software engineering immersive course.",
-          "id" : 199155650,
-          "endDate" : {
-            "year" : 2014
-          }
-        },
-        {
-          "startDate" : {
-            "year" : 2011
-          },
-          "schoolName" : "Art Center College of Design",
-          "id" : 62842653,
-          "fieldOfStudy" : "Advertising",
-          "endDate" : {
-            "year" : 2013
-          },
-          "degree" : "BFA"
-        }
-      ],
-      "_total" : 2
-    },
-    "courses" : {
-      "_total" : 0
-    },
-    "certifications" : {
-      "_total" : 0
-    }
-  },
-  "name" : "Max Giraldo",
-  "roles" : [
-    "developer"
-  ],
-  "work_experiences" : [
-    {
-      "company" : {
-        "type" : "Public Company",
-        "ticker" : "IPG",
-        "size" : "501-1000 employees",
-        "name" : "Deutsch",
-        "industry" : "Marketing and Advertising",
-        "id" : 6043
-      },
-      "id" : 489641674,
-      "isCurrent" : false,
-      "title" : "Creative",
-      "endDate" : {
-        "month" : 12,
-        "year" : 2013
-      },
-      "startDate" : {
-        "month" : 10,
-        "year" : 2013
-      }
-    }
-  ]
-})
 
 //Nathan Grotticelli
 User.create({
@@ -3867,6 +2765,2187 @@ User.create({
     }
   ]
 });
+
+//Eric Cook
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "AjEGjDYQLv",
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "Master of Science in Teaching",
+      "fieldOfStudy" : "Adolescence Education",
+      "id" : 103278384,
+      "schoolName" : "State University of New York College at Plattsburgh",
+      "endDate" : {
+        "year" : 2013
+      },
+      "startDate" : {
+        "year" : 2011
+      }
+    },
+    {
+      "activities" : "Zeta Beta tau",
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "Mathematics",
+      "id" : 45405222,
+      "schoolName" : "State University of New York College at Plattsburgh",
+      "endDate" : {
+        "year" : 2011
+      },
+      "startDate" : {
+        "year" : 2008
+      }
+    }
+  ],
+  "email" : "ejcook111@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 32746,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 7,
+    "private_gists" : 1,
+    "updated_at" : "2014-03-26T16:19:44Z",
+    "created_at" : "2013-11-18T00:26:30Z",
+    "following" : 17,
+    "followers" : 6,
+    "public_gists" : 1,
+    "public_repos" : 9,
+    "bio" : null,
+    "hireable" : true,
+    "email" : null,
+    "location" : null,
+    "blog" : null,
+    "company" : null,
+    "name" : null,
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/CoderCookE/received_events",
+    "events_url" : "https://api.github.com/users/CoderCookE/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/CoderCookE/repos",
+    "organizations_url" : "https://api.github.com/users/CoderCookE/orgs",
+    "subscriptions_url" : "https://api.github.com/users/CoderCookE/subscriptions",
+    "starred_url" : "https://api.github.com/users/CoderCookE/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/CoderCookE/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/CoderCookE/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/CoderCookE/followers",
+    "html_url" : "https://github.com/CoderCookE",
+    "url" : "https://api.github.com/users/CoderCookE",
+    "gravatar_id" : "f6e326617b186e967d2aebc673bf3fa9",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5964112?",
+    "id" : 5964112,
+    "login" : "CoderCookE"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "OS X"
+          },
+          "id" : 27
+        },
+        {
+          "skill" : {
+            "name" : "Facebook"
+          },
+          "id" : 26
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 20
+        },
+        {
+          "skill" : {
+            "name" : "HTML 5"
+          },
+          "id" : 21
+        },
+        {
+          "skill" : {
+            "name" : "CSS"
+          },
+          "id" : 22
+        },
+        {
+          "skill" : {
+            "name" : "Mac OS X"
+          },
+          "id" : 16
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 29
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 30
+        }
+      ],
+      "_total" : 8
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=67450652&authType=name&authToken=XEz5&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        },
+        {
+          "lastName" : "Drury",
+          "id" : "hne4Az6W6H",
+          "firstName" : "James"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        },
+        {
+          "lastName" : "Xiang",
+          "id" : "0CbQxKE7yn",
+          "firstName" : "Tong"
+        },
+        {
+          "lastName" : "Zaman",
+          "id" : "PvmfqY724t",
+          "firstName" : "Jisan"
+        },
+        {
+          "lastName" : "Leasia",
+          "id" : "wWHDhWIVhD",
+          "firstName" : "Charlotte"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Student",
+          "startDate" : {
+            "year" : 2014,
+            "month" : 1
+          },
+          "isCurrent" : true,
+          "id" : 504577579,
+          "company" : {
+            "type" : "Educational Institution",
+            "size" : "1-10 employees",
+            "name" : "Fullstack Academy",
+            "industry" : "Internet",
+            "id" : 4985867
+          }
+        },
+        {
+          "title" : "Customer Experience Associate",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 6
+          },
+          "isCurrent" : true,
+          "id" : 110125471,
+          "company" : {
+            "type" : "Public Company",
+            "name" : "Gap Inc./Old Navy",
+            "industry" : "Retail",
+            "id" : 165295
+          }
+        },
+        {
+          "title" : "Mathematics Teacher",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 9
+          },
+          "isCurrent" : false,
+          "id" : 414011451,
+          "endDate" : {
+            "year" : 2014,
+            "month" : 1
+          },
+          "company" : {
+            "type" : "Government Agency",
+            "size" : "10,001+ employees",
+            "name" : "NYC Department of Education",
+            "industry" : "Education Management",
+            "id" : 2905
+          }
+        },
+        {
+          "title" : "Tutor",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 4
+          },
+          "isCurrent" : false,
+          "id" : 414010812,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "201-500 employees",
+            "name" : "Huntington Learning Center",
+            "industry" : "Education Management",
+            "id" : 164244
+          }
+        },
+        {
+          "title" : "Electronics Sales Associate",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2007,
+            "month" : 11
+          },
+          "isCurrent" : false,
+          "id" : 110125683,
+          "endDate" : {
+            "year" : 2008,
+            "month" : 7
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "SHLD",
+            "name" : "Sears, Roebuck and Co.",
+            "industry" : "Retail",
+            "id" : 1942
+          }
+        },
+        {
+          "title" : "Crew Coach",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2005,
+            "month" : 7
+          },
+          "isCurrent" : false,
+          "id" : 110125555,
+          "endDate" : {
+            "year" : 2007,
+            "month" : 11
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "MCD",
+            "name" : "McDonald's",
+            "industry" : "Restaurants",
+            "id" : 2677
+          }
+        }
+      ],
+      "_total" : 6
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_UZgaG6KvBpw-GkhVJyslG5rncy7CC3rVMpWlG5BFHVUtg5FscYSGuLidJlfg36A9sUxrDGdd4_F8",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Cook",
+    "id" : "AjEGjDYQLv",
+    "headline" : "Student at Fullstack Academy",
+    "firstName" : "Eric",
+    "emailAddress" : "ejcook111@gmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2011
+          },
+          "schoolName" : "State University of New York College at Plattsburgh",
+          "id" : 103278384,
+          "fieldOfStudy" : "Adolescence Education",
+          "endDate" : {
+            "year" : 2013
+          },
+          "degree" : "Master of Science in Teaching"
+        },
+        {
+          "startDate" : {
+            "year" : 2008
+          },
+          "schoolName" : "State University of New York College at Plattsburgh",
+          "id" : 45405222,
+          "fieldOfStudy" : "Mathematics",
+          "endDate" : {
+            "year" : 2011
+          },
+          "degree" : "Bachelor of Arts (B.A.)",
+          "activities" : "Zeta Beta tau"
+        }
+      ],
+      "_total" : 2
+    },
+    "dateOfBirth" : {
+      "year" : 1990,
+      "month" : 11,
+      "day" : 1
+    }
+  },
+  "name" : "Eric Cook",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 504577579,
+      "isCurrent" : true,
+      "title" : "Student",
+      "startDate" : {
+        "month" : 1,
+        "year" : 2014
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "name" : "Gap Inc./Old Navy",
+        "industry" : "Retail",
+        "id" : 165295
+      },
+      "id" : 110125471,
+      "isCurrent" : true,
+      "title" : "Customer Experience Associate",
+      "startDate" : {
+        "month" : 6,
+        "year" : 2009
+      }
+    },
+    {
+      "company" : {
+        "type" : "Government Agency",
+        "size" : "10,001+ employees",
+        "name" : "NYC Department of Education",
+        "industry" : "Education Management",
+        "id" : 2905
+      },
+      "id" : 414011451,
+      "isCurrent" : false,
+      "title" : "Mathematics Teacher",
+      "endDate" : {
+        "month" : 1,
+        "year" : 2014
+      },
+      "startDate" : {
+        "month" : 9,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "201-500 employees",
+        "name" : "Huntington Learning Center",
+        "industry" : "Education Management",
+        "id" : 164244
+      },
+      "id" : 414010812,
+      "isCurrent" : false,
+      "title" : "Tutor",
+      "endDate" : {
+        "month" : 6,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 4,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "SHLD",
+        "name" : "Sears, Roebuck and Co.",
+        "industry" : "Retail",
+        "id" : 1942
+      },
+      "id" : 110125683,
+      "isCurrent" : false,
+      "title" : "Electronics Sales Associate",
+      "endDate" : {
+        "month" : 7,
+        "year" : 2008
+      },
+      "startDate" : {
+        "month" : 11,
+        "year" : 2007
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "MCD",
+        "name" : "McDonald's",
+        "industry" : "Restaurants",
+        "id" : 2677
+      },
+      "id" : 110125555,
+      "isCurrent" : false,
+      "title" : "Crew Coach",
+      "endDate" : {
+        "month" : 11,
+        "year" : 2007
+      },
+      "startDate" : {
+        "month" : 7,
+        "year" : 2005
+      }
+    }
+  ]
+})
+
+//Kelvin Yu
+User.create({
+
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "GDSYjeKb_Q",
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "Bachelor of Business Administration (BBA)",
+      "fieldOfStudy" : "Finance, General",
+      "id" : 176306523,
+      "schoolName" : "Boston University",
+      "endDate" : {
+        "year" : 2010
+      },
+      "startDate" : {
+        "year" : 2006
+      }
+    },
+    {
+      "activities" : "Alpha Kappa Psi Professional Business Fraternity, Chinese Student Association, Boston University Mixed Martial Arts",
+      "degree" : "BS",
+      "fieldOfStudy" : "Finance",
+      "id" : 22346625,
+      "notes" : "",
+      "schoolName" : "Boston University - School of Management",
+      "endDate" : {
+        "year" : 2010
+      },
+      "startDate" : {
+        "year" : 2006
+      }
+    },
+    {
+      "id" : 204603991,
+      "schoolName" : "Fullstack Academy",
+    },
+    {
+      "id" : 204605358,
+      "schoolName" : "Fullstack Academy",
+    }
+  ],
+  "email" : "kyu1012@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 7704,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 9,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T17:40:41Z",
+    "created_at" : "2013-06-29T21:31:48Z",
+    "following" : 8,
+    "followers" : 4,
+    "public_gists" : 0,
+    "public_repos" : 12,
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/kyu1012/received_events",
+    "events_url" : "https://api.github.com/users/kyu1012/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/kyu1012/repos",
+    "organizations_url" : "https://api.github.com/users/kyu1012/orgs",
+    "subscriptions_url" : "https://api.github.com/users/kyu1012/subscriptions",
+    "starred_url" : "https://api.github.com/users/kyu1012/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/kyu1012/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/kyu1012/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/kyu1012/followers",
+    "html_url" : "https://github.com/kyu1012",
+    "url" : "https://api.github.com/users/kyu1012",
+    "gravatar_id" : "a9e27b6a86cf2c5a869b19304f97bb73",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/4886387?",
+    "id" : 4886387,
+    "login" : "kyu1012"
+  },
+  "linkedin" : {
+    "summary" : "Self-starter at the leading Digital Demand Side Platform, MediaMath, and enhancing the supply product suite. Learning ROR on the side!\n\nSpecialties: Comparative analysis, Company Valuation, Research Analysis, Business Development, Product Management",
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "Business Development"
+          },
+          "id" : 30
+        },
+        {
+          "skill" : {
+            "name" : "Product Management"
+          },
+          "id" : 31
+        },
+        {
+          "skill" : {
+            "name" : "Analytics"
+          },
+          "id" : 32
+        },
+        {
+          "skill" : {
+            "name" : "Financial Modeling"
+          },
+          "id" : 33
+        },
+        {
+          "skill" : {
+            "name" : "Strategic Partnerships"
+          },
+          "id" : 34
+        },
+        {
+          "skill" : {
+            "name" : "Research"
+          },
+          "id" : 35
+        },
+        {
+          "skill" : {
+            "name" : "Online Advertising"
+          },
+          "id" : 36
+        },
+        {
+          "skill" : {
+            "name" : "Project Management"
+          },
+          "id" : 37
+        },
+        {
+          "skill" : {
+            "name" : "Digital Media"
+          },
+          "id" : 38
+        },
+        {
+          "skill" : {
+            "name" : "Digital Strategy"
+          },
+          "id" : 39
+        },
+        {
+          "skill" : {
+            "name" : "Web Analytics"
+          },
+          "id" : 40
+        },
+        {
+          "skill" : {
+            "name" : "Start-ups"
+          },
+          "id" : 41
+        },
+        {
+          "skill" : {
+            "name" : "Valuation"
+          },
+          "id" : 42
+        },
+        {
+          "skill" : {
+            "name" : "Financial Analysis"
+          },
+          "id" : 43
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 44
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 45
+        },
+        {
+          "skill" : {
+            "name" : "Angularjs"
+          },
+          "id" : 46
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 47
+        },
+        {
+          "skill" : {
+            "name" : "Express"
+          },
+          "id" : 48
+        },
+        {
+          "skill" : {
+            "name" : "Ruby"
+          },
+          "id" : 49
+        },
+        {
+          "skill" : {
+            "name" : "Ruby on Rails"
+          },
+          "id" : 50
+        },
+        {
+          "skill" : {
+            "name" : "ActiveRecord"
+          },
+          "id" : 51
+        },
+        {
+          "skill" : {
+            "name" : "SQL"
+          },
+          "id" : 52
+        },
+        {
+          "skill" : {
+            "name" : "Github"
+          },
+          "id" : 53
+        },
+        {
+          "skill" : {
+            "name" : "Test Driven Development"
+          },
+          "id" : 54
+        },
+        {
+          "skill" : {
+            "name" : "Sinatra"
+          },
+          "id" : 55
+        }
+      ],
+      "_total" : 26
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=25815921&authType=name&authToken=FBW2&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Cook",
+          "id" : "AjEGjDYQLv",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Maru",
+          "id" : "7xiZaujHrb",
+          "firstName" : "Nimit"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        },
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        },
+        {
+          "lastName" : "D'Alessandro",
+          "id" : "WkMxcboGNL",
+          "firstName" : "Scott"
+        },
+        {
+          "lastName" : "Buchanan",
+          "id" : "fGnvXFc51n",
+          "firstName" : "Hannah Jane"
+        },
+        {
+          "lastName" : "Leasia",
+          "id" : "wWHDhWIVhD",
+          "firstName" : "Charlotte"
+        },
+        {
+          "lastName" : "Koo",
+          "id" : "CSRTpH9PMC",
+          "firstName" : "Ji Ho"
+        },
+        {
+          "lastName" : "Dorman",
+          "id" : "RA_dFGEbz-",
+          "firstName" : "Kyle"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Student",
+          "summary" : "Learning to become a web developer in 3 months - HTML, CSS, JavaScript, jQuery, Ruby, Ruby on Rails.",
+          "startDate" : {
+            "year" : 2014,
+            "month" : 1
+          },
+          "isCurrent" : true,
+          "id" : 498640375,
+          "company" : {
+            "type" : "Educational Institution",
+            "size" : "1-10 employees",
+            "name" : "Fullstack Academy",
+            "industry" : "Internet",
+            "id" : 4985867
+          }
+        },
+        {
+          "title" : "Platform Partner Operations",
+          "summary" : "Account Management of supply vendors such as Google AdExchange, MSFT funded AppNexus, Rubicon, Pubmatic, among other hot media supply exchanges/platforms. \n\nProduct Management of new media tech innovations from said vendors with focus on Google AdExchange and AppNexus. Mostly, reading technical specifications, designing & project managing technical solutions/build.",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 8
+          },
+          "isCurrent" : true,
+          "id" : 368287068,
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "51-200 employees",
+            "name" : "MediaMath",
+            "industry" : "Internet",
+            "id" : 239341
+          }
+        },
+        {
+          "title" : "Analyst, Business Development",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2011,
+            "month" : 5
+          },
+          "isCurrent" : false,
+          "id" : 187711026,
+          "endDate" : {
+            "year" : 2012,
+            "month" : 8
+          },
+          "company" : {
+            "name" : "MediaMath",
+            "industry" : "Internet"
+          }
+        },
+        {
+          "title" : "Analyst, Supply Operations and Data",
+          "summary" : "Relationship management of RTB supply partners and data vendors.",
+          "startDate" : {
+            "year" : 2010,
+            "month" : 7
+          },
+          "isCurrent" : false,
+          "id" : 138774492,
+          "endDate" : {
+            "year" : 2011,
+            "month" : 5
+          },
+          "company" : {
+            "type" : "Privately Held",
+            "name" : "MediaMath",
+            "industry" : "Internet",
+            "id" : 239341
+          }
+        },
+        {
+          "title" : "Business Development Analyst",
+          "summary" : "•Researched the requirements of over 600 scholarships to increase the functionality of ScholarPro’s software\n•Conceptualized the ‘Non-Profit Sector’ with the CEO of ScholarPro to help organizations and individuals either create scholarships or make anonymous donations to qualified students\n•Sourced four qualified universities whose student populations in total exceeded 130,000 students",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 5
+          },
+          "isCurrent" : false,
+          "id" : 118484800,
+          "endDate" : {
+            "year" : 2009,
+            "month" : 7
+          },
+          "company" : {
+            "name" : "Scholar Pro",
+            "industry" : "Education Management"
+          }
+        }
+      ],
+      "_total" : 5
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_oCf8SHsPv0YW451EeTxPSEHuvZHIq5CEe5R0SEw2EOpRI3voQk0uio0GUveqBC_QITDYCDv3M--m",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Yu",
+    "interests" : "Psychology/Strategy Books: 48 Laws of Power, Art of War, Telling Lies. Hip-hop choreography, Mixed Martial Arts, Boxing, Brazilian Jiu Jitsu, Chess.",
+    "id" : "GDSYjeKb_Q",
+    "headline" : "Student at Fullstack Academy",
+    "firstName" : "Kelvin",
+    "emailAddress" : "kyu1012@gmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2006
+          },
+          "schoolName" : "Boston University",
+          "id" : 176306523,
+          "fieldOfStudy" : "Finance, General",
+          "endDate" : {
+            "year" : 2010
+          },
+          "degree" : "Bachelor of Business Administration (BBA)"
+        },
+        {
+          "startDate" : {
+            "year" : 2006
+          },
+          "schoolName" : "Boston University - School of Management",
+          "notes" : "",
+          "id" : 22346625,
+          "fieldOfStudy" : "Finance",
+          "endDate" : {
+            "year" : 2010
+          },
+          "degree" : "BS",
+          "activities" : "Alpha Kappa Psi Professional Business Fraternity, Chinese Student Association, Boston University Mixed Martial Arts"
+        },
+        {
+          "schoolName" : "Fullstack Academy",
+          "id" : 204603991
+        },
+        {
+          "schoolName" : "Fullstack Academy",
+          "id" : 204605358
+        }
+      ],
+      "_total" : 4
+    },
+    "dateOfBirth" : {
+      "year" : 1988,
+      "month" : 10,
+      "day" : 12
+    }
+  },
+  "name" : "Kelvin Yu",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 498640375,
+      "isCurrent" : true,
+      "title" : "Student",
+      "startDate" : {
+        "month" : 1,
+        "year" : 2014
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "51-200 employees",
+        "name" : "MediaMath",
+        "industry" : "Internet",
+        "id" : 239341
+      },
+      "id" : 368287068,
+      "isCurrent" : true,
+      "title" : "Platform Partner Operations",
+      "startDate" : {
+        "month" : 8,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "name" : "MediaMath",
+        "industry" : "Internet"
+      },
+      "id" : 187711026,
+      "isCurrent" : false,
+      "title" : "Analyst, Business Development",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2012
+      },
+      "startDate" : {
+        "month" : 5,
+        "year" : 2011
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "name" : "MediaMath",
+        "industry" : "Internet",
+        "id" : 239341
+      },
+      "id" : 138774492,
+      "isCurrent" : false,
+      "title" : "Analyst, Supply Operations and Data",
+      "endDate" : {
+        "month" : 5,
+        "year" : 2011
+      },
+      "startDate" : {
+        "month" : 7,
+        "year" : 2010
+      }
+    },
+    {
+      "company" : {
+        "name" : "Scholar Pro",
+        "industry" : "Education Management"
+      },
+      "id" : 118484800,
+      "isCurrent" : false,
+      "title" : "Business Development Analyst",
+      "endDate" : {
+        "month" : 7,
+        "year" : 2009
+      },
+      "startDate" : {
+        "month" : 5,
+        "year" : 2009
+      }
+    }
+  ]
+})
+
+//Lauren Ashpole
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "G_psXT4Atc",
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "English Literature (British and Commonwealth)",
+      "id" : 165058454,
+      "schoolName" : "UC Irvine",
+      "endDate" : {
+        "year" : 2007
+      }
+    }
+  ],
+  "email" : "lauren@laurenashpole.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 12518,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 10,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T19:42:09Z",
+    "created_at" : "2013-09-16T17:31:55Z",
+    "following" : 2,
+    "followers" : 3,
+    "public_gists" : 0,
+    "public_repos" : 10,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "lauren@laurenashpole.com",
+    "location" : "",
+    "blog" : "",
+    "company" : "",
+    "name" : "Lauren Ashpole",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/laurenashpole/received_events",
+    "events_url" : "https://api.github.com/users/laurenashpole/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/laurenashpole/repos",
+    "organizations_url" : "https://api.github.com/users/laurenashpole/orgs",
+    "subscriptions_url" : "https://api.github.com/users/laurenashpole/subscriptions",
+    "starred_url" : "https://api.github.com/users/laurenashpole/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/laurenashpole/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/laurenashpole/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/laurenashpole/followers",
+    "html_url" : "https://github.com/laurenashpole",
+    "url" : "https://api.github.com/users/laurenashpole",
+    "gravatar_id" : "58387d0119271e2c6c25940ec208c595",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5471778?",
+    "id" : 5471778,
+    "login" : "laurenashpole"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "HTML 5"
+          },
+          "id" : 18
+        },
+        {
+          "skill" : {
+            "name" : "jQuery"
+          },
+          "id" : 19
+        },
+        {
+          "skill" : {
+            "name" : "Photoshop"
+          },
+          "id" : 20
+        },
+        {
+          "skill" : {
+            "name" : "Illustrator"
+          },
+          "id" : 21
+        },
+        {
+          "skill" : {
+            "name" : "CSS3"
+          },
+          "id" : 22
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 23
+        }
+      ],
+      "_total" : 6
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=242600319&authType=name&authToken=sRXz&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Brennan",
+          "id" : "jneLfIxkN_",
+          "firstName" : "Jackie"
+        },
+        {
+          "lastName" : "Hendricks Jr.",
+          "id" : "nN37FpN-Q4",
+          "firstName" : "Patricio"
+        },
+        {
+          "lastName" : "Tan",
+          "id" : "Mp9tRyZgp4",
+          "firstName" : "Neil"
+        },
+        {
+          "lastName" : "D.",
+          "id" : "hftGLM3MU8",
+          "firstName" : "Brian"
+        },
+        {
+          "lastName" : "Jordan",
+          "id" : "g2odq2njhO",
+          "firstName" : "Clif"
+        },
+        {
+          "lastName" : "A.",
+          "id" : "1zSVx3R3xl",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Shans",
+          "id" : "EBqfoGeXZG",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Vega",
+          "id" : "yKnKBU4PB2",
+          "firstName" : "Durlan"
+        },
+        {
+          "lastName" : "Flynn",
+          "id" : "-omUKw6ijh",
+          "firstName" : "Brandon"
+        },
+        {
+          "lastName" : "W.",
+          "id" : "ID8ZPegqsD",
+          "firstName" : "Jeffrey"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Freelance Front-End Web Developer",
+          "summary" : "PSD Conversion\nCreating handcoded themes for Tumblr utilizing HTML5, CSS3, and jQuery • Integration of social networking widgets including Facebook and Twitter • Testing for cross-broswer compatibility\n\nWordPress Customization\nProducing page templates consistent with existing styles and functionality • Setting up, editing, and styling plugins and widgets\n\nMobile Compatibility\nUpdating existing themes using media queries to ensure responsive, mobile friendly design",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 2
+          },
+          "isCurrent" : true,
+          "id" : 379444641,
+          "company" : {
+            "name" : "Self Employed",
+            "industry" : "Financial Services"
+          }
+        },
+        {
+          "title" : "Font Designer & Retailer",
+          "summary" : "Creating hand illustrated and computer generated lettering • Designing and maintaining responsive e-commerce site • Customer technical and licensing support",
+          "startDate" : {
+            "year" : 2008,
+            "month" : 7
+          },
+          "isCurrent" : true,
+          "id" : 379444802,
+          "company" : {
+            "name" : "laurenashpole.com",
+            "industry" : "Financial Services"
+          }
+        },
+        {
+          "title" : "Administrative Assistant",
+          "summary" : "Assistant to Managing Directors and Accountants at boutique financial management firm • Payment processing and contract preparation • Ordering and accounts payable reconciliation",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 3
+          },
+          "isCurrent" : false,
+          "id" : 379444504,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "company" : {
+            "name" : "KLS Professional Advisors",
+            "industry" : "Financial Services"
+          }
+        }
+      ],
+      "_total" : 3
+    },
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Ashpole",
+    "id" : "G_psXT4Atc",
+    "headline" : "Student Fullstack Academy",
+    "firstName" : "Lauren",
+    "emailAddress" : "lauren@laurenashpole.com",
+    "educations" : {
+      "values" : [
+        {
+          "schoolName" : "UC Irvine",
+          "id" : 165058454,
+          "fieldOfStudy" : "English Literature (British and Commonwealth)",
+          "endDate" : {
+            "year" : 2007
+          },
+          "degree" : "Bachelor of Arts (B.A.)"
+        }
+      ],
+      "_total" : 1
+    }
+  },
+  "name" : "Lauren Ashpole",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "name" : "Self Employed",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444641,
+      "isCurrent" : true,
+      "title" : "Freelance Front-End Web Developer",
+      "startDate" : {
+        "month" : 2,
+        "year" : 2009
+      }
+    },
+    {
+      "company" : {
+        "name" : "laurenashpole.com",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444802,
+      "isCurrent" : true,
+      "title" : "Font Designer & Retailer",
+      "startDate" : {
+        "month" : 7,
+        "year" : 2008
+      }
+    },
+    {
+      "company" : {
+        "name" : "KLS Professional Advisors",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444504,
+      "isCurrent" : false,
+      "title" : "Administrative Assistant",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 3,
+        "year" : 2009
+      }
+    }
+  ]
+})
+
+//Jisan data
+// User.create({
+
+//   "auth_methods" : [
+//     {
+//       "provider" : "linkedin",
+//       "providerId" : "PvmfqY724t",
+
+//     }
+//   ],
+//   "educations" : [
+//     {
+//       "fieldOfStudy" : "Web Development",
+//       "id" : 204678887,
+//       "schoolName" : "Fullstack Academy of Code",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "degree" : "Bachelors",
+//       "fieldOfStudy" : "History",
+//       "id" : 74426792,
+//       "schoolName" : "Wesleyan University",
+//       "endDate" : {
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "id" : 81501045,
+//       "notes" : "",
+//       "schoolName" : "Stuyvesant High School",
+//       "endDate" : {
+//         "year" : 2008
+//       },
+//       "startDate" : {
+//         "year" : 2005
+//       }
+//     }
+//   ],
+//   "email" : "jzaman@wesleyan.edu",
+//   "github" : {
+//     "plan" : {
+//       "private_repos" : 0,
+//       "collaborators" : 0,
+//       "space" : 307200,
+//       "name" : "free"
+//     },
+//     "collaborators" : 0,
+//     "disk_usage" : 89065,
+//     "owned_private_repos" : 0,
+//     "total_private_repos" : 11,
+//     "private_gists" : 1,
+//     "updated_at" : "2014-03-25T16:07:33Z",
+//     "created_at" : "2013-05-22T16:40:57Z",
+//     "following" : 29,
+//     "followers" : 12,
+//     "public_gists" : 15,
+//     "public_repos" : 36,
+//     "bio" : null,
+//     "hireable" : true,
+//     "email" : "jzaman@wesleyan.edu",
+//     "location" : "New York, NY",
+//     "blog" : "jisan-octopress.herokuapp.com",
+//     "company" : "",
+//     "name" : "Jisan Zaman",
+//     "site_admin" : false,
+//     "type" : "User",
+//     "received_events_url" : "https://api.github.com/users/Superjisan/received_events",
+//     "events_url" : "https://api.github.com/users/Superjisan/events{/privacy}",
+//     "repos_url" : "https://api.github.com/users/Superjisan/repos",
+//     "organizations_url" : "https://api.github.com/users/Superjisan/orgs",
+//     "subscriptions_url" : "https://api.github.com/users/Superjisan/subscriptions",
+//     "starred_url" : "https://api.github.com/users/Superjisan/starred{/owner}{/repo}",
+//     "gists_url" : "https://api.github.com/users/Superjisan/gists{/gist_id}",
+//     "following_url" : "https://api.github.com/users/Superjisan/following{/other_user}",
+//     "followers_url" : "https://api.github.com/users/Superjisan/followers",
+//     "html_url" : "https://github.com/Superjisan",
+//     "url" : "https://api.github.com/users/Superjisan",
+//     "gravatar_id" : "a2619a8a1f6182567a9e63521a3bf982",
+//     "avatar_url" : "https://avatars.githubusercontent.com/u/4501479?",
+//     "id" : 4501479,
+//     "login" : "Superjisan"
+//   },
+//   "linkedin" : {
+//     "volunteer" : {
+//       "volunteerExperiences" : {
+//         "values" : [
+//           {
+//             "role" : "Big Brother",
+//             "organization" : {
+//               "name" : "Big Brothers Big Sisters",
+//               "id" : 7171
+//             },
+//             "id" : 62
+//           },
+//           {
+//             "role" : "Google Hangout Current Events Instructor",
+//             "organization" : {
+//               "name" : "Selfhelp Community Services",
+//               "id" : 121309
+//             },
+//             "id" : 63
+//           }
+//         ],
+//         "_total" : 2
+//       }
+//     },
+//     "summary" : "I am a junior website developer who is well-versed in JavaScript and Ruby. I am trained in the MEAN (MongoDB, Express, Angular.JS, Node.JS) Stack but am also familiar with Ruby on Rails, Ember.JS, Backbone.JS, and the LAMP stack (Linux, Apache, MySQL, and Perl/Python/PHP). My computer is a Linux Ubuntu machine, and my blog is maintained in WordPress.\n\nI am working on several apps right now that showcase my skills in these different platforms as well as in mobile development. Check out my GitHub page: Superjisan.github.com for some of the projects and code I've done.\n\nHere's my blog about my coding adventures at Fullstack Academy: Superjisan.org/devblog.",
+//     "skills" : {
+//       "values" : [
+//         {
+//           "skill" : {
+//             "name" : "Tutoring"
+//           },
+//           "id" : 16
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SPSS"
+//           },
+//           "id" : 38
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Data Analysis"
+//           },
+//           "id" : 39
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Critical Thinking"
+//           },
+//           "id" : 6
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Market Research"
+//           },
+//           "id" : 42
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Small Talk"
+//           },
+//           "id" : 37
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Listening Skills"
+//           },
+//           "id" : 5
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Writing"
+//           },
+//           "id" : 9
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Swing Dancing"
+//           },
+//           "id" : 10
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Money Management"
+//           },
+//           "id" : 11
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Supervising"
+//           },
+//           "id" : 12
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Microsoft Excel"
+//           },
+//           "id" : 30
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Microsoft Office"
+//           },
+//           "id" : 31
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Product Management"
+//           },
+//           "id" : 32
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Mobile Marketing"
+//           },
+//           "id" : 35
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Problem Solving"
+//           },
+//           "id" : 4
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Bengali"
+//           },
+//           "id" : 14
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Youth Mentoring"
+//           },
+//           "id" : 17
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Product Development"
+//           },
+//           "id" : 33
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Editing"
+//           },
+//           "id" : 41
+//         },
+//         {
+//           "skill" : {
+//             "name" : "HTML"
+//           },
+//           "id" : 44
+//         },
+//         {
+//           "skill" : {
+//             "name" : "WordPress"
+//           },
+//           "id" : 51
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Blues Dancing"
+//           },
+//           "id" : 29
+//         },
+//         {
+//           "skill" : {
+//             "name" : "HTML 5"
+//           },
+//           "id" : 45
+//         },
+//         {
+//           "skill" : {
+//             "name" : "CSS"
+//           },
+//           "id" : 46
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Ruby"
+//           },
+//           "id" : 47
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Ruby on Rails"
+//           },
+//           "id" : 48
+//         },
+//         {
+//           "skill" : {
+//             "name" : "JavaScript"
+//           },
+//           "id" : 49
+//         },
+//         {
+//           "skill" : {
+//             "name" : "jQuery"
+//           },
+//           "id" : 50
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Web Development"
+//           },
+//           "id" : 52
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Node.js"
+//           },
+//           "id" : 54
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Backbone.js"
+//           },
+//           "id" : 55
+//         },
+//         {
+//           "skill" : {
+//             "name" : "JSON"
+//           },
+//           "id" : 56
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SQL"
+//           },
+//           "id" : 57
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SQLite"
+//           },
+//           "id" : 58
+//         },
+//         {
+//           "skill" : {
+//             "name" : "MongoDB"
+//           },
+//           "id" : 59
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Redis"
+//           },
+//           "id" : 60
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Cricket"
+//           },
+//           "id" : 64
+//         }
+//       ],
+//       "_total" : 38
+//     },
+//     "siteStandardProfileRequest" : {
+//       "url" : "http://www.linkedin.com/profile/view?id=118698139&authType=name&authToken=3H8C&trk=api*a3226473*s3299743*"
+//     },
+//     "relatedProfileViews" : {
+//       "values" : [
+//         {
+//           "lastName" : "Domingo",
+//           "id" : "hiyN8jWqPW",
+//           "firstName" : "Migi"
+//         },
+//         {
+//           "lastName" : "Yu",
+//           "id" : "GDSYjeKb_Q",
+//           "firstName" : "Kelvin"
+//         },
+//         {
+//           "lastName" : "Cook",
+//           "id" : "AjEGjDYQLv",
+//           "firstName" : "Eric"
+//         },
+//         {
+//           "lastName" : "Wallace",
+//           "id" : "tIxs2lfEnw",
+//           "firstName" : "Omari"
+//         },
+//         {
+//           "lastName" : "Ingram",
+//           "id" : "buLJshkhKq",
+//           "firstName" : "Russell"
+//         },
+//         {
+//           "lastName" : "Pazmiño",
+//           "id" : "En1mNn2tQC",
+//           "firstName" : "Luis"
+//         },
+//         {
+//           "lastName" : "Tsui",
+//           "id" : "JmCfHALEkj",
+//           "firstName" : "Jaclyn"
+//         },
+//         {
+//           "lastName" : "Giraldo",
+//           "id" : "2qKGhmTNbZ",
+//           "firstName" : "Max"
+//         },
+//         {
+//           "lastName" : "Maru",
+//           "id" : "7xiZaujHrb",
+//           "firstName" : "Nimit"
+//         },
+//         {
+//           "lastName" : "Drury",
+//           "id" : "hne4Az6W6H",
+//           "firstName" : "James"
+//         }
+//       ],
+//       "_total" : 10
+//     },
+//     "recommendationsReceived" : {
+//       "_total" : 0
+//     },
+//     "positions" : {
+//       "values" : [
+//         {
+//           "title" : "Student",
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "isCurrent" : false,
+//           "id" : 513835875,
+//           "endDate" : {
+//             "year" : 2014
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "1-10 employees",
+//             "name" : "Fullstack Academy",
+//             "industry" : "Internet",
+//             "id" : 4985867
+//           }
+//         },
+//         {
+//           "title" : "Student",
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "isCurrent" : false,
+//           "id" : 513838091,
+//           "endDate" : {
+//             "year" : 2014
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "1-10 employees",
+//             "name" : "Fullstack Academy",
+//             "industry" : "Internet",
+//             "id" : 4985867
+//           }
+//         },
+//         {
+//           "title" : "Research Assistant",
+//           "summary" : "1. Overseeing Product and App Development; \n2. Recruitment for panel and specific project; \n3. Organizing Support/Service Infrastructure; \n4. Developed Company Metrics and Reports; Testing Specialist; Authored Surveys; \n5. Assisted in  development of new technology Location Based Services; \n6. Creating reporting portals for clients and internal evaluations; \n7. Managed the creation of a new Website; \n8. Managed company project planning via ASANA.\n9. Maintained a panel of 100,000+ people and their demographic datapoints via proprietary technology tool.\n10. Manage client projects, present deliverable to clients.",
+//           "startDate" : {
+//             "year" : 2012,
+//             "month" : 10
+//           },
+//           "isCurrent" : false,
+//           "id" : 342035594,
+//           "endDate" : {
+//             "year" : 2013,
+//             "month" : 10
+//           },
+//           "company" : {
+//             "type" : "Partnership",
+//             "size" : "11-50 employees",
+//             "name" : "Paradigm Sample",
+//             "industry" : "Market Research",
+//             "id" : 252666
+//           }
+//         },
+//         {
+//           "title" : "Residential Assistant",
+//           "summary" : "1.Assisted students and staff to ensure a safe and fun environment for learning;\n2.Supervised special-needs students with ADHD, Asperger, and Bipolar disorder; \n3.Organized the yearbook committee and created an online yearbook; \n4.Led fun and educational activities during afternoons and weekends; \n5.Supervised students during dances, weekends, quad-time and field trips; \n6.Maintained a high-energy and positive attitude throughout 6 weeks to provide a better work environment; \n7.Handled emergency situations on a 24-hour basis.",
+//           "startDate" : {
+//             "year" : 2010,
+//             "month" : 6
+//           },
+//           "isCurrent" : false,
+//           "id" : 214911824,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 8
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "10,001+ employees",
+//             "name" : "Johns Hopkins University Center for Talented Youth",
+//             "industry" : "Higher Education",
+//             "id" : 3528
+//           }
+//         },
+//         {
+//           "title" : "Treasurer",
+//           "summary" : "1.Managed a $200,000 budget; \n2.Created the budget for the upcoming year; Collected rents and dues from members;\n3. Reported to the Adelphic Literary Society (alumni branch) regarding budgetary concerns; \n4. Managed a  $15,000 fund for the Adelphic Educational Fund (AEF), a 501(c) organization ;\n5. Worked with members of the society to create payment plans for students with financial need in order to make membership more accessible; \n6.Followed up with other officers of the Society, its members, local businesses regarding financial transactions;\n7. Partnered with Alumni members to purchase new equipment to increase office functionality; \n8. Institutionalized the use of software such as Google Docs, Boomerang, Expensify for better record keeping; \n9. Received “The Brown Award for Service to the Community” from the AEF.",
+//           "startDate" : {
+//             "year" : 2011,
+//             "month" : 5
+//           },
+//           "isCurrent" : false,
+//           "id" : 214912397,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "51-200 employees",
+//             "name" : "Alpha Delta Phi Society",
+//             "industry" : "Higher Education",
+//             "id" : 2073909
+//           }
+//         },
+//         {
+//           "title" : "Admissions Office Tour Guide",
+//           "summary" : "1.Gave over 300 tours to prospective students, parents, alumni, and high school counselors- the most in school history; \n2.Provided a personal and professional perspective about Wesleyan; \n3.Interacted with various people of many different backgrounds; \n4.Showed the facilities that highlighted the university and promoted its reputation, programs and environment;\n5. Acquired knowledge about all aspects of the University thoroughly and incorporated personal stories in order to give factual yet exciting tours; \n6.Earned the “Tour Guide of the Month” award after only one semester.",
+//           "startDate" : {
+//             "year" : 2009,
+//             "month" : 3
+//           },
+//           "isCurrent" : false,
+//           "id" : 214910839,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         },
+//         {
+//           "title" : "Student",
+//           "summary" : "B.A. in History with Honors",
+//           "startDate" : {
+//             "year" : 2008,
+//             "month" : 9
+//           },
+//           "isCurrent" : false,
+//           "id" : 185342794,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         },
+//         {
+//           "title" : "Van Driver",
+//           "startDate" : {
+//             "year" : 2008
+//           },
+//           "isCurrent" : false,
+//           "id" : 244958520,
+//           "endDate" : {
+//             "year" : 2012
+//           },
+//           "company" : {
+//             "name" : "Wesleyan University Office of Community Service",
+//             "industry" : "Higher Education"
+//           }
+//         },
+//         {
+//           "title" : "Resident Advisor",
+//           "summary" : "1.Fostered a community in two different resident halls; \n2. Acted as a liaison between the Office of Residential Life and the residents in the hall; \n3.Advised students on various issues that included policy enforcement, drugs and alcohol, social justice; Updated residents about events on campus;\n4. Raised over $2,000 for community service projects around Wesleyan and Middletown, CT. \n5.Organized various programs that promoted a sense of community; \n6. Earned the “Resident Advisor Of the Year” Award in Spring 2011.",
+//           "startDate" : {
+//             "year" : 2009,
+//             "month" : 8
+//           },
+//           "isCurrent" : false,
+//           "id" : 199950435,
+//           "endDate" : {
+//             "year" : 2011,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         }
+//       ],
+//       "_total" : 9
+//     },
+//     "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_jE7gvrM4ZX5CbGoP0muGvtZVs_PCbXVP0HUGvPJo5QbPZ8D1luxlR1SXND1yXiRxpWS_sqFixbuY",
+//     "phoneNumbers" : {
+//       "_total" : 0
+//     },
+//     "numRecommenders" : 0,
+//     "lastName" : "Zaman",
+//     "id" : "PvmfqY724t",
+//     "honorsAwards" : {
+//       "values" : [
+//         {
+//           "name" : "Tour Guide of the Month",
+//           "issuer" : "Wesleyan University Office of Admissions",
+//           "id" : 23
+//         },
+//         {
+//           "name" : "Resident Advisor of The Year",
+//           "issuer" : "Wesleyan University Office of Residential Life",
+//           "id" : 24
+//         },
+//         {
+//           "name" : "Departmental Honors",
+//           "issuer" : "Wesleyan University History Department",
+//           "id" : 25
+//         },
+//         {
+//           "name" : "AP Scholar with Distinction",
+//           "issuer" : "CollegeBoard",
+//           "id" : 26
+//         },
+//         {
+//           "name" : "Gram Award for Service to the Community",
+//           "issuer" : "Adelphic Literary Society",
+//           "id" : 27
+//         },
+//         {
+//           "name" : "Most Outstanding Cricket Player",
+//           "issuer" : "Stuyvesant High School Athletics Department",
+//           "id" : 40
+//         }
+//       ],
+//       "_total" : 6
+//     },
+//     "headline" : "Web Developer, Student at Fullstack Academy of Code",
+//     "firstName" : "Jisan",
+//     "emailAddress" : "jzaman@wesleyan.edu",
+//     "educations" : {
+//       "values" : [
+//         {
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "schoolName" : "Fullstack Academy of Code",
+//           "id" : 204678887,
+//           "fieldOfStudy" : "Web Development",
+//           "endDate" : {
+//             "year" : 2014
+//           }
+//         },
+//         {
+//           "startDate" : {
+//             "year" : 2008
+//           },
+//           "schoolName" : "Wesleyan University",
+//           "id" : 74426792,
+//           "fieldOfStudy" : "History",
+//           "endDate" : {
+//             "year" : 2012
+//           },
+//           "degree" : "Bachelors"
+//         },
+//         {
+//           "startDate" : {
+//             "year" : 2005
+//           },
+//           "schoolName" : "Stuyvesant High School",
+//           "notes" : "",
+//           "id" : 81501045,
+//           "endDate" : {
+//             "year" : 2008
+//           }
+//         }
+//       ],
+//       "_total" : 3
+//     },
+//     "dateOfBirth" : {
+//       "year" : 1990,
+//       "month" : 6,
+//       "day" : 4
+//     }
+//   },
+//   "name" : "Jisan Zaman",
+//   "roles" : [
+//     "developer"
+//   ],
+//   "work_experiences" : [
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "1-10 employees",
+//         "name" : "Fullstack Academy",
+//         "industry" : "Internet",
+//         "id" : 4985867
+//       },
+//       "id" : 513835875,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "1-10 employees",
+//         "name" : "Fullstack Academy",
+//         "industry" : "Internet",
+//         "id" : 4985867
+//       },
+//       "id" : 513838091,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Partnership",
+//         "size" : "11-50 employees",
+//         "name" : "Paradigm Sample",
+//         "industry" : "Market Research",
+//         "id" : 252666
+//       },
+//       "id" : 342035594,
+//       "isCurrent" : false,
+//       "title" : "Research Assistant",
+//       "endDate" : {
+//         "month" : 10,
+//         "year" : 2013
+//       },
+//       "startDate" : {
+//         "month" : 10,
+//         "year" : 2012
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "10,001+ employees",
+//         "name" : "Johns Hopkins University Center for Talented Youth",
+//         "industry" : "Higher Education",
+//         "id" : 3528
+//       },
+//       "id" : 214911824,
+//       "isCurrent" : false,
+//       "title" : "Residential Assistant",
+//       "endDate" : {
+//         "month" : 8,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 6,
+//         "year" : 2010
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "51-200 employees",
+//         "name" : "Alpha Delta Phi Society",
+//         "industry" : "Higher Education",
+//         "id" : 2073909
+//       },
+//       "id" : 214912397,
+//       "isCurrent" : false,
+//       "title" : "Treasurer",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 5,
+//         "year" : 2011
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 214910839,
+//       "isCurrent" : false,
+//       "title" : "Admissions Office Tour Guide",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 3,
+//         "year" : 2009
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 185342794,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 9,
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "company" : {
+//         "name" : "Wesleyan University Office of Community Service",
+//         "industry" : "Higher Education"
+//       },
+//       "id" : 244958520,
+//       "isCurrent" : false,
+//       "title" : "Van Driver",
+//       "endDate" : {
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 199950435,
+//       "isCurrent" : false,
+//       "title" : "Resident Advisor",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2011
+//       },
+//       "startDate" : {
+//         "month" : 8,
+//         "year" : 2009
+//       }
+//     }
+//   ]
+// });
+
 
 console.log('Done Seeding Data');
   res.send('200')
