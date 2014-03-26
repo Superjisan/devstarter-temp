@@ -113,13 +113,33 @@ exports.user = function(req, res, next, id) {
 
 //shows pending profile requests
 exports.admin = function(req, res) {
-	User.find({}, function(err, developers){
+	User.find({'roles':{$in: ['developer'], $nin:['approved', 'denied']}}, function(err, developers){
 		res.render('users/admin', {
 			title: 'Admin Page',
 			users: developers
 		});
 	});
 };
+
+exports.approve = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
+
+exports.deny = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
 
 
 /**

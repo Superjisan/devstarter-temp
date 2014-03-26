@@ -10,7 +10,10 @@ module.exports = function(app, passport) {
 	app.get('/signup', users.signup);
 	app.get('/signout', users.signout);
 	// app.get('/users/me', users.me);
-	app.get('/users/admin', users.admin);
+	app.get('/users/admin', authorization.isAdmin, users.admin);
+	app.post('/users/admin/approve', authorization.isAdmin, users.approve);
+	app.post('/users/admin/deny', authorization.isAdmin, users.deny);
+
 
 	// Setting up the users api
 	// app.post('/users', users.create);
@@ -50,8 +53,4 @@ module.exports = function(app, passport) {
 	app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
 			failureRedirect: '/signin'
 		}), users.authCallback);
-
-
-
-
 };
