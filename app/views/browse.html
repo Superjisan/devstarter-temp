@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="/brackets/images/favicon.png" type="image/png">
+{% extends 'layouts/developers.html' %}
 
-  <title>Bracket Responsive Bootstrap3 Admin</title>
-
-  <link href="brackets/css/style.default.css" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-
-<!-- Preloader -->
-<!-- <div >
-    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
-</div> -->
-
+{% block content%}
 <section>
 
 
@@ -85,7 +61,8 @@
 
                 <div class="media-body">
                   <div class="pull-right"> <img class="img-responsive" src="{{developer.linkedin.pictureUrl}}"> </div>
-                  <h4 class="person-name">{{developer.name}}</h4>
+                  <a href="/profile/{{developer.name}}">
+                  <h4 class="person-name">{{developer.name}}</h4> </a>
 
                   <div class="text-muted"><i class="fa fa-briefcase"></i> {{developer.linkedin.headline}}</a></div>
                   <ul class="social-list">
@@ -399,37 +376,6 @@
   </div><!-- rightpanel -->
 
 </section>
+{% endblock%}
 
 
-<script src="/brackets/js/jquery-1.10.2.min.js"></script>
-<script src="/brackets/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="/brackets/js/bootstrap.min.js"></script>
-<script src="/brackets/js/modernizr.min.js"></script>
-<script src="/brackets/js/jquery.sparkline.min.js"></script>
-<script src="/brackets/js/toggles.min.js"></script>
-<script src="/brackets/js/retina.min.js"></script>
-<script src="/brackets/js/jquery.cookies.js"></script>
-
-<script src="/brackets/js/holder.js"></script>
-
-<script src="/brackets/js/custom.js"></script>
-<script>
-  jQuery(window).load(function(){
-
-    var container = document.querySelector('#bloglist');
-    // var msnry = new Masonry( container, {
-    //   // options
-    //   columnWidth: '.col-xs-6',
-    //   itemSelector: '.col-xs-6'
-    // });
-
-  });
-
-        window.user = {{user|safe}};
-        window.developers = {{developers|json|safe}};
-
-
-</script>
-
-</body>
-</html>
