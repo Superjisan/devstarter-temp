@@ -2124,250 +2124,6 @@ User.create({
   ]
 });
 
-//Max Giraldo
-User.create({
-
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "2qKGhmTNbZ",
-    }
-  ],
-  "educations" : [
-    {
-      "id" : 199155650,
-      "notes" : "Intensive, 12-week web development/software engineering immersive course.",
-      "schoolName" : "Fullstack Academy",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "degree" : "BFA",
-      "fieldOfStudy" : "Advertising",
-      "id" : 62842653,
-      "schoolName" : "Art Center College of Design",
-      "endDate" : {
-        "year" : 2013
-      },
-      "startDate" : {
-        "year" : 2011
-      }
-    }
-  ],
-  "email" : "hi@maxgiraldo.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 5,
-      "collaborators" : 1,
-      "space" : 614400,
-      "name" : "micro"
-    },
-    "collaborators" : 3,
-    "disk_usage" : 1587,
-    "owned_private_repos" : 3,
-    "total_private_repos" : 9,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T01:58:48Z",
-    "created_at" : "2013-07-01T23:21:12Z",
-    "following" : 7,
-    "followers" : 6,
-    "public_gists" : 0,
-    "public_repos" : 2,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "",
-    "location" : "nyc",
-    "blog" : "maxgiraldo.com",
-    "company" : "",
-    "name" : "Max",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/maxgiraldo/received_events",
-    "events_url" : "https://api.github.com/users/maxgiraldo/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/maxgiraldo/repos",
-    "organizations_url" : "https://api.github.com/users/maxgiraldo/orgs",
-    "subscriptions_url" : "https://api.github.com/users/maxgiraldo/subscriptions",
-    "starred_url" : "https://api.github.com/users/maxgiraldo/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/maxgiraldo/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/maxgiraldo/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/maxgiraldo/followers",
-    "html_url" : "https://github.com/maxgiraldo",
-    "url" : "https://api.github.com/users/maxgiraldo",
-    "gravatar_id" : "4b1bd19834c6b4adfcf3286d880bba0a",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/4913413?",
-    "id" : 4913413,
-    "login" : "maxgiraldo"
-  },
-  "linkedin" : {
-    "summary" : "maxgiraldo.com",
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=63020039&authType=name&authToken=JuKE&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Wallace",
-          "id" : "tIxs2lfEnw",
-          "firstName" : "Omari"
-        },
-        {
-          "lastName" : "Yu",
-          "id" : "GDSYjeKb_Q",
-          "firstName" : "Kelvin"
-        },
-        {
-          "lastName" : "Koo",
-          "id" : "CSRTpH9PMC",
-          "firstName" : "Ji Ho"
-        },
-        {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
-        },
-        {
-          "lastName" : "Ingram",
-          "id" : "buLJshkhKq",
-          "firstName" : "Russell"
-        },
-        {
-          "lastName" : "Xiang",
-          "id" : "0CbQxKE7yn",
-          "firstName" : "Tong"
-        },
-        {
-          "lastName" : "D'Alessandro",
-          "id" : "WkMxcboGNL",
-          "firstName" : "Scott"
-        },
-        {
-          "lastName" : "Tam",
-          "id" : "yV3QGJfBVK",
-          "firstName" : "Waine"
-        },
-        {
-          "lastName" : "Buchanan",
-          "id" : "fGnvXFc51n",
-          "firstName" : "Hannah Jane"
-        },
-        {
-          "lastName" : "Dorman",
-          "id" : "RA_dFGEbz-",
-          "firstName" : "Kyle"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "primaryTwitterAccount" : {
-      "providerAccountName" : "maxgiraldo",
-      "providerAccountId" : "34191752"
-    },
-    "positions" : {
-      "values" : [
-        {
-          "title" : "Creative",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 10
-          },
-          "isCurrent" : false,
-          "id" : 489641674,
-          "endDate" : {
-            "year" : 2013,
-            "month" : 12
-          },
-          "company" : {
-            "type" : "Public Company",
-            "ticker" : "IPG",
-            "size" : "501-1000 employees",
-            "name" : "Deutsch",
-            "industry" : "Marketing and Advertising",
-            "id" : 6043
-          }
-        }
-      ],
-      "_total" : 1
-    },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0__NWrbZruZEcF-XZsDKEfbVruVeC9OXds3Pg7bRlpLSnF38OVftMpdUL-q6GHgiHnCBwaey7qhEA0",
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Giraldo",
-    "id" : "2qKGhmTNbZ",
-    "headline" : "Student at Fullstack Academy",
-    "firstName" : "Max",
-    "emailAddress" : "hi@maxgiraldo.com",
-    "educations" : {
-      "values" : [
-        {
-          "startDate" : {
-            "year" : 2014
-          },
-          "schoolName" : "Fullstack Academy",
-          "notes" : "Intensive, 12-week web development/software engineering immersive course.",
-          "id" : 199155650,
-          "endDate" : {
-            "year" : 2014
-          }
-        },
-        {
-          "startDate" : {
-            "year" : 2011
-          },
-          "schoolName" : "Art Center College of Design",
-          "id" : 62842653,
-          "fieldOfStudy" : "Advertising",
-          "endDate" : {
-            "year" : 2013
-          },
-          "degree" : "BFA"
-        }
-      ],
-      "_total" : 2
-    },
-    "courses" : {
-      "_total" : 0
-    },
-    "certifications" : {
-      "_total" : 0
-    }
-  },
-  "name" : "Max Giraldo",
-  "roles" : [
-    "developer"
-  ],
-  "work_experiences" : [
-    {
-      "company" : {
-        "type" : "Public Company",
-        "ticker" : "IPG",
-        "size" : "501-1000 employees",
-        "name" : "Deutsch",
-        "industry" : "Marketing and Advertising",
-        "id" : 6043
-      },
-      "id" : 489641674,
-      "isCurrent" : false,
-      "title" : "Creative",
-      "endDate" : {
-        "month" : 12,
-        "year" : 2013
-      },
-      "startDate" : {
-        "month" : 10,
-        "year" : 2013
-      }
-    }
-  ]
-})
 
 //Nathan Grotticelli
 User.create({
@@ -4036,8 +3792,299 @@ User.create({
       }
     }
   ]
-}
-)
+})
+
+//Lauren Ashpole
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "G_psXT4Atc",
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "English Literature (British and Commonwealth)",
+      "id" : 165058454,
+      "schoolName" : "UC Irvine",
+      "endDate" : {
+        "year" : 2007
+      }
+    }
+  ],
+  "email" : "lauren@laurenashpole.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 12518,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 10,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T19:42:09Z",
+    "created_at" : "2013-09-16T17:31:55Z",
+    "following" : 2,
+    "followers" : 3,
+    "public_gists" : 0,
+    "public_repos" : 10,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "lauren@laurenashpole.com",
+    "location" : "",
+    "blog" : "",
+    "company" : "",
+    "name" : "Lauren Ashpole",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/laurenashpole/received_events",
+    "events_url" : "https://api.github.com/users/laurenashpole/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/laurenashpole/repos",
+    "organizations_url" : "https://api.github.com/users/laurenashpole/orgs",
+    "subscriptions_url" : "https://api.github.com/users/laurenashpole/subscriptions",
+    "starred_url" : "https://api.github.com/users/laurenashpole/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/laurenashpole/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/laurenashpole/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/laurenashpole/followers",
+    "html_url" : "https://github.com/laurenashpole",
+    "url" : "https://api.github.com/users/laurenashpole",
+    "gravatar_id" : "58387d0119271e2c6c25940ec208c595",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5471778?",
+    "id" : 5471778,
+    "login" : "laurenashpole"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "HTML 5"
+          },
+          "id" : 18
+        },
+        {
+          "skill" : {
+            "name" : "jQuery"
+          },
+          "id" : 19
+        },
+        {
+          "skill" : {
+            "name" : "Photoshop"
+          },
+          "id" : 20
+        },
+        {
+          "skill" : {
+            "name" : "Illustrator"
+          },
+          "id" : 21
+        },
+        {
+          "skill" : {
+            "name" : "CSS3"
+          },
+          "id" : 22
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 23
+        }
+      ],
+      "_total" : 6
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=242600319&authType=name&authToken=sRXz&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Brennan",
+          "id" : "jneLfIxkN_",
+          "firstName" : "Jackie"
+        },
+        {
+          "lastName" : "Hendricks Jr.",
+          "id" : "nN37FpN-Q4",
+          "firstName" : "Patricio"
+        },
+        {
+          "lastName" : "Tan",
+          "id" : "Mp9tRyZgp4",
+          "firstName" : "Neil"
+        },
+        {
+          "lastName" : "D.",
+          "id" : "hftGLM3MU8",
+          "firstName" : "Brian"
+        },
+        {
+          "lastName" : "Jordan",
+          "id" : "g2odq2njhO",
+          "firstName" : "Clif"
+        },
+        {
+          "lastName" : "A.",
+          "id" : "1zSVx3R3xl",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Shans",
+          "id" : "EBqfoGeXZG",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Vega",
+          "id" : "yKnKBU4PB2",
+          "firstName" : "Durlan"
+        },
+        {
+          "lastName" : "Flynn",
+          "id" : "-omUKw6ijh",
+          "firstName" : "Brandon"
+        },
+        {
+          "lastName" : "W.",
+          "id" : "ID8ZPegqsD",
+          "firstName" : "Jeffrey"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Freelance Front-End Web Developer",
+          "summary" : "PSD Conversion\nCreating handcoded themes for Tumblr utilizing HTML5, CSS3, and jQuery • Integration of social networking widgets including Facebook and Twitter • Testing for cross-broswer compatibility\n\nWordPress Customization\nProducing page templates consistent with existing styles and functionality • Setting up, editing, and styling plugins and widgets\n\nMobile Compatibility\nUpdating existing themes using media queries to ensure responsive, mobile friendly design",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 2
+          },
+          "isCurrent" : true,
+          "id" : 379444641,
+          "company" : {
+            "name" : "Self Employed",
+            "industry" : "Financial Services"
+          }
+        },
+        {
+          "title" : "Font Designer & Retailer",
+          "summary" : "Creating hand illustrated and computer generated lettering • Designing and maintaining responsive e-commerce site • Customer technical and licensing support",
+          "startDate" : {
+            "year" : 2008,
+            "month" : 7
+          },
+          "isCurrent" : true,
+          "id" : 379444802,
+          "company" : {
+            "name" : "laurenashpole.com",
+            "industry" : "Financial Services"
+          }
+        },
+        {
+          "title" : "Administrative Assistant",
+          "summary" : "Assistant to Managing Directors and Accountants at boutique financial management firm • Payment processing and contract preparation • Ordering and accounts payable reconciliation",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 3
+          },
+          "isCurrent" : false,
+          "id" : 379444504,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "company" : {
+            "name" : "KLS Professional Advisors",
+            "industry" : "Financial Services"
+          }
+        }
+      ],
+      "_total" : 3
+    },
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Ashpole",
+    "id" : "G_psXT4Atc",
+    "headline" : "Student Fullstack Academy",
+    "firstName" : "Lauren",
+    "emailAddress" : "lauren@laurenashpole.com",
+    "educations" : {
+      "values" : [
+        {
+          "schoolName" : "UC Irvine",
+          "id" : 165058454,
+          "fieldOfStudy" : "English Literature (British and Commonwealth)",
+          "endDate" : {
+            "year" : 2007
+          },
+          "degree" : "Bachelor of Arts (B.A.)"
+        }
+      ],
+      "_total" : 1
+    }
+  },
+  "name" : "Lauren Ashpole",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "name" : "Self Employed",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444641,
+      "isCurrent" : true,
+      "title" : "Freelance Front-End Web Developer",
+      "startDate" : {
+        "month" : 2,
+        "year" : 2009
+      }
+    },
+    {
+      "company" : {
+        "name" : "laurenashpole.com",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444802,
+      "isCurrent" : true,
+      "title" : "Font Designer & Retailer",
+      "startDate" : {
+        "month" : 7,
+        "year" : 2008
+      }
+    },
+    {
+      "company" : {
+        "name" : "KLS Professional Advisors",
+        "industry" : "Financial Services"
+      },
+      "id" : 379444504,
+      "isCurrent" : false,
+      "title" : "Administrative Assistant",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 3,
+        "year" : 2009
+      }
+    }
+  ]
+})
 
 //Jisan data
 // User.create({
