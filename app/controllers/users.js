@@ -126,12 +126,13 @@ exports.admin = function(req, res) {
  * Show user profile
  */
 exports.profile = function(req, res) {
-	console.log(req.user);
-	res.render('profile', {
-		title: req.user.name,
-		user: req.user
+	console.log(req.user.name);
+	User.findOne({name: req.user.name}, function(err, user) {
+		res.render('profile', {
+			user: user
+		});
 	});
 };
 exports.profileedit = function(req, res) {
-	res.render('profile-edit')
-}
+	res.render('profile-edit');
+};
