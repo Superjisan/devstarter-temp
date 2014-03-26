@@ -21,6 +21,9 @@
 			<td>{{developer.name}}</td>
 			<td><button value="{{developer.id}}" class="btn btn-md btn-primary approve" id='approve'>Approve</button></td>
 			<td><button value="{{developer.id}}" class="btn btn-md btn-danger deny" id='deny'>Deny</button></td>
+			{% if developer.roles.indexOf('admin') != -1 %}
+			<td><h4>Admin</h4></td>
+			{% endif %}
 		</tr>
 	{% endfor %}
 	</table>
