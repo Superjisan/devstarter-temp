@@ -1905,866 +1905,7 @@ User.create({
   ]
 });
 
-//Peter Espinosa
-User.create({
 
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "gYd6XGSzom",
-    }
-  ],
-  "email" : "peterespinosa78@gmail.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 0,
-      "collaborators" : 0,
-      "space" : 307200,
-      "name" : "free"
-    },
-    "collaborators" : 0,
-    "disk_usage" : 6676,
-    "owned_private_repos" : 0,
-    "total_private_repos" : 0,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T01:27:48Z",
-    "created_at" : "2013-07-30T15:27:03Z",
-    "following" : 3,
-    "followers" : 3,
-    "public_gists" : 0,
-    "public_repos" : 3,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "",
-    "location" : "",
-    "blog" : "",
-    "company" : "",
-    "name" : "Peter Espinosa",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/peterespinosa/received_events",
-    "events_url" : "https://api.github.com/users/peterespinosa/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/peterespinosa/repos",
-    "organizations_url" : "https://api.github.com/users/peterespinosa/orgs",
-    "subscriptions_url" : "https://api.github.com/users/peterespinosa/subscriptions",
-    "starred_url" : "https://api.github.com/users/peterespinosa/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/peterespinosa/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/peterespinosa/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/peterespinosa/followers",
-    "html_url" : "https://github.com/peterespinosa",
-    "url" : "https://api.github.com/users/peterespinosa",
-    "gravatar_id" : "c6cb4f394a65e585ef01ff30cd9fddad",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/5122260?",
-    "id" : 5122260,
-    "login" : "peterespinosa"
-  },
-  "linkedin" : {
-    "skills" : {
-      "values" : [
-        {
-          "skill" : {
-            "name" : "Software Development"
-          },
-          "id" : 9
-        },
-        {
-          "skill" : {
-            "name" : "Software Engineering"
-          },
-          "id" : 10
-        },
-        {
-          "skill" : {
-            "name" : "Linux"
-          },
-          "id" : 11
-        },
-        {
-          "skill" : {
-            "name" : "Embedded Systems"
-          },
-          "id" : 12
-        },
-        {
-          "skill" : {
-            "name" : "Agile Methodologies"
-          },
-          "id" : 13
-        },
-        {
-          "skill" : {
-            "name" : "XML"
-          },
-          "id" : 14
-        },
-        {
-          "skill" : {
-            "name" : "JavaScript"
-          },
-          "id" : 15
-        },
-        {
-          "skill" : {
-            "name" : "SQL"
-          },
-          "id" : 16
-        },
-        {
-          "skill" : {
-            "name" : "Python"
-          },
-          "id" : 18
-        },
-        {
-          "skill" : {
-            "name" : "Web Services"
-          },
-          "id" : 19
-        }
-      ],
-      "_total" : 10
-    },
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=273467332&authType=name&authToken=71nc&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "F.",
-          "id" : "rbg3BBO1-S",
-          "firstName" : "Julie"
-        },
-        {
-          "lastName" : "U.",
-          "id" : "TaaWGFU5Zr",
-          "firstName" : "Jamie"
-        },
-        {
-          "lastName" : "J.",
-          "id" : "NooJPn--Rn",
-          "firstName" : "Arlene"
-        },
-        {
-          "lastName" : "L.",
-          "id" : "ncZxEcw2DT",
-          "firstName" : "Amarylis"
-        },
-        {
-          "lastName" : "B.",
-          "id" : "_etjwSlgCO",
-          "firstName" : "Millie"
-        },
-        {
-          "lastName" : "J.",
-          "id" : "z_L5pALvWQ",
-          "firstName" : "Harry"
-        },
-        {
-          "lastName" : "H.",
-          "id" : "HCcqgg52IH",
-          "firstName" : "Susan"
-        },
-        {
-          "lastName" : "M.",
-          "id" : "nzxeGpmwUS",
-          "firstName" : "Scott"
-        },
-        {
-          "lastName" : "F.",
-          "id" : "LWV_M2-tTp",
-          "firstName" : "Jason"
-        },
-        {
-          "lastName" : "F.",
-          "id" : "IMWA2zwYp3",
-          "firstName" : "Derek"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "positions" : {
-      "_total" : 0
-    },
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Espinosa",
-    "languages" : {
-      "values" : [
-        {
-          "language" : {
-            "name" : "English"
-          },
-          "id" : 1
-        },
-        {
-          "language" : {
-            "name" : "Spanish"
-          },
-          "id" : 2
-        }
-      ],
-      "_total" : 2
-    },
-    "id" : "gYd6XGSzom",
-    "headline" : "Software Engineer",
-    "firstName" : "Peter",
-    "emailAddress" : "peterespinosa78@gmail.com",
-    "educations" : {
-      "_total" : 0
-    }
-  },
-  "name" : "Peter Espinosa",
-  "roles" : [
-    "developer"
-  ]
-});
-
-
-//Nathan Grotticelli
-User.create({
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "diAmJFCENs",
-    }
-  ],
-  "educations" : [
-    {
-      "id" : 199548544,
-      "notes" : "Making great people into great developers. Y Combinator backed.",
-      "schoolName" : "Fullstack Academy of Code",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2013
-      }
-    },
-    {
-      "activities" : "Zeta Psi Fraternity, BU Poker Society Vice President, Entrepreneurship Club",
-      "id" : 156420782,
-      "schoolName" : "SUNY Binghamton",
-      "endDate" : {
-        "year" : 2013
-      },
-      "startDate" : {
-        "year" : 2012
-      }
-    }
-  ],
-  "email" : "nmg2225@Yahoo.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 0,
-      "collaborators" : 0,
-      "space" : 307200,
-      "name" : "free"
-    },
-    "collaborators" : 0,
-    "disk_usage" : 14632,
-    "owned_private_repos" : 0,
-    "total_private_repos" : 6,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T14:50:32Z",
-    "created_at" : "2013-12-26T21:21:33Z",
-    "following" : 0,
-    "followers" : 4,
-    "public_gists" : 0,
-    "public_repos" : 7,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "NathanGrotticelli@gmail.com",
-    "location" : null,
-    "blog" : null,
-    "company" : null,
-    "name" : "Nathan Grotticelli",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/nathangrotticelli/received_events",
-    "events_url" : "https://api.github.com/users/nathangrotticelli/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/nathangrotticelli/repos",
-    "organizations_url" : "https://api.github.com/users/nathangrotticelli/orgs",
-    "subscriptions_url" : "https://api.github.com/users/nathangrotticelli/subscriptions",
-    "starred_url" : "https://api.github.com/users/nathangrotticelli/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/nathangrotticelli/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/nathangrotticelli/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/nathangrotticelli/followers",
-    "html_url" : "https://github.com/nathangrotticelli",
-    "url" : "https://api.github.com/users/nathangrotticelli",
-    "gravatar_id" : "dfb9aa0ec31a18c26e59abc9be8c3aab",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/6266959?",
-    "id" : 6266959,
-    "login" : "nathangrotticelli"
-  },
-  "linkedin" : {
-    "summary" : "With a passion for creation, design and growth, my goal is to affect and alter the world.",
-    "skills" : {
-      "values" : [
-        {
-          "skill" : {
-            "name" : "Social Media"
-          },
-          "id" : 67
-        },
-        {
-          "skill" : {
-            "name" : "Entrepreneurship"
-          },
-          "id" : 68
-        },
-        {
-          "skill" : {
-            "name" : "Strategy"
-          },
-          "id" : 69
-        },
-        {
-          "skill" : {
-            "name" : "Analytics"
-          },
-          "id" : 70
-        },
-        {
-          "skill" : {
-            "name" : "Social Entrepreneurship"
-          },
-          "id" : 71
-        },
-        {
-          "skill" : {
-            "name" : "Leadership"
-          },
-          "id" : 72
-        },
-        {
-          "skill" : {
-            "name" : "Facebook"
-          },
-          "id" : 73
-        },
-        {
-          "skill" : {
-            "name" : "Social Networking"
-          },
-          "id" : 74
-        },
-        {
-          "skill" : {
-            "name" : "Marketing"
-          },
-          "id" : 75
-        },
-        {
-          "skill" : {
-            "name" : "Thought Leadership"
-          },
-          "id" : 76
-        },
-        {
-          "skill" : {
-            "name" : "Marketing Strategy"
-          },
-          "id" : 77
-        },
-        {
-          "skill" : {
-            "name" : "Social Media Marketing"
-          },
-          "id" : 78
-        },
-        {
-          "skill" : {
-            "name" : "Advertising"
-          },
-          "id" : 79
-        },
-        {
-          "skill" : {
-            "name" : "Online Marketing"
-          },
-          "id" : 80
-        },
-        {
-          "skill" : {
-            "name" : "Innovation"
-          },
-          "id" : 81
-        },
-        {
-          "skill" : {
-            "name" : "B2C marketing"
-          },
-          "id" : 82
-        },
-        {
-          "skill" : {
-            "name" : "Online Advertising"
-          },
-          "id" : 83
-        },
-        {
-          "skill" : {
-            "name" : "Google Analytics"
-          },
-          "id" : 84
-        },
-        {
-          "skill" : {
-            "name" : "Blogging"
-          },
-          "id" : 85
-        },
-        {
-          "skill" : {
-            "name" : "SEO"
-          },
-          "id" : 86
-        },
-        {
-          "skill" : {
-            "name" : "Brand Development"
-          },
-          "id" : 87
-        },
-        {
-          "skill" : {
-            "name" : "Social Media Measurement"
-          },
-          "id" : 88
-        },
-        {
-          "skill" : {
-            "name" : "Public Relations"
-          },
-          "id" : 89
-        },
-        {
-          "skill" : {
-            "name" : "Digital Media"
-          },
-          "id" : 90
-        },
-        {
-          "skill" : {
-            "name" : "JavaScript"
-          },
-          "id" : 91
-        },
-        {
-          "skill" : {
-            "name" : "Node.js"
-          },
-          "id" : 92
-        },
-        {
-          "skill" : {
-            "name" : "HTML 5"
-          },
-          "id" : 93
-        },
-        {
-          "skill" : {
-            "name" : "CSS3"
-          },
-          "id" : 94
-        },
-        {
-          "skill" : {
-            "name" : "MongoDB"
-          },
-          "id" : 95
-        },
-        {
-          "skill" : {
-            "name" : "Test Driven Development"
-          },
-          "id" : 96
-        },
-        {
-          "skill" : {
-            "name" : "Git"
-          },
-          "id" : 97
-        }
-      ],
-      "_total" : 31
-    },
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=249776017&authType=name&authToken=8bdA&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Taylor",
-          "id" : "H1LOPF8vq2",
-          "firstName" : "Brittany Star"
-        },
-        {
-          "lastName" : "Hoffmann",
-          "id" : "RY2E3_yats",
-          "firstName" : "Lucas"
-        },
-        {
-          "lastName" : "Macin",
-          "id" : "DOaxdYzfAF",
-          "firstName" : "Brooke"
-        },
-        {
-          "lastName" : "Graves",
-          "id" : "6u4XERdQxE",
-          "firstName" : "Shanice"
-        },
-        {
-          "lastName" : "Gotleib",
-          "id" : "WZwpDiKbV9",
-          "firstName" : "Melissa"
-        },
-        {
-          "lastName" : "Hitt",
-          "id" : "mmRZqBa8On",
-          "firstName" : "Aidan"
-        },
-        {
-          "lastName" : "Lipman",
-          "id" : "5ryED0p3Nw",
-          "firstName" : "Brogan"
-        },
-        {
-          "lastName" : "Zhao",
-          "id" : "63iIbrsyUU",
-          "firstName" : "Tommy"
-        },
-        {
-          "lastName" : "Clarke",
-          "id" : "UBFG4oqt8u",
-          "firstName" : "Erik"
-        },
-        {
-          "lastName" : "Alvarado",
-          "id" : "CfBtZ9RUYA",
-          "firstName" : "Natalie"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "positions" : {
-      "values" : [
-        {
-          "title" : "College Market Strategist",
-          "summary" : "Responsible for driving awareness, engagement, and excitement for Spotify within the college community through strategic partnerships, sponsored events and word-of-mouth.",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 4
-          },
-          "isCurrent" : true,
-          "id" : 389704318,
-          "company" : {
-            "type" : "Privately Held",
-            "size" : "1001-5000 employees",
-            "name" : "Spotify",
-            "industry" : "Computer Software",
-            "id" : 207470
-          }
-        },
-        {
-          "title" : "CEO/Founder",
-          "summary" : "Leading an innovative tech start up obsessed with improving college nightlife through the mobile experience.",
-          "startDate" : {
-            "year" : 2012,
-            "month" : 9
-          },
-          "isCurrent" : true,
-          "id" : 389703968,
-          "company" : {
-            "type" : "Privately Held",
-            "size" : "11-50 employees",
-            "name" : "U Nightlife",
-            "industry" : "Utilities",
-            "id" : 3515937
-          }
-        },
-        {
-          "title" : "Mr. Youth Community Manager",
-          "summary" : "The Mr Youth Network is a global team of motivated and entrepreneurial students that focus on using creative, strategic and analytic intell to inspire and fuel advocacy and action on campus.\n\nMembers learn critical business skills related to social media and word-of-mouth marketing while developing a powerful network of executives and peers that will last them throughout their professional career. Most importantly the Mr Youth Network provides top-notch experience helping global brands pioneer the future of youth marketing.",
-          "startDate" : {
-            "year" : 2012,
-            "month" : 1
-          },
-          "isCurrent" : true,
-          "id" : 389705005,
-          "company" : {
-            "type" : "Public Company",
-            "size" : "501-1000 employees",
-            "name" : "MRY",
-            "industry" : "Marketing and Advertising",
-            "id" : 29473
-          }
-        },
-        {
-          "title" : "Customer Funnel/Website Architect",
-          "summary" : "Providing strength, through insights, techniques and services, to students looking to use social media professionally.",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 8
-          },
-          "isCurrent" : false,
-          "id" : 473782211,
-          "endDate" : {
-            "year" : 2014,
-            "month" : 2
-          },
-          "company" : {
-            "name" : "SocialMediaSpinach.com",
-            "industry" : "-1"
-          }
-        },
-        {
-          "title" : "Contributor",
-          "summary" : "Active article writer/contributor to the online publication.",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 5
-          },
-          "isCurrent" : false,
-          "id" : 399787099,
-          "endDate" : {
-            "year" : 2014,
-            "month" : 2
-          },
-          "company" : {
-            "type" : "Privately Held",
-            "size" : "1-10 employees",
-            "name" : "YoungEntrepreneur.com",
-            "industry" : "Online Media",
-            "id" : 1150400
-          }
-        },
-        {
-          "title" : "#MRYintern",
-          "summary" : "MRY is a new type of agency that specializes in blending creativity and technology to make brands remarkable. We harness the power of strategic analytic intelligence to create remarkable content that sparks emotion, adds value, inspires action and changes behavior. We work with some of the world's biggest brands, including Coca-Cola, Adobe, Spotify, and Neutrogena. The #MRYintern program was named the \"Top Advertising Agency Internship\" of 2012.",
-          "startDate" : {
-            "year" : 2013,
-            "month" : 6
-          },
-          "isCurrent" : false,
-          "id" : 410702598,
-          "endDate" : {
-            "year" : 2013,
-            "month" : 8
-          },
-          "company" : {
-            "type" : "Public Company",
-            "size" : "501-1000 employees",
-            "name" : "MRY",
-            "industry" : "Marketing and Advertising",
-            "id" : 29473
-          }
-        },
-        {
-          "title" : "Lead Social Media/Concept Design",
-          "startDate" : {
-            "year" : 2012,
-            "month" : 3
-          },
-          "isCurrent" : false,
-          "id" : 389705726,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 6
-          },
-          "company" : {
-            "name" : "www.VideoJournalistToday.com",
-            "industry" : "Computer Software"
-          }
-        }
-      ],
-      "_total" : 7
-    },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_goVSNvyqshnDobSjgaEONcEHniTiEGpjxma-N9sqW6v-vQIgA2oTVnaVZS3jdLjAyd4PUlX32aed",
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Grotticelli",
-    "interests" : "Growth Hacking,\nEntrepreneurship,\nSocial Media,\nDesign,\nSports,\nSnowboarding,\nInnovation\nAwesomeness",
-    "id" : "diAmJFCENs",
-    "honorsAwards" : {
-      "values" : [
-        {
-          "name" : "Startup Weekend Competition Finalist/Winner",
-          "id" : 10
-        }
-      ],
-      "_total" : 1
-    },
-    "headline" : "Entrepreneur/Developer",
-    "firstName" : "Nathan",
-    "emailAddress" : "nmg2225@Yahoo.com",
-    "educations" : {
-      "values" : [
-        {
-          "startDate" : {
-            "year" : 2013
-          },
-          "schoolName" : "Fullstack Academy of Code",
-          "notes" : "Making great people into great developers. Y Combinator backed.",
-          "id" : 199548544,
-          "endDate" : {
-            "year" : 2014
-          }
-        },
-        {
-          "startDate" : {
-            "year" : 2012
-          },
-          "schoolName" : "SUNY Binghamton",
-          "id" : 156420782,
-          "endDate" : {
-            "year" : 2013
-          },
-          "activities" : "Zeta Psi Fraternity, BU Poker Society Vice President, Entrepreneurship Club"
-        }
-      ],
-      "_total" : 2
-    }
-  },
-  "name" : "Nathan Grotticelli",
-  "roles" : [
-    "developer"
-  ],
-  "work_experiences" : [
-    {
-      "company" : {
-        "type" : "Privately Held",
-        "size" : "1001-5000 employees",
-        "name" : "Spotify",
-        "industry" : "Computer Software",
-        "id" : 207470
-      },
-      "id" : 389704318,
-      "isCurrent" : true,
-      "title" : "College Market Strategist",
-      "startDate" : {
-        "month" : 4,
-        "year" : 2013
-      }
-    },
-    {
-      "company" : {
-        "type" : "Privately Held",
-        "size" : "11-50 employees",
-        "name" : "U Nightlife",
-        "industry" : "Utilities",
-        "id" : 3515937
-      },
-      "id" : 389703968,
-      "isCurrent" : true,
-      "title" : "CEO/Founder",
-      "startDate" : {
-        "month" : 9,
-        "year" : 2012
-      }
-    },
-    {
-      "company" : {
-        "type" : "Public Company",
-        "size" : "501-1000 employees",
-        "name" : "MRY",
-        "industry" : "Marketing and Advertising",
-        "id" : 29473
-      },
-      "id" : 389705005,
-      "isCurrent" : true,
-      "title" : "Mr. Youth Community Manager",
-      "startDate" : {
-        "month" : 1,
-        "year" : 2012
-      }
-    },
-    {
-      "company" : {
-        "name" : "SocialMediaSpinach.com",
-        "industry" : "-1"
-      },
-      "id" : 473782211,
-      "isCurrent" : false,
-      "title" : "Customer Funnel/Website Architect",
-      "endDate" : {
-        "month" : 2,
-        "year" : 2014
-      },
-      "startDate" : {
-        "month" : 8,
-        "year" : 2013
-      }
-    },
-    {
-      "company" : {
-        "type" : "Privately Held",
-        "size" : "1-10 employees",
-        "name" : "YoungEntrepreneur.com",
-        "industry" : "Online Media",
-        "id" : 1150400
-      },
-      "id" : 399787099,
-      "isCurrent" : false,
-      "title" : "Contributor",
-      "endDate" : {
-        "month" : 2,
-        "year" : 2014
-      },
-      "startDate" : {
-        "month" : 5,
-        "year" : 2013
-      }
-    },
-    {
-      "company" : {
-        "type" : "Public Company",
-        "size" : "501-1000 employees",
-        "name" : "MRY",
-        "industry" : "Marketing and Advertising",
-        "id" : 29473
-      },
-      "id" : 410702598,
-      "isCurrent" : false,
-      "title" : "#MRYintern",
-      "endDate" : {
-        "month" : 8,
-        "year" : 2013
-      },
-      "startDate" : {
-        "month" : 6,
-        "year" : 2013
-      }
-    },
-    {
-      "company" : {
-        "name" : "www.VideoJournalistToday.com",
-        "industry" : "Computer Software"
-      },
-      "id" : 389705726,
-      "isCurrent" : false,
-      "title" : "Lead Social Media/Concept Design",
-      "endDate" : {
-        "month" : 6,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 3,
-        "year" : 2012
-      }
-    }
-  ]
-});
 
 //Eric Cook
 User.create({
@@ -4081,6 +3222,523 @@ User.create({
       "startDate" : {
         "month" : 3,
         "year" : 2009
+      }
+    }
+  ]
+})
+
+//Andrew Ross
+User.create(
+  {
+
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "BOUAn90rFk",
+    }
+  ],
+  "email" : "andrewlyross@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 5396,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 9,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T21:47:11Z",
+    "created_at" : "2014-01-13T19:50:20Z",
+    "following" : 0,
+    "followers" : 4,
+    "public_gists" : 0,
+    "public_repos" : 8,
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/andrewlyross/received_events",
+    "events_url" : "https://api.github.com/users/andrewlyross/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/andrewlyross/repos",
+    "organizations_url" : "https://api.github.com/users/andrewlyross/orgs",
+    "subscriptions_url" : "https://api.github.com/users/andrewlyross/subscriptions",
+    "starred_url" : "https://api.github.com/users/andrewlyross/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/andrewlyross/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/andrewlyross/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/andrewlyross/followers",
+    "html_url" : "https://github.com/andrewlyross",
+    "url" : "https://api.github.com/users/andrewlyross",
+    "gravatar_id" : "d3cb81fd6eb5f85cd02dfc73a34f868d",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/6392921?",
+    "id" : 6392921,
+    "login" : "andrewlyross"
+  },
+  "linkedin" : {
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=297784008&authType=name&authToken=rzeP&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Bedford",
+          "id" : "YDZ5S68Xsi",
+          "firstName" : "Beau"
+        }
+      ],
+      "_total" : 1
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "_total" : 0
+    },
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Ross",
+    "id" : "BOUAn90rFk",
+    "headline" : "--",
+    "firstName" : "Andrew",
+    "emailAddress" : "andrewlyross@gmail.com",
+    "educations" : {
+      "_total" : 0
+    }
+  },
+  "name" : "Andrew Ross",
+  "roles" : [
+    "developer"
+  ]
+});
+
+//Jaclyn Tsui
+User.create({
+  "__v" : 1,
+  "_id" : ObjectId("53334cb9034c0377610b8154"),
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "JmCfHALEkj",
+      "_id" : ObjectId("53334cb9034c0377610b8155")
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "",
+      "fieldOfStudy" : "Software Development",
+      "id" : 203997702,
+      "schoolName" : "Fullstack Academy",
+      "_id" : ObjectId("53334cb9034c0377610b8158"),
+      "endDate" : {
+        "year" : 2014
+      },
+      "startDate" : {
+        "year" : 2014
+      }
+    },
+    {
+      "degree" : "Master of Science (MSc)",
+      "fieldOfStudy" : "Real Estate",
+      "id" : 206782944,
+      "schoolName" : "The University of Hong Kong",
+      "_id" : ObjectId("53334cb9034c0377610b8157"),
+      "endDate" : {
+        "year" : 2011
+      },
+      "startDate" : {
+        "year" : 2010
+      }
+    },
+    {
+      "activities" : "SIFE",
+      "degree" : "BSc",
+      "fieldOfStudy" : "Joint Honors Biology and Management",
+      "id" : 47405908,
+      "schoolName" : "Imperial College London",
+      "_id" : ObjectId("53334cb9034c0377610b8156"),
+      "endDate" : {
+        "year" : 2008
+      },
+      "startDate" : {
+        "year" : 2005
+      }
+    }
+  ],
+  "email" : "jac_2685@hotmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 49812,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 8,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T21:55:48Z",
+    "created_at" : "2013-02-24T20:48:01Z",
+    "following" : 5,
+    "followers" : 3,
+    "public_gists" : 0,
+    "public_repos" : 9,
+    "bio" : null,
+    "hireable" : false,
+    "email" : null,
+    "location" : "Hong Kong",
+    "blog" : null,
+    "company" : null,
+    "name" : null,
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/jaclyntsui/received_events",
+    "events_url" : "https://api.github.com/users/jaclyntsui/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/jaclyntsui/repos",
+    "organizations_url" : "https://api.github.com/users/jaclyntsui/orgs",
+    "subscriptions_url" : "https://api.github.com/users/jaclyntsui/subscriptions",
+    "starred_url" : "https://api.github.com/users/jaclyntsui/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/jaclyntsui/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/jaclyntsui/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/jaclyntsui/followers",
+    "html_url" : "https://github.com/jaclyntsui",
+    "url" : "https://api.github.com/users/jaclyntsui",
+    "gravatar_id" : "8fa69cbf3b09e19a870dfdfbe9b8ecc3",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/3687874?",
+    "id" : 3687874,
+    "login" : "jaclyntsui"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "HTML"
+          },
+          "id" : 47
+        },
+        {
+          "skill" : {
+            "name" : "CSS"
+          },
+          "id" : 48
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 49
+        },
+        {
+          "skill" : {
+            "name" : "MySQL"
+          },
+          "id" : 50
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 51
+        },
+        {
+          "skill" : {
+            "name" : "AngularJS"
+          },
+          "id" : 52
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 53
+        },
+        {
+          "skill" : {
+            "name" : "SASS"
+          },
+          "id" : 54
+        },
+        {
+          "skill" : {
+            "name" : "Ruby on Rails"
+          },
+          "id" : 55
+        },
+        {
+          "skill" : {
+            "name" : "Microsoft Excel"
+          },
+          "id" : 56
+        },
+        {
+          "skill" : {
+            "name" : "Illustrator"
+          },
+          "id" : 57
+        },
+        {
+          "skill" : {
+            "name" : "Photoshop"
+          },
+          "id" : 58
+        }
+      ],
+      "_total" : 12
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=53366181&authType=name&authToken=_k3i&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        },
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Koo",
+          "id" : "CSRTpH9PMC",
+          "firstName" : "Ji Ho"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Pazmiño",
+          "id" : "En1mNn2tQC",
+          "firstName" : "Luis"
+        },
+        {
+          "lastName" : "D'Alessandro",
+          "id" : "WkMxcboGNL",
+          "firstName" : "Scott"
+        },
+        {
+          "lastName" : "Zaman",
+          "id" : "PvmfqY724t",
+          "firstName" : "Jisan"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Managing Director",
+          "summary" : "Private family office investment company based in Hong Kong. Main investment focus include oil exploration, real estate, education, healthcare, consumer brands and early stage tech companies based in US, UK, Europe, Canada and Asia.",
+          "startDate" : {
+            "year" : 2011,
+            "month" : 6
+          },
+          "isCurrent" : true,
+          "id" : 213653463,
+          "company" : {
+            "name" : "Arbutus Capital Partners Ltd",
+            "industry" : "Investment Management"
+          }
+        },
+        {
+          "title" : "Product Manager",
+          "summary" : "Techstars Nike+ Accelerator attendee",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 3
+          },
+          "isCurrent" : false,
+          "id" : 393214943,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "company" : {
+            "name" : "Coachbase",
+            "industry" : "Computer Software"
+          }
+        },
+        {
+          "title" : "Associate",
+          "summary" : "Private equity residential and commercial real estate investments in Mainland China.",
+          "startDate" : {
+            "year" : 2008
+          },
+          "isCurrent" : false,
+          "id" : 213653775,
+          "endDate" : {
+            "year" : 2010
+          },
+          "company" : {
+            "name" : "Landsdown Investment Ltd",
+            "industry" : "Investment Management"
+          }
+        }
+      ],
+      "_total" : 3
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_FfbQYouw2v4dw4GS5mFvYWdEhKoJIUGSLaPJYWmR0POdq0zDwdBErdVza4E6eyiT625ZlayoOG2R",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Tsui",
+    "languages" : {
+      "values" : [
+        {
+          "language" : {
+            "name" : "English"
+          },
+          "id" : 16
+        },
+        {
+          "language" : {
+            "name" : "Mandarin"
+          },
+          "id" : 17
+        },
+        {
+          "language" : {
+            "name" : "Cantonese"
+          },
+          "id" : 39
+        },
+        {
+          "language" : {
+            "name" : "French"
+          },
+          "id" : 42
+        }
+      ],
+      "_total" : 4
+    },
+    "interests" : "Design, photography, technology, typography, business operations, product management",
+    "id" : "JmCfHALEkj",
+    "headline" : "Student at Fullstack Academy",
+    "firstName" : "Jaclyn",
+    "emailAddress" : "jac_2685@hotmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2014
+          },
+          "schoolName" : "Fullstack Academy",
+          "id" : 203997702,
+          "fieldOfStudy" : "Software Development",
+          "endDate" : {
+            "year" : 2014
+          },
+          "degree" : ""
+        },
+        {
+          "startDate" : {
+            "year" : 2010
+          },
+          "schoolName" : "The University of Hong Kong",
+          "id" : 206782944,
+          "fieldOfStudy" : "Real Estate",
+          "endDate" : {
+            "year" : 2011
+          },
+          "degree" : "Master of Science (MSc)"
+        },
+        {
+          "startDate" : {
+            "year" : 2005
+          },
+          "schoolName" : "Imperial College London",
+          "id" : 47405908,
+          "fieldOfStudy" : "Joint Honors Biology and Management",
+          "endDate" : {
+            "year" : 2008
+          },
+          "degree" : "BSc",
+          "activities" : "SIFE"
+        }
+      ],
+      "_total" : 3
+    },
+    "dateOfBirth" : {
+      "year" : 1985
+    }
+  },
+  "name" : "Jaclyn Tsui",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "name" : "Arbutus Capital Partners Ltd",
+        "industry" : "Investment Management"
+      },
+      "id" : 213653463,
+      "isCurrent" : true,
+      "title" : "Managing Director",
+      "_id" : ObjectId("53334cb9034c0377610b815b"),
+      "startDate" : {
+        "month" : 6,
+        "year" : 2011
+      }
+    },
+    {
+      "company" : {
+        "name" : "Coachbase",
+        "industry" : "Computer Software"
+      },
+      "id" : 393214943,
+      "isCurrent" : false,
+      "title" : "Product Manager",
+      "_id" : ObjectId("53334cb9034c0377610b815a"),
+      "endDate" : {
+        "month" : 6,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 3,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "name" : "Landsdown Investment Ltd",
+        "industry" : "Investment Management"
+      },
+      "id" : 213653775,
+      "isCurrent" : false,
+      "title" : "Associate",
+      "_id" : ObjectId("53334cb9034c0377610b8159"),
+      "endDate" : {
+        "year" : 2010
+      },
+      "startDate" : {
+        "year" : 2008
       }
     }
   ]
