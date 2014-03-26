@@ -23,6 +23,7 @@ module.exports = function(app, passport) {
 
 	app.get('/profile/edit', authorization.requiresLogin, users.profileedit);
 	app.get('/profile/:id', authorization.requiresLogin, users.profile);
+	app.get('/api/profile', authorization.requiresLogin, users.profile_edit);
 
 	// Setting the local strategy route
 	app.post('/users/session', passport.authenticate('local', {

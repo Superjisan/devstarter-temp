@@ -3,7 +3,6 @@
 		"public/build/css/dist.min.css": [
 			"public/lib/bootstrap/dist/css/bootstrap.css",
 			"public/brackets/css/style.default.css",
-
 			"public/brackets/css/bootstrap-override.css",
 			"public/brackets/css/jquery-ui-1.10.3.css",
 			"public/brackets/css/font-awesome.min.css",
@@ -13,7 +12,12 @@
 			"public/brackets/css/chosen.css",
 			"public/brackets/css/lato.css",
 			"public/brackets/css/roboto.css",
-			"public/brackets/css/style.default.css"
+			"public/brackets/css/style.default.css",
+			"public/brackets/css/bootstrap-fileupload.min.css",
+			"public/brackets/css/bootstrap-timepicker.min.css",
+			"public/brackets/css/jquery.tagsinput.css",
+			"public/brackets/css/colorpicker.css",
+			"public/brackets/css/dropzone.css"
 		]
 	},
 	"js": {
