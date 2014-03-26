@@ -61,7 +61,7 @@
 					</div>
 					{% else %}
 					<div class="inner cover">
-						<a href="/profile/{{req.user.name}}" class="btn btn-lg btn-primary">Check out your profile!</a>
+						<a href="/profile/{{req.user._id.toString()}}" class="btn btn-lg btn-primary">Check out your profile!</a>
 					</div>
 					{% endif %}
 					{% endif %}
