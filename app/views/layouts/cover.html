@@ -64,6 +64,11 @@
 						<a href="/profile/{{req.user._id.toString()}}" class="btn btn-lg btn-primary">Check out your profile!</a>
 					</div>
 					{% endif %}
+					{% if req.user.roles.indexOf('admin') !== -1 %}
+					<div class="inner cover">
+						<a href="/users/admin" class="btn btn-lg btn-default">Admin screens</a>
+					</div>
+					{% endif %}
 					{% endif %}
           <div class="mastfoot">
             <div class="inner">
