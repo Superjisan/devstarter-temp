@@ -127,7 +127,7 @@ exports.admin = function(req, res) {
  */
 exports.profile = function(req, res) {
 	console.log(req.params.name);
-	User.findOne({name: req.params.name}, function(err, user) {
+	User.findOne({ _id: req.params.name}, function(err, user) {
 		res.render('profile', {
 			user: user
 		});
