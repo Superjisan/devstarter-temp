@@ -1,7 +1,6 @@
 {% extends 'layouts/theme.html' %}
 
 {% block pageheader %}
-
       <h2><i class="fa fa-user"></i> hire fullstack <span> Find your next Fullstack developer... </span></h2>
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
@@ -78,30 +77,25 @@
 	<div class="tab-pane active" id="activities">
 
 	</div>
-
-
-
 <!-- end work experience list -->
 
-
-
-		<!-- Education List -->
-		<div class="tab-pane" id="followers">
-			{% for school in user.linkedin.educations.values %}
-			<li>{{school.schoolName}}
-				<ul> {{school.fieldOfStudy}} </ul>
-				<ul> {{school.degree}} </ul>
-			</li>
-			{% endfor %}
-		</div>
-		<!-- project 1 tab -->
-			<div class="tab-pane" id="following">
-			</div>
-		<!-- end project 1 tab -->
-		<!-- project 1 tab -->
-			<div class="tab-pane" id="events">
-				<h2>We will add secondary projects or skills here</h2>
-			</div>
-		<!-- end project 1 tab -->
+<!-- Education List -->
+<div class="tab-pane" id="followers">
+	{% for school in user.linkedin.educations.values %}
+	<li>{{school.schoolName}}
+		<ul> {{school.fieldOfStudy}} </ul>
+		<ul> {{school.degree}} </ul>
+	</li>
+	{% endfor %}
+</div>
+<!-- project 1 tab -->
+	<div class="tab-pane" id="following">
+	</div>
+<!-- end project 1 tab -->
+<!-- project 1 tab -->
+	<div class="tab-pane" id="events">
+		<h2>We will add secondary projects or skills here</h2>
+	</div>
+<!-- end project 1 tab -->
 {% endblock %}
 
