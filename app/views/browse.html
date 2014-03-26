@@ -21,22 +21,23 @@
 
     <div class="contentpanel" data-ng-view>
 
-      <div data-ng-controller="DevelopersController" ng-init="find()" >
+      <div data-ng-controller="DevelopersController" >
 
       <div class="people-list">
         <div class="row">
-          {% for developer in developers %}
+
+          <div ng-repeat="developer in developers">
           <div class="col-md-6">
             <div class="people-item">
               <div class="media">
                 <a href="#" class="pull-left"></a>
 
                 <div class="media-body">
-                  <div class="pull-right"> <img class="img-responsive" src="{{developer.linkedin.pictureUrl}}"> </div>
-                  <a href="/profile/{{developer._id.toString()}}">
-                  <h4 class="person-name">{{developer.name}}</h4> </a>
+                  <div class="pull-right"> <img class="img-responsive" src="[[developer.linkedin.pictureUrl]]"> </div>
+                  <a href="/profile/[[developer._id.toString()]]">
+                  <h4 class="person-name">[[developer.name]]</h4> </a>
 
-                  <div class="text-muted"><i class="fa fa-briefcase"></i> {{developer.linkedin.headline}}</a></div>
+                  <div class="text-muted"><i class="fa fa-briefcase"></i> [[developer.linkedin.headline]]</a></div>
                   <ul class="social-list">
                     <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope-o"></i></a></li>
                     <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -48,14 +49,14 @@
               </div>
             </div>
           </div><!-- col-md-6 -->
-          {% endfor %}
+
 
 
         </div><!-- row -->
       </div><!-- people-list -->
 
-    </div><!-- contentpanel -->
-
+    </div><!-- Developer Controller -->
+  </div><!-- contentpanel -->
 
 {% endblock%}
 
