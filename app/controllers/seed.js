@@ -1660,7 +1660,7 @@ User.create(
 
 //Peter Espinosa
 User.create({
-  "__v" : 1,
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -1879,7 +1879,7 @@ User.create({
 
 //Max Giraldo
 User.create({
-  "__v" : 1,
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -2121,6 +2121,647 @@ User.create({
     }
   ]
 })
+
+//Nathan Grotticelli
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "diAmJFCENs",
+    }
+  ],
+  "educations" : [
+    {
+      "id" : 199548544,
+      "notes" : "Making great people into great developers. Y Combinator backed.",
+      "schoolName" : "Fullstack Academy of Code",
+      "endDate" : {
+        "year" : 2014
+      },
+      "startDate" : {
+        "year" : 2013
+      }
+    },
+    {
+      "activities" : "Zeta Psi Fraternity, BU Poker Society Vice President, Entrepreneurship Club",
+      "id" : 156420782,
+      "schoolName" : "SUNY Binghamton",
+      "endDate" : {
+        "year" : 2013
+      },
+      "startDate" : {
+        "year" : 2012
+      }
+    }
+  ],
+  "email" : "nmg2225@Yahoo.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 14632,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 6,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T14:50:32Z",
+    "created_at" : "2013-12-26T21:21:33Z",
+    "following" : 0,
+    "followers" : 4,
+    "public_gists" : 0,
+    "public_repos" : 7,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "NathanGrotticelli@gmail.com",
+    "location" : null,
+    "blog" : null,
+    "company" : null,
+    "name" : "Nathan Grotticelli",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/nathangrotticelli/received_events",
+    "events_url" : "https://api.github.com/users/nathangrotticelli/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/nathangrotticelli/repos",
+    "organizations_url" : "https://api.github.com/users/nathangrotticelli/orgs",
+    "subscriptions_url" : "https://api.github.com/users/nathangrotticelli/subscriptions",
+    "starred_url" : "https://api.github.com/users/nathangrotticelli/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/nathangrotticelli/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/nathangrotticelli/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/nathangrotticelli/followers",
+    "html_url" : "https://github.com/nathangrotticelli",
+    "url" : "https://api.github.com/users/nathangrotticelli",
+    "gravatar_id" : "dfb9aa0ec31a18c26e59abc9be8c3aab",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/6266959?",
+    "id" : 6266959,
+    "login" : "nathangrotticelli"
+  },
+  "linkedin" : {
+    "summary" : "With a passion for creation, design and growth, my goal is to affect and alter the world.",
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "Social Media"
+          },
+          "id" : 67
+        },
+        {
+          "skill" : {
+            "name" : "Entrepreneurship"
+          },
+          "id" : 68
+        },
+        {
+          "skill" : {
+            "name" : "Strategy"
+          },
+          "id" : 69
+        },
+        {
+          "skill" : {
+            "name" : "Analytics"
+          },
+          "id" : 70
+        },
+        {
+          "skill" : {
+            "name" : "Social Entrepreneurship"
+          },
+          "id" : 71
+        },
+        {
+          "skill" : {
+            "name" : "Leadership"
+          },
+          "id" : 72
+        },
+        {
+          "skill" : {
+            "name" : "Facebook"
+          },
+          "id" : 73
+        },
+        {
+          "skill" : {
+            "name" : "Social Networking"
+          },
+          "id" : 74
+        },
+        {
+          "skill" : {
+            "name" : "Marketing"
+          },
+          "id" : 75
+        },
+        {
+          "skill" : {
+            "name" : "Thought Leadership"
+          },
+          "id" : 76
+        },
+        {
+          "skill" : {
+            "name" : "Marketing Strategy"
+          },
+          "id" : 77
+        },
+        {
+          "skill" : {
+            "name" : "Social Media Marketing"
+          },
+          "id" : 78
+        },
+        {
+          "skill" : {
+            "name" : "Advertising"
+          },
+          "id" : 79
+        },
+        {
+          "skill" : {
+            "name" : "Online Marketing"
+          },
+          "id" : 80
+        },
+        {
+          "skill" : {
+            "name" : "Innovation"
+          },
+          "id" : 81
+        },
+        {
+          "skill" : {
+            "name" : "B2C marketing"
+          },
+          "id" : 82
+        },
+        {
+          "skill" : {
+            "name" : "Online Advertising"
+          },
+          "id" : 83
+        },
+        {
+          "skill" : {
+            "name" : "Google Analytics"
+          },
+          "id" : 84
+        },
+        {
+          "skill" : {
+            "name" : "Blogging"
+          },
+          "id" : 85
+        },
+        {
+          "skill" : {
+            "name" : "SEO"
+          },
+          "id" : 86
+        },
+        {
+          "skill" : {
+            "name" : "Brand Development"
+          },
+          "id" : 87
+        },
+        {
+          "skill" : {
+            "name" : "Social Media Measurement"
+          },
+          "id" : 88
+        },
+        {
+          "skill" : {
+            "name" : "Public Relations"
+          },
+          "id" : 89
+        },
+        {
+          "skill" : {
+            "name" : "Digital Media"
+          },
+          "id" : 90
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 91
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 92
+        },
+        {
+          "skill" : {
+            "name" : "HTML 5"
+          },
+          "id" : 93
+        },
+        {
+          "skill" : {
+            "name" : "CSS3"
+          },
+          "id" : 94
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 95
+        },
+        {
+          "skill" : {
+            "name" : "Test Driven Development"
+          },
+          "id" : 96
+        },
+        {
+          "skill" : {
+            "name" : "Git"
+          },
+          "id" : 97
+        }
+      ],
+      "_total" : 31
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=249776017&authType=name&authToken=8bdA&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Taylor",
+          "id" : "H1LOPF8vq2",
+          "firstName" : "Brittany Star"
+        },
+        {
+          "lastName" : "Hoffmann",
+          "id" : "RY2E3_yats",
+          "firstName" : "Lucas"
+        },
+        {
+          "lastName" : "Macin",
+          "id" : "DOaxdYzfAF",
+          "firstName" : "Brooke"
+        },
+        {
+          "lastName" : "Graves",
+          "id" : "6u4XERdQxE",
+          "firstName" : "Shanice"
+        },
+        {
+          "lastName" : "Gotleib",
+          "id" : "WZwpDiKbV9",
+          "firstName" : "Melissa"
+        },
+        {
+          "lastName" : "Hitt",
+          "id" : "mmRZqBa8On",
+          "firstName" : "Aidan"
+        },
+        {
+          "lastName" : "Lipman",
+          "id" : "5ryED0p3Nw",
+          "firstName" : "Brogan"
+        },
+        {
+          "lastName" : "Zhao",
+          "id" : "63iIbrsyUU",
+          "firstName" : "Tommy"
+        },
+        {
+          "lastName" : "Clarke",
+          "id" : "UBFG4oqt8u",
+          "firstName" : "Erik"
+        },
+        {
+          "lastName" : "Alvarado",
+          "id" : "CfBtZ9RUYA",
+          "firstName" : "Natalie"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "College Market Strategist",
+          "summary" : "Responsible for driving awareness, engagement, and excitement for Spotify within the college community through strategic partnerships, sponsored events and word-of-mouth.",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 4
+          },
+          "isCurrent" : true,
+          "id" : 389704318,
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "1001-5000 employees",
+            "name" : "Spotify",
+            "industry" : "Computer Software",
+            "id" : 207470
+          }
+        },
+        {
+          "title" : "CEO/Founder",
+          "summary" : "Leading an innovative tech start up obsessed with improving college nightlife through the mobile experience.",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 9
+          },
+          "isCurrent" : true,
+          "id" : 389703968,
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "11-50 employees",
+            "name" : "U Nightlife",
+            "industry" : "Utilities",
+            "id" : 3515937
+          }
+        },
+        {
+          "title" : "Mr. Youth Community Manager",
+          "summary" : "The Mr Youth Network is a global team of motivated and entrepreneurial students that focus on using creative, strategic and analytic intell to inspire and fuel advocacy and action on campus.\n\nMembers learn critical business skills related to social media and word-of-mouth marketing while developing a powerful network of executives and peers that will last them throughout their professional career. Most importantly the Mr Youth Network provides top-notch experience helping global brands pioneer the future of youth marketing.",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 1
+          },
+          "isCurrent" : true,
+          "id" : 389705005,
+          "company" : {
+            "type" : "Public Company",
+            "size" : "501-1000 employees",
+            "name" : "MRY",
+            "industry" : "Marketing and Advertising",
+            "id" : 29473
+          }
+        },
+        {
+          "title" : "Customer Funnel/Website Architect",
+          "summary" : "Providing strength, through insights, techniques and services, to students looking to use social media professionally.",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "isCurrent" : false,
+          "id" : 473782211,
+          "endDate" : {
+            "year" : 2014,
+            "month" : 2
+          },
+          "company" : {
+            "name" : "SocialMediaSpinach.com",
+            "industry" : "-1"
+          }
+        },
+        {
+          "title" : "Contributor",
+          "summary" : "Active article writer/contributor to the online publication.",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 5
+          },
+          "isCurrent" : false,
+          "id" : 399787099,
+          "endDate" : {
+            "year" : 2014,
+            "month" : 2
+          },
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "1-10 employees",
+            "name" : "YoungEntrepreneur.com",
+            "industry" : "Online Media",
+            "id" : 1150400
+          }
+        },
+        {
+          "title" : "#MRYintern",
+          "summary" : "MRY is a new type of agency that specializes in blending creativity and technology to make brands remarkable. We harness the power of strategic analytic intelligence to create remarkable content that sparks emotion, adds value, inspires action and changes behavior. We work with some of the world's biggest brands, including Coca-Cola, Adobe, Spotify, and Neutrogena. The #MRYintern program was named the \"Top Advertising Agency Internship\" of 2012.",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 410702598,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "company" : {
+            "type" : "Public Company",
+            "size" : "501-1000 employees",
+            "name" : "MRY",
+            "industry" : "Marketing and Advertising",
+            "id" : 29473
+          }
+        },
+        {
+          "title" : "Lead Social Media/Concept Design",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 3
+          },
+          "isCurrent" : false,
+          "id" : 389705726,
+          "endDate" : {
+            "year" : 2012,
+            "month" : 6
+          },
+          "company" : {
+            "name" : "www.VideoJournalistToday.com",
+            "industry" : "Computer Software"
+          }
+        }
+      ],
+      "_total" : 7
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_goVSNvyqshnDobSjgaEONcEHniTiEGpjxma-N9sqW6v-vQIgA2oTVnaVZS3jdLjAyd4PUlX32aed",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Grotticelli",
+    "interests" : "Growth Hacking,\nEntrepreneurship,\nSocial Media,\nDesign,\nSports,\nSnowboarding,\nInnovation\nAwesomeness",
+    "id" : "diAmJFCENs",
+    "honorsAwards" : {
+      "values" : [
+        {
+          "name" : "Startup Weekend Competition Finalist/Winner",
+          "id" : 10
+        }
+      ],
+      "_total" : 1
+    },
+    "headline" : "Entrepreneur/Developer",
+    "firstName" : "Nathan",
+    "emailAddress" : "nmg2225@Yahoo.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2013
+          },
+          "schoolName" : "Fullstack Academy of Code",
+          "notes" : "Making great people into great developers. Y Combinator backed.",
+          "id" : 199548544,
+          "endDate" : {
+            "year" : 2014
+          }
+        },
+        {
+          "startDate" : {
+            "year" : 2012
+          },
+          "schoolName" : "SUNY Binghamton",
+          "id" : 156420782,
+          "endDate" : {
+            "year" : 2013
+          },
+          "activities" : "Zeta Psi Fraternity, BU Poker Society Vice President, Entrepreneurship Club"
+        }
+      ],
+      "_total" : 2
+    }
+  },
+  "name" : "Nathan Grotticelli",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "1001-5000 employees",
+        "name" : "Spotify",
+        "industry" : "Computer Software",
+        "id" : 207470
+      },
+      "id" : 389704318,
+      "isCurrent" : true,
+      "title" : "College Market Strategist",
+      "startDate" : {
+        "month" : 4,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "11-50 employees",
+        "name" : "U Nightlife",
+        "industry" : "Utilities",
+        "id" : 3515937
+      },
+      "id" : 389703968,
+      "isCurrent" : true,
+      "title" : "CEO/Founder",
+      "startDate" : {
+        "month" : 9,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "size" : "501-1000 employees",
+        "name" : "MRY",
+        "industry" : "Marketing and Advertising",
+        "id" : 29473
+      },
+      "id" : 389705005,
+      "isCurrent" : true,
+      "title" : "Mr. Youth Community Manager",
+      "startDate" : {
+        "month" : 1,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "name" : "SocialMediaSpinach.com",
+        "industry" : "-1"
+      },
+      "id" : 473782211,
+      "isCurrent" : false,
+      "title" : "Customer Funnel/Website Architect",
+      "endDate" : {
+        "month" : 2,
+        "year" : 2014
+      },
+      "startDate" : {
+        "month" : 8,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "1-10 employees",
+        "name" : "YoungEntrepreneur.com",
+        "industry" : "Online Media",
+        "id" : 1150400
+      },
+      "id" : 399787099,
+      "isCurrent" : false,
+      "title" : "Contributor",
+      "endDate" : {
+        "month" : 2,
+        "year" : 2014
+      },
+      "startDate" : {
+        "month" : 5,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "size" : "501-1000 employees",
+        "name" : "MRY",
+        "industry" : "Marketing and Advertising",
+        "id" : 29473
+      },
+      "id" : 410702598,
+      "isCurrent" : false,
+      "title" : "#MRYintern",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "name" : "www.VideoJournalistToday.com",
+        "industry" : "Computer Software"
+      },
+      "id" : 389705726,
+      "isCurrent" : false,
+      "title" : "Lead Social Media/Concept Design",
+      "endDate" : {
+        "month" : 6,
+        "year" : 2012
+      },
+      "startDate" : {
+        "month" : 3,
+        "year" : 2012
+      }
+    }
+  ]
+});
 
 console.log('Done Seeding Data');
   res.send('200')
