@@ -1,8 +1,8 @@
 #SEED DATA
 In order to seed three developer data, please follow this method after merging your files:
-*1. Run your server 
-*2. Change the url to localhost:3000/seed
-*3. If you see a 200 json file, then the seed should be transported to your mongodb.
+*  1. Run your server 
+*  2. Change the url to localhost:3000/seed
+*  3. If you see a 200 json file, then the seed should be transported to your mongodb.
 
 
 # MEAN Stack
