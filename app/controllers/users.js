@@ -136,3 +136,7 @@ exports.profile = function(req, res) {
 exports.profileedit = function(req, res) {
 	res.render('profile-edit');
 };
+
+exports.profile_edit = function(req, res) {
+	res.json(req.user);
+}
