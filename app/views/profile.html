@@ -1,95 +1,128 @@
 {% extends 'layouts/theme.html' %}
 
 {% block pageheader %}
-      <h2><i class="fa fa-user"></i> <a href="/"> hire fullstack </a><span> Find your next Fullstack developer... </span></h2>
-      <div class="breadcrumb-wrapper">
-        <span class="label">You are here:</span>
-        <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li><a href="/developers">Search</a></li>
-          {%if req.user._id.toString() == req.params.id %}
-          <li class="active">Profile</li>
-          {% else %}
-          <li><a href="/profile/{{req.user._id.toString()}}">Profile</a></li>
-					{% endif %}
-        </ol>
-      </div>
+<h2><i class="fa fa-user"></i> <a href="/"> hire fullstack </a><span> Find your next Fullstack developer... </span></h2>
+<div class="breadcrumb-wrapper">
+	<span class="label">You are here:</span>
+	<ol class="breadcrumb">
+		<li><a href="/">Home</a></li>
+		<li><a href="/developers">Search</a></li>
+		{%if req.user._id.toString() == req.params.id %}
+		<li class="active">Profile</li>
+		{% else %}
+		<li><a href="/profile/{{req.user._id.toString()}}">Profile</a></li>
+		{% endif %}
+	</ol>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="row">
-      	<!-- Col-sm-3 -->
-        <div class="col-sm-3">
-          <img src="{{user.linkedin.pictureUrl}}" class="thumbnail img-responsive" alt=""/>
+	<!-- Col-sm-3 -->
+	<div class="col-sm-3">
+		<img src="{{user.linkedin.pictureUrl}}" class="thumbnail img-responsive" alt=""/>
+		<div class="mb30"></div>
+		<h5 class="subtitle">About</h5>
+		<p class="mb30">{{user.linkedin.summary || "Edit your profile to tell employers about yourself!"}} <br><a href="">Show More</a></p>
+		<h5 class="subtitle">Connect</h5>
+		<ul class="profile-social-list">
+			<li><i class="fa fa-twitter"></i> <a href="">twitter.com/eileensideways</a></li>
+			<li><i class="fa fa-facebook"></i> <a href="">facebook.com/eileen</a></li>
+			<li><i class="fa fa-youtube"></i> <a href="">youtube.com/eileen22</a></li>
+			<li><i class="fa fa-linkedin"></i> <a href="">linkedin.com/4ever-eileen</a></li>
+			<li><i class="fa fa-pinterest"></i> <a href="">pinterest.com/eileen</a></li>
+			<li><i class="fa fa-instagram"></i> <a href="">instagram.com/eiside</a></li>
+		</ul>
 
-          <div class="mb30"></div>
+		<div class="mb30"></div>
+		<h5 class="subtitle">Address</h5>
+		<address>
+			795 Folsom Ave, Suite 600<br>
+			San Francisco, CA 94107<br>
+			<abbr title="Phone">P:</abbr> (123) 456-7890
+		</address>
+	</div>
+	<!-- end col-sm-3 -->
+	<!-- Col-sm-9 -->
+	<div class="col-sm-9">
 
-          <h5 class="subtitle">About</h5>
-          <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat... <a href="">Show More</a></p>
+		<!-- Profile Header -->
+		<div class="profile-header">
+			<h2 class="profile-name">{{user.name}}</h2>
+			<div class="profile-location"><i class="fa fa-map-marker"></i> {{user.linkedin.location || user.github.location}}</div>
+			<div class="profile-position"><i class="fa fa-briefcase"></i>{{user.linkedin.headline}}</a></div>
 
-          <h5 class="subtitle">Connect</h5>
-          <ul class="profile-social-list">
-            <li><i class="fa fa-twitter"></i> <a href="">twitter.com/eileensideways</a></li>
-            <li><i class="fa fa-facebook"></i> <a href="">facebook.com/eileen</a></li>
-            <li><i class="fa fa-youtube"></i> <a href="">youtube.com/eileen22</a></li>
-            <li><i class="fa fa-linkedin"></i> <a href="">linkedin.com/4ever-eileen</a></li>
-            <li><i class="fa fa-pinterest"></i> <a href="">pinterest.com/eileen</a></li>
-            <li><i class="fa fa-instagram"></i> <a href="">instagram.com/eiside</a></li>
-          </ul>
+			<div class="mb20"></div>
 
-          <div class="mb30"></div>
+			<button class="btn btn-success mr5"><i class="fa fa-user"></i> Follow</button>
+			<button class="btn btn-white"><i class="fa fa-envelope-o"></i> Message</button>
+			{% if req.user._id.toString() == req.params.id %}
+			<a href='/profile/edit' class="btn btn-info"><i class='fa fa-edit'></i> Edit</a>
+			{% endif %}
+			<!-- <a href="#myModal" role="button" class="btn btn-info" data-toggle="modal">Demo Modal</a> -->
+			<!-- <button class="btn btn-primary" data-toggle="modal" data-target=".modal-header">Launch Modal</button> -->
+			<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Watch My Video</button>
+		</div>
 
-          <h5 class="subtitle">Address</h5>
-          <address>
-            795 Folsom Ave, Suite 600<br>
-            San Francisco, CA 94107<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-          </address>
+		<!-- end profile header -->
+<!-- Modal -->
 
-        </div>
-        <!-- end col-sm-3 -->
+<!-- <div class="modal-header">
+	<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+	<h4 class="modal-title">Static Background</h4>
+</div> -->
 
-        <!-- Col-sm-9 -->
-        <div class="col-sm-9">
 
-        	<!-- Profile Header -->
-          <div class="profile-header">
-            <h2 class="profile-name">{{user.name}}</h2>
-            <div class="profile-location"><i class="fa fa-map-marker"></i> {{user.linkedin.location || user.github.location}}</div>
-            <div class="profile-position"><i class="fa fa-briefcase"></i>{{user.linkedin.headline}}</a></div>
 
-            <div class="mb20"></div>
 
-            <button class="btn btn-success mr5"><i class="fa fa-user"></i> Follow</button>
-            <button class="btn btn-white"><i class="fa fa-envelope-o"></i> Message</button>
-          </div>
-          <!-- end profile header -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!-- Nav Tabs -->
-        <ul class="nav nav-tabs nav-justified nav-profile">
-          <li class="active"><a href="#activities" data-toggle="tab"><strong>Work Experience</strong></a></li>
-          <li><a href="#followers" data-toggle="tab"><strong>Education</strong></a></li>
-          <li><a href="#following" data-toggle="tab"><strong>Project 1</strong></a></li>
-          <li><a href="#events" data-toggle="tab"><strong>Project 2</strong></a></li>
-        </ul>
-        <!-- end nav tabs -->
+<!-- Modal end -->
+		<!-- Nav Tabs -->
+		<ul class="nav nav-tabs nav-justified nav-profile">
+			<li class="active"><a href="#activities" data-toggle="tab"><strong>Work Experience</strong></a></li>
+			<li><a href="#followers" data-toggle="tab"><strong>Education</strong></a></li>
+			<li><a href="#following" data-toggle="tab"><strong>Project 1</strong></a></li>
+			<li><a href="#events" data-toggle="tab"><strong>Project 2</strong></a></li>
+		</ul>
+		<!-- end nav tabs -->
 
-        <!-- Tab Panes -->
-        <div class="tab-content">
+		<!-- Tab Panes -->
+		<div class="tab-content">
 
 	<!-- Work Experience List -->
 	<div class="tab-pane active" id="activities">
-
+		{% for key, position in user.linkedin.positions.values %}
+			<li>{{position.company.name}}
+				<ul>{{position.title}}</ul>
+			</li>
+		{% endfor %}
 	</div>
 <!-- end work experience list -->
 
 <!-- Education List -->
 <div class="tab-pane" id="followers">
 	{% for school in user.linkedin.educations.values %}
-	<li>{{school.schoolName}}
-		<ul> {{school.fieldOfStudy}} </ul>
-		<ul> {{school.degree}} </ul>
-	</li>
+		<li>{{school.schoolName}}
+			<ul> {{school.fieldOfStudy}} </ul>
+			<ul> {{school.degree}} </ul>
+		</li>
 	{% endfor %}
 </div>
 <!-- project 1 tab -->
@@ -101,5 +134,6 @@
 		<h2>We will add secondary projects or skills here</h2>
 	</div>
 <!-- end project 1 tab -->
+</div>
 {% endblock %}
 
