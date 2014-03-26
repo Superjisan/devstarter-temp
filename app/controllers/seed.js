@@ -1658,6 +1658,470 @@ User.create(
   ]
 });
 
+//Peter Espinosa
+User.create({
+  "__v" : 1,
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "gYd6XGSzom",
+    }
+  ],
+  "email" : "peterespinosa78@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 6676,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 0,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T01:27:48Z",
+    "created_at" : "2013-07-30T15:27:03Z",
+    "following" : 3,
+    "followers" : 3,
+    "public_gists" : 0,
+    "public_repos" : 3,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "",
+    "location" : "",
+    "blog" : "",
+    "company" : "",
+    "name" : "Peter Espinosa",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/peterespinosa/received_events",
+    "events_url" : "https://api.github.com/users/peterespinosa/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/peterespinosa/repos",
+    "organizations_url" : "https://api.github.com/users/peterespinosa/orgs",
+    "subscriptions_url" : "https://api.github.com/users/peterespinosa/subscriptions",
+    "starred_url" : "https://api.github.com/users/peterespinosa/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/peterespinosa/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/peterespinosa/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/peterespinosa/followers",
+    "html_url" : "https://github.com/peterespinosa",
+    "url" : "https://api.github.com/users/peterespinosa",
+    "gravatar_id" : "c6cb4f394a65e585ef01ff30cd9fddad",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5122260?",
+    "id" : 5122260,
+    "login" : "peterespinosa"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "Software Development"
+          },
+          "id" : 9
+        },
+        {
+          "skill" : {
+            "name" : "Software Engineering"
+          },
+          "id" : 10
+        },
+        {
+          "skill" : {
+            "name" : "Linux"
+          },
+          "id" : 11
+        },
+        {
+          "skill" : {
+            "name" : "Embedded Systems"
+          },
+          "id" : 12
+        },
+        {
+          "skill" : {
+            "name" : "Agile Methodologies"
+          },
+          "id" : 13
+        },
+        {
+          "skill" : {
+            "name" : "XML"
+          },
+          "id" : 14
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 15
+        },
+        {
+          "skill" : {
+            "name" : "SQL"
+          },
+          "id" : 16
+        },
+        {
+          "skill" : {
+            "name" : "Python"
+          },
+          "id" : 18
+        },
+        {
+          "skill" : {
+            "name" : "Web Services"
+          },
+          "id" : 19
+        }
+      ],
+      "_total" : 10
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=273467332&authType=name&authToken=71nc&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "F.",
+          "id" : "rbg3BBO1-S",
+          "firstName" : "Julie"
+        },
+        {
+          "lastName" : "U.",
+          "id" : "TaaWGFU5Zr",
+          "firstName" : "Jamie"
+        },
+        {
+          "lastName" : "J.",
+          "id" : "NooJPn--Rn",
+          "firstName" : "Arlene"
+        },
+        {
+          "lastName" : "L.",
+          "id" : "ncZxEcw2DT",
+          "firstName" : "Amarylis"
+        },
+        {
+          "lastName" : "B.",
+          "id" : "_etjwSlgCO",
+          "firstName" : "Millie"
+        },
+        {
+          "lastName" : "J.",
+          "id" : "z_L5pALvWQ",
+          "firstName" : "Harry"
+        },
+        {
+          "lastName" : "H.",
+          "id" : "HCcqgg52IH",
+          "firstName" : "Susan"
+        },
+        {
+          "lastName" : "M.",
+          "id" : "nzxeGpmwUS",
+          "firstName" : "Scott"
+        },
+        {
+          "lastName" : "F.",
+          "id" : "LWV_M2-tTp",
+          "firstName" : "Jason"
+        },
+        {
+          "lastName" : "F.",
+          "id" : "IMWA2zwYp3",
+          "firstName" : "Derek"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "_total" : 0
+    },
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Espinosa",
+    "languages" : {
+      "values" : [
+        {
+          "language" : {
+            "name" : "English"
+          },
+          "id" : 1
+        },
+        {
+          "language" : {
+            "name" : "Spanish"
+          },
+          "id" : 2
+        }
+      ],
+      "_total" : 2
+    },
+    "id" : "gYd6XGSzom",
+    "headline" : "Software Engineer",
+    "firstName" : "Peter",
+    "emailAddress" : "peterespinosa78@gmail.com",
+    "educations" : {
+      "_total" : 0
+    }
+  },
+  "name" : "Peter Espinosa",
+  "roles" : [
+    "developer"
+  ]
+});
+
+//Max Giraldo
+User.create({
+  "__v" : 1,
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "2qKGhmTNbZ",
+    }
+  ],
+  "educations" : [
+    {
+      "id" : 199155650,
+      "notes" : "Intensive, 12-week web development/software engineering immersive course.",
+      "schoolName" : "Fullstack Academy",
+      "endDate" : {
+        "year" : 2014
+      },
+      "startDate" : {
+        "year" : 2014
+      }
+    },
+    {
+      "degree" : "BFA",
+      "fieldOfStudy" : "Advertising",
+      "id" : 62842653,
+      "schoolName" : "Art Center College of Design",
+      "endDate" : {
+        "year" : 2013
+      },
+      "startDate" : {
+        "year" : 2011
+      }
+    }
+  ],
+  "email" : "hi@maxgiraldo.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 5,
+      "collaborators" : 1,
+      "space" : 614400,
+      "name" : "micro"
+    },
+    "collaborators" : 3,
+    "disk_usage" : 1587,
+    "owned_private_repos" : 3,
+    "total_private_repos" : 9,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-26T01:58:48Z",
+    "created_at" : "2013-07-01T23:21:12Z",
+    "following" : 7,
+    "followers" : 6,
+    "public_gists" : 0,
+    "public_repos" : 2,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "",
+    "location" : "nyc",
+    "blog" : "maxgiraldo.com",
+    "company" : "",
+    "name" : "Max",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/maxgiraldo/received_events",
+    "events_url" : "https://api.github.com/users/maxgiraldo/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/maxgiraldo/repos",
+    "organizations_url" : "https://api.github.com/users/maxgiraldo/orgs",
+    "subscriptions_url" : "https://api.github.com/users/maxgiraldo/subscriptions",
+    "starred_url" : "https://api.github.com/users/maxgiraldo/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/maxgiraldo/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/maxgiraldo/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/maxgiraldo/followers",
+    "html_url" : "https://github.com/maxgiraldo",
+    "url" : "https://api.github.com/users/maxgiraldo",
+    "gravatar_id" : "4b1bd19834c6b4adfcf3286d880bba0a",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/4913413?",
+    "id" : 4913413,
+    "login" : "maxgiraldo"
+  },
+  "linkedin" : {
+    "summary" : "maxgiraldo.com",
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=63020039&authType=name&authToken=JuKE&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Koo",
+          "id" : "CSRTpH9PMC",
+          "firstName" : "Ji Ho"
+        },
+        {
+          "lastName" : "Pazmiño",
+          "id" : "En1mNn2tQC",
+          "firstName" : "Luis"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        },
+        {
+          "lastName" : "Xiang",
+          "id" : "0CbQxKE7yn",
+          "firstName" : "Tong"
+        },
+        {
+          "lastName" : "D'Alessandro",
+          "id" : "WkMxcboGNL",
+          "firstName" : "Scott"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Buchanan",
+          "id" : "fGnvXFc51n",
+          "firstName" : "Hannah Jane"
+        },
+        {
+          "lastName" : "Dorman",
+          "id" : "RA_dFGEbz-",
+          "firstName" : "Kyle"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "primaryTwitterAccount" : {
+      "providerAccountName" : "maxgiraldo",
+      "providerAccountId" : "34191752"
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Creative",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 10
+          },
+          "isCurrent" : false,
+          "id" : 489641674,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 12
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "IPG",
+            "size" : "501-1000 employees",
+            "name" : "Deutsch",
+            "industry" : "Marketing and Advertising",
+            "id" : 6043
+          }
+        }
+      ],
+      "_total" : 1
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0__NWrbZruZEcF-XZsDKEfbVruVeC9OXds3Pg7bRlpLSnF38OVftMpdUL-q6GHgiHnCBwaey7qhEA0",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Giraldo",
+    "id" : "2qKGhmTNbZ",
+    "headline" : "Student at Fullstack Academy",
+    "firstName" : "Max",
+    "emailAddress" : "hi@maxgiraldo.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2014
+          },
+          "schoolName" : "Fullstack Academy",
+          "notes" : "Intensive, 12-week web development/software engineering immersive course.",
+          "id" : 199155650,
+          "endDate" : {
+            "year" : 2014
+          }
+        },
+        {
+          "startDate" : {
+            "year" : 2011
+          },
+          "schoolName" : "Art Center College of Design",
+          "id" : 62842653,
+          "fieldOfStudy" : "Advertising",
+          "endDate" : {
+            "year" : 2013
+          },
+          "degree" : "BFA"
+        }
+      ],
+      "_total" : 2
+    },
+    "courses" : {
+      "_total" : 0
+    },
+    "certifications" : {
+      "_total" : 0
+    }
+  },
+  "name" : "Max Giraldo",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "IPG",
+        "size" : "501-1000 employees",
+        "name" : "Deutsch",
+        "industry" : "Marketing and Advertising",
+        "id" : 6043
+      },
+      "id" : 489641674,
+      "isCurrent" : false,
+      "title" : "Creative",
+      "endDate" : {
+        "month" : 12,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 10,
+        "year" : 2013
+      }
+    }
+  ]
+})
+
 console.log('Done Seeding Data');
   res.send('200')
 };
