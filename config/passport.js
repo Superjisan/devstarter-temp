@@ -52,30 +52,29 @@ module.exports = function(passport) {
         },
         function(req, accessToken, refreshToken, profile, done) {
         	console.log(profile);
-            User.findOne({
-                'github.id': profile.id
-            }, function(err, github) {
-                if (!github) {
-                    // console.log(req.user)
-                 User.findOne({ 'linkedin.id' : req.user.linkedin.id},
-                    function(err, user){
-                      if(err) console.log(err);
-                        user.github = profile._json;
-                        user.roles.push('developer')
-                        console.log(user);
-                        user.save(function(err){
-                            if(err) console.log(err);
-                            return done(err, github)
+            User.findOne({ 'github.id' : profile.id },
+                function(err, github) {
+                    if (!github) {
+                        // console.log(req.user)
+                     User.findOne({ 'linkedin.id' : req.user.linkedin.id},
+                        function(err, user){
+                          if(err) console.log(err);
+                            user.github = profile._json;
+                            user.roles.push('developer')
+                            console.log(user);
+                            user.save(function(err){
+                                if(err) console.log(err);
+                                return done(err, github)
+                            }
+                          )
                         }
-                      )
+                     )}
+                    else {
+                        return done(err, github);
                     }
-                 )}
-                else {
-                    return done(err, github);
-                }
-            });
+                });
 
-        }
+            }
       ));
 
 
@@ -90,8 +89,7 @@ module.exports = function(passport) {
         function(accessToken, refreshToken, profile, done) {
         	console.log(profile);
             User.findOne({
-                'authMethods.providerId': profile.id,
-                'authMethods.provider'	:	"linkedin"
+                'linkedin.id' : profile.id
             }, function(err, user) {
                 if (!user) {
                 	var linkedInFields = parseLinkedIn(profile);

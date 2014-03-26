@@ -47,6 +47,7 @@ exports.signup = function(req, res) {
  */
 exports.signout = function(req, res) {
 	req.logout();
+	req.logout();
 	res.redirect('/');
 };
 
@@ -119,6 +120,26 @@ exports.admin = function(req, res) {
 		});
 	});
 };
+
+exports.approve = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
+
+exports.deny = function(req, res){
+	var applicant = Object.keys(req.body)[0];
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
+		if (err){
+			return err;
+		}
+		console.log('Success:', user.roles);
+	})
+}
 
 
 /**
