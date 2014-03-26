@@ -5,7 +5,9 @@ angular.module('mean.developers').factory('Developers', ['$resource', function($
         articleId: '@_id'
     }, {
         update: {
-            method: 'PUT'
-        }
+            method: 'PUT',
+                        isArray : false
+        },
+
     });
 }]);

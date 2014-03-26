@@ -19,9 +19,9 @@
 
 {% block content%}
 
-    <div class="contentpanel">
+    <div class="contentpanel" data-ng-view>
 
-
+      <div data-ng-controller="DevelopersController" ng-init="find()" >
 
       <div class="people-list">
         <div class="row">
