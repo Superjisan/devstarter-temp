@@ -23,13 +23,15 @@
 
       <div data-ng-controller="DevelopersController" >
 
+      <div>
+      <form class="searchform" action="index.html" method="post">
+        <input type="text" class="form-control" name="keyword" placeholder="Search here..." ng-model="search.name"/>
 
-        <div id="search" class="container">
-                  <h3> Search Friends</h3>
-                  <input type="text" ng-model="search.name" name="Search Friends" placeholder="Friend Name Here" >
-                  <searchlimit></searchlimit>
+      </form>
+    </div>
 
-              </div>
+
+    <br><br><br><br>
 
       <div class="people-list">
         <div class="row">
