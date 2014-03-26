@@ -11,6 +11,8 @@
 jQuery(document).ready(function() {
 
    // Toggle Left Menu
+   /* remove left menu - we don't have one - david
+
    jQuery('.leftpanel .nav-parent > a').live('click', function() {
 
       var parent = jQuery(this).parent();
@@ -34,6 +36,7 @@ jQuery(document).ready(function() {
       }
       return false;
    });
+*/
 
    function closeVisibleSubMenu() {
       jQuery('.leftpanel .nav-parent').each(function() {
@@ -56,10 +59,10 @@ jQuery(document).ready(function() {
 
 
    // Tooltip
-   jQuery('.tooltips').tooltip({ container: 'body'});
+   // jQuery('.tooltips').tooltip({ container: 'body'});
 
    // Popover
-   jQuery('.popovers').popover();
+   // jQuery('.popovers').popover();
 
    // Close Button in Panels
    jQuery('.panel .panel-close').click(function(){
