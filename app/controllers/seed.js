@@ -2763,6 +2763,484 @@ User.create({
   ]
 });
 
+//Eric Cook
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "AjEGjDYQLv",
+    }
+  ],
+  "educations" : [
+    {
+      "degree" : "Master of Science in Teaching",
+      "fieldOfStudy" : "Adolescence Education",
+      "id" : 103278384,
+      "schoolName" : "State University of New York College at Plattsburgh",
+      "endDate" : {
+        "year" : 2013
+      },
+      "startDate" : {
+        "year" : 2011
+      }
+    },
+    {
+      "activities" : "Zeta Beta tau",
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "Mathematics",
+      "id" : 45405222,
+      "schoolName" : "State University of New York College at Plattsburgh",
+      "endDate" : {
+        "year" : 2011
+      },
+      "startDate" : {
+        "year" : 2008
+      }
+    }
+  ],
+  "email" : "ejcook111@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 32746,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 7,
+    "private_gists" : 1,
+    "updated_at" : "2014-03-26T16:19:44Z",
+    "created_at" : "2013-11-18T00:26:30Z",
+    "following" : 17,
+    "followers" : 6,
+    "public_gists" : 1,
+    "public_repos" : 9,
+    "bio" : null,
+    "hireable" : true,
+    "email" : null,
+    "location" : null,
+    "blog" : null,
+    "company" : null,
+    "name" : null,
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/CoderCookE/received_events",
+    "events_url" : "https://api.github.com/users/CoderCookE/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/CoderCookE/repos",
+    "organizations_url" : "https://api.github.com/users/CoderCookE/orgs",
+    "subscriptions_url" : "https://api.github.com/users/CoderCookE/subscriptions",
+    "starred_url" : "https://api.github.com/users/CoderCookE/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/CoderCookE/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/CoderCookE/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/CoderCookE/followers",
+    "html_url" : "https://github.com/CoderCookE",
+    "url" : "https://api.github.com/users/CoderCookE",
+    "gravatar_id" : "f6e326617b186e967d2aebc673bf3fa9",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5964112?",
+    "id" : 5964112,
+    "login" : "CoderCookE"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "OS X"
+          },
+          "id" : 27
+        },
+        {
+          "skill" : {
+            "name" : "Facebook"
+          },
+          "id" : 26
+        },
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 20
+        },
+        {
+          "skill" : {
+            "name" : "HTML 5"
+          },
+          "id" : 21
+        },
+        {
+          "skill" : {
+            "name" : "CSS"
+          },
+          "id" : 22
+        },
+        {
+          "skill" : {
+            "name" : "Mac OS X"
+          },
+          "id" : 16
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 29
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 30
+        }
+      ],
+      "_total" : 8
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=67450652&authType=name&authToken=XEz5&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        },
+        {
+          "lastName" : "Drury",
+          "id" : "hne4Az6W6H",
+          "firstName" : "James"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        },
+        {
+          "lastName" : "Xiang",
+          "id" : "0CbQxKE7yn",
+          "firstName" : "Tong"
+        },
+        {
+          "lastName" : "Zaman",
+          "id" : "PvmfqY724t",
+          "firstName" : "Jisan"
+        },
+        {
+          "lastName" : "Leasia",
+          "id" : "wWHDhWIVhD",
+          "firstName" : "Charlotte"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Student",
+          "startDate" : {
+            "year" : 2014,
+            "month" : 1
+          },
+          "isCurrent" : true,
+          "id" : 504577579,
+          "company" : {
+            "type" : "Educational Institution",
+            "size" : "1-10 employees",
+            "name" : "Fullstack Academy",
+            "industry" : "Internet",
+            "id" : 4985867
+          }
+        },
+        {
+          "title" : "Customer Experience Associate",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 6
+          },
+          "isCurrent" : true,
+          "id" : 110125471,
+          "company" : {
+            "type" : "Public Company",
+            "name" : "Gap Inc./Old Navy",
+            "industry" : "Retail",
+            "id" : 165295
+          }
+        },
+        {
+          "title" : "Mathematics Teacher",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 9
+          },
+          "isCurrent" : false,
+          "id" : 414011451,
+          "endDate" : {
+            "year" : 2014,
+            "month" : 1
+          },
+          "company" : {
+            "type" : "Government Agency",
+            "size" : "10,001+ employees",
+            "name" : "NYC Department of Education",
+            "industry" : "Education Management",
+            "id" : 2905
+          }
+        },
+        {
+          "title" : "Tutor",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 4
+          },
+          "isCurrent" : false,
+          "id" : 414010812,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "company" : {
+            "type" : "Privately Held",
+            "size" : "201-500 employees",
+            "name" : "Huntington Learning Center",
+            "industry" : "Education Management",
+            "id" : 164244
+          }
+        },
+        {
+          "title" : "Electronics Sales Associate",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2007,
+            "month" : 11
+          },
+          "isCurrent" : false,
+          "id" : 110125683,
+          "endDate" : {
+            "year" : 2008,
+            "month" : 7
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "SHLD",
+            "name" : "Sears, Roebuck and Co.",
+            "industry" : "Retail",
+            "id" : 1942
+          }
+        },
+        {
+          "title" : "Crew Coach",
+          "summary" : "",
+          "startDate" : {
+            "year" : 2005,
+            "month" : 7
+          },
+          "isCurrent" : false,
+          "id" : 110125555,
+          "endDate" : {
+            "year" : 2007,
+            "month" : 11
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "MCD",
+            "name" : "McDonald's",
+            "industry" : "Restaurants",
+            "id" : 2677
+          }
+        }
+      ],
+      "_total" : 6
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_UZgaG6KvBpw-GkhVJyslG5rncy7CC3rVMpWlG5BFHVUtg5FscYSGuLidJlfg36A9sUxrDGdd4_F8",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Cook",
+    "id" : "AjEGjDYQLv",
+    "headline" : "Student at Fullstack Academy",
+    "firstName" : "Eric",
+    "emailAddress" : "ejcook111@gmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2011
+          },
+          "schoolName" : "State University of New York College at Plattsburgh",
+          "id" : 103278384,
+          "fieldOfStudy" : "Adolescence Education",
+          "endDate" : {
+            "year" : 2013
+          },
+          "degree" : "Master of Science in Teaching"
+        },
+        {
+          "startDate" : {
+            "year" : 2008
+          },
+          "schoolName" : "State University of New York College at Plattsburgh",
+          "id" : 45405222,
+          "fieldOfStudy" : "Mathematics",
+          "endDate" : {
+            "year" : 2011
+          },
+          "degree" : "Bachelor of Arts (B.A.)",
+          "activities" : "Zeta Beta tau"
+        }
+      ],
+      "_total" : 2
+    },
+    "dateOfBirth" : {
+      "year" : 1990,
+      "month" : 11,
+      "day" : 1
+    }
+  },
+  "name" : "Eric Cook",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 504577579,
+      "isCurrent" : true,
+      "title" : "Student",
+      "startDate" : {
+        "month" : 1,
+        "year" : 2014
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "name" : "Gap Inc./Old Navy",
+        "industry" : "Retail",
+        "id" : 165295
+      },
+      "id" : 110125471,
+      "isCurrent" : true,
+      "title" : "Customer Experience Associate",
+      "startDate" : {
+        "month" : 6,
+        "year" : 2009
+      }
+    },
+    {
+      "company" : {
+        "type" : "Government Agency",
+        "size" : "10,001+ employees",
+        "name" : "NYC Department of Education",
+        "industry" : "Education Management",
+        "id" : 2905
+      },
+      "id" : 414011451,
+      "isCurrent" : false,
+      "title" : "Mathematics Teacher",
+      "endDate" : {
+        "month" : 1,
+        "year" : 2014
+      },
+      "startDate" : {
+        "month" : 9,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Privately Held",
+        "size" : "201-500 employees",
+        "name" : "Huntington Learning Center",
+        "industry" : "Education Management",
+        "id" : 164244
+      },
+      "id" : 414010812,
+      "isCurrent" : false,
+      "title" : "Tutor",
+      "endDate" : {
+        "month" : 6,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 4,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "SHLD",
+        "name" : "Sears, Roebuck and Co.",
+        "industry" : "Retail",
+        "id" : 1942
+      },
+      "id" : 110125683,
+      "isCurrent" : false,
+      "title" : "Electronics Sales Associate",
+      "endDate" : {
+        "month" : 7,
+        "year" : 2008
+      },
+      "startDate" : {
+        "month" : 11,
+        "year" : 2007
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "MCD",
+        "name" : "McDonald's",
+        "industry" : "Restaurants",
+        "id" : 2677
+      },
+      "id" : 110125555,
+      "isCurrent" : false,
+      "title" : "Crew Coach",
+      "endDate" : {
+        "month" : 11,
+        "year" : 2007
+      },
+      "startDate" : {
+        "month" : 7,
+        "year" : 2005
+      }
+    }
+  ]
+})
+
 console.log('Done Seeding Data');
   res.send('200')
 };
