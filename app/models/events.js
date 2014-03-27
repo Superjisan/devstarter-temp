@@ -3,20 +3,24 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var ProfilesVisitedBySchema = new Schema({
 
-});
-
+var ClicksSchema = new Schema({
+	url: String,
+	time_clicked: {type: Date}
+})
 
 var EventsSchema = new Schema({
-  user_id :  { type: Schema.Types.ObjectId,
-              ref: 'Users',
-              required: true},
-  profiles_visited : [],
-  profile_visited_by: [ProfilesVisitedBySchema],
-  user_name: {type: String,
-              ref: 'Users'},
-  user_organization : {
-    type: String,
-    ref: 'Users'}
+	visiting_user: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+									name: {type: String, ref: 'Users'},
+									organization: {type: String, ref: 'Users'}},
+	user_visited: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+								name: {type: String, ref: 'Users'},
+								organization: {type: String, ref: 'Users'}},
+	start_time: {type: Date},
+	end_time: {type: Date},
+	clicks: [ClicksSchema]
 });
+
+exports.ClicksSchema = ClicksSchema;
+exports.EventsSchema = EventsSchema;
+
