@@ -1,0 +1,42 @@
+{% extends 'layouts/theme.html' %}
+
+
+{% block pageheader %}
+
+<h2><i class="fa fa-user"></i> <a href="/">hire fullstack </a> <span> Find your next Fullstack developer... </span></h2>
+<div class="breadcrumb-wrapper">
+	<span class="label">You are here:</span>
+	<ol class="breadcrumb">
+		<li><a href="/">Home</a></li>
+		<li><a href="/developers">Search</a></li>
+		<li><a href="/profile/{{req.user._id.toString()}}"> Profile</a></li>
+	</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="contentpanel" data-ng-view>
+	<div data-ng-controller="InterestedController" >
+		<div class="people-list">
+			<div class="row">
+				<div ng-repeat='name in names'>
+					<div class="col-md-6">
+						<div class="people-item">
+							<div class="media">
+								<div class="media-body">
+									<!-- <div class="pull-right"> <img class="img-responsive" src="[[developer.linkedin.pictureUrl]]"> </div> -->
+									<a href="/profile/[[name.id]]">
+									<h4 class="person-name">[[name.name]]</h4></a>
+									<div class="text-muted"><i class="fa fa-briefcase"></i> [[name.email]]</a></div>
+								</div>
+							</div>
+						</div>
+					</div
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
