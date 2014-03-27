@@ -23,12 +23,28 @@ module.exports = function(app, passport) {
 
 	app.get('/profile/edit', authorization.requiresLogin, users.profileedit);
 	app.get('/profile/:id', authorization.requiresLogin, users.profile);
+
+
+
+
+	//=====================================================================
+	// API CALLS
 	app.get('/api/profile', authorization.requiresLogin, users.apiProfile);
 	app.get('/api/profile/edit', authorization.requiresLogin, users.apiProfileEdit);
 
-
 	app.post("/api/work", authorization.requiresLogin, users.workCreate);
 	app.delete("/api/work/:id", authorization.requiresLogin, users.workDelete);
+
+	app.post("/api/education", authorization.requiresLogin, users.educationCreate);
+	app.delete("/api/education/:id", authorization.requiresLogin, users.educationDelete);
+
+	app.post("/api/project", authorization.requiresLogin, users.projectCreate);
+	app.delete("/api/project/:id", authorization.requiresLogin, users.projectDelete);
+	// end api calls
+	//=====================================================================
+
+
+
 
 	// Setting the local strategy route
 	app.post('/users/session', passport.authenticate('local', {

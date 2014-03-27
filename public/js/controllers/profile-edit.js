@@ -1,21 +1,33 @@
 'use strict';
 
 angular.module('mean.profile-edit')
-  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work',
-  	function ($scope, Global, ProfileEditSrvc, Work) {
+  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work', 'Education', 'Project',
+  	function ($scope, Global, ProfileEditSrvc, Work, Education, Project) {
       $scope.global = Global;
 
       ProfileEditSrvc.getProfile(function(data) {
       	console.log(data);
       	$scope.user = data;
-      })
-
-      $scope.submitForm = function(isValid) {
-      	if (isValid) {
-      		ProfileEditSrvc.editProfile(function(data) {
-      			console.log(data);
-      		})
+      	$scope.skills = data.linkedin.skills.values;
+      	for (var i=0; i<$scope.skills.length; i++) {
+      		console.log($scope.skills[i]);
       	}
+      	// var skillsArray = $scope.user.linkedin.skills.values;
+      	// $scope.skillsString = skillsArray.join(",");
+
+      });
+
+      $scope.removeEducation = function(index) {
+      	var removedEducation = $scope.user.educations.splice(index, 1);
+      	var education = new Education(removedEducation[0]);
+      	education.$remove();
+      };
+      $scope.addEducation = function() {
+      	var education = new Education($scope.new_education);
+      	education.$save(function() {
+      		$scope.user.educations.unshift($scope.new_education);
+      		$scope.new_education = {};
+      	})
       }
 
       $scope.removeWork = function(index) {
@@ -27,7 +39,30 @@ angular.module('mean.profile-edit')
         var work = new Work($scope.new_work);
         work.$save(function() {
           $scope.user.work_experiences.unshift($scope.new_work);
+          $scope.new_work = {};
         });
+      };
+
+      $scope.removeProject = function(index) {
+      	var removedProject = $scope.user.projects.splice(index, 1);
+      	var project = new Project(removedProject[0]);
+      	project.$remove();
+      }
+
+      $scope.addProject = function() {
+      	var project = new Project($scope.new_project);
+      	project.$save(function() {
+      		$scope.user.projects.unshift($scope.new_project);
+      		$scope.new_project = {};
+      	})
+      }
+
+      $scope.addTag = function(event) {
+      	if(event.which === 13) {
+	      	$scope.skills.push({skill: {name: $scope.current_tag}});
+	      	$scope.current_tag = "";
+	      	event.preventDefault();
+      	}
       };
     }
   ])
@@ -42,7 +77,7 @@ angular.module('mean.profile-edit')
           return convertMonth(input.month) + ", " + input.year;
         } else if(input.year) {
           return input.year;
-        } else { 
+        } else {
           return "";
         }
       } else {
@@ -54,9 +89,9 @@ angular.module('mean.profile-edit')
 
 
 // angular.module("hire.editApp", ["resources"])
-//   .controller('FormCtrl', ['$scope', 'Global', '$element', 'Profile', 'Education', 'Employment', 
+//   .controller('FormCtrl', ['$scope', 'Global', '$element', 'Profile', 'Education', 'Employment',
 //     function ($scope, Global, $element, Profile, Education, Employment) {
 //       // $scope.user = Profile.get(
 
-        
+
 //   }])

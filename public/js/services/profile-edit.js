@@ -19,7 +19,17 @@ angular.module('mean.profile-edit')
 		return $resource('/api/work/:workId', {
 			workId: "@_id"
 		});
-	}]);
+	}])
+	.factory('Education', ['$resource', function($resource) {
+		return $resource('/api/education/:educationId', {
+			educationId: "@_id"
+		});
+	}])
+	.factory('Project', ['$resource', function($resource) {
+		return $resource('/api/project/:projectId', {
+			projectId: "@_id"
+		})
+	}])
 
 
 // angular.module("resources", ["$resource"]);
@@ -30,5 +40,5 @@ angular.module('mean.profile-edit')
 // 			developerId: "@_id"
 // 		});
 // 	}]);
-	
+
 
