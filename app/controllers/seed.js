@@ -3315,13 +3315,10 @@ User.create(
 
 //Jaclyn Tsui
 User.create({
-  "__v" : 1,
-  "_id" : ObjectId("53334cb9034c0377610b8154"),
   "auth_methods" : [
     {
       "provider" : "linkedin",
       "providerId" : "JmCfHALEkj",
-      "_id" : ObjectId("53334cb9034c0377610b8155")
     }
   ],
   "educations" : [
@@ -3330,7 +3327,6 @@ User.create({
       "fieldOfStudy" : "Software Development",
       "id" : 203997702,
       "schoolName" : "Fullstack Academy",
-      "_id" : ObjectId("53334cb9034c0377610b8158"),
       "endDate" : {
         "year" : 2014
       },
@@ -3343,7 +3339,6 @@ User.create({
       "fieldOfStudy" : "Real Estate",
       "id" : 206782944,
       "schoolName" : "The University of Hong Kong",
-      "_id" : ObjectId("53334cb9034c0377610b8157"),
       "endDate" : {
         "year" : 2011
       },
@@ -3357,7 +3352,6 @@ User.create({
       "fieldOfStudy" : "Joint Honors Biology and Management",
       "id" : 47405908,
       "schoolName" : "Imperial College London",
-      "_id" : ObjectId("53334cb9034c0377610b8156"),
       "endDate" : {
         "year" : 2008
       },
@@ -3701,7 +3695,6 @@ User.create({
       "id" : 213653463,
       "isCurrent" : true,
       "title" : "Managing Director",
-      "_id" : ObjectId("53334cb9034c0377610b815b"),
       "startDate" : {
         "month" : 6,
         "year" : 2011
@@ -3715,7 +3708,6 @@ User.create({
       "id" : 393214943,
       "isCurrent" : false,
       "title" : "Product Manager",
-      "_id" : ObjectId("53334cb9034c0377610b815a"),
       "endDate" : {
         "month" : 6,
         "year" : 2013
@@ -3733,12 +3725,525 @@ User.create({
       "id" : 213653775,
       "isCurrent" : false,
       "title" : "Associate",
-      "_id" : ObjectId("53334cb9034c0377610b8159"),
       "endDate" : {
         "year" : 2010
       },
       "startDate" : {
         "year" : 2008
+      }
+    }
+  ]
+})
+
+//James Drury
+User.create({
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "hne4Az6W6H",
+    }
+  ],
+  "educations" : [
+    {
+      "id" : 208852519,
+      "notes" : "Fullstack Academy is an immersive, full-time course in web development offered in New York City.",
+      "schoolName" : "Fullstack Academy of Code",
+      "endDate" : {
+        "year" : 2014
+      },
+      "startDate" : {
+        "year" : 2014
+      }
+    },
+    {
+      "fieldOfStudy" : "Web Developer Apprenticeship",
+      "id" : 208854254,
+      "notes" : "Twelve-week crash course in web development. Focused on Ruby and Ruby on Rails. Also covered version control (Git) and deployment with Heroku.",
+      "schoolName" : "Bloc.io",
+      "endDate" : {
+        "year" : 2013
+      },
+      "startDate" : {
+        "year" : 2013
+      }
+    },
+    {
+      "activities" : "Graduate Assistant at Providence College Center for Catholic and Dominican Studies. Member of Phi Alpha Theta History Honor Society. Graduated Summa Cum Laude.",
+      "degree" : "Master of Arts (M.A.)",
+      "fieldOfStudy" : "Modern European History",
+      "id" : 208852395,
+      "schoolName" : "Providence College",
+      "_id" : ObjectId("5334266600f0574f0f811089"),
+      "endDate" : {
+        "year" : 2011
+      },
+      "startDate" : {
+        "year" : 2009
+      }
+    },
+    {
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "History",
+      "id" : 208852404,
+      "schoolName" : "Providence College",
+      "_id" : ObjectId("5334266600f0574f0f811088"),
+      "endDate" : {
+        "year" : 2009
+      },
+      "startDate" : {
+        "year" : 2005
+      }
+    }
+  ],
+  "email" : "jdrury86@gmail.com",
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 131208,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 4,
+    "private_gists" : 2,
+    "updated_at" : "2014-03-27T13:24:16Z",
+    "created_at" : "2013-09-10T22:30:17Z",
+    "following" : 20,
+    "followers" : 7,
+    "public_gists" : 0,
+    "public_repos" : 12,
+    "bio" : null,
+    "hireable" : false,
+    "email" : "jdrury86@gmail.com",
+    "location" : "NYC",
+    "blog" : "http://jdrur.com",
+    "company" : "",
+    "name" : "James Drury",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/jamesdrury/received_events",
+    "events_url" : "https://api.github.com/users/jamesdrury/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/jamesdrury/repos",
+    "organizations_url" : "https://api.github.com/users/jamesdrury/orgs",
+    "subscriptions_url" : "https://api.github.com/users/jamesdrury/subscriptions",
+    "starred_url" : "https://api.github.com/users/jamesdrury/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/jamesdrury/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/jamesdrury/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/jamesdrury/followers",
+    "html_url" : "https://github.com/jamesdrury",
+    "url" : "https://api.github.com/users/jamesdrury",
+    "gravatar_id" : "c0168c2ceec4e5fa35a8268cec6d4d2b",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/5431100?",
+    "id" : 5431100,
+    "login" : "jamesdrury"
+  },
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 21
+        },
+        {
+          "skill" : {
+            "name" : "Web Developers"
+          },
+          "id" : 22
+        },
+        {
+          "skill" : {
+            "name" : "Creative Writing"
+          },
+          "id" : 23
+        },
+        {
+          "skill" : {
+            "name" : "Ruby"
+          },
+          "id" : 24
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 25
+        },
+        {
+          "skill" : {
+            "name" : "Ruby on Rails"
+          },
+          "id" : 26
+        },
+        {
+          "skill" : {
+            "name" : "Teaching"
+          },
+          "id" : 27
+        },
+        {
+          "skill" : {
+            "name" : "Social Media"
+          },
+          "id" : 28
+        }
+      ],
+      "_total" : 8
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=277252314&authType=name&authToken=caKV&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Cook",
+          "id" : "AjEGjDYQLv",
+          "firstName" : "Eric"
+        },
+        {
+          "lastName" : "Xiang",
+          "id" : "0CbQxKE7yn",
+          "firstName" : "Tong"
+        },
+        {
+          "lastName" : "Pazmiño",
+          "id" : "En1mNn2tQC",
+          "firstName" : "Luis"
+        },
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        },
+        {
+          "lastName" : "Buchanan",
+          "id" : "fGnvXFc51n",
+          "firstName" : "Hannah Jane"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Student",
+          "isCurrent" : true,
+          "id" : 514073362,
+          "company" : {
+            "type" : "Educational Institution",
+            "size" : "1-10 employees",
+            "name" : "Fullstack Academy",
+            "industry" : "Internet",
+            "id" : 4985867
+          }
+        },
+        {
+          "title" : "Co-Director of Education Program",
+          "summary" : "• Designed and deployed remedial education program for two hundred plus underprivileged children from Greater New York area.\n• Developed and implemented creative writing comic book curriculum for 10 year olds.\n• Organized and facilitated leadership seminar for rising ninth graders, SAT prep for rising eleventh graders and remedial literacy program for children ages ten to sixteen.",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 427716125,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "company" : {
+            "name" : "Morry's Camp, Project Morry",
+            "industry" : "Nonprofit Organization Management",
+            "id" : 1989443
+          }
+        },
+        {
+          "title" : "Dairyhand",
+          "summary" : "• Responsible for milking, setting up feed breaks, feeding out with tractor and monitoring cow health.\n• Mastered the four main cycles of dairy farming: calving, artificial insemination, once-a-day milking, drying off.",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 9
+          },
+          "isCurrent" : false,
+          "id" : 514089961,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 4
+          },
+          "company" : {
+            "name" : "Glencairn",
+            "industry" : "Computer Software"
+          }
+        },
+        {
+          "title" : "Shepherd",
+          "summary" : "• Worked full time at an iconic sheep station in the high country of Central Otago.\n• Assisted head shepherd in mustering and maintenance of livestock, including sheep, deer and cattle beasts.",
+          "startDate" : {
+            "year" : 2012,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 514092290,
+          "endDate" : {
+            "year" : 2012,
+            "month" : 9
+          },
+          "company" : {
+            "name" : "Glen Dene Station",
+            "industry" : "Computer Software"
+          }
+        },
+        {
+          "title" : "Communications Coordinator",
+          "summary" : "• Primary media contact for the nation’s largest nonprofit for new war veterans. Directly assisted Communications Director with messaging and media pitches.\n• Crafted social media messaging for multiple Twitter and Facebook accounts. Drafted a “Daily News Brief” for 4,000 member audience.\n• Excelled at transforming complicated policy points into concise, creative messaging.",
+          "startDate" : {
+            "year" : 2011,
+            "month" : 9
+          },
+          "isCurrent" : false,
+          "id" : 439331927,
+          "endDate" : {
+            "year" : 2012,
+            "month" : 6
+          },
+          "company" : {
+            "type" : "Nonprofit",
+            "size" : "11-50 employees",
+            "name" : "Iraq and Afghanistan Veterans of America (IAVA)",
+            "industry" : "Nonprofit Organization Management",
+            "id" : 394616
+          }
+        },
+        {
+          "title" : "Communications Intern",
+          "startDate" : {
+            "year" : 2011,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 514821971,
+          "endDate" : {
+            "year" : 2011,
+            "month" : 9
+          },
+          "company" : {
+            "type" : "Nonprofit",
+            "size" : "11-50 employees",
+            "name" : "Iraq and Afghanistan Veterans of America (IAVA)",
+            "industry" : "Nonprofit Organization Management",
+            "id" : 394616
+          }
+        }
+      ],
+      "_total" : 6
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_FfbQYoDRCra4WU-SFWnvYWyEhno4IUGS5HPJYWmR0POdq0zDwdBErdVza4E6eyiT625ZlaKoXLHR",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Drury",
+    "interests" : "Software development, version control, web development, web design, literature, history, international affairs, teaching",
+    "id" : "hne4Az6W6H",
+    "headline" : "Student at Fullstack Academy, Journeyman Web Developer",
+    "firstName" : "James",
+    "emailAddress" : "jdrury86@gmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2014
+          },
+          "schoolName" : "Fullstack Academy of Code",
+          "notes" : "Fullstack Academy is an immersive, full-time course in web development offered in New York City.",
+          "id" : 208852519,
+          "endDate" : {
+            "year" : 2014
+          }
+        },
+        {
+          "startDate" : {
+            "year" : 2013
+          },
+          "schoolName" : "Bloc.io",
+          "notes" : "Twelve-week crash course in web development. Focused on Ruby and Ruby on Rails. Also covered version control (Git) and deployment with Heroku.",
+          "id" : 208854254,
+          "fieldOfStudy" : "Web Developer Apprenticeship",
+          "endDate" : {
+            "year" : 2013
+          }
+        },
+        {
+          "startDate" : {
+            "year" : 2009
+          },
+          "schoolName" : "Providence College",
+          "id" : 208852395,
+          "fieldOfStudy" : "Modern European History",
+          "endDate" : {
+            "year" : 2011
+          },
+          "degree" : "Master of Arts (M.A.)",
+          "activities" : "Graduate Assistant at Providence College Center for Catholic and Dominican Studies. Member of Phi Alpha Theta History Honor Society. Graduated Summa Cum Laude."
+        },
+        {
+          "startDate" : {
+            "year" : 2005
+          },
+          "schoolName" : "Providence College",
+          "id" : 208852404,
+          "fieldOfStudy" : "History",
+          "endDate" : {
+            "year" : 2009
+          },
+          "degree" : "Bachelor of Arts (B.A.)"
+        }
+      ],
+      "_total" : 4
+    }
+  },
+  "name" : "James Drury",
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 514073362,
+      "isCurrent" : true,
+      "title" : "Student",
+      "_id" : ObjectId("5334266600f0574f0f811091")
+    },
+    {
+      "company" : {
+        "name" : "Morry's Camp, Project Morry",
+        "industry" : "Nonprofit Organization Management",
+        "id" : 1989443
+      },
+      "id" : 427716125,
+      "isCurrent" : false,
+      "title" : "Co-Director of Education Program",
+      "_id" : ObjectId("5334266600f0574f0f811090"),
+      "endDate" : {
+        "month" : 8,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "name" : "Glencairn",
+        "industry" : "Computer Software"
+      },
+      "id" : 514089961,
+      "isCurrent" : false,
+      "title" : "Dairyhand",
+      "_id" : ObjectId("5334266600f0574f0f81108f"),
+      "endDate" : {
+        "month" : 4,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 9,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "name" : "Glen Dene Station",
+        "industry" : "Computer Software"
+      },
+      "id" : 514092290,
+      "isCurrent" : false,
+      "title" : "Shepherd",
+      "_id" : ObjectId("5334266600f0574f0f81108e"),
+      "endDate" : {
+        "month" : 9,
+        "year" : 2012
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "type" : "Nonprofit",
+        "size" : "11-50 employees",
+        "name" : "Iraq and Afghanistan Veterans of America (IAVA)",
+        "industry" : "Nonprofit Organization Management",
+        "id" : 394616
+      },
+      "id" : 439331927,
+      "isCurrent" : false,
+      "title" : "Communications Coordinator",
+      "_id" : ObjectId("5334266600f0574f0f81108d"),
+      "endDate" : {
+        "month" : 6,
+        "year" : 2012
+      },
+      "startDate" : {
+        "month" : 9,
+        "year" : 2011
+      }
+    },
+    {
+      "company" : {
+        "type" : "Nonprofit",
+        "size" : "11-50 employees",
+        "name" : "Iraq and Afghanistan Veterans of America (IAVA)",
+        "industry" : "Nonprofit Organization Management",
+        "id" : 394616
+      },
+      "id" : 514821971,
+      "isCurrent" : false,
+      "title" : "Communications Intern",
+      "endDate" : {
+        "month" : 9,
+        "year" : 2011
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2011
       }
     }
   ]
