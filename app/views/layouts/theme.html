@@ -44,8 +44,9 @@
 {% include '../includes/foot.html' %}
 {% block js_footer %}{% endblock %}
 <script>
-  window.user = {{user|safe}};
-  window.developers = {{developers | json | safe}}
+window.user = {{ user | json | safe}}
+window.developers = {{developers | json | safe}}
+window.names = {{names | json | safe }}
 </script>
 </body>
 </html>
