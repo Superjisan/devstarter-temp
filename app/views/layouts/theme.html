@@ -55,9 +55,10 @@
     });
 
   });
-  window.user = {{user|safe}};
-  window.developers = {{developers | json | safe}}
-  window.names = {{names | json | safe }}
+  window.user = {{user| json | safe}};
+  window.developers = {{developers | json | safe}};
+  window.names = {{names | json | safe }};
+  window.eventTracker = {};
 
 </script>
 </body>

@@ -147,9 +147,10 @@ exports.deny = function(req, res){
  */
 exports.profile = function(req, res) {
 	// console.log(req.params.id);
-	User.findOne({_id: req.params.id}, function(err, user) {
+	User.findOne({_id: req.params.id}, function(err, developers) {
 		res.render('profile', {
-			user: user
+			user: req.user,
+			developers: developers
 		});
 	});
 };
