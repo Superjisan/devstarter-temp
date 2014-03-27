@@ -2,19 +2,19 @@
 
 angular.module('mean.profile-edit').controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc',
 	function ($scope, Global, ProfileEditSrvc) {
-    $scope.global = Global;
+		$scope.global = Global;
 
-    ProfileEditSrvc.getProfile(function(data) {
-    	console.log(data);
-    	$scope.user = data;
-    })
+		ProfileEditSrvc.getProfile(function(data) {
+			console.log(data);
+			$scope.user = data;
+		});
 
-    $scope.submitForm = function(isValid) {
-    	if (isValid) {
-    		ProfileEditSrvc.editProfile(function(data) {
-    			console.log(data);
-    		})
-    	}
-    }
-  }
+		$scope.submitForm = function(isValid) {
+			if (isValid) {
+				ProfileEditSrvc.editProfile(function(data) {
+					console.log(data);
+				});
+			}
+		};
+	}
 ]);
