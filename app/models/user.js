@@ -6,7 +6,9 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     WorkExperienceSchema = require('./work_experience').WorkExperienceSchema,
-		EducationSchema = require('./work_experience').EducationSchema;
+		EducationSchema = require('./work_experience').EducationSchema,
+		ClicksSchema = require('./events').ClicksSchema,
+		EventsSchema = require('./events').EventsSchema;
 /**
  * User Schema
  */
@@ -22,7 +24,8 @@ var UserSchema = new Schema({
     linkedin: {},
     educations: [EducationSchema],
     work_experiences: [WorkExperienceSchema],
-    auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}]
+    auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
+    events: [EventsSchema]
 });
 
 
