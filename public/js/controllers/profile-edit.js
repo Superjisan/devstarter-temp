@@ -8,5 +8,13 @@ angular.module('mean.profile-edit').controller('ProfileEditCtrl', ['$scope','Glo
     	console.log(data);
     	$scope.user = data;
     })
+
+    $scope.submitForm = function(isValid) {
+    	if (isValid) {
+    		ProfileEditSrvc.editProfile(function(data) {
+    			console.log(data);
+    		})
+    	}
+    }
   }
 ]);
