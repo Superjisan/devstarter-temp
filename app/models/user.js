@@ -14,6 +14,7 @@ var mongoose = require('mongoose'),
  */
 var UserSchema = new Schema({
 	name: {
+
         type: String,
         required: true
     },
@@ -27,6 +28,7 @@ var UserSchema = new Schema({
     work_experiences: [WorkExperienceSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema]
+
 });
 
 

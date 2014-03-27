@@ -60,7 +60,8 @@ module.exports = function(passport) {
                         function(err, user){
                           if(err) console.log(err);
                             user.github = profile._json;
-                            user.roles.push('developer')
+                            user.roles.push('developer');
+                            user.location.push(profile._json.location, ';', 'Willing To Relocate') // this is a hack job
                             console.log(user);
                             user.save(function(err){
                                 if(err) console.log(err);

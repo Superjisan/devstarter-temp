@@ -23,9 +23,16 @@
 
       <div data-ng-controller="DevelopersController" >
 
-      <div>
+    <div>
       <form class="searchform" action="index.html" method="post">
-        <input type="text" class="form-control" name="keyword" placeholder="Search here..." ng-model="search.name"/>
+        <input type="text" class="form-control" name="keyword" placeholder="Search by name" ng-model="search.name"/>
+
+      </form>
+    </div>
+
+    <div>
+      <form class="searchform" action="index.html" method="post">
+        <input type="text" class="form-control" name="keyword" placeholder="Search by location" ng-model="search.location"/>
 
       </form>
     </div>
@@ -36,18 +43,23 @@
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers | filter: search" ng-cloak>
-          <div class="col-md-6">
+          <div ng-repeat="developer in developers | filter: search" ng-cloak class ="col-md-6">
+          <div >
+
             <div class="people-item">
               <div class="media">
                 <a href="#" class="pull-left"></a>
 
                 <div class="media-body">
-                  <div class="pull-right"> <img class="img-responsive" src="[[developer.linkedin.pictureUrl]]"> </div>
+                  <div class="pull-right"> <img class="img-responsive" src=[[developer.linkedin.pictureUrl]]> </div>
                   <a href="/profile/[[developer._id.toString()]]">
                   <h4 class="person-name">[[developer.name]]</h4> </a>
 
                   <div class="text-muted"><i class="fa fa-briefcase"></i> [[developer.linkedin.headline]]</a></div>
+
+                   <div class="text-muted" ng-if="developer.github.location"><i class="fa fa-map-marker" ></i>
+                    <span ng-repeat="location in developer.location " >[[location]] </span>
+                  </div>
                   <ul class="social-list">
                     <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope-o"></i></a></li>
                     <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -67,6 +79,7 @@
 
     </div><!-- Developer Controller -->
   </div><!-- contentpanel -->
+</div>
 
 {% endblock%}
 

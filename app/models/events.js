@@ -3,6 +3,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
+
 var ClicksSchema = new Schema({
 	url: String,
 	time_clicked: {type: Date}
@@ -22,3 +23,4 @@ var EventsSchema = new Schema({
 
 exports.ClicksSchema = ClicksSchema;
 exports.EventsSchema = EventsSchema;
+
