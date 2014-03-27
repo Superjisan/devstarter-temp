@@ -7,18 +7,18 @@ var mongoose = require('mongoose'),
 	User = mongoose.model('User');
 
 exports.all = function(req, res) {
-// needs to be changed to approved
-  User.find({ roles: 'developer'}).exec(function(err, developers){
-    console.log(developers)
-    if(err) {
-      res.render('error', {
-        status: 500
-      });
-    } else {
 
-      res.render('browse', {developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'})
-    }
-  })
+	User.find({ roles: 'developer'}).exec(function(err, developers){
+		console.log(developers);
+		if(err) {
+			res.render('error', {
+				status: 500
+			});
+		} else {
+
+			res.render('browse', {developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'});
+		}
+	});
 
 };
 
