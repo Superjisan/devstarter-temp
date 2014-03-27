@@ -14,11 +14,32 @@ angular.module('mean.favorites')
 	'$location',
 	'$window',
 	'Global',
-	function($scope, $stateParams, $location, $window,  Global) {
+	'FollowService',
+	'$http',
+	function($scope, $stateParams, $location, $window,  Global, FollowService, $http) {
 		$scope.global = Global;
 		$scope.limitct = 10;
-		console.log($window.names);
-		$scope.names = $window.names;
+		// $scope.names = $window.names;
+		$scope.developers = $window.developers;
+		$scope.follow = function(name){
+			// console.log(name);
+			FollowService.postInterest(name,function(data){
+				console.log(data);
+			});
+		};
 
+		$scope.loadInterested = function() {
+			$http.get('/api/interests').success(function(data) {
+				console.log(data);
+				$scope.interested_users = data;
+			});
+		};
+
+		$scope.removeInterest = function(event, userId) {
+			$http.delete('/api/interests/' + userId)
+				.success(function() {
+					$scope.loadInterested();
+				});
+		};
 
 	}]);

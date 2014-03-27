@@ -15,19 +15,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="contentpanel" data-ng-view>
-	<div data-ng-controller="InterestedController" >
+<div class="contentpanel">
+	<div data-ng-controller="InterestedController" ng-init='loadInterested()' >
 		<div class="people-list">
 			<div class="row">
-				<div ng-repeat='name in names'>
+				<div ng-repeat='user in interested_users'>
 					<div class="col-md-6">
 						<div class="people-item">
 							<div class="media">
 								<div class="media-body">
 									<!-- <div class="pull-right"> <img class="img-responsive" src="[[developer.linkedin.pictureUrl]]"> </div> -->
-									<a href="/profile/[[name.id]]">
-									<h4 class="person-name">[[name.name]]</h4></a>
-									<div class="text-muted"><i class="fa fa-briefcase"></i> [[name.email]]</a></div>
+									<a href="/profile/[[user._id]]">
+									<h4 class="person-name">[[user.name]]</h4></a>
+									<div class="text-muted"><i class="fa fa-briefcase"></i> [[user.email]]</a></div>
+									<button class="btn" ng-click="removeInterest($event, user._id)">Remove</btn>
 								</div>
 							</div>
 						</div>

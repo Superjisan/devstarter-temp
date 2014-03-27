@@ -17,7 +17,7 @@ var UserSchema = new Schema({
         type: String,
         required: true
     },
-    interested: Array,
+    interested: [{ref: 'User', type: Schema.ObjectId }],
     email: String,
     provider: String,
     roles: [],
