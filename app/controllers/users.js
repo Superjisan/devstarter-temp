@@ -158,6 +158,24 @@ exports.profileedit = function(req, res) {
 	res.render('profile-edit');
 };
 
-exports.profile_edit = function(req, res) {
+exports.apiProfile = function(req, res) {
 	res.json(req.user);
+};
+
+exports.apiProfileEdit = function(req, res) {
+	var oldUser = req.user;
+	var newUser = req.body;
+	console.log(oldUser);
+	console.log(newUser);
+	// User.findByIdAndUpdate(oldUser._id, { username: newUser.username, full_name: newUser.full_name, bio: newUser.bio }, function(err, user) {
+	// 	if (err) {
+	// 		res.json(err);
+	// 	} else {
+	// 		console.log(user);
+	// 		res.json(user);
+	// 	}
+	// })
 }
+
+
+
