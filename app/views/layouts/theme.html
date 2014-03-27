@@ -44,8 +44,21 @@
 {% include '../includes/foot.html' %}
 {% block js_footer %}{% endblock %}
 <script>
-window.user = {{user | json | safe}}
-window.developers = {{developers | json | safe}}
+
+  jQuery(window).load(function(){
+
+    var container = document.querySelector('.people-list .row');
+    var msnry = new Masonry( container, {
+      // options
+      columnWidth: '.col-md-6',
+      itemSelector: '.col-md-6'
+    });
+
+  });
+  window.user = {{user| json | safe}};
+  window.developers = {{developers | json | safe}};
+  window.names = {{names | json | safe }};
+  window.eventTracker = {};
 </script>
 </body>
 </html>

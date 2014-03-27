@@ -18,14 +18,23 @@
 {% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
 <div ng-controller='InterestedController'>
 <div class="row">
+=======
+<div class="row" ng-controller="TrackingController" ng-init="startTimer()">
+>>>>>>> upstream/master
 	<!-- Col-sm-3 -->
 	<div class="col-sm-3">
 		<img src="{{developers.linkedin.pictureUrl}}" class="thumbnail img-responsive" alt=""/>
 		<div class="mb30"></div>
 		<h5 class="subtitle">About</h5>
+<<<<<<< HEAD
 		<p class="mb30">{{developers.linkedin.summary || "Edit your profile to tell employers about yourself!"}} <br><a href="">Show More</a></p>
+=======
+
+		<p class="mb30">{{user.linkedin.summary || "Edit your profile to tell employers about yourself!"}} <br><a href="">Show More</a></p>
+>>>>>>> upstream/master
 		<h5 class="subtitle">Connect</h5>
 		<ul class="profile-social-list">
 			<li><i class="fa fa-twitter"></i> <a href="">twitter.com/eileensideways</a></li>
