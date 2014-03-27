@@ -1,20 +1,6 @@
 {% extends 'layouts/theme.html' %}
 
-{% block pageheader %}
-<h2><i class="fa fa-user"></i> <a href="/"> hire fullstack </a><span> Find your next Fullstack developer... </span></h2>
-<div class="breadcrumb-wrapper">
-	<span class="label">You are here:</span>
-	<ol class="breadcrumb">
-		<li><a href="/">Home</a></li>
-		<li><a href="/developers">Search</a></li>
-		{%if req.user._id.toString() == req.params.id %}
-		<li class="active">Profile</li>
-		{% else %}
-		<li><a href="/profile/{{req.user._id.toString()}}">Profile</a></li>
-		{% endif %}
-	</ol>
-</div>
-{% endblock %}
+
 
 {% block content %}
 <div class="row">

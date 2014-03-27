@@ -162,6 +162,15 @@ exports.apiProfile = function(req, res) {
 	res.json(req.user);
 };
 
+exports.workDelete = function(req, res) {
+	User.findOne({ "work_experiences._id": req.params.id }, function(err, user) {
+		if (err) return next(err);
+		user.work_experiences.id(req.params.id).remove();
+		user.save();
+		res.json({});
+	});
+};
+
 exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
