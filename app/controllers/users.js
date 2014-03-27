@@ -162,6 +162,17 @@ exports.apiProfile = function(req, res) {
 	res.json(req.user);
 };
 
+
+exports.workCreate = function(req, res) {
+	User.findOne( { "_id": req.user._id }, function(err, user) {
+		console.log(req.body);
+		user.work_experiences.push(req.body);
+		user.save(function(err) {
+			res.json({});
+		});
+	});
+};
+
 exports.workDelete = function(req, res) {
 	User.findOne({ "work_experiences._id": req.params.id }, function(err, user) {
 		if (err) return next(err);

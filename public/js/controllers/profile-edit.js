@@ -19,10 +19,15 @@ angular.module('mean.profile-edit')
       }
 
       $scope.removeWork = function(index) {
-        debugger;
         var removedWork = $scope.user.work_experiences.splice(index, 1);
         var work = new Work(removedWork[0]);
         work.$remove();
+      };
+      $scope.addWork = function() {
+        var work = new Work($scope.new_work);
+        work.$save(function() {
+          $scope.user.work_experiences.unshift($scope.new_work);
+        });
       };
     }
   ])
