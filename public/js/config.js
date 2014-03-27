@@ -9,14 +9,7 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
 
 		// states for my app
 		$stateProvider
-			.state('developer by id',{
-				url: '/developers/:developerId',
-				templateUrl: 'views/developers/view.html'
-			})
-			.state('all developers',{
-				url: '/developers',
-				templateUrl: 'views/developers/list.html'
-			})
+
 			.state('all articles', {
 				url: '/articles',
 				templateUrl: 'views/articles/list.html'
