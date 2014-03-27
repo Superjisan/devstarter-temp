@@ -44,6 +44,16 @@
 {% include '../includes/foot.html' %}
 {% block js_footer %}{% endblock %}
 <script>
+  jQuery(window).load(function(){
+
+    var container = document.querySelector('#bloglist');
+    var msnry = new Masonry( container, {
+      // options
+      columnWidth: '.col-xs-6',
+      itemSelector: '.col-xs-6'
+    });
+
+  });
   window.user = {{user|safe}};
   window.developers = {{developers | json | safe}}
 </script>

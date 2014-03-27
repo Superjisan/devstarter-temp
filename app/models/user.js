@@ -16,6 +16,7 @@ var UserSchema = new Schema({
         required: true
     },
     email: String,
+    location: ['Willing To Relocate'],
     provider: String,
     roles: [],
     github: {},

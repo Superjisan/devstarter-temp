@@ -10,7 +10,7 @@ exports.seed = function(req, res) {
 //Migi's Data
 User.create(
 {
-
+  "location": [';', 'Willing to relocate'],
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -355,13 +355,14 @@ User.create(
         "year" : 2009
       }
     }
-  ]
+  ],
+
 });
 
 //Howard Kim
 User.create(
 {
-
+  "location": [';', 'Willing to relocate'],
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -802,7 +803,7 @@ User.create(
 
 //Peter Espinosa
 User.create({
-
+  "location": [';', 'Willing to relocate'],
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -1021,6 +1022,7 @@ User.create({
 
 //Max Giraldo
 User.create({
+  "location": ['nyc',';', 'Willing to relocate'],
 
   "auth_methods" : [
     {
@@ -1266,6 +1268,8 @@ User.create({
 
 //Nathan Grotticelli
 User.create({
+  "location": [';', 'Willing to relocate'],
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -1909,6 +1913,8 @@ User.create({
 
 //Eric Cook
 User.create({
+  "location": [null,';', 'Willing to relocate'],
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -2387,6 +2393,7 @@ User.create({
 
 //Kelvin Yu
 User.create({
+  "location": [';', 'Willing to relocate'],
 
   "auth_methods" : [
     {
@@ -2937,6 +2944,8 @@ User.create({
 
 //Lauren Ashpole
 User.create({
+  "location": ['',';', 'Willing to relocate'],
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -3228,8 +3237,8 @@ User.create({
 })
 
 //Andrew Ross
-User.create(
-  {
+User.create({
+  "location": [';', 'Willing to relocate'],
 
   "auth_methods" : [
     {
@@ -3315,6 +3324,8 @@ User.create(
 
 //Jaclyn Tsui
 User.create({
+  "location": ['Hong Kong',';', 'Willing to relocate'],
+
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -3773,7 +3784,6 @@ User.create({
       "fieldOfStudy" : "Modern European History",
       "id" : 208852395,
       "schoolName" : "Providence College",
-      "_id" : ObjectId("5334266600f0574f0f811089"),
       "endDate" : {
         "year" : 2011
       },
@@ -3786,7 +3796,6 @@ User.create({
       "fieldOfStudy" : "History",
       "id" : 208852404,
       "schoolName" : "Providence College",
-      "_id" : ObjectId("5334266600f0574f0f811088"),
       "endDate" : {
         "year" : 2009
       },
@@ -4148,7 +4157,6 @@ User.create({
       "id" : 514073362,
       "isCurrent" : true,
       "title" : "Student",
-      "_id" : ObjectId("5334266600f0574f0f811091")
     },
     {
       "company" : {
@@ -4159,7 +4167,6 @@ User.create({
       "id" : 427716125,
       "isCurrent" : false,
       "title" : "Co-Director of Education Program",
-      "_id" : ObjectId("5334266600f0574f0f811090"),
       "endDate" : {
         "month" : 8,
         "year" : 2013
@@ -4177,7 +4184,6 @@ User.create({
       "id" : 514089961,
       "isCurrent" : false,
       "title" : "Dairyhand",
-      "_id" : ObjectId("5334266600f0574f0f81108f"),
       "endDate" : {
         "month" : 4,
         "year" : 2013
@@ -4195,7 +4201,6 @@ User.create({
       "id" : 514092290,
       "isCurrent" : false,
       "title" : "Shepherd",
-      "_id" : ObjectId("5334266600f0574f0f81108e"),
       "endDate" : {
         "month" : 9,
         "year" : 2012
@@ -4216,7 +4221,6 @@ User.create({
       "id" : 439331927,
       "isCurrent" : false,
       "title" : "Communications Coordinator",
-      "_id" : ObjectId("5334266600f0574f0f81108d"),
       "endDate" : {
         "month" : 6,
         "year" : 2012
