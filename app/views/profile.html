@@ -108,12 +108,38 @@
 
 	<!-- Work Experience List -->
 	<div class="tab-pane active" id="activities">
-		{% for key, position in user.linkedin.positions.values %}
+<!-- 		{% for key, position in user.linkedin.positions.values %}
 			<li>{{position.company.name}}
 				<ul>{{position.title}}</ul>
+				<ul>{{position.startDate.year}} - {{position.endDate.year}}</ul>
 			</li>
+		{% endfor %} -->
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+		{% for key, position in user.linkedin.positions.values %}
+
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{key}}">
+								{{position.company.name}} : {{position.startDate.year}} - {{position.endDate.year}}
+						</a>
+
+					</h4>
+				</div>
+				<div id="collapse{{key}}" class="panel-collapse collapse in" style="height: auto;">
+					<div class="panel-body">
+					<ul><strong>{{position.title}}</strong></ul>
+					{% for key, line in position.summary.split(';') %}
+					<ul> {{line}}</ul>
+					{% endfor %}
+					</div>
+				</div>
+
 		{% endfor %}
+		</div>
+		</div>
 	</div>
+
 <!-- end work experience list -->
 
 <!-- Education List -->
