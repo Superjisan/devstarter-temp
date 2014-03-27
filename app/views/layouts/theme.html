@@ -44,6 +44,7 @@
 {% include '../includes/foot.html' %}
 {% block js_footer %}{% endblock %}
 <script>
+
   jQuery(window).load(function(){
 
     var container = document.querySelector('.people-list .row');
@@ -56,6 +57,9 @@
   });
   window.user = {{user|safe}};
   window.developers = {{developers | json | safe}}
+
+window.names = {{names | json | safe }}
+
 </script>
 </body>
 </html>

@@ -6,24 +6,28 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     WorkExperienceSchema = require('./work_experience').WorkExperienceSchema,
-		EducationSchema = require('./work_experience').EducationSchema;
+		EducationSchema = require('./work_experience').EducationSchema,
+		ClicksSchema = require('./events').ClicksSchema,
+		EventsSchema = require('./events').EventsSchema;
 /**
  * User Schema
  */
 var UserSchema = new Schema({
 	name: {
-		type: String,
-		required: true
-	},
-	interested: Array,
-	email: String,
-	provider: String,
-	roles: [],
-	github: {},
-	linkedin: {},
-	educations: [EducationSchema],
-	work_experiences: [WorkExperienceSchema],
-	auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}]
+
+        type: String,
+        required: true
+    },
+    interested: Array,
+    email: String,
+    provider: String,
+    roles: [],
+    github: {},
+    linkedin: {},
+    educations: [EducationSchema],
+    work_experiences: [WorkExperienceSchema],
+    auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
+    events: [EventsSchema]
 
 });
 
