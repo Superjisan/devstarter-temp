@@ -149,8 +149,8 @@ exports.profile = function(req, res) {
 	// console.log(req.params.id);
 	User.findOne({_id: req.params.id}, function(err, developers) {
 		res.render('profile', {
-			user: req.user,
-			developers: developers
+			developers: developers,
+			user: req.user
 		});
 	});
 };
