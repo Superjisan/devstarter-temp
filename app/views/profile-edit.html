@@ -13,7 +13,7 @@
   <div class="col-lg-3 col-sm-3 sidebar">
     <div class="sidebar-inner">
       <li>Personal Info</li>
-      <button class="btn btn-primary" ng-click="saveCandidate()">Save Profile</button>
+      <button type="submit" class="btn btn-primary">Save Profile</button>
     </div>
   </div><!-- sidebar -->
 
@@ -80,9 +80,9 @@
 						    <input name="tags" id="tags" class="form-control" value="foo,bar,baz" style="display: none;">
 						    <div id="tags_tagsinput" class="tagsinput" style="width: auto; height: 100px;">
 
-						    	<span ng-repeat="foo in skills" class="tag">
-						    		<span>[[ foo.skill.name ]]</span>
-						    		<a href="#" title="Removing tag">x</a>
+						    	<span ng-repeat="tag in skills" class="tag">
+						    		<span>[[ tag.skill.name ]]</span>
+						    		<a href="" ng-click="removeTag($index)" title="Removing tag">x</a>
 						    	</span>
 
 						    	<div id="tags_addTag">
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-
+					<button ng-disabled="basicForm.$invalid" type="submit" class="btn btn-primary">Save Profile</button>
         </div><!-- panel-body -->
 
       </div><!-- panel -->
