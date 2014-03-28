@@ -15,151 +15,164 @@
 		{% endif %}
 	</ol>
 </div>
+<style>
+	.floatLeft {
+		float: left;
+	}
+
+</style>
 {% endblock %}
 
 
 {% block content %}
+<!-- space for sidebar -->
+<div class="col-sm-3">
 
-<div class="row" ng-controller="TrackingController" ng-init="startTimer()">
-	<!-- Col-sm-3 -->
-	<div class="col-sm-3">
-		<img src="{{developers.linkedin.pictureUrl}}" class="thumbnail img-responsive" alt=""/>
-		<div class="mb30"></div>
-		<h5 class="subtitle">About</h5>
-		<p class="mb30">{{developers.linkedin.summary || "Edit your profile to tell employers about yourself!"}} <br><a href="">Show More</a></p>
-		<h5 class="subtitle">Connect</h5>
-		<ul class="profile-social-list">
-			{% if developers.twitter_url %}
-			<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{ developers.twitter_url }}"></a></li>
-			{% endif %}
-			<li><i class="fa fa-linkedin"></i> <a href="">{{ developers.linkedin_url }}</a></li>
-			<li><i class="fa fa-github"></i> <a href="">{{ developers.github_url }}</a></li>
-					</ul>
-
-		<div class="mb30"></div>
-		<h5 class="subtitle">Address</h5>
-		<address>
-			795 Folsom Ave, Suite 600<br>
-			San Francisco, CA 94107<br>
-			<abbr title="Phone">P:</abbr> (123) 456-7890
-		</address>
-	</div>
-	<!-- end col-sm-3 -->
-	<!-- Col-sm-9 -->
-	<div class="col-sm-9">
-
-		<!-- Profile Header -->
-		<div class="profile-header">
-			<h2 class="profile-name">{{developers.name}}</h2>
-			<div class="profile-location"><i class="fa fa-map-marker"></i> {{developers.linkedin.location || developers.github.location}}</div>
-			<div class="profile-position"><i class="fa fa-briefcase"></i>{{developers.linkedin.headline}}</a></div>
-
-			<div class="mb20"></div>
-
-			<button class="btn btn-success mr5" ng-click='follow(developers.name)'><i class="fa fa-user"></i> I'm Interested</button>
-			<button class="btn btn-white"><i class="fa fa-envelope-o"></i> Message</button>
-			{% if req.user._id.toString() == req.params.id %}
-			<a href='/profile/edit' class="btn btn-info"><i class='fa fa-edit'></i> Edit</a>
-			{% endif %}
-			<!-- <a href="#myModal" role="button" class="btn btn-info" data-toggle="modal">Demo Modal</a> -->
-			<!-- <button class="btn btn-primary" data-toggle="modal" data-target=".modal-header">Launch Modal</button> -->
-			<button id="watchVideo" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">Watch My Video</button>
-		</div>
-
-		<!-- end profile header -->
-<!-- Modal -->
-
-<!-- <div class="modal-header">
-	<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-	<h4 class="modal-title">Static Background</h4>
-</div> -->
-
-
-
-
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
-			</div>
-			<div class="modal-body">
-				<iframe id="userVid" width="640" height="400" src="//www.youtube.com/embed/HyophYBP_w4" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
 </div>
+<!-- /end space for sidebar -->
 
-<!-- Modal end -->
-		<!-- Nav Tabs -->
-		<ul class="nav nav-tabs nav-justified nav-profile">
-			<li class="active"><a href="#activities" data-toggle="tab"><strong>Work Experience</strong></a></li>
-			<li><a href="#followers" data-toggle="tab"><strong>Education</strong></a></li>
-			<li><a href="#following" data-toggle="tab"><strong>Project 1</strong></a></li>
-			<li><a href="#events" data-toggle="tab"><strong>Project 2</strong></a></li>
-		</ul>
-		<!-- end nav tabs -->
-
-		<!-- Tab Panes -->
-		<div class="tab-content">
-
-	<!-- Work Experience List -->
-	<div class="tab-pane active" id="activities">
-<!-- 		{% for key, position in user.linkedin.positions.values %}
-			<li>{{position.company.name}}
-				<ul>{{position.title}}</ul>
-				<ul>{{position.startDate.year}} - {{position.endDate.year}}</ul>
-			</li>
-		{% endfor %} -->
-		<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-		{% for key, position in developers.linkedin.positions.values %}
-
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{key}}">
-								{{position.company.name}} : {{position.startDate.year}} - {{position.endDate.year}}
-						</a>
-
-					</h4>
-				</div>
-				<div id="collapse{{key}}" class="panel-collapse collapse in" style="height: auto;">
+<!-- content panel -->
+<div class="col-sm-9">
+	<iframe id="userVid" width="725" height="480" src="//www.youtube.com/embed/HyophYBP_w4?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+	<div class="text-muted"><h3>ABOUT</h3></div>
+	<div class="panel panel-default panel-timeline">
+			<div class="media">
+				<div class="media-body">
+					<h2>{{user.name}}</h2>
 					<div class="panel-body">
-					<ul><strong>{{position.title}}</strong></ul>
-					{% for key, line in position.summary.split(';') %}
-					<ul> {{line}}</ul>
-					{% endfor %}
+						<h4>New York, NY</h4>
+						<h5 class='text-muted'>"Some really inspirational quotes will get you jobs if you put them here. Also Jisan will probably break this soon. Or already broke it. It's just a matter of time."</h5>
 					</div>
 				</div>
+			</div>
+	</div>
+	<div class="text-muted"><h3>PROJECTS</h3></div>
 
-		{% endfor %}
+<!-- insert PROJECT panels swig for loop BEGIN here -->
+
+	<div class="panel panel-default panel-timeline">
+		<div class="panel-heading">
+			<div class="media">
+				<div class="media-body">
+					<div class="panel-body">
+						<div class="media">
+								<img alt="" src="images/photos/media4.png" class="media-object pull-left">
+								<div class="media-body">
+									<h4><a href="">Project 1</a></h4>
+									<h5><strong>One line pitch, e.g., 'snapchat for legal docs'</strong></h5>
+									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+							</div>
+							<div class="timeline-btns">
+								<div class="pull-left">
+									<small class="text-muted">FRONT END DEVELOPER</small>
+								</div>
+								<div class="pull-right">
+									<small class="text-muted">AngularJS, MongoDB, Express, HTML, CSS, Node.js, Git</small>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+
+<!-- insert PROJECTS swig for loop END here  -->
+
+<div class="text-muted"><h3>WORK EXPERIENCE</h3></div>
+
+<!-- insert WORK EXPERIENCE swig for loop BEGIN here  -->
+
+	<div class="panel panel-default panel-timeline">
+		<div class="panel-heading">
+			<div class="media">
+				<div class="media-body">
+					<div class="panel-body">
+						<div class="media">
+								<div class="media-body">
+									<h4>HireFullStack</h4>
+									<h5><strong>Junior JavaScript Developer</strong></h5>
+									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+							</div>
+							<div class="timeline-btns">
+								<div>
+									<small class="text-muted">Bonus info: I beat Migi in ping pong all day every day.</small>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
-<!-- end work experience list -->
 
-<!-- Education List -->
-<div class="tab-pane" id="followers">
-	{% for school in developers.linkedin.educations.values %}
-		<li>{{school.schoolName}}
-			<ul> {{school.fieldOfStudy}} </ul>
-			<ul> {{school.degree}} </ul>
-		</li>
-	{% endfor %}
-</div>
-<!-- project 1 tab -->
-	<div class="tab-pane" id="following">
+<!-- insert WORK EXPERIENCE swig for END loop here -->
+
+<div class="text-muted"><h3>EDUCATION</h3></div>
+
+<!-- insert EDUCATION swig loop BEGIN here -->
+
+	<div class="panel panel-default panel-timeline">
+		<div class="panel-heading">
+			<div class="media">
+				<div class="media-body">
+					<div class="panel-body">
+						<div class="media">
+								<div class="media-body">
+									<h4>FullStack Academy of Code</h4>
+									<h5><strong>Learning to be a fullstack developer</strong></h5>
+									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+							</div>
+							<div class="timeline-btns">
+								<div>
+									<small class="text-muted">Bonus info: Root Beer is gross.</small>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-<!-- end project 1 tab -->
-<!-- project 1 tab -->
-	<div class="tab-pane" id="events">
-		<h2>We will add secondary projects or skills here</h2>
+
+
+<!-- insert EDUCATION swig loop END here -->
+
+<div class="text-muted"><h3>ADDITIONAL INFORMATION</h3></div>
+
+<!-- insert ADDITIONAL INFO swig loop BEGIN here -->
+
+	<div class="panel panel-default panel-timeline">
+		<div class="panel-heading">
+			<div class="media">
+				<div class="media-body">
+					<div class="panel-body">
+						<div class="media">
+								<div class="media-body">
+									<h4>I Like Turtles</h4>
+									<h5><strong>Bachelor's in Other Relevant Things</strong></h5>
+									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+							</div>
+							<div class="timeline-btns">
+								<div>
+									<small class="text-muted">Bonus info: Something cool.</small>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-<!-- end project 1 tab -->
+
+
+<!-- insert ADDITIONAL INFO swig loop END here -->
+
+
 </div>
-</div>
+
+<!-- end content panel -->
 {% endblock %}
 
 <script>
