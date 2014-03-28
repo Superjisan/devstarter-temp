@@ -109,19 +109,19 @@
 		      <div class="form-inline">
 		        <div class="form-group">
 		          <label class="sr-only" for="">Company Name</label>
-		          <input type="text" class="form-control" ng-model="new_work.company.name" placeholder="Company Name">
+		          <input type="text" class="form-control form-company" ng-model="new_work.company.name" placeholder="Company Name">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">Title </label>
-		          <input type="text" class="form-control" ng-model="new_work.title" placeholder="Title">
+		          <input type="text" class="form-control form-date" ng-model="new_work.title" placeholder="Title">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">Start Date</label>
-		          <input type="text" class="form-control" datepicker-popup ng-model="new_work.startDate" placeholder="Start Date">
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.startDate" placeholder="Start Date">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">End Date</label>
-		          <input type="text" class="form-control" datepicker-popup ng-model="new_work.endDate" placeholder="End Date">
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.endDate" placeholder="End Date">
 		        </div>
 		        <a href="" ng-click="addWork()" class="delete-row"><i class="fa fa-plus"></i></a>
 		      </div>
@@ -161,19 +161,19 @@
 		      <div class="form-inline">
 		        <div class="form-group">
 		          <label class="sr-only" for="">College/University</label>
-		          <input type="text" class="form-control" ng-model="new_education.schoolName" placeholder="College Name">
+		          <input type="text" class="form-control form-company" ng-model="new_education.schoolName" placeholder="College Name">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">Field of Study</label>
-		          <input type="text" class="form-control" ng-model="new_education.fieldOfStudy" placeholder="Study">
+		          <input type="text" class="form-control form-date" ng-model="new_education.fieldOfStudy" placeholder="Study">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">Start Date</label>
-		          <input type="text" class="form-control" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date">
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date">
 		        </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">End Date</label>
-		          <input type="text" class="form-control" datepicker-popup ng-model="new_education.endDate" placeholder="End Date">
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.endDate" placeholder="End Date">
 		        </div>
 		        <a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus"></i></a>
 		      </div>
@@ -225,6 +225,37 @@
 		          	<input type="url" class="form-control" ng-model="new_project.githubUrl" placeholder="GitHub URL">
 		          </div>
 		        </div>
+						<div class="form-group">
+		          <label class="col-sm-3 control-label">Short Pitch <span class="asterisk">*</span></label>
+		          <div class="col-sm-9">
+		          	<input type="text" class="form-control" ng-model="new_project.pitch" placeholder="Select Image">
+		          </div>
+		        </div>
+			      <div class="form-group">
+						  <label class="col-sm-3 control-label">Technology Stack</label>
+							  <div class="col-sm-7">
+							    <input name="tags" id="tags" class="form-control" value="foo,bar,baz" style="display: none;">
+							    <div id="tags_tagsinput" class="tagsinput" style="width: auto; height: 100px;">
+
+							    	<span ng-repeat="tag in projectTags" class="tag">
+							    		<span>[[ tag ]]</span>
+							    		<a href="" ng-click="removeProjectTag($index)" title="Removing tag">x</a>
+							    	</span>
+
+							    	<div id="tags_addTag">
+							    		<input id="tags_tag" value="" data-default="add a tag" style="color: rgb(102, 102, 102); width: 68px;" ng-model="currentTag" ng-keypress="addProjectTag($event)">
+							  		</div>
+							    	<div class="tags_clear"></div>
+
+							    </div>
+							  </div>
+						</div>
+		        <div class="form-group">
+		          <label class="col-sm-3 control-label">Description <span class="asterisk">*</span></label>
+		          <div class="col-sm-9">
+		          	<input type="text" class="form-control" ng-model="new_project.description" placeholder="Describe your project">
+		          </div>
+		        </div>
 		        <div class="form-group">
 		          <label class="col-sm-3 control-label">Images <span class="asterisk">*</span></label>
 		          <div class="col-sm-9">
@@ -246,6 +277,9 @@
 		    	<h1>[[ project.name ]]</h1>
 		    	<a href="[[ project.githubUrl ]]">[[ project.githubUrl ]]</a>
 <!-- 		    	<img ng-repeat="img in user.projects.images" src="[[ project.images ]]" class="img-responsive"> -->
+					<p>[[ project.description ]]</p>
+					<h3>[[ project.pitch ]]</h3>
+					<h6 ng-repeat="tag in project.tags">[[ tag ]]</h6>
 		    	<a href="" ng-click="removeProject($index)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		    </div>
 

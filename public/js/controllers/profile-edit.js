@@ -49,10 +49,12 @@ angular.module('mean.profile-edit')
       }
 
       $scope.addProject = function() {
+      	$scope.new_project.tags = $scope.projectTags;
       	var project = new Project($scope.new_project);
       	project.$save(function() {
       		$scope.user.projects.unshift($scope.new_project);
       		$scope.new_project = {};
+      		$scope.projectTags = [];
       	})
       }
 
@@ -67,6 +69,22 @@ angular.module('mean.profile-edit')
 	      	event.preventDefault();
       	}
       };
+
+      $scope.projectTags = [];
+
+
+      $scope.removeProjectTag = function(index) {
+      	$scope.projectTags.splice(index, 1);
+      }
+
+      $scope.addProjectTag = function(event) {
+      	if(event.which === 13) {
+      		$scope.projectTags.push($scope.currentTag);
+      		$scope.currentTag = "";
+      		event.preventDefault();
+      	}
+      }
+
     }
   ])
   .filter('workDate', function() {

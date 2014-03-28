@@ -220,6 +220,7 @@ exports.educationDelete = function(req, res) {
 
 exports.projectCreate = function(req, res) {
 	User.findOne( {"_id": req.user._id }, function(err, user) {
+		console.log(req.body);
 		user.projects.push(req.body);
 		user.save(function(err) {
 			res.json({});
