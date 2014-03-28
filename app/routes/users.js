@@ -22,8 +22,8 @@ module.exports = function(app, passport) {
 	// app.param('userId', users.user);
 
 	app.get('/profile/edit', authorization.requiresLogin, users.profileedit);
+	app.get('/profile/me', authorization.requiresLogin, users.redirectToProfile);
 	app.get('/profile/:id', authorization.requiresLogin, users.profile);
-
 
 
 

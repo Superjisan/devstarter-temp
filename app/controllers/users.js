@@ -11,11 +11,11 @@ var mongoose = require('mongoose'),
  */
 
 exports.authCallback = function(req, res) {
-	if (req.user.github){
-		res.redirect('/profile/' + req.user.id);
-	} else {
-		res.redirect('/');
-	}
+	// if (req.user.github){
+	// 	res.redirect('/profile/' + req.user.id);
+	// } else {
+	res.redirect('/developers');
+	// }
 };
 
 /**
@@ -155,6 +155,9 @@ exports.profile = function(req, res) {
 	});
 };
 
+exports.redirectToProfile = function(req, res) {
+	res.redirect('/profile/' + req.user._id);
+};
 exports.profileedit = function(req, res) {
 	res.render('profile-edit');
 };

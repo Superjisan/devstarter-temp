@@ -53,26 +53,18 @@
           </div>
 					{% else %}
           <div class="inner cover">
-          	<a href="/developers" class="btn btn-lg btn-danger">Danger, awesomeness ahead!</a>
+          	<a href="/developers" class="btn btn-lg btn-danger">View Developers</a>
           </div>
-          {% if !req.user.github %}
-					<div class="inner cover">
-						<a href="/auth/github" class="btn btn-lg btn-social btn-github"><i class="fa fa-github"></i>Connect with GitHub</a>
-					</div>
-					{% else %}
-					<div class="inner cover">
-						<a href="/profile/{{req.user._id.toString()}}" class="btn btn-lg btn-primary">Check out your profile!</a>
-					</div>
-					{% endif %}
-					{% if req.user.roles.indexOf('admin') !== -1 %}
+          {% endif %}
+
+					{% if req.user && req.user.roles.indexOf('admin') !== -1 %}
 					<div class="inner cover">
 						<a href="/users/admin" class="btn btn-lg btn-default">Admin screens</a>
 					</div>
 					{% endif %}
-					{% endif %}
           <div class="mastfoot">
             <div class="inner">
-              <p><a href="http://getbootstrap.com">Fullstack Academy, Making Great People into Great Developers</a></p>
+              <p><a href="http://fullstackacademy.com">Fullstack Academy, Making Great People into Great Developers</a></p>
             </div>
           </div>
 
