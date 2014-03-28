@@ -6,18 +6,10 @@
 			"public/brackets/css/bootstrap-override.css",
 			"public/brackets/css/jquery-ui-1.10.3.css",
 			"public/brackets/css/font-awesome.min.css",
-			"public/brackets/css/animate.min.css",
-			"public/brackets/css/animate.delay.css",
-			"public/brackets/css/toggles.css",
-			"public/brackets/css/chosen.css",
 			"public/brackets/css/lato.css",
 			"public/brackets/css/roboto.css",
 			"public/brackets/css/style.default.css",
-			"public/brackets/css/bootstrap-fileupload.min.css",
-			"public/brackets/css/bootstrap-timepicker.min.css",
-			"public/brackets/css/jquery.tagsinput.css",
-			"public/brackets/css/colorpicker.css",
-			"public/brackets/css/dropzone.css"
+			"public/brackets/css/jquery.tagsinput.css"
 		]
 	},
 	"js": {
@@ -29,19 +21,7 @@
 			"public/lib/angular-ui-router/release/angular-ui-router.js",
 			"public/lib/angular-bootstrap/ui-bootstrap.js",
 			"public/lib/angular-bootstrap/ui-bootstrap-tpls.js",
-			"public/brackets/js/jquery-migrate-1.2.1.min.js",
 			"public/brackets/js/bootstrap.min.js",
-			"public/brackets/js/modernizr.min.js",
-			"public/brackets/js/jquery.sparkline.min.js",
-			"public/brackets/js/toggles.min.js",
-			"public/brackets/js/retina.min.js",
-			"public/brackets/js/jquery.cookies.js",
-			"public/brackets/js/jquery.prettyPhoto.js",
-			"public/brackets/js/holder.js",
-			"public/brackets/js/custom.js",
-			"public/brackets/js/holder.js",
-			"public/brackets/js/jquery-1.10.2.min.js",
-			"public/brackets/js/jquery.tagsinput.min.js",
 			"public/js/**/*.js"
 		]
 	}

@@ -115,7 +115,7 @@
 		{% endfor %} -->
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
-		{% for key, position in user.linkedin.positions.values %}
+		{% for key, position in developers.linkedin.positions.values %}
 
 				<div class="panel-heading">
 					<h4 class="panel-title">
@@ -143,7 +143,7 @@
 
 <!-- Education List -->
 <div class="tab-pane" id="followers">
-	{% for school in user.linkedin.educations.values %}
+	{% for school in developers.linkedin.educations.values %}
 		<li>{{school.schoolName}}
 			<ul> {{school.fieldOfStudy}} </ul>
 			<ul> {{school.degree}} </ul>

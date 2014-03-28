@@ -17,11 +17,13 @@
 
 {% endblock %}
 
+{% block ng-controller %}DevelopersController{% endblock %}
+
 {% block content%}
 
-    <div class="contentpanel" data-ng-view>
+<div class="contentpanel">
 
-      <div data-ng-controller="DevelopersController" ng-init="startTimer()">
+  <div>
 
     <div>
       <form class="searchform" action="index.html" method="post">
@@ -33,7 +35,6 @@
     <div>
       <form class="searchform" action="index.html" method="post">
         <input type="text" class="form-control" name="keyword" placeholder="Search by location" ng-model="search.location"/>
-
       </form>
     </div>
 
