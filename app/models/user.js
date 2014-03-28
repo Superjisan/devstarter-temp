@@ -21,6 +21,8 @@ var UserSchema = new Schema({
     },
     interested: [{ref: 'User', type: Schema.ObjectId }],
     email: String,
+    location: String,
+    relocate: Boolean,
     provider: String,
     roles: [],
     github: {},

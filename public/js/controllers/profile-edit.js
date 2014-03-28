@@ -6,6 +6,7 @@ angular.module('mean.profile-edit')
       $scope.global = Global;
 
       ProfileEditSrvc.getProfile(function(data) {
+      	console.log(data);
       	$scope.user = data;
       	$scope.skills = data.linkedin.skills.values;
       });
@@ -127,7 +128,7 @@ angular.module('mean.profile-edit')
             openTo: "COMPUTER"
           }, {
             location: "S3",
-            path: "/assets/", 
+            path: "/assets/",
             access: "public"
           }, function (InkBlobs){
             console.log(InkBlobs);
