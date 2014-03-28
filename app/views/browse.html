@@ -56,16 +56,17 @@
 
                   <div class="text-muted"><i class="fa fa-briefcase"></i> [[developer.linkedin.headline]]</a></div>
 
-                   <div class="text-muted" ng-if="developer.github.location"><i class="fa fa-map-marker" ></i>
+
+                   <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
                     <span ng-repeat="location in developer.location " >[[location]] </span>
                   </div>
                   <ul class="social-list">
-                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope-o"></i></a></li>
-                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="" class="tooltips" data-toggle="tooltip" data-placement="top" title="Skype"><i class="fa fa-skype"></i></a></li>
+                    <li><a href="[[developer.github.html_url]]"class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+                  <li><a href="[[developer.linkedin.siteStandardProfileRequest.url]]"  class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+
                   </ul>
+                  <p > Summary: [[developer.linkedin.summary]] </p>
+
                 </div>
               </div>
             </div>
