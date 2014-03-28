@@ -84,7 +84,56 @@ angular.module('mean.profile-edit')
         return "";
       }
     }
-  });
+  })
+  .directive('filePicker', ['$compile', '$http', '$window', function ($compile, $http, $window) {
+    return {
+      restrict: 'C',
+      controller: function($scope, $attrs, $window) {
+        $scope.pickFiles = function(event) {
+          event.preventDefault();
+          var $element = angular.element(event.currentTarget).closest(".file-picker");
+          var $attrs = $element.data();
+          var $button = $element.find(".button")
+          $window.filepicker.setKey("Acw0VeSQcTCSvPgAV5GEqz");
+          var extensions = [".png", ".jpg", ".gif"].concat($attrs.extensions);
+
+          $button.addClass('button-loading');
+          $window.filepicker.pickAndStore({
+            extensions: extensions,
+            container: "modal",
+            services: ["COMPUTER", "FACEBOOK", "DROPBOX", "URL"],
+            openTo: "COMPUTER"
+          }, {
+            location: "S3",
+            path: "/assets/", 
+            access: "public"
+          }, function (InkBlobs){
+            console.log(InkBlobs);
+            $scope.$apply(function() {
+              var payload = {
+                url: InkBlobs[0].url,
+                filename: InkBlobs[0].filename,
+                attachment: $attrs.attachment
+              };
+
+              debugger;
+              $http.put($attrs.attachmentPath, payload).success(function(data, status, headers) {
+                $scope.$eval($attrs.resource)[$attrs.attachment] = angular.copy(data);
+                $button.removeClass('button-loading');
+              });
+            });
+          }, function (FPError){
+            console.warn(FPError);
+          })
+      };
+      }
+    };
+  }])
+
+
+
+
+
 
 
 
