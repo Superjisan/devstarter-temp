@@ -179,8 +179,9 @@ exports.apiProfileEdit = function(req, res) {
 	})
 }
 
-
-
+exports.apiDeveloperProfile = function(req, res) {
+	res.json(req.developers)
+}
 
 
 exports.workCreate = function(req, res) {

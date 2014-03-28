@@ -83,6 +83,7 @@ module.exports = function(app, passport) {
 
 	//Events post events
 	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate, tracker.visitedByCreate)
+	app.get("/api/developerProfile", users.apiDeveloperProfile);
 
 };
 
