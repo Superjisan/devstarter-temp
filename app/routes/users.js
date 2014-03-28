@@ -1,8 +1,10 @@
 'use strict';
 
 // User routes use users controller
+var tracker = require('../controllers/tracking.js')
 var users = require('../controllers/users');
 var authorization = require('./middlewares/authorization');
+
 
 
 module.exports = function(app, passport) {
@@ -78,4 +80,9 @@ module.exports = function(app, passport) {
 	app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
 			failureRedirect: '/signin'
 		}), users.authCallback);
+
+	//Events post events
+	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate, tracker.visitedByCreate)
+
 };
+
