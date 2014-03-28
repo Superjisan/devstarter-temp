@@ -4,7 +4,16 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = mongoose.model('User'),
+    nodemailer = require('nodemailer');
+
+var smtpTransport = nodemailer.createTransport("SMTP",{
+  service: "Gmail",
+  auth: {
+    user: "hirefullstackacademy@gmail.com",
+    pass: "devstarter"
+  }
+});
 
 /**
  * Auth callback
@@ -137,7 +146,19 @@ exports.deny = function(req, res){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been approved!",
+			text: "View your profile at http://hire.fullstackacademy.com"
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			smtpTransport.close();
+		})
 	})
 }
 

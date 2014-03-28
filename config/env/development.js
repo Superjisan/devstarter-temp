@@ -20,11 +20,10 @@ module.exports = {
         clientSecret: '9dc50a5a5b8ccff5ce76ec6ef47d613a5c2b3709',
         callbackURL: 'http://localhost:3000/auth/github/callback'
     },
-    // google: {
-    //     clientID: 'APP_ID',
-    //     clientSecret: 'APP_SECRET',
-    //     callbackURL: 'http://localhost:3000/auth/google/callback'
-    // },
+    google: {
+        email: 'HireFullstackAcademy@gmail.com',
+        password: 'devstarter'
+    },
     linkedin: {
         clientID: '77qy5d9cyaxg74',
         clientSecret: 'DIfXoYralsxVMTZN',
