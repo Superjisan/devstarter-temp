@@ -26,6 +26,10 @@ module.exports = function(app, passport) {
 	app.get('/api/profile', authorization.requiresLogin, users.apiProfile);
 	app.get('/api/profile/edit', authorization.requiresLogin, users.apiProfileEdit);
 
+
+	app.post("/api/work", authorization.requiresLogin, users.workCreate);
+	app.delete("/api/work/:id", authorization.requiresLogin, users.workDelete);
+
 	// Setting the local strategy route
 	app.post('/users/session', passport.authenticate('local', {
 		failureRedirect: '/signin',
