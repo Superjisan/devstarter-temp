@@ -8,8 +8,8 @@ angular.module('mean.profile-edit')
 					return $http.get('/api/profile')
 									.success(cb);
 				},
-				editProfile: function(cb) {
-					return $http.get('/api/profile/edit')
+				editProfile: function(formData, cb) {
+					return $http.post('/api/profile/edit', formData)
 									.success(cb);
 				}
 			};

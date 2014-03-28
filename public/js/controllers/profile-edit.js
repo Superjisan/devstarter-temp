@@ -6,16 +6,15 @@ angular.module('mean.profile-edit')
       $scope.global = Global;
 
       ProfileEditSrvc.getProfile(function(data) {
-      	console.log(data);
       	$scope.user = data;
       	$scope.skills = data.linkedin.skills.values;
-      	for (var i=0; i<$scope.skills.length; i++) {
-      		console.log($scope.skills[i]);
-      	}
-      	// var skillsArray = $scope.user.linkedin.skills.values;
-      	// $scope.skillsString = skillsArray.join(",");
-
       });
+
+      $scope.submitForm = function() {
+      	ProfileEditSrvc.editProfile($scope.user, function(data) {
+      		$scope.user = data;
+      	})
+      }
 
       $scope.removeEducation = function(index) {
       	var removedEducation = $scope.user.educations.splice(index, 1);
@@ -55,6 +54,10 @@ angular.module('mean.profile-edit')
       		$scope.user.projects.unshift($scope.new_project);
       		$scope.new_project = {};
       	})
+      }
+
+      $scope.removeTag = function(index) {
+      	$scope.skills.splice(index, 1);
       }
 
       $scope.addTag = function(event) {

@@ -6,9 +6,9 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     WorkExperienceSchema = require('./work_experience').WorkExperienceSchema,
-	EducationSchema = require('./work_experience').EducationSchema,
-	ClicksSchema = require('./events').ClicksSchema,
-	EventsSchema = require('./events').EventsSchema,
+		EducationSchema = require('./work_experience').EducationSchema,
+		ClicksSchema = require('./events').ClicksSchema,
+		EventsSchema = require('./events').EventsSchema,
     ProjectSchema = require('./work_experience').ProjectSchema;
 /**
  * User Schema
