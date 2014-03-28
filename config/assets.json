@@ -42,6 +42,7 @@
 			"public/brackets/js/custom.js",
 			"public/brackets/js/holder.js",
 			"public/brackets/js/jquery-1.10.2.min.js",
+			"public/brackets/js/jquery.tagsinput.min.js",
 			"public/js/**/*.js"
 		]
 	}

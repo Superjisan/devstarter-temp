@@ -163,6 +163,24 @@ exports.apiProfile = function(req, res) {
 	res.json(req.user);
 };
 
+exports.apiProfileEdit = function(req, res) {
+	var oldUser = req.user;
+	var newUser = req.body;
+	console.log(oldUser);
+	console.log(newUser);
+	// User.findByIdAndUpdate(oldUser._id, { username: newUser.username, full_name: newUser.full_name, bio: newUser.bio }, function(err, user) {
+	// 	if (err) {
+	// 		res.json(err);
+	// 	} else {
+	// 		console.log(user);
+	// 		res.json(user);
+	// 	}
+	// })
+}
+
+
+
+
 
 exports.workCreate = function(req, res) {
 	User.findOne( { "_id": req.user._id }, function(err, user) {
@@ -183,20 +201,39 @@ exports.workDelete = function(req, res) {
 	});
 };
 
-exports.apiProfileEdit = function(req, res) {
-	var oldUser = req.user;
-	var newUser = req.body;
-	console.log(oldUser);
-	console.log(newUser);
-	// User.findByIdAndUpdate(oldUser._id, { username: newUser.username, full_name: newUser.full_name, bio: newUser.bio }, function(err, user) {
-	// 	if (err) {
-	// 		res.json(err);
-	// 	} else {
-	// 		console.log(user);
-	// 		res.json(user);
-	// 	}
-	// })
+exports.educationCreate = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+		console.log(req.body);
+		user.educations.push(req.body);
+		user.save(function(err) {
+			res.json({});
+		});
+	});
+};
+
+exports.educationDelete = function(req, res) {
+	User.findOne({ "educations._id": req.params.id }, function(err, user) {
+		if (err) return next(err);
+		user.educations.id(req.params.id).remove();
+		user.save();
+		res.json({});
+	})
 }
 
+exports.projectCreate = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+		user.projects.push(req.body);
+		user.save(function(err) {
+			res.json({});
+		})
+	})
+}
 
-
+exports.projectDelete = function(req, res) {
+	User.findOne({ "projects._id": req.params.id }, function(err, user) {
+		if (err) return next(err);
+		user.projects.id(req.params.id).remove();
+		user.save();
+		res.json({});
+	})
+}
