@@ -239,4 +239,13 @@ exports.projectDelete = function(req, res) {
 		user.save();
 		res.json({});
 	})
-}
+};
+
+exports.addAttachment = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+		user[req.body.attachment] = req.body.url;
+		user.save(function(err) {
+			res.json(req.body);
+		})
+	})
+};

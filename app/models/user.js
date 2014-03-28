@@ -32,7 +32,9 @@ var UserSchema = new Schema({
     work_experiences: [WorkExperienceSchema],
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
-    events: [EventsSchema]
+    events: [EventsSchema],
+    profile_picture: String,
+    resume: String
 
 });
 

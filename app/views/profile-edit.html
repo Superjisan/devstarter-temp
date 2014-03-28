@@ -31,10 +31,17 @@
 
         <div class="panel-body">
 
-          <div class="form-group">
+          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='profile_picture'>
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
-              <input ng-model="user.name" type="text" name="name" class="form-control" placeholder="Type your name..." required />
+              <div ng-hide='user.profile_picture'>
+                <img src="holder.js/200x200"><br/><br/>
+                <button ng-click='pickFiles($event)'>Add Picture</button>
+              </div>
+              <div ng-show='user.profile_picture'>
+                <img ng-src="[[user.profile_picture]]/convert?w=200&h=200&fit=crop&align=faces" /><br /><br />
+                <button ng-click='pickFiles($event)'>Change Picture</button>
+              </div>
             </div>
           </div>
 
@@ -86,6 +93,19 @@
 						    </div>
 						  </div>
 					</div>
+
+          <div class="form-group file-picker" data-extensions="['.pdf', '.doc', '.docx']" data-attachment-path="/api/attachments" data-resource='user' data-attachment='resume'>
+            <label class="col-sm-3 control-label">Resume (PDF/DOC) <span class="asterisk">*</span></label>
+            <div class="col-sm-9">
+              <div ng-hide='user.resume'>
+                <button ng-click='pickFiles($event)'>Add Resume</button>
+              </div>
+              <div ng-show='user.resume'>
+                <a href="[[user.resume]]"><span class="fa fa-file-text"></span> Resume</a><br /><br />
+                <button ng-click='pickFiles($event)'>Change Resume</button>
+              </div>
+            </div>
+          </div>
 
         </div><!-- panel-body -->
 
