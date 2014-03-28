@@ -1,7 +1,5 @@
 {% extends 'layouts/theme.html' %}
 
-{% block ng-controller %}ProfileEditCtrl{% endblock %}
-
 {% block pageheader %}
       <h2><i class="fa fa-pencil"></i> Profile Edit <span>Subtitle goes here...</span></h2>
 
@@ -9,7 +7,7 @@
 
 {% block content %}
 
-<div class="row">
+<div class="row" ng-controller="ProfileEditCtrl">
 
 	<!-- Sidebar -->
   <div class="col-lg-3 col-sm-3 sidebar">
