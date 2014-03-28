@@ -95,7 +95,8 @@ angular.module('mean.profile-edit')
           var $attrs = $element.data();
           var $button = $element.find(".button")
           $window.filepicker.setKey("Acw0VeSQcTCSvPgAV5GEqz");
-          var extensions = [".png", ".jpg", ".gif"].concat($attrs.extensions);
+          debugger;
+          var extensions = [".png", ".jpg", ".gif"].concat($scope.$eval($attrs.extensions));
 
           $button.addClass('button-loading');
           $window.filepicker.pickAndStore({
@@ -115,8 +116,7 @@ angular.module('mean.profile-edit')
                 filename: InkBlobs[0].filename,
                 attachment: $attrs.attachment
               };
-
-              debugger;
+              // debugger;
               $http.put($attrs.attachmentPath, payload).success(function(data, status, headers) {
                 $scope.$eval($attrs.resource)[$attrs.attachment] = angular.copy(data);
                 $button.removeClass('button-loading');
