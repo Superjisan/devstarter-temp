@@ -10,6 +10,7 @@ angular.module('mean.tracking')
 	'Global',
 	function($scope, $stateParams, $location, $window, Global){
 		$scope.global = Global;
+		$scope.clicks = [];
 		$scope.startTimer = function(){
 			var startTime = new Date();
 			var visitingUser = $window.user;
