@@ -22,14 +22,13 @@
 	},
 	"js": {
 		"public/build/js/dist.min.js": [
-			"public/lib/jquery/sjquery.js",
+			"public/brackets/js/jquery-1.10.2.min.js",
 			"public/lib/angular/angular.js",
 			"public/lib/angular-cookies/angular-cookies.js",
 			"public/lib/angular-resource/angular-resource.js",
 			"public/lib/angular-ui-router/release/angular-ui-router.js",
 			"public/lib/angular-bootstrap/ui-bootstrap.js",
 			"public/lib/angular-bootstrap/ui-bootstrap-tpls.js",
-			"public/brackets/js/jquery-1.10.2.min.js",
 			"public/brackets/js/jquery-migrate-1.2.1.min.js",
 			"public/brackets/js/bootstrap.min.js",
 			"public/brackets/js/modernizr.min.js",
