@@ -21,7 +21,9 @@ var parseLinkedIn = function(profile) {
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
     skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
-    linkedin: profile._json
+    linkedin: profile._json,
+    linkedin_url: profile._json.siteStandardProfileRequest.url,
+    relocate: true
   };
 };
 module.exports = function(passport) {
@@ -62,8 +64,9 @@ module.exports = function(passport) {
                         function(err, user){
                           if(err) console.log(err);
                             user.github = profile._json;
+                            user.github_url = profile._json.html_url;
                             user.roles.push('developer');
-                            user.location.push(profile._json.location, ';', 'Willing To Relocate') // this is a hack job
+                            user.location = profile._json.location;
                             console.log(user);
                             user.save(function(err){
                                 if(err) console.log(err);

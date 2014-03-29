@@ -21,7 +21,6 @@ var UserSchema = new Schema({
     },
     interested: [{ref: 'User', type: Schema.ObjectId }],
     email: String,
-    location: String,
     relocate: Boolean,
     provider: String,
     roles: [],
@@ -36,6 +35,9 @@ var UserSchema = new Schema({
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
+
+    location: [],
+
     resume: String,
     skills: String,
     profile_picture: {
@@ -47,6 +49,7 @@ var UserSchema = new Schema({
       original: String
     },
     summary: String
+
 });
 
 

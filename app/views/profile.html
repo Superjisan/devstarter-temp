@@ -5,7 +5,9 @@
 
 <div class='mini-profile'>
   <div class='info'>
+
     <img class='profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
+
     <h3 class='mini-header'>{{developer.name}}</h3>
     <h4 class='extra-info'>{{developer.location}}</h4>
     <h4 class='extra-info'>
@@ -51,15 +53,17 @@
     {% if developer._id.toString() === user._id.toString() %}
     	<p><a href="/profile/edit" class="btn btn-warning">Edit My Profile</a></p>
 	  {% endif %}
+
   </div>
 </div>
 <!-- space for sidebar -->
-<div class="col-sm-3">
+<div class="col-sm-3" >
 
 </div>
 <!-- /end space for sidebar -->
 
 <!-- content panel -->
+
 <div class="col-sm-9" style="padding-left:20px">
 	{% if developer.video_url %}
 	<div class="video-container"><!-- fix for video responsive container -->
@@ -71,6 +75,7 @@
 			<div class="media white-bg">
 				<div class="media-body">
 					<h1 class='header'>{{developer.name}}</h1>
+
 					<div class="panel-body">
 						<h4>New York, NY
 						{% if developer.relocate %}
@@ -90,6 +95,7 @@
 				</div>
 			</div>
 	</div>
+
 
 	{% if developer.projects.length > 0 %}
 		<div class="text-muted"><h3 class='headings'>PROJECTS</h3></div>
@@ -126,6 +132,7 @@
 												{% endfor %}
 											</div>
 										</div>
+
 								</div>
 							</div>
 						</div>

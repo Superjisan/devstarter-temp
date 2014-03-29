@@ -27,11 +27,13 @@
       <input type="text" class="form-control" name="keyword" placeholder="Search" ng-model="search.name"/>
     </div>
 
+
     <div class="col-md-3 col-lg-3">
       <div class="ckbox ckbox-default">
         <input ng-model="search.relocate" type="checkbox" value="1" id="checkboxDefault" checked="checked">
         <label for="checkboxDefault">Willing to Relocate</label>
       </div>
+
     </div>
 
 
@@ -59,8 +61,8 @@
                     <span ng-repeat="location in developer.location " >[[location]] </span>
                   </div>
                   <ul class="social-list">
-                    <li><a href="[[developer.github.html_url]]"class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
-                  <li><a href="[[developer.linkedin.siteStandardProfileRequest.url]]"  class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+                  <li><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 
                   </ul>
                   <p ng-if="developer.linkedin.summary">[[developer.linkedin.summary]] </p>
