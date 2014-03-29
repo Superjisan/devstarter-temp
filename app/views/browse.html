@@ -23,12 +23,15 @@
 
   <div>
 
-    <div>
+    <div class="col-md-3 col-lg-3">
       <input type="text" class="form-control" name="keyword" placeholder="Search by name" ng-model="search.name"/>
     </div>
 
-    <div>
-      <input type="checkbox" class="form-control" name="keyword" placeholder="Willing to Relocate" ng-model="search.relocate"/>
+    <div class="col-md-3 col-lg-3">
+      <div class="ckbox ckbox-default">
+        <input ng-model="search.relocate" type="checkbox" value="1" id="checkboxDefault" checked="checked">
+        <label for="checkboxDefault">Willing to Relocate</label>
+      </div>
     </div>
 
 
@@ -37,7 +40,7 @@
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers | filter: search" ng-cloak class ="col-md-6">
+          <div ng-repeat="developer in developers | filter: searchFn" ng-cloak class ="col-md-6">
           <div >
 
             <div class="people-item">

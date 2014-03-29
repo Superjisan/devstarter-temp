@@ -17,13 +17,11 @@ exports.all = function(req, res) {
 			'location': 1,
 			'github_url': 1, 
 			'linkedin_url': 1,
-			'summary': 1
+			'summary': 1,
+			'relocate': 1
 		};
 
 	User.find({ roles: 'developer'}, fields).exec(function(err, developers){
-		// console.log(developers);
-
-
 		if(err) {
 			res.render('error', {
 				status: 500

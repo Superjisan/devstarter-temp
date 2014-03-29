@@ -21,7 +21,6 @@ var parseLinkedIn = function(profile) {
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
     linkedin: profile._json,
-    
   };
 };
 module.exports = function(passport) {
