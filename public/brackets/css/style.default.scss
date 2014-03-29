@@ -2,16 +2,16 @@
 Created by: @themepixels
 URL: http://themepixels.com/
 */
-@import url('bootstrap.min.css');
-@import url('bootstrap-override.css');
-@import url('jquery-ui-1.10.3.css');
-@import url('font-awesome.min.css');
-@import url('animate.min.css');
-@import url('animate.delay.css');
-@import url('toggles.css');
-@import url('chosen.css');
-@import url('lato.css');
-@import url('roboto.css');
+@import 'bootstrap.min';
+@import 'bootstrap-override';
+@import 'jquery-ui-1.10.3';
+@import 'font-awesome';
+@import 'animate.min';
+@import 'animate.delay';
+@import 'toggles';
+@import 'chosen';
+@import 'lato';
+@import 'roboto';
 
 body {
    /*background: #1d2939;*/
@@ -127,6 +127,9 @@ h1,h2,h3,h4,h5 {
   padding-left: 10px;
   margin-bottom: 5px;
 }
+
+
+
 .relocate {
   padding-left: 20px;
 }
@@ -249,7 +252,6 @@ strong {
 
 .header-right {
    float: right;
-   height:
 }
 
 .headermenu {
@@ -835,7 +837,7 @@ strong {
 }
 
 .pageheader .fa-file-text {
-	padding: 6px 10px;`
+	padding: 6px 10px;
 }
 
 .pageheader .fa-map-marker {
