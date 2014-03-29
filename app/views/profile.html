@@ -76,8 +76,10 @@
 						</h4>
 						<h4 id='description'>{{developer.linkedin.headline}}</h4>
 						<p class="summary">{{developer.linkedin.summary}}</p>
-						{% if developer.skills_list().length > 0 %}
-    					<p class='skills'>{{ developer.skills_list() }}</p>
+						{% if developer.tagSkills().length > 0 %}
+							{% for i, skill in developer.tagSkills() %}
+	    					<span class='label label-success' style="margin-bottom:3px">{{ skill }}</span>
+    					{% endfor %}
     				{% endif %}
 					</div>
 				</div>
@@ -103,7 +105,7 @@
 													{% endif %}
 												</h3>
 												{% if project.url %}
-													<a href="{{project.url}}">{{ project.url }} <span class="fa fa-external-link"></span></a>
+													<a href="{{project.url}}">Live Site {{project.url}} <span class="fa fa-external-link"></span></a>
 												{% endif %}
 												<h5><strong>{{ project.pitch }}</strong></h5>
 												<p>{{ project.description }}</p>
@@ -114,7 +116,9 @@
 												<small class="text-muted">{{ project.role }}</small>
 											</div>
 											<div class="pull-right">
-												<small class="text-muted">{{ project.tags.join(", ") }}</small>
+												{% for i, tag in project.tagsList() %}
+													<span class="label label-success">{{ tag }}</span>
+												{% endfor %}
 											</div>
 										</div>
 								</div>
@@ -131,30 +135,39 @@
 		<div class="text-muted"><h3 class='headings'>WORK EXPERIENCE</h3></div>
 
 		<!-- insert WORK EXPERIENCE swig for loop BEGIN here  -->
-
+		{% for i, work in developer.work_experiences | sortByDate %}
 			<div class="panel panel-default panel-timeline">
 				<div class="panel-heading">
 					<div class="media">
 						<div class="media-body">
 							<div class="panel-body">
-								<div class="media white-bg">
-										<div class="media-body">
-											<h4>HireFullStack</h4>
-											<h5><strong>Junior JavaScript Developer</strong></h5>
-											<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<div class="row work-history">
+									<div class="col-lg-8 col-md-8 col-sm-7 col-xs-7">
+										<span class="work-company">{{ work.company.name }}</span>
+										<div class="muted">
+											<div class="icon-position"></div>
+											{{ work.title }}
 										</div>
 									</div>
-									<div class="timeline-btns">
-										<div>
-											<small class="text-muted">Bonus info: Howard wishes he could beat Migi in ping pong all day every day.</small>
+									<div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 text-right">
+										<div>&nbsp;</div>
+										<div class="muted">
+											<div class="icon-date"></div>
+											{% if work.startDate.year %}
+												{{work.startDate.year}} 
+											{% endif %}
+											{% if work.endDate.year %}
+											— {{work.endDate.year}}
+											{% endif %}
 										</div>
 									</div>
-							</div>
+								</div>
+			 				</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
+			{% endfor %}
 
 		<!-- insert WORK EXPERIENCE swig for END loop here -->
 	{% endif %}
@@ -164,29 +177,40 @@
 <div class="text-muted"><h3 class='headings'>EDUCATION</h3></div>
 
 <!-- insert EDUCATION swig loop BEGIN here -->
-
+	
+	{% for i, education in developer.educations | sortByDate %}
 	<div class="panel panel-default panel-timeline">
 		<div class="panel-heading">
 			<div class="media">
 				<div class="media-body">
 					<div class="panel-body">
-						<div class="media white-bg">
-								<div class="media-body">
-									<h4>FullStack Academy of Code</h4>
-									<h5><strong>Learning to be a fullstack developer</strong></h5>
-									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="row work-history">
+							<div class="col-lg-8 col-md-8 col-sm-7 col-xs-7">
+								<span class="work-company">{{ education.schoolName }}</span>
+								<div class="muted">
+									<div class="icon-position"></div>
+									{{ education.degree }} - {{ education.fieldOfStudy }}
 								</div>
 							</div>
-							<div class="timeline-btns">
-								<div>
-									<small class="text-muted">Bonus info: Root Beer is gross.</small>
+							<div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 text-right">
+								<div>&nbsp;</div>
+								<div class="muted">
+									<div class="icon-date"></div>
+									{% if education.startDate.year %}
+										{{education.startDate.year}} 
+									{% endif %}
+									{% if education.endDate.year %}
+									— {{education.endDate.year}}
+									{% endif %}
 								</div>
 							</div>
-					</div>
+						</div>
+	 				</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	{% endfor %}
 
 	{% endif %}<!-- end educations -->
 <!-- insert EDUCATION swig loop END here -->
