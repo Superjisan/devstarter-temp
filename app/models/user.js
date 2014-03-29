@@ -41,6 +41,10 @@ var UserSchema = new Schema({
     profile_picture: {
       crops: Object,
       original: String
+    },
+    funny_profile_picture: {
+      crops: Object,
+      original: String
     }
 });
 
@@ -128,7 +132,7 @@ UserSchema.methods = {
 		}
 	},
     tagSkills: function() {
-        this.skil
+        return this.skills.split(",").map(function(skill) { return skill.trim() });
     }
 };
 // UserSchema.methods = {

@@ -35,7 +35,23 @@
                 <button ng-click='pickFiles($event)'>Add Picture</button>
               </div>
               <div ng-show='user.profile_picture'>
-                <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" /><br /><br />
+                <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" />
+                <br /><br />
+                <button ng-click='pickFiles($event)'>Change Picture</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='funny_profile_picture' data-crop-size='200x200'>
+            <label class="col-sm-3 control-label">Funny Profile Picture <span class="asterisk">*</span></label>
+            <div class="col-sm-9">
+              <div ng-hide='user.funny_profile_picture'>
+                <img src="holder.js/200x200"><br/><br/>
+                <button ng-click='pickFiles($event)'>Add Picture</button>
+              </div>
+              <div ng-show='user.funny_profile_picture'>
+
+                <img class="img-responsive col-md-5" ng-src="[[user.funny_profile_picture.crops._200x200]]" />
                 <button ng-click='pickFiles($event)'>Change Picture</button>
               </div>
             </div>
@@ -54,7 +70,7 @@
             <div class="col-sm-9">
               <input ng-model="user.video_url" type="text" name="video_url" placeholder="//www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
             </div>
-          </div>          
+          </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Email <span class="asterisk">*</span></label>
@@ -197,6 +213,10 @@
 		          <label class="sr-only" for="">College/University</label>
 		          <input type="text" class="form-control form-company" ng-model="new_education.schoolName" placeholder="College Name">
 		        </div>
+            <div class="form-group">
+              <label class="sr-only" for="">Degree</label>
+              <input type="text" class="form-control form-date" ng-model="new_education.degree" placeholder="Degree">
+            </div>
 		        <div class="form-group">
 		          <label class="sr-only" for="">Field of Study</label>
 		          <input type="text" class="form-control form-date" ng-model="new_education.fieldOfStudy" placeholder="Study">
@@ -217,6 +237,7 @@
 		          <tbody>
 		            <tr ng-repeat="college in user.educations | orderBy:'startDate.year':true">
 		              <td>[[college.schoolName]]</td>
+                  <td>[[college.degree]]</td>
 		              <td>[[college.fieldOfStudy]]</td>
 		              <td>[[college.startDate | workDate ]]</td>
 		              <td>[[college.endDate | workDate]]</td>
@@ -258,7 +279,7 @@
               <div class="col-sm-9">
                 <input type="text" class="form-control" ng-model="new_project.url" placeholder="Live URL if available">
               </div>
-            </div>            
+            </div>
 		        <div class="form-group">
 		          <label class="col-sm-3 control-label">GitHub URL <span class="asterisk">*</span></label>
 		          <div class="col-sm-9">
@@ -275,7 +296,7 @@
             <div class="form-group">
               <label class="col-sm-3 control-label">Tech Stack Tags </label>
               <div class="col-sm-9">
-                <textarea ng-model="project.tech_tags" rows="5" class="form-control" placeholder="Comma Separated Values... like 'Angular, Node.js, Express'"></textarea>
+                <textarea ng-model="new_project.tech_tags" rows="5" class="form-control" placeholder="Comma Separated Values... like 'Angular, Node.js, Express'"></textarea>
               </div>
             </div>
 
@@ -290,7 +311,7 @@
               <div class="col-sm-9">
                 <input type="text" class="form-control" ng-model="new_project.role" placeholder="Front End Developer, Backend, Scraping....">
               </div>
-            </div>            
+            </div>
 		        <div class="form-group">
 		          <label class="col-sm-3 control-label">Images <span class="asterisk">*</span></label>
 		          <div class="col-sm-9">
