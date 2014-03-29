@@ -5,7 +5,9 @@
 
 <div class='mini-profile'>
   <div class='info'>
-    <img class='profile-img' src="{{developer.linkedin.pictureUrl}}" />
+    <img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
+    <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="{{developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200 }}" />
+
     <h3 class='mini-header'>{{developer.name}}</h3>
     <h4 class='extra-info'>{{developer.location}}
 			{% if developer.relocate %}
