@@ -20,7 +20,8 @@ var parseLinkedIn = function(profile) {
     work_experiences: profile._json.positions.values,
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
-    linkedin: profile._json
+    linkedin: profile._json,
+    
   };
 };
 module.exports = function(passport) {
