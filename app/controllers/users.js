@@ -5,6 +5,7 @@
  */
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
+		mailer = require('../lib/mailer'),
     _ = require("lodash");
 
 /**
@@ -124,11 +125,23 @@ exports.admin = function(req, res) {
 
 exports.approve = function(req, res){
 	var applicant = Object.keys(req.body)[0];
-	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		mailer.smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been approved!",
+			text: "View your profile at http://hire.fullstackacademy.com"
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			mailer.smtpTransport.close();
+		})
 	})
 }
 
@@ -138,7 +151,19 @@ exports.deny = function(req, res){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		mailer.smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been denied.",
+			text: "Sorry, we cannot accept your profile at this time."
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			mailer.smtpTransport.close();
+		})
 	})
 }
 
@@ -195,7 +220,7 @@ exports.apiProfileEdit = function(req, res) {
 			console.log(user);
 			res.json(user);
 		}
-	})
+	}))
 }
 
 
