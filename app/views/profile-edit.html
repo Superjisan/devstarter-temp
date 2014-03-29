@@ -31,7 +31,7 @@
 
         <div class="panel-body">
 
-          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='profile_picture'>
+          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='profile_picture' data-crop-size='200x200'>
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.profile_picture'>
@@ -316,8 +316,19 @@
 		<!-- end projects form -->
 
 
-
-
+    <!-- modal -->
+      <div class="modal fade" id="filepickerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div id="modalContent">
+                <iframe id="filepickerFrame"></iframe>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    <!-- end modal -->
   </div>
 </div>
 {% endblock %}
