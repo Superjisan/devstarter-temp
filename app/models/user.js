@@ -127,12 +127,9 @@ UserSchema.methods = {
 			return githubAuth.accessToken;
 		}
 	},
-  skills_list: function() {
-    return this.linkedin.skills.values.map(function(skill) {
-      console.log(skill);
-      return skill.skill.name;
-    }).join(", ");
-  }
+    tagSkills: function() {
+        this.skil
+    }
 };
 // UserSchema.methods = {
 //     /**

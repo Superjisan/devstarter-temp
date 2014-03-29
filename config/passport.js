@@ -20,6 +20,7 @@ var parseLinkedIn = function(profile) {
     work_experiences: profile._json.positions.values,
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
+    skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
     linkedin: profile._json,
   };
 };

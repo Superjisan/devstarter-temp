@@ -35,7 +35,7 @@
                 <button ng-click='pickFiles($event)'>Add Picture</button>
               </div>
               <div ng-show='user.profile_picture'>
-                <img ng-src="[[user.profile_picture.crops._200x200]]/convert?w=200&h=200&fit=crop&align=faces" /><br /><br />
+                <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" /><br /><br />
                 <button ng-click='pickFiles($event)'>Change Picture</button>
               </div>
             </div>
