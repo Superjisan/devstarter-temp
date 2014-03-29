@@ -27,7 +27,7 @@
 
         <div class="panel-body">
 
-          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='profile_picture'>
+          <div class="form-group file-picker" data-attachment-path="/api/attachments" data-resource='user' data-attachment='profile_picture' data-crop-size='200x200'>
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.profile_picture'>
@@ -35,7 +35,7 @@
                 <button ng-click='pickFiles($event)'>Add Picture</button>
               </div>
               <div ng-show='user.profile_picture'>
-                <img ng-src="[[user.profile_picture]]/convert?w=200&h=200&fit=crop&align=faces" /><br /><br />
+                <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" /><br /><br />
                 <button ng-click='pickFiles($event)'>Change Picture</button>
               </div>
             </div>
@@ -322,8 +322,19 @@
 		<!-- end projects form -->
 
 
-
-
+    <!-- modal -->
+      <div class="modal fade" id="filepickerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div id="modalContent">
+                <iframe id="filepickerFrame"></iframe>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    <!-- end modal -->
   </div>
 </div>
 {% endblock %}

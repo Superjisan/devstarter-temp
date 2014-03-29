@@ -36,10 +36,12 @@ var UserSchema = new Schema({
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
-    profile_picture: String,
     resume: String,
-    skills: String
-
+    skills: String,
+    profile_picture: {
+      crops: Object,
+      original: String
+    }
 });
 
 
@@ -125,12 +127,9 @@ UserSchema.methods = {
 			return githubAuth.accessToken;
 		}
 	},
-  skills_list: function() {
-    return this.linkedin.skills.values.map(function(skill) {
-      console.log(skill);
-      return skill.skill.name;
-    }).join(", ");
-  }
+    tagSkills: function() {
+        this.skil
+    }
 };
 // UserSchema.methods = {
 //     /**

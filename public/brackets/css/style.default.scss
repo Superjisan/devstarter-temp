@@ -128,12 +128,12 @@ h1,h2,h3,h4,h5 {
   padding: 0 10px 0 10px;
 }
 
-.social-icons {
-  color: #aaa;
+.social-icons a {
+  color: #999;
 }
 
 .resume-link {
-  color: #aaa;
+  color: #999;
 
 }
 /*end*/
@@ -4498,4 +4498,17 @@ div.error label.error:before {
 }
 .ckbox label {
 	margin-bottom: -7px !important;
+}
+
+
+#filepickerFrame {
+  width: 800px;
+  height: 468px;
+  border: none;
+}
+
+#filepickerModal {
+  .modal-dialog {
+    width: 830px;
+  }
 }
