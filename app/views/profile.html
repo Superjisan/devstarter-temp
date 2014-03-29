@@ -159,7 +159,7 @@
 										<div class="muted">
 											<div class="icon-date"></div>
 											{% if work.startDate.year %}
-												{{work.startDate.year}} 
+												{{work.startDate.year}}
 											{% endif %}
 											{% if work.endDate.year %}
 											— {{work.endDate.year}}
@@ -182,7 +182,7 @@
 <div class="text-muted"><h3 class='headings'>EDUCATION</h3></div>
 
 <!-- insert EDUCATION swig loop BEGIN here -->
-	
+
 	{% for i, education in developer.educations | sortByDate %}
 	<div class="panel panel-default panel-timeline">
 		<div class="panel-heading">
@@ -202,7 +202,7 @@
 								<div class="muted">
 									<div class="icon-date"></div>
 									{% if education.startDate.year %}
-										{{education.startDate.year}} 
+										{{education.startDate.year}}
 									{% endif %}
 									{% if education.endDate.year %}
 									— {{education.endDate.year}}
@@ -236,8 +236,8 @@ jQuery(document).ready(function() {
 		console.log(data);
 		$.post('/addfavorite', data, function(result,status,xhr){
 			console.log(result,status,xhr);
-
 		});
+		$('#follow').replaceWith("<a class='btn btn-primary'><i class='fa fa-check-circle-o'></i> Marked as interested</a>");
   });
 });
 </script>
