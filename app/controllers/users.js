@@ -220,7 +220,7 @@ exports.apiProfileEdit = function(req, res) {
 			console.log(user);
 			res.json(user);
 		}
-	}))
+	});
 }
 
 

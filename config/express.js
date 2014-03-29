@@ -9,7 +9,8 @@ var express = require('express'),
     flash = require('connect-flash'),
     helpers = require('view-helpers'),
     assetmanager = require('assetmanager'),
-    config = require('./config');
+    config = require('./config'),
+    path = require('path');
 
 module.exports = function(app, passport, db) {
     app.set('showStackError', true);
@@ -97,7 +98,7 @@ module.exports = function(app, passport, db) {
         app.use(app.router);
 
         // Setting the fav icon and static folder
-        app.use(express.favicon());
+        app.use(express.favicon(path.join(__dirname, '../public/favicon.ico')));
         app.use(express.static(config.root + '/public'));
 
         // Assume "not found" in the error msgs is a 404. this is somewhat
