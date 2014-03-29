@@ -236,8 +236,8 @@ jQuery(document).ready(function() {
 		console.log(data);
 		$.post('/addfavorite', data, function(result,status,xhr){
 			console.log(result,status,xhr);
-
 		});
+		$('#follow').replaceWith("<a class='btn btn-primary'><i class='fa fa-check-circle-o'></i> Marked as interested</a>");
   });
 });
 </script>
