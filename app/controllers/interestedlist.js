@@ -1,8 +1,17 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-	User = mongoose.model('User');
+	User = mongoose.model('User'),
+	nodemailer = require('nodemailer'),
+	config = require('../../config/config');
 
+var smtpTransport = nodemailer.createTransport("SMTP",{
+  service: "Gmail",
+  auth: {
+    user: config.google.email,
+    pass: config.google.password
+  }
+});
 // define the findOne function that searches the database based on id's
 // creates a multidimensional array with the users' information to be used on page
 var findFollowers = function (namesArray, interestedArray, i) {
