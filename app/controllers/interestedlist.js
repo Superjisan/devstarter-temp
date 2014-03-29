@@ -54,19 +54,14 @@ exports.add = function(req, res) {
 	var viewedUser = Object.keys(req.body)[0];
 // query the database to find the logged in user's interest array
 	User.findOne({_id: req.user.id}, function (err, myUser) {
-		console.log(myUser.name, "this");
 		// query the db to find the viewed user's id
-		console.log(viewedUser, "here");
 		User.findOne({name: viewedUser}, function(err,viewUser){
 			if (err){
 				return err;
 			}
-			console.log(viewUser.name, "that");
 			// push the viewed id into the logUser's array then save the user object
 			myUser.interested.push(viewUser.id);
-			console.log(myUser.interested);
 			myUser.save();
-			console.log('success');
 			mailer.smtpTransport.sendMail({
 				from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
 				to: viewUser.name+' <'+viewUser.email+'>',
