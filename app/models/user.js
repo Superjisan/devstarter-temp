@@ -47,7 +47,8 @@ var UserSchema = new Schema({
     funny_profile_picture: {
       crops: Object,
       original: String
-    }
+    },
+    summary: String
 
 });
 

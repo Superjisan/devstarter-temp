@@ -6,7 +6,8 @@
 <div class='mini-profile'>
   <div class='info'>
 
-    <img class='profile-img' src="{{developer.linkedin.pictureUrl}}" />
+    <img class='profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
+
     <h3 class='mini-header'>{{developer.name}}</h3>
     <h4 class='extra-info'>{{developer.location}}
 			{% if developer.relocate %}
@@ -84,7 +85,7 @@
 						{% endif %}
 						</h4>
 						<h4 id='description'>{{developer.linkedin.headline}}</h4>
-						<p class="summary">{{developer.linkedin.summary}}</p>
+						<p class="summary">{{developer.summary || developer.linkedin.summary}}</p>
 						{% if developer.tagSkills().length > 0 %}
 							{% for i, skill in developer.tagSkills() %}
 	    					<span class='label label-success' style="margin-bottom:3px">{{ skill }}</span>
