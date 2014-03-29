@@ -132,7 +132,11 @@ UserSchema.methods = {
 		}
 	},
     tagSkills: function() {
-        return this.skills.split(",").map(function(skill) { return skill.trim() });
+        if (this.skills) {
+            return this.skills.split(",").map(function(skill) { return skill.trim() });
+        } else {
+            return [];
+        }
     }
 };
 // UserSchema.methods = {
