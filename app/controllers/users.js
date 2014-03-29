@@ -202,16 +202,14 @@ exports.apiProfile = function(req, res) {
 exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
-	console.log(oldUser);
 	console.log(newUser);
-	// User.findByIdAndUpdate(oldUser._id, { username: newUser.username, full_name: newUser.full_name, bio: newUser.bio }, function(err, user) {
-	// 	if (err) {
-	// 		res.json(err);
-	// 	} else {
-	// 		console.log(user);
-	// 		res.json(user);
-	// 	}
-	// })
+	User.findByIdAndUpdate(oldUser._id, { "name": newUser.name, "email": newUser.email, "linkedin.headline": newUser.linkedin.headline, "linkedin.skills.values": newUser.linkedin.skills.values }, function(err, user) {
+		if (err) {
+			res.json(err);
+		} else {
+			res.json(user);
+		}
+	})
 }
 
 
@@ -258,6 +256,7 @@ exports.educationDelete = function(req, res) {
 
 exports.projectCreate = function(req, res) {
 	User.findOne( {"_id": req.user._id }, function(err, user) {
+		console.log(req.body);
 		user.projects.push(req.body);
 		user.save(function(err) {
 			res.json({});
@@ -272,4 +271,13 @@ exports.projectDelete = function(req, res) {
 		user.save();
 		res.json({});
 	})
-}
+};
+
+exports.addAttachment = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+		user[req.body.attachment] = req.body.url;
+		user.save(function(err) {
+			res.json(req.body);
+		})
+	})
+};

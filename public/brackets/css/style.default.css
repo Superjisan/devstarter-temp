@@ -4319,3 +4319,20 @@ div.error label.error:before {
    }
 
 }
+
+
+
+
+/* HOWARD ADDED THIS */
+.form-company {
+	width: 200px !important;
+}
+.form-date {
+	width: 125px !important;
+}
+.form-control {
+	border-radius: 0px !important;
+}
+.form-inline {
+	padding-bottom: 15px !important;
+}

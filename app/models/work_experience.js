@@ -29,7 +29,10 @@ var EducationSchema = new Schema({
 var ProjectSchema = new Schema({
 	name: String,
 	githubUrl: String,
-	images: [{url: String, description: String}],
+	pitch: String,
+	description: String,
+	tags: [String],
+	images: [{url: String}],
 	video: String
 });
 

@@ -6,16 +6,15 @@ angular.module('mean.profile-edit')
       $scope.global = Global;
 
       ProfileEditSrvc.getProfile(function(data) {
-      	console.log(data);
       	$scope.user = data;
       	$scope.skills = data.linkedin.skills.values;
-      	for (var i=0; i<$scope.skills.length; i++) {
-      		console.log($scope.skills[i]);
-      	}
-      	// var skillsArray = $scope.user.linkedin.skills.values;
-      	// $scope.skillsString = skillsArray.join(",");
-
       });
+
+      $scope.submitForm = function() {
+      	ProfileEditSrvc.editProfile($scope.user, function(data) {
+      		$scope.user = data;
+      	})
+      }
 
       $scope.removeEducation = function(index) {
       	var removedEducation = $scope.user.educations.splice(index, 1);
@@ -50,11 +49,17 @@ angular.module('mean.profile-edit')
       }
 
       $scope.addProject = function() {
+      	$scope.new_project.tags = $scope.projectTags;
       	var project = new Project($scope.new_project);
       	project.$save(function() {
       		$scope.user.projects.unshift($scope.new_project);
       		$scope.new_project = {};
+      		$scope.projectTags = [];
       	})
+      }
+
+      $scope.removeTag = function(index) {
+      	$scope.skills.splice(index, 1);
       }
 
       $scope.addTag = function(event) {
@@ -64,6 +69,22 @@ angular.module('mean.profile-edit')
 	      	event.preventDefault();
       	}
       };
+
+      $scope.projectTags = [];
+
+
+      $scope.removeProjectTag = function(index) {
+      	$scope.projectTags.splice(index, 1);
+      }
+
+      $scope.addProjectTag = function(event) {
+      	if(event.which === 13) {
+      		$scope.projectTags.push($scope.currentTag);
+      		$scope.currentTag = "";
+      		event.preventDefault();
+      	}
+      }
+
     }
   ])
   .filter('workDate', function() {
@@ -84,7 +105,56 @@ angular.module('mean.profile-edit')
         return "";
       }
     }
-  });
+  })
+  .directive('filePicker', ['$compile', '$http', '$window', function ($compile, $http, $window) {
+    return {
+      restrict: 'C',
+      controller: function($scope, $attrs, $window) {
+        $scope.pickFiles = function(event) {
+          event.preventDefault();
+          var $element = angular.element(event.currentTarget).closest(".file-picker");
+          var $attrs = $element.data();
+          var $button = $element.find(".button")
+          $window.filepicker.setKey("Acw0VeSQcTCSvPgAV5GEqz");
+          debugger;
+          var extensions = [".png", ".jpg", ".gif"].concat($scope.$eval($attrs.extensions));
+
+          $button.addClass('button-loading');
+          $window.filepicker.pickAndStore({
+            extensions: extensions,
+            container: "modal",
+            services: ["COMPUTER", "FACEBOOK", "DROPBOX", "URL"],
+            openTo: "COMPUTER"
+          }, {
+            location: "S3",
+            path: "/assets/", 
+            access: "public"
+          }, function (InkBlobs){
+            console.log(InkBlobs);
+            $scope.$apply(function() {
+              var payload = {
+                url: InkBlobs[0].url,
+                filename: InkBlobs[0].filename,
+                attachment: $attrs.attachment
+              };
+              // debugger;
+              $http.put($attrs.attachmentPath, payload).success(function(data, status, headers) {
+                $scope.$eval($attrs.resource)[$attrs.attachment] = angular.copy(data);
+                $button.removeClass('button-loading');
+              });
+            });
+          }, function (FPError){
+            console.warn(FPError);
+          })
+      };
+      }
+    };
+  }])
+
+
+
+
+
 
 
 
