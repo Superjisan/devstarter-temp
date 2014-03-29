@@ -132,11 +132,23 @@ exports.admin = function(req, res) {
 
 exports.approve = function(req, res){
 	var applicant = Object.keys(req.body)[0];
-	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been approved!",
+			text: "View your profile at http://hire.fullstackacademy.com"
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			smtpTransport.close();
+		})
 	})
 }
 
@@ -149,7 +161,7 @@ exports.deny = function(req, res){
 		smtpTransport.sendMail({
 			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
 			to: user.name+' <'+user.email+'>',
-			subject: "Your profile has been approved!",
+			subject: "Your profile has been denied.",
 			text: "View your profile at http://hire.fullstackacademy.com"
 		}, function(error, response){
 			if (error){
