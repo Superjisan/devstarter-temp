@@ -4496,3 +4496,16 @@ div.error label.error:before {
 .ckbox label {
 	margin-bottom: -7px !important;
 }
+
+
+#filepickerFrame {
+  width: 800px;
+  height: 468px;
+  border: none;
+}
+
+#filepickerModal {
+  .modal-dialog {
+    width: 830px;
+  }
+}

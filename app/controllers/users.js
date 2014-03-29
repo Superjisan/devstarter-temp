@@ -256,11 +256,25 @@ exports.projectDelete = function(req, res) {
 	})
 };
 
+
 exports.addAttachment = function(req, res) {
-	User.findOne( {"_id": req.user._id }, function(err, user) {
-		user[req.body.attachment] = req.body.url;
-		user.save(function(err) {
-			res.json(req.body);
-		})
-	})
+  var updates = {$set:{}};
+
+  User.findOne( {"_id": req.user._id }, function(err, user) {
+    if (req.body.attachments) {
+      req.body.attachments.forEach(function(attachment){
+        updates.$set[attachment.name] = attachment.url;
+      });
+    } else if (req.body.attachment) {
+      updates.$set[req.body.attachment] = req.body.url;
+    } else {
+      return res.send(400);
+    }
+
+    console.log(updates);
+
+    User.update({"_id": req.user._id}, updates, function(){
+      res.json(req.body);
+    });
+  })
 };

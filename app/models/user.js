@@ -36,10 +36,12 @@ var UserSchema = new Schema({
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
-    profile_picture: String,
     resume: String,
-    skills: String
-
+    skills: String,
+    profile_picture: {
+      crops: Object,
+      original: String
+    }
 });
 
 

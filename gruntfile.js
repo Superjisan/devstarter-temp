@@ -104,7 +104,7 @@ module.exports = function(grunt) {
               files: {                         // Dictionary of files
                 'public/build/css/dist.min.css': 'public/brackets/css/style.default.scss'       // 'destination': 'source'
               }
-            },           
+            },
             dist: {                            // Target
               options: {                       // Target options
                 style: 'compressed'
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                 'public/build/css/dist.min.css': 'public/brackets/css/style.default.scss'       // 'destination': 'source'
               }
             }
-        }        
+        }
     });
 
     //Load NPM tasks

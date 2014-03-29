@@ -36,6 +36,7 @@ module.exports = function(passport) {
         User.findOne({
             _id: id
         }, '-salt -hashed_password', function(err, user) {
+
             done(err, user);
         });
     });
