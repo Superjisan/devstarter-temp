@@ -7,14 +7,14 @@
   <div class='info'>
     <img class='profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
     <h3 class='mini-header'>{{developer.name}}</h3>
-    <h4 class='extra-info'>{{developer.location}}
+    <h4 class='extra-info'>{{developer.location}}</h4>
+    <h4 class='extra-info'>
 			{% if developer.relocate %}
 	    	<span class='mini-profile-span'>Willing to relocate</span>
 			{% else %}
 	    	<span class='mini-profile-span'>Not Willing to relocate</span>
 			{% endif %}
-    </h4>
-
+		</h4>
     {% if developer.github_url || developer.linkedin_url || developer.twitter_url %}
 	    <h3 class="social-icons">
 	    	{% if developer.github_url %}
