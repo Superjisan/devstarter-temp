@@ -36,12 +36,25 @@ angular.module('mean.profile-edit')
         work.$remove();
       };
       $scope.addWork = function() {
-        var work = new Work($scope.new_work);
+      	console.log($scope.new_work.startDate);
+      	var new_work = angular.copy($scope.new_work);
+      	new_work.startDate = convertToDate($scope.new_work.startDate);
+      	new_work.endDate = convertToDate($scope.new_work.endDate);
+        var work = new Work(new_work);
         work.$save(function() {
-          $scope.user.work_experiences.unshift($scope.new_work);
+          $scope.user.work_experiences.unshift(new_work);
           $scope.new_work = {};
         });
       };
+
+      function convertToDate(dateObj) {
+      	if (!dateObj) {
+      		return undefined;
+      	}
+      	// var monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Nov", "Dec"];
+      	numMonth = dateObj.getMonth()+1;
+      	return { "year": dateObj.getFullYear(), "month": numMonth };
+      }
 
       $scope.removeProject = function(index) {
       	var removedProject = $scope.user.projects.splice(index, 1);
@@ -96,7 +109,7 @@ angular.module('mean.profile-edit')
     return function(input) {
       if(input) {
         if(input.year && input.month) {
-          return convertMonth(input.month) + ", " + input.year;
+          return convertMonth(input.month) + " " + input.year;
         } else if(input.year) {
           return input.year;
         } else {
