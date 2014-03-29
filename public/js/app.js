@@ -12,3 +12,4 @@ angular.module('mean.developers', []);
 angular.module('mean.tracking', []);
 angular.module('mean.profile-edit', []);
 angular.module('mean.favorites', []);
+angular.module('mean').constant('_', _);

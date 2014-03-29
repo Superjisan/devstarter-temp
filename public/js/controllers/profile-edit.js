@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('mean.profile-edit')
-  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work', 'Education', 'Project',
-    function ($scope, Global, ProfileEditSrvc, Work, Education, Project) {
+  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work', 'Education', 'Project', '_',
+    function ($scope, Global, ProfileEditSrvc, Work, Education, Project, _) {
       // $scope.global = Global;
+      $scope.Work = Work;
+      $scope.Education = Education;
+      $scope.Project = Project;
 
       ProfileEditSrvc.getProfile(function(data) {
         $scope.user = data;
@@ -16,11 +19,6 @@ angular.module('mean.profile-edit')
         })
       };
 
-      $scope.removeEducation = function(index) {
-        var removedEducation = $scope.user.educations.splice(index, 1);
-        var education = new Education(removedEducation[0]);
-        education.$remove();
-      };
       $scope.addEducation = function() {
         var education = new Education($scope.new_education);
         education.$save(function() {
@@ -29,19 +27,24 @@ angular.module('mean.profile-edit')
         })
       }
 
-      $scope.removeWork = function(index) {
-        var removedWork = $scope.user.work_experiences.splice(index, 1);
-        var work = new Work(removedWork[0]);
-        work.$remove();
+      $scope.removeObj = function(obj, array, resourceType) {
+        _.remove(array, function(arrObj) {
+          return obj._id === arrObj._id;
+        });
+        var castObj = new resourceType(obj);
+        castObj.$remove();
       };
+
       $scope.addWork = function() {
-        console.log($scope.new_work.startDate);
+        // console.log($scope.new_work.startDate);
         var new_work = angular.copy($scope.new_work);
         new_work.startDate = convertToDate($scope.new_work.startDate);
         new_work.endDate = convertToDate($scope.new_work.endDate);
+
         var work = new Work(new_work);
-        work.$save(function() {
-          $scope.user.work_experiences.unshift(new_work);
+        
+        work.$save(function(saved_work) {
+          $scope.user.work_experiences.push(saved_work);
           $scope.new_work = {};
         });
       };
@@ -55,8 +58,10 @@ angular.module('mean.profile-edit')
         return { "year": dateObj.getFullYear(), "month": dateObj.getMonth()+1 };
       }
 
-      $scope.removeProject = function(index) {
-        var removedProject = $scope.user.projects.splice(index, 1);
+      $scope.removeProject = function(projId) {
+        var removedProject = _.remove($scope.user.projects, function(proj) {
+          return proj._id === projId;
+        });
         var project = new Project(removedProject[0]);
         project.$remove();
       }

@@ -26,7 +26,7 @@
   <div class="mainpanel">
 
   	<!-- Pageheader -->
-    <div class="headerbar">
+    <div class="headerbar ">
       <div class="logopanel">
         <h1><span>[</span> <a href="/developers">hire.fullstackacademy.com</a> <span>]</span></h1>
       </div>      
@@ -61,24 +61,15 @@
 
 {% include '../includes/foot.html' %}
 {% block js_footer %}{% endblock %}
-<script>
-
-  jQuery(window).load(function(){
-
-    var container = document.querySelector('.people-list .row');
-    if(container) {
-      var msnry = new Masonry( container, {
-        // options
-        columnWidth: '.col-md-6',
-        itemSelector: '.col-md-6'
-      });
-    }
-
-  });
+<script type="text/javascript">
   window.user = {{user| json | safe}};
   window.developers = {{developers | json | safe}};
   window.names = {{names | json | safe }};
   window.eventTracker = {};
+
+  // hack to fix font loading - from: https://productforums.google.com/forum/#!topic/chrome/elw8busIfJA
+  $(function() { $('body').hide().show(); });
+
 </script>
 </body>
 </html>

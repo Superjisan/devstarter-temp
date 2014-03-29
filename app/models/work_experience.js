@@ -32,8 +32,11 @@ var ProjectSchema = new Schema({
 	pitch: String,
 	description: String,
 	tags: [String],
+	tech_tags: String,
 	images: [{url: String}],
-	video: String
+	video: String,
+	url: String,
+	role: String
 });
 
 exports.WorkExperienceSchema = WorkExperienceSchema;
