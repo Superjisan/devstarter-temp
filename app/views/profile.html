@@ -25,6 +25,17 @@
 
 
 {% block content %}
+<div class='mini-profile'>
+  <div class='info'>
+    <img class='profile-img' src="{{developers.linkedin.pictureUrl}}" />
+    <h3 class='mini-header'>{{developers.name}}</h3>
+    <h4 class='extra-info'>New York, NY <span class='mini-profile-span'>Willing to relocate</span></h4>
+    <p class='skills'>Angular, Node, MongoDB, Express, JavaScript, Ruby, Rails, Git</p>
+    <div class='interested-btn'>
+      <h2 class='interested-header'><i class="fa fa-check-circle-o"></i> I'm interested</h2>
+    </div>
+  </div>
+</div>
 <!-- space for sidebar -->
 <div class="col-sm-3" >
 
@@ -34,20 +45,22 @@
 <!-- content panel -->
 <div class="col-sm-9" data-ng-controller= "TrackingController"  ng-init="startTimer()">
 	<iframe id="userVid" width="725" height="480" src="//www.youtube.com/embed/HyophYBP_w4?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-	<div class="text-muted"><h3>ABOUT</h3></div>
+	<div class="text-muted"><h3 class='headings'>ABOUT</h3></div>
 	<div class="panel panel-default panel-timeline">
-			<div class="media">
+			<div class="media white-bg">
 				<div class="media-body">
+
 					<h2>{{developers.name}}</h2>
+
 					<div class="panel-body">
-						<h4>New York, NY</h4>
-						<h5 class='text-muted'>"Some really inspirational quotes will get you jobs if you put them here. Also Jisan will probably break this soon. Or already broke it. It's just a matter of time."</h5>
+						<h4>New York, NY <span class='relocate'>Willing to relocate</span></h4>
+						<h4 id='description'>Programmer and designer. "If you want to build a ship, don't drum up the men to gather wood, divide the work, and give orders. Instead, teach them to yearn for the vast and endless sea."</h4>
 					</div>
 				</div>
 			</div>
 	</div>
 
-	<div class="text-muted"><h3>PROJECTS</h3></div>
+	<div class="text-muted"><h3 class='headings'>PROJECTS</h3></div>
 
 <!-- insert PROJECT panels swig for loop BEGIN here -->
 
@@ -56,8 +69,10 @@
 			<div class="media">
 				<div class="media-body">
 					<div class="panel-body">
+
 						<div class="media">
 								<img alt="" src="#" class="media-object pull-left">
+
 								<div class="media-body">
 									<h4><a href="" ng-click="clickTrack()">Project 1</a></h4>
 									<h5><strong>One line pitch, e.g., 'snapchat for legal docs'</strong></h5>
@@ -80,7 +95,7 @@
 
 <!-- insert PROJECTS swig for loop END here  -->
 
-<div class="text-muted"><h3>WORK EXPERIENCE</h3></div>
+<div class="text-muted"><h3 class='headings'>WORK EXPERIENCE</h3></div>
 
 <!-- insert WORK EXPERIENCE swig for loop BEGIN here  -->
 
@@ -89,7 +104,7 @@
 			<div class="media">
 				<div class="media-body">
 					<div class="panel-body">
-						<div class="media">
+						<div class="media white-bg">
 								<div class="media-body">
 									<h4>HireFullStack</h4>
 									<h5><strong>Junior JavaScript Developer</strong></h5>
@@ -110,7 +125,7 @@
 
 <!-- insert WORK EXPERIENCE swig for END loop here -->
 
-<div class="text-muted"><h3>EDUCATION</h3></div>
+<div class="text-muted"><h3 class='headings'>EDUCATION</h3></div>
 
 <!-- insert EDUCATION swig loop BEGIN here -->
 
@@ -119,7 +134,7 @@
 			<div class="media">
 				<div class="media-body">
 					<div class="panel-body">
-						<div class="media">
+						<div class="media white-bg">
 								<div class="media-body">
 									<h4>FullStack Academy of Code</h4>
 									<h5><strong>Learning to be a fullstack developer</strong></h5>
@@ -140,7 +155,7 @@
 
 <!-- insert EDUCATION swig loop END here -->
 
-<div class="text-muted"><h3>ADDITIONAL INFORMATION</h3></div>
+<div class="text-muted"><h3 class='headings'>ADDITIONAL INFORMATION</h3></div>
 
 <!-- insert ADDITIONAL INFO swig loop BEGIN here -->
 
@@ -149,7 +164,7 @@
 			<div class="media">
 				<div class="media-body">
 					<div class="panel-body">
-						<div class="media">
+						<div class="media white-bg">
 								<div class="media-body">
 									<h4>I Like Turtles</h4>
 									<h5><strong>Bachelor's in Other Relevant Things</strong></h5>
@@ -184,7 +199,6 @@ jQuery(document).ready(function() {
 			type: 'POST',
 			async: true,
 		})
-
-	})
+  });
 });
 </script>

@@ -14,7 +14,8 @@ URL: http://themepixels.com/
 @import url('roboto.css');
 
 body {
-   background: #1d2939;
+   /*background: #1d2939;*/
+   background-color: #e4e7ea;
    font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
    line-height: 21px;
    color: #636e7b;
@@ -35,7 +36,112 @@ a:focus, a:active { outline: none; }
 
 h1,h2,h3,h4,h5 {
    font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+   color: #000;
 }
+
+/*Edits to profile*/
+
+/*Mini profile that follows you*/
+.mini-profile {
+  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  padding-top: 20px;
+  background-color: #fff;
+  position: fixed;
+  width: 230px;
+  height: 247px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  border-color: #ddd;
+}
+.profile-img {
+  border-radius: 3px;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /*float: left;*/
+}
+.info {
+  text-align: center;
+  /*background-color: #ececec;*/
+}
+.mini-header {
+  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  margin-top: 10px;
+  font-size: 20px;
+}
+#check-icon {
+  font-size: 30px;
+  color: #77cc33;
+  padding-left: 15px;
+  padding-top: 3px;
+}
+.interested-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 40px;
+  border: 2px solid #77cc33;
+  border-radius: 5px;
+}
+.interested-header {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 8px;
+  color: #77cc33;
+}
+.interested-btn:hover {
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #36aa53;
+  cursor: pointer;
+}
+.interested-header:hover {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 8px;
+  color: #36aa53;
+  cursor: pointer;
+}
+.extra-info {
+  font-size: 13px;
+  color: #b2b3ab;
+}
+.mini-profile-span {
+  padding-left: 10px;
+  /*margin-left: 10px;*/
+}
+.skills {
+  color: #b2b3ab;
+  font-size: 12px;
+}
+/*end*/
+
+.header {
+  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  font-size: 40px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+.relocate {
+  padding-left: 20px;
+}
+#description {
+  color: #838383;
+  margin-top: 14px;
+  line-height: 1.4;
+}
+.headings {
+  font-size: 20px;
+}
+.white-bg {
+  padding-left: 10px;
+}
+/*end*/
 
 strong {
 	font-family: 'LatoBold';
@@ -143,7 +249,7 @@ strong {
 
 .header-right {
    float: right;
-   height: 
+   height:
 }
 
 .headermenu {
@@ -3459,7 +3565,8 @@ div.error label.error:before {
 /***********************/
 
 .fixed {
-    background: #1D2939;
+    /*background: #1D2939;*/
+    background-color: #e4e7ea;
 }
 
 .fixed section {
@@ -4335,4 +4442,11 @@ div.error label.error:before {
 }
 .form-inline {
 	padding-bottom: 15px !important;
+}
+.ckbox {
+	line-height: 21px !important;
+	margin-top: 6px !important;
+}
+.ckbox label {
+	margin-bottom: -7px !important;
 }
