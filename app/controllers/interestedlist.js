@@ -2,16 +2,8 @@
 
 var mongoose = require('mongoose'),
 	User = mongoose.model('User'),
-	nodemailer = require('nodemailer'),
-	config = require('../../config/config');
+	mailer = require('../lib/mailer');
 
-var smtpTransport = nodemailer.createTransport("SMTP",{
-  service: "Gmail",
-  auth: {
-    user: config.google.email,
-    pass: config.google.password
-  }
-});
 // define the findOne function that searches the database based on id's
 // creates a multidimensional array with the users' information to be used on page
 var findFollowers = function (namesArray, interestedArray, i) {
@@ -58,13 +50,36 @@ exports.delete = function(req, res) {
 };
 
 exports.add = function(req, res) {
+	// access the name of the user being viewed
+	var viewedUser = Object.keys(req.body)[0];
 // query the database to find the logged in user's interest array
 	User.findOne({_id: req.user.id}, function (err, myUser) {
+		console.log(myUser.name, "this");
 		// query the db to find the viewed user's id
-		User.findOne({name: req.body.name}, function(err,viewUser){
+		console.log(viewedUser, "here");
+		User.findOne({name: viewedUser}, function(err,viewUser){
+			if (err){
+				return err;
+			}
+			console.log(viewUser.name, "that");
 			// push the viewed id into the logUser's array then save the user object
 			myUser.interested.push(viewUser.id);
+			console.log(myUser.interested);
 			myUser.save();
+			console.log('success');
+			mailer.smtpTransport.sendMail({
+				from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+				to: viewUser.name+' <'+viewUser.email+'>',
+				subject: "An interested user has clicked your profile",
+				text: myUser.name+' is possibly interested in hiring you.'
+			}, function(error, response){
+				if (error){
+					console.log(error)
+				} else {
+					console.log('interested sent');
+				}
+				mailer.smtpTransport.close();
+			})
 		});
 	});
 };
