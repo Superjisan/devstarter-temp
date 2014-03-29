@@ -10,7 +10,7 @@ angular.module('mean.profile-edit', ['mean.directives'])
 
       ProfileEditSrvc.getProfile(function(data) {
         $scope.user = data;
-        $scope.skills = data.linkedin.skills.values;
+        // $scope.skills = data.linkedin.skills.values;
       });
 
       $scope.submitForm = function() {
@@ -21,8 +21,11 @@ angular.module('mean.profile-edit', ['mean.directives'])
 
       $scope.addEducation = function() {
         var education = new Education($scope.new_education);
-        education.$save(function() {
-          $scope.user.educations.unshift($scope.new_education);
+        education.startDate = convertToDate($scope.new_education.startDate);
+        education.endDate = convertToDate($scope.new_education.endDate);
+
+        education.$save(function(education) {
+          $scope.user.educations.unshift(education);
           $scope.new_education = {};
         })
       }
@@ -67,41 +70,42 @@ angular.module('mean.profile-edit', ['mean.directives'])
       }
 
       $scope.addProject = function() {
-        $scope.new_project.tags = $scope.projectTags;
+        // $scope.new_project.tags = $scope.projectTags;
         var project = new Project($scope.new_project);
+
         project.$save(function() {
           $scope.user.projects.unshift($scope.new_project);
           $scope.new_project = {};
-          $scope.projectTags = [];
+          // $scope.projectTags = [];
         })
       }
 
-      $scope.removeTag = function(index) {
-        $scope.skills.splice(index, 1);
-      }
+      // $scope.removeTag = function(index) {
+      //   $scope.skills.splice(index, 1);
+      // }
 
-      $scope.addTag = function(event) {
-        if(event.which === 13) {
-          $scope.skills.push({skill: {name: $scope.current_tag}});
-          $scope.current_tag = "";
-          event.preventDefault();
-        }
-      };
+      // $scope.addTag = function(event) {
+      //   if(event.which === 13) {
+      //     $scope.skills.push({skill: {name: $scope.current_tag}});
+      //     $scope.current_tag = "";
+      //     event.preventDefault();
+      //   }
+      // };
 
-      $scope.projectTags = [];
+      // $scope.projectTags = [];
 
 
-      $scope.removeProjectTag = function(index) {
-        $scope.projectTags.splice(index, 1);
-      }
+      // $scope.removeProjectTag = function(index) {
+      //   $scope.projectTags.splice(index, 1);
+      // }
 
-      $scope.addProjectTag = function(event) {
-        if(event.which === 13) {
-          $scope.projectTags.push($scope.currentTag);
-          $scope.currentTag = "";
-          event.preventDefault();
-        }
-      }
+      // $scope.addProjectTag = function(event) {
+      //   if(event.which === 13) {
+      //     $scope.projectTags.push($scope.currentTag);
+      //     $scope.currentTag = "";
+      //     event.preventDefault();
+      //   }
+      // }
 
     }
   ])
