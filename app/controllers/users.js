@@ -177,11 +177,12 @@ exports.apiProfileEdit = function(req, res) {
 			res.json(user);
 		}
 	})
-}
+};
 
 exports.apiDeveloperProfile = function(req, res) {
+	console.log("req.developers: ",req.developers);
 	res.json(req.developers)
-}
+};
 
 
 exports.workCreate = function(req, res) {

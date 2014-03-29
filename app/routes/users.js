@@ -31,7 +31,7 @@ module.exports = function(app, passport) {
 
 	//=====================================================================
 	// API CALLS
-	app.get('/api/profile', authorization.requiresLogin, users.apiProfile);
+	app.get('/api/profile', authorization.requiresLogin, users.apiProfile, users.apiDeveloperProfile);
 	app.post('/api/profile/edit', authorization.requiresLogin, users.apiProfileEdit);
 
 	app.post("/api/work", authorization.requiresLogin, users.workCreate);
@@ -83,7 +83,7 @@ module.exports = function(app, passport) {
 
 	//Events post events
 	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate, tracker.visitedByCreate)
-	app.get("/api/developerProfile", users.apiDeveloperProfile);
+
 
 };
 

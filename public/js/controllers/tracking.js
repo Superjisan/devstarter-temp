@@ -37,15 +37,38 @@ angular.module('mean.tracking')
 
 		$scope.addUserEvent= function(click){
 			console.log("it works")
-			var userInfo = $scope.user.events.user_visited;
-			var userEvent = new Event($window.eventTracker);
+			console.log("scope user: ", $scope.user.events.length, $scope.user.events)
+			var eventsObj = {}
+			eventsObj.user_visited = {};
+			var userInfo = eventsObj.user_visited;
+			var userEvent = new Visited(eventsObj);
 			userEvent.$save(function(){
-				$scope.user.events.clicks = click;
-				$scope.user.events.start_time = $window.eventTracker.start_time;
-				$scope.user.events.end_time = $window.eventTracker.end_time;
+
+				eventsObj.clicks = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1];
+				eventsObj.start_time = $window.eventTracker.start_time;
+				eventsObj.end_time = $window.eventTracker.end_time;
 				userInfo.id = $scope.user._id;
 				userInfo.name = $scope.user.name;
-				userInfo.organization = $scope.user.work_experiences[0].company.name
+				userInfo.organization = $scope.user.work_experiences[0].company.name;
+				$scope.user.events.push(eventsObj)
+			})
+		};
+
+		$scope.addDeveloperEvent = function(click){
+			console.log("add to developer is getting called")
+			console.log("scope developer: ", $scope.developer.events)
+			var eventsObj = {}
+			eventsObj.visiting_user = {};
+			var developerInfo = eventsObj.visiting_user;
+			var userEvent = new VisitedBy(eventsObj);
+			userEvent.$save(function(){
+				eventsObj.clicks = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1];
+				eventsObj.start_time = $window.eventTracker.start_time;
+				eventsObj.end_time = $window.eventTracker.end_time;
+				developerInfo.id = $scope.user._id;
+				developerInfo.name = $scope.user.name;
+				developerInfo.organization = $scope.user.work_experiences[0].company.name;
+				$scope.developer.events.push(eventsObj)
 			})
 		}
 
@@ -54,21 +77,16 @@ angular.module('mean.tracking')
 			var date = new Date();
 			clickObj.time_clicked = date;
 			clickObj.url = tab;
-
-			if (window.eventTracker.clicks.length > 0) {
-				var last_click =window.eventTracker.clicks[window.eventTracker.clicks.length - 1]
+			console.log($window.eventTracker.clicks.length)
+			if ($window.eventTracker.clicks.length > 0) {
+				var last_click = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1]
 				last_click.end_time = date;
-				$scope.addUserEvent(clickObj)
+				$scope.addUserEvent(clickObj);
+				$scope.addDeveloperEvent(clickObj);
 			}
 
 			$window.eventTracker.clicks.push(clickObj);
 			console.log($window.eventTracker.clicks);
-		}
-
-
-
-		$scope.addDeveloperEvent = function(){
-
 		}
 	}])
 
