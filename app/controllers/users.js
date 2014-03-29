@@ -172,7 +172,7 @@ exports.apiProfileEdit = function(req, res) {
 	var newUser = req.body;
 
 	// values from the newUser object that we want to update
-	var pick_values = [
+	var clean_values = [
 		"name",
 		"email",
 		"linkedin.headline",
@@ -186,18 +186,9 @@ exports.apiProfileEdit = function(req, res) {
 		"skills"
 		];
 
-	var newUser = _.pick(new
+	var newUser = _.pick(newUser, clean_values);
 
-	User.findByIdAndUpdate(oldUser._id, { 
-		"name": newUser.name, 
-		"email": newUser.email, 
-		"linkedin.headline": newUser.linkedin.headline, 
-		"linkedin.skills.values": newUser.linkedin.skills.values, 
-		"location": (newUser.location || "New York, NY"), 
-		"relocate": newUser.relocate,
-		"linkedin.summary": newUser.linkedin.summary,
-		"video_url": newUser.video
-	}, function(err, user) {
+	User.findByIdAndUpdate(oldUser._id, newUser, function(err, user) {
 		if (err) {
 			res.json(err);
 		} else {
@@ -206,9 +197,6 @@ exports.apiProfileEdit = function(req, res) {
 		}
 	})
 }
-
-
-
 
 
 exports.workCreate = function(req, res) {

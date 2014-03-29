@@ -37,7 +37,8 @@ var UserSchema = new Schema({
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
     profile_picture: String,
-    resume: String
+    resume: String,
+    skills: String
 
 });
 

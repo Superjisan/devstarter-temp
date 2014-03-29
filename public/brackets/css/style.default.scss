@@ -32,6 +32,10 @@ input,select,textarea {
 	color: #636e7b;
 }
 
+a, a:focus, a:active, a:hover {
+  color: #000;
+};
+
 a:focus, a:active { outline: none; }
 
 h1,h2,h3,h4,h5 {
