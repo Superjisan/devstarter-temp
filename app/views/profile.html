@@ -34,12 +34,19 @@
 	    	<a class="resume-link" href="{{developer.resume}}"><span class="fa fa-file-text"></span> Resume</a>
 	    </p>
     {% endif %}
-
+		{% if user.interested.indexOf(developer.id) === -1 %}
     <p>
 	    <a class="btn btn-success" id="follow">
 	      <i class="fa fa-check-circle-o"></i> I'm interested
 	    </a>
     </p>
+    {% else %}
+    <p>
+	    <a class="btn btn-primary">
+	      <i class="fa fa-check-circle-o"></i> Marked as interested
+      </a>
+    </p>
+    {% endif %}
 
     {% if developer._id.toString() === user._id.toString() %}
     	<p><a href="/profile/edit" class="btn btn-warning">Edit My Profile</a></p>
@@ -205,13 +212,8 @@ jQuery(document).ready(function() {
 		console.log(data);
 		$.post('/addfavorite', data, function(result,status,xhr){
 			console.log(result,status,xhr);
+
 		});
-		// jQuery.ajax({
-		// 	url:'/addfavorite',
-		// 	data: data,
-		// 	type: 'POST',
-		// 	async: true
-		// })
   });
 });
 </script>
