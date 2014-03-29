@@ -23,17 +23,15 @@
 
   <div>
 
-    <div>
-      <form class="searchform" action="index.html" method="post">
-        <input type="text" class="form-control" name="keyword" placeholder="Search by name" ng-model="search.name"/>
-
-      </form>
+    <div class="col-md-3 col-lg-3" style="padding-left:0px">
+      <input type="text" class="form-control" name="keyword" placeholder="Search" ng-model="search.name"/>
     </div>
 
-    <div>
-      <form class="searchform" action="index.html" method="post">
-        <input type="text" class="form-control" name="keyword" placeholder="Search by location" ng-model="search.location"/>
-      </form>
+    <div class="col-md-3 col-lg-3">
+      <div class="ckbox ckbox-default">
+        <input ng-model="search.relocate" type="checkbox" value="1" id="checkboxDefault" checked="checked">
+        <label for="checkboxDefault">Willing to Relocate</label>
+      </div>
     </div>
 
 
@@ -42,7 +40,7 @@
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers | filter: search" ng-cloak class ="col-md-6">
+          <div ng-repeat="developer in developers | filter: searchFn" ng-cloak class ="col-md-6">
           <div >
 
             <div class="people-item">
@@ -54,7 +52,7 @@
                   <a href="/profile/[[developer._id.toString()]]">
                   <h4 class="person-name">[[developer.name]]</h4> </a>
 
-                  <div class="text-muted"><i class="fa fa-briefcase"></i> [[developer.linkedin.headline]]</a></div>
+                  <div class="text-muted" ng-if="developer.linkedin.headline"><i class="fa fa-briefcase"></i> [[developer.linkedin.headline]]</a></div>
 
 
                    <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
@@ -65,7 +63,7 @@
                   <li><a href="[[developer.linkedin.siteStandardProfileRequest.url]]"  class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 
                   </ul>
-                  <p > Summary: [[developer.linkedin.summary]] </p>
+                  <p ng-if="developer.linkedin.summary">[[developer.linkedin.summary]] </p>
 
                 </div>
               </div>
