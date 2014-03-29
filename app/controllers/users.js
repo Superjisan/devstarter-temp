@@ -169,11 +169,19 @@ exports.apiProfile = function(req, res) {
 exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
-	console.log(newUser);
-	User.findByIdAndUpdate(oldUser._id, { "name": newUser.name, "email": newUser.email, "linkedin.headline": newUser.linkedin.headline, "linkedin.skills.values": newUser.linkedin.skills.values, "location": newUser.location, "relocate": newUser.relocate }, function(err, user) {
+	User.findByIdAndUpdate(oldUser._id, { 
+		"name": newUser.name, 
+		"email": newUser.email, 
+		"linkedin.headline": newUser.linkedin.headline, 
+		"linkedin.skills.values": newUser.linkedin.skills.values, 
+		"location": (newUser.location || "New York, NY"), 
+		"relocate": newUser.relocate,
+		"linkedin.summary": newUser.linkedin.summary
+	}, function(err, user) {
 		if (err) {
 			res.json(err);
 		} else {
+			console.log(user);
 			res.json(user);
 		}
 	})

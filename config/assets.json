@@ -24,6 +24,7 @@
 			"public/brackets/js/bootstrap.min.js",
 			"public/brackets/js/holder.js",
 			"public/lib/masonry/dist/masonry.pkgd.min.js",
+      "public/brackets/js/jquery.tagsinput.min.js",
 			"public/js/**/*.js"
 		]
 	}

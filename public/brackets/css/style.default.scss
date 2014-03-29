@@ -12,6 +12,7 @@ URL: http://themepixels.com/
 @import 'chosen';
 @import 'lato';
 @import 'roboto';
+@import 'jquery.tagsinput';
 
 body {
    background-color: #c9cccf;
@@ -122,6 +123,26 @@ h1,h2,h3,h4,h5 {
   font-size: 12px;
 }
 /*end*/
+
+
+/* video container fix from http://avexdesigns.com/responsive-youtube-embed/ */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .header {
   font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
