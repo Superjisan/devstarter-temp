@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 var express = require('express'),
+    swig = require("swig"),
     consolidate = require('consolidate'),
     mongoStore = require('connect-mongo')(express),
     flash = require('connect-flash'),
@@ -36,8 +37,25 @@ module.exports = function(app, passport, db) {
         app.use(express.logger('dev'));
     }
 
+    swig.setFilter('sortByDate', function(input) {
+        return input.sort(function(a, b) {
+            if(a.startDate.year < b.startDate.year) {
+                return -1;
+            } else if (a.startDate.year == b.startDate.year) {
+                if(a.startDate.month < b.startDate.month) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else {
+                return 1;
+            }
+        }).reverse();
+    });
     // assign the template engine to .html files
     app.engine('html', consolidate[config.templateEngine]);
+
+
 
     // set .html as the default extension
     app.set('view engine', 'html');

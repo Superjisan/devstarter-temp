@@ -135,7 +135,11 @@ UserSchema.methods = {
 		}
 	},
     tagSkills: function() {
-        this.skil
+        if (this.skills) {
+            return this.skills.split(",").map(function(skill) { return skill.trim() });
+        } else {
+            return [];
+        }
     }
 };
 // UserSchema.methods = {

@@ -39,6 +39,18 @@ var ProjectSchema = new Schema({
 	role: String
 });
 
+ProjectSchema.methods = {
+	tagsList: function() {
+		console.log(this.tech_tags);
+		if(this.tech_tags) {
+			return this.tech_tags.split(",").map(function(tag) { return tag.trim() });
+		} else {
+			return [];
+		}
+	}
+}
+
+
 exports.WorkExperienceSchema = WorkExperienceSchema;
 exports.EducationSchema = EducationSchema;
 exports.ProjectSchema = ProjectSchema;

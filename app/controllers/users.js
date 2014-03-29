@@ -274,7 +274,7 @@ exports.projectCreate = function(req, res) {
 		console.log(req.body);
 		user.projects.push(req.body);
 		user.save(function(err) {
-			res.json({});
+			res.json(req.body);
 		})
 	})
 }
