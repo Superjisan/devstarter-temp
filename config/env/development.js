@@ -21,7 +21,7 @@ module.exports = {
         callbackURL: 'http://localhost:3000/auth/github/callback'
     },
     google: {
-        email: 'HireFullstackAcademy@gmail.com',
+        email: 'hirefullstackacademy@gmail.com',
         password: 'devstarter'
     },
     linkedin: {

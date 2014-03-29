@@ -5,13 +5,14 @@
  */
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
+    config = require('../../config/config'),
     nodemailer = require('nodemailer');
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
   service: "Gmail",
   auth: {
-    user: "hirefullstackacademy@gmail.com",
-    pass: "devstarter"
+    user: config.google.email,
+    pass: config.google.password
   }
 });
 
