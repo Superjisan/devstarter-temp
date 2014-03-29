@@ -121,7 +121,14 @@ h1,h2,h3,h4,h5 {
 .skills {
   color: #b2b3ab;
   font-size: 12px;
+  padding: 0 10px 0 10px;
 }
+
+a.resume-link {
+  color: #b2b3ab;
+  font-size: 14px;
+}
+
 /*end*/
 
 
@@ -130,6 +137,7 @@ h1,h2,h3,h4,h5 {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
+    margin-bottom: 20px;
 }
  
 .video-container iframe,
@@ -3827,6 +3835,15 @@ div.error label.error:before {
    position: fixed;
    top: 0;
    left: 240px;
+   width: 100%;
+   z-index: 100;
+   box-shadow: 0 1px rgba(0,0,0,0.05);
+}
+
+.stickyheader2 .headerbar {
+   position: fixed;
+   top: 0;
+   // left: 240px;
    width: 100%;
    z-index: 100;
    box-shadow: 0 1px rgba(0,0,0,0.05);

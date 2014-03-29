@@ -6,7 +6,8 @@
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
     config = require('../../config/config'),
-    nodemailer = require('nodemailer');
+    nodemailer = require('nodemailer'),
+    _ = require("lodash");
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
   service: "Gmail",
@@ -181,9 +182,9 @@ exports.deny = function(req, res){
  */
 exports.profile = function(req, res) {
 	// console.log(req.params.id);
-	User.findOne({_id: req.params.id}, function(err, developers) {
+	User.findOne({_id: req.params.id}, function(err, developer) {
 		res.render('profile', {
-			developers: developers,
+			developer: developer,
 			user: req.user
 		});
 	});
@@ -203,14 +204,33 @@ exports.apiProfile = function(req, res) {
 exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
-	User.findByIdAndUpdate(oldUser._id, { 
-		"name": newUser.name, 
-		"email": newUser.email, 
-		"linkedin.headline": newUser.linkedin.headline, 
-		"linkedin.skills.values": newUser.linkedin.skills.values, 
-		"location": (newUser.location || "New York, NY"), 
+
+	// values from the newUser object that we want to update
+	var pick_values = [
+		"name",
+		"email",
+		"linkedin.headline",
+		"linkedin.skills.values",
+		"location",
+		"relocate",
+		"linkedin.summary",
+		"video_url",
+		"twitter_url",
+		"github_url",
+		"skills"
+		];
+
+	var newUser = _.pick(new
+
+	User.findByIdAndUpdate(oldUser._id, {
+		"name": newUser.name,
+		"email": newUser.email,
+		"linkedin.headline": newUser.linkedin.headline,
+		"linkedin.skills.values": newUser.linkedin.skills.values,
+		"location": (newUser.location || "New York, NY"),
 		"relocate": newUser.relocate,
-		"linkedin.summary": newUser.linkedin.summary
+		"linkedin.summary": newUser.linkedin.summary,
+		"video_url": newUser.video
 	}, function(err, user) {
 		if (err) {
 			res.json(err);
