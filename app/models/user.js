@@ -30,6 +30,7 @@ var UserSchema = new Schema({
     github_url: String,
     linkedin_url: String,
     twitter_url: String,
+    video_url: String,
     educations: [EducationSchema],
     work_experiences: [WorkExperienceSchema],
     projects: [ProjectSchema],
@@ -122,7 +123,13 @@ UserSchema.methods = {
 		if(githubAuth) {
 			return githubAuth.accessToken;
 		}
-	}
+	},
+  skills_list: function() {
+    return this.linkedin.skills.values.map(function(skill) {
+      console.log(skill);
+      return skill.skill.name;
+    }).join(", ");
+  }
 };
 // UserSchema.methods = {
 //     /**

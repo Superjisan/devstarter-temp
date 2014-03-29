@@ -54,6 +54,13 @@
           </div>
 
           <div class="form-group">
+            <label class="col-sm-3 control-label">Video URL</label>
+            <div class="col-sm-9">
+              <input ng-model="user.video_url" type="text" name="video_url" placeholder="//www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
+            </div>
+          </div>          
+
+          <div class="form-group">
             <label class="col-sm-3 control-label">Email <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <input ng-model="user.email" type="email" name="email" class="form-control" placeholder="Type your email..." required />
@@ -77,6 +84,21 @@
               </div>
             </div>
           </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Twitter URL</label>
+            <div class="col-sm-9">
+              <input ng-model="user.twitter_url" type="text" name="twitter_url" class="form-control" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Github URL</label>
+            <div class="col-sm-9">
+              <input ng-model="user.github_url" type="text" name="github_url" class="form-control" />
+            </div>
+          </div>
+
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Summary </label>
