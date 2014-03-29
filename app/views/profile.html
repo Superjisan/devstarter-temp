@@ -5,7 +5,7 @@
 
 <div class='mini-profile'>
   <div class='info'>
-    <img class='profile-img' src="{{developer.linkedin.pictureUrl}}" />
+    <img class='profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
     <h3 class='mini-header'>{{developer.name}}</h3>
     <h4 class='extra-info'>{{developer.location}}
 			{% if developer.relocate %}
@@ -152,7 +152,7 @@
 										<div class="muted">
 											<div class="icon-date"></div>
 											{% if work.startDate.year %}
-												{{work.startDate.year}} 
+												{{work.startDate.year}}
 											{% endif %}
 											{% if work.endDate.year %}
 											— {{work.endDate.year}}
@@ -175,7 +175,7 @@
 <div class="text-muted"><h3 class='headings'>EDUCATION</h3></div>
 
 <!-- insert EDUCATION swig loop BEGIN here -->
-	
+
 	{% for i, education in developer.educations | sortByDate %}
 	<div class="panel panel-default panel-timeline">
 		<div class="panel-heading">
@@ -195,7 +195,7 @@
 								<div class="muted">
 									<div class="icon-date"></div>
 									{% if education.startDate.year %}
-										{{education.startDate.year}} 
+										{{education.startDate.year}}
 									{% endif %}
 									{% if education.endDate.year %}
 									— {{education.endDate.year}}
