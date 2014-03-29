@@ -31,7 +31,8 @@ module.exports = function(app, passport) {
 
 	//=====================================================================
 	// API CALLS
-	app.get('/api/profile', authorization.requiresLogin, users.apiProfile, users.apiDeveloperProfile);
+	app.get('/api/profile', authorization.requiresLogin, users.apiProfile);
+	app.get('/api/devProfile', authorization.requiresLogin, users.apiDeveloperProfile)
 	app.post('/api/profile/edit', authorization.requiresLogin, users.apiProfileEdit);
 
 	app.post("/api/work", authorization.requiresLogin, users.workCreate);

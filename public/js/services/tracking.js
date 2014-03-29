@@ -5,7 +5,7 @@ angular.module('mean.tracking')
     function($http) {
       return {
         getProfile: function(cb) {
-          return $http.get('/api/profile')
+          return $http.get('/api/devProfiles')
                   .success(cb);
         },
       };
