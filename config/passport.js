@@ -21,7 +21,7 @@ var parseLinkedIn = function(profile) {
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
     skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
-    linkedin: profile._json,
+    linkedin: profile._json
   };
 };
 module.exports = function(passport) {

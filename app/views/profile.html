@@ -80,7 +80,7 @@
 						{% endif %}
 						</h4>
 						<h4 id='description'>{{developer.linkedin.headline}}</h4>
-						<p class="summary">{{developer.linkedin.summary}}</p>
+						<p class="summary">{{developer.summary || developer.linkedin.summary}}</p>
 						{% if developer.tagSkills().length > 0 %}
 							{% for i, skill in developer.tagSkills() %}
 	    					<span class='label label-success' style="margin-bottom:3px">{{ skill }}</span>

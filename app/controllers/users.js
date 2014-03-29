@@ -204,7 +204,7 @@ exports.apiProfileEdit = function(req, res) {
 		"linkedin.skills.values",
 		"location",
 		"relocate",
-		"linkedin.summary",
+		"summary",
 		"video_url",
 		"twitter_url",
 		"github_url",
@@ -218,9 +218,11 @@ exports.apiProfileEdit = function(req, res) {
 			res.json(err);
 		} else {
 			console.log(user);
+
 			res.json(user);
 		}
 	});
+
 }
 
 
