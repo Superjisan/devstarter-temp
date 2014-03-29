@@ -170,7 +170,7 @@ exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
 	console.log(newUser);
-	User.findByIdAndUpdate(oldUser._id, { "name": newUser.name, "email": newUser.email, "linkedin.headline": newUser.linkedin.headline, "linkedin.skills.values": newUser.linkedin.skills.values }, function(err, user) {
+	User.findByIdAndUpdate(oldUser._id, { "name": newUser.name, "email": newUser.email, "linkedin.headline": newUser.linkedin.headline, "linkedin.skills.values": newUser.linkedin.skills.values, "location": newUser.location, "relocate": newUser.relocate }, function(err, user) {
 		if (err) {
 			res.json(err);
 		} else {

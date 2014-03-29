@@ -66,11 +66,13 @@
   jQuery(window).load(function(){
 
     var container = document.querySelector('.people-list .row');
-    var msnry = new Masonry( container, {
-      // options
-      columnWidth: '.col-md-6',
-      itemSelector: '.col-md-6'
-    });
+    if(container) {
+      var msnry = new Masonry( container, {
+        // options
+        columnWidth: '.col-md-6',
+        itemSelector: '.col-md-6'
+      });
+    }
 
   });
   window.user = {{user| json | safe}};

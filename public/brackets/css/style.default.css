@@ -4443,3 +4443,10 @@ div.error label.error:before {
 .form-inline {
 	padding-bottom: 15px !important;
 }
+.ckbox {
+	line-height: 21px !important;
+	margin-top: 6px !important;
+}
+.ckbox label {
+	margin-bottom: -7px !important;
+}
