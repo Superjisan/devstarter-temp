@@ -7,6 +7,12 @@ angular.module('mean.profile-edit', ['mean.directives'])
       $scope.Work = Work;
       $scope.Education = Education;
       $scope.Project = Project;
+      $scope.new_project = {
+          image: {
+            crops: {
+            }
+          }
+      };
 
       ProfileEditSrvc.getProfile(function(data) {
         $scope.user = data;
