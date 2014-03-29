@@ -10,20 +10,20 @@ module.exports = function(grunt) {
                 files: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js'],
                 tasks: ['jshint'],
                 options: {
-                    livereload: true
+                    // livereload: true
                 }
             },
             html: {
                 files: ['public/views/**', 'app/views/**'],
                 options: {
-                    livereload: true
+                    // livereload: true
                 }
             },
             css: {
-                files: ['public/css/**'],
-                tasks: ['csslint'],
+                files: ['public/brackets/css/style.default.scss'],
+                tasks: ['sass:dev'],
                 options: {
-                    livereload: true
+                    // livereload: true
                 }
             }
         },
@@ -46,7 +46,8 @@ module.exports = function(grunt) {
                 csslintrc: '.csslintrc'
             },
             all: {
-                src: ['public/css/**/*.css']
+                // src: ['public/css/**/*.css']
+                src: []
             }
         },
         cssmin: {
@@ -92,12 +93,32 @@ module.exports = function(grunt) {
             unit: {
                 configFile: 'test/karma/karma.conf.js'
             }
-        }
+        },
+        sass: {                              // Task
+            dev: {                            // Target
+              options: {                       // Target options
+                style: 'expanded',
+                lineNumbers: true,
+
+              },
+              files: {                         // Dictionary of files
+                'public/build/css/dist.min.css': 'public/brackets/css/style.default.scss'       // 'destination': 'source'
+              }
+            },           
+            dist: {                            // Target
+              options: {                       // Target options
+                style: 'compressed'
+              },
+              files: {                         // Dictionary of files
+                'public/build/css/dist.min.css': 'public/brackets/css/style.default.scss'       // 'destination': 'source'
+              }
+            }
+        }        
     });
 
     //Load NPM tasks
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -113,9 +134,9 @@ module.exports = function(grunt) {
 
     //Default task(s).
     if (process.env.NODE_ENV === 'production') {
-        grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'csslint', 'sass:dist', 'uglify', 'concurrent']);
     } else {
-        grunt.registerTask('default', ['jshint', 'csslint', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'csslint', 'sass:dev', 'concurrent']);
     }
 
     //Test task.
