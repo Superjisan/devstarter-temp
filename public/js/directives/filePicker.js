@@ -25,6 +25,9 @@ angular.module('mean.directives')
               cropPresets: [["Square", "1:1"]],
               cropPresetDefault: "Square",
               cropPresetsStrict: true,
+              onClose: function() {
+                resetModal();
+              },
               onSave: function(imageID, newURL) {
                 var options = {
                   url: $attrs.attachmentPath,
@@ -47,7 +50,9 @@ angular.module('mean.directives')
 
               featherEditor.launch({
                 image: preview,
-                url: inkBlob.url
+                url: inkBlob.url,
+                forceCropPreset: ['Square','200x200'],
+                forceCropMessage: 'Crop your picture:'
               });
             }
 

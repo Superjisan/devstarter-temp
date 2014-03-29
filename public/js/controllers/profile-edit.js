@@ -90,7 +90,6 @@ angular.module('mean.profile-edit', ['mean.directives'])
 
       $scope.projectTags = [];
 
-
       $scope.removeProjectTag = function(index) {
         $scope.projectTags.splice(index, 1);
       }
