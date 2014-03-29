@@ -15,6 +15,7 @@
 	"js": {
 		"public/build/js/dist.min.js": [
 			"public/brackets/js/jquery-1.10.2.min.js",
+			"public/lib/lodash/dist/lodash.js",
 			"public/lib/angular/angular.js",
 			"public/lib/angular-cookies/angular-cookies.js",
 			"public/lib/angular-resource/angular-resource.js",
@@ -24,6 +25,7 @@
 			"public/brackets/js/bootstrap.min.js",
 			"public/brackets/js/holder.js",
 			"public/lib/masonry/dist/masonry.pkgd.min.js",
+      "public/brackets/js/jquery.tagsinput.min.js",
 			"public/js/**/*.js"
 		]
 	}

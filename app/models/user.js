@@ -29,14 +29,25 @@ var UserSchema = new Schema({
     github_url: String,
     linkedin_url: String,
     twitter_url: String,
+    video_url: String,
     educations: [EducationSchema],
     work_experiences: [WorkExperienceSchema],
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
-    profile_picture: String,
+
+    location: [],
+
     resume: String,
-    location: []
+    skills: String,
+    profile_picture: {
+      crops: Object,
+      original: String
+    },
+    funny_profile_picture: {
+      crops: Object,
+      original: String
+    }
 
 });
 
@@ -122,7 +133,10 @@ UserSchema.methods = {
 		if(githubAuth) {
 			return githubAuth.accessToken;
 		}
-	}
+	},
+    tagSkills: function() {
+        this.skil
+    }
 };
 // UserSchema.methods = {
 //     /**

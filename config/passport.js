@@ -20,7 +20,8 @@ var parseLinkedIn = function(profile) {
     work_experiences: profile._json.positions.values,
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
-    linkedin: profile._json
+    skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
+    linkedin: profile._json,
   };
 };
 module.exports = function(passport) {
@@ -36,6 +37,7 @@ module.exports = function(passport) {
         User.findOne({
             _id: id
         }, '-salt -hashed_password', function(err, user) {
+
             done(err, user);
         });
     });

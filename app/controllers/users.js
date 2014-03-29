@@ -4,7 +4,9 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = mongoose.model('User'),
+		mailer = require('../lib/mailer'),
+    _ = require("lodash");
 
 /**
  * Auth callback
@@ -123,11 +125,23 @@ exports.admin = function(req, res) {
 
 exports.approve = function(req, res){
 	var applicant = Object.keys(req.body)[0];
-	User.findByIdAndUpdate(applicant,{$push: {'roles': 'approved'}}, function(err, user){
+	User.findByIdAndUpdate(applicant,{$push: {'roles': 'denied'}}, function(err, user){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		mailer.smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been approved!",
+			text: "View your profile at http://hire.fullstackacademy.com"
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			mailer.smtpTransport.close();
+		})
 	})
 }
 
@@ -137,7 +151,19 @@ exports.deny = function(req, res){
 		if (err){
 			return err;
 		}
-		console.log('Success:', user.roles);
+		mailer.smtpTransport.sendMail({
+			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+			to: user.name+' <'+user.email+'>',
+			subject: "Your profile has been denied.",
+			text: "Sorry, we cannot accept your profile at this time."
+		}, function(error, response){
+			if (error){
+				console.log(error)
+			} else {
+				console.log('Success:', user.roles);
+			}
+			mailer.smtpTransport.close();
+		})
 	})
 }
 
@@ -147,9 +173,9 @@ exports.deny = function(req, res){
  */
 exports.profile = function(req, res) {
 	// console.log(req.params.id);
-	User.findOne({_id: req.params.id}, function(err, developers) {
+	User.findOne({_id: req.params.id}, function(err, developer) {
 		res.render('profile', {
-			developers: developers,
+			developer: developer,
 			user: req.user
 		});
 	});
@@ -169,13 +195,32 @@ exports.apiProfile = function(req, res) {
 exports.apiProfileEdit = function(req, res) {
 	var oldUser = req.user;
 	var newUser = req.body;
-	console.log(newUser);
-	User.findByIdAndUpdate(oldUser._id, { "name": newUser.name, "email": newUser.email, "linkedin.headline": newUser.linkedin.headline, "linkedin.skills.values": newUser.linkedin.skills.values, "location": newUser.location, "relocate": newUser.relocate }, function(err, user) {
+
+	// values from the newUser object that we want to update
+	var clean_values = [
+		"name",
+		"email",
+		"linkedin.headline",
+		"linkedin.skills.values",
+		"location",
+		"relocate",
+		"linkedin.summary",
+		"video_url",
+		"twitter_url",
+		"github_url",
+		"skills"
+		];
+
+	var newUser = _.pick(newUser, clean_values);
+
+	User.findByIdAndUpdate(oldUser._id, newUser, function(err, user) {
 		if (err) {
 			res.json(err);
 		} else {
+			console.log(user);
 			res.json(user);
 		}
+
 	})
 };
 
@@ -185,12 +230,13 @@ exports.apiDeveloperProfile = function(req, res) {
 };
 
 
+
 exports.workCreate = function(req, res) {
 	User.findOne( { "_id": req.user._id }, function(err, user) {
 		console.log(req.body);
 		user.work_experiences.push(req.body);
 		user.save(function(err) {
-			res.json({});
+			res.json(req.body);
 		});
 	});
 };
@@ -209,7 +255,7 @@ exports.educationCreate = function(req, res) {
 		console.log(req.body);
 		user.educations.push(req.body);
 		user.save(function(err) {
-			res.json({});
+			res.json(req.body);
 		});
 	});
 };
@@ -242,11 +288,25 @@ exports.projectDelete = function(req, res) {
 	})
 };
 
+
 exports.addAttachment = function(req, res) {
-	User.findOne( {"_id": req.user._id }, function(err, user) {
-		user[req.body.attachment] = req.body.url;
-		user.save(function(err) {
-			res.json(req.body);
-		})
-	})
+  var updates = {$set:{}};
+
+  User.findOne( {"_id": req.user._id }, function(err, user) {
+    if (req.body.attachments) {
+      req.body.attachments.forEach(function(attachment){
+        updates.$set[attachment.name] = attachment.url;
+      });
+    } else if (req.body.attachment) {
+      updates.$set[req.body.attachment] = req.body.url;
+    } else {
+      return res.send(400);
+    }
+
+    console.log(updates);
+
+    User.update({"_id": req.user._id}, updates, function(){
+      res.json(req.body);
+    });
+  })
 };
