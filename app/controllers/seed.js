@@ -359,8 +359,7 @@ User.create(
 });
 
 //Howard Kim
-User.create(
-{
+User.create({
   "location": [';', 'Willing to relocate'],
   "auth_methods" : [
     {
@@ -676,291 +675,12 @@ User.create(
       "_total" : 0
     }
   },
-  "name" : "Migi Domingo",
+  "name" : "Howard Kim",
   "roles" : [
     "developer",
     "admin"
   ],
-  "work_experiences" : [
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "1-10 employees",
-        "name" : "Fullstack Academy",
-        "industry" : "Internet",
-        "id" : 4985867
-      },
-      "id" : 514054384,
-      "isCurrent" : true,
-      "title" : "Student",
-      "startDate" : {
-        "month" : 1,
-        "year" : 2014
-      }
-    },
-    {
-      "company" : {
-        "name" : "Magic 89.9",
-        "industry" : "Broadcast Media"
-      },
-      "id" : 373551161,
-      "isCurrent" : false,
-      "title" : "Radio DJ",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2013
-      },
-      "startDate" : {
-        "month" : 10,
-        "year" : 2012
-      }
-    },
-    {
-      "company" : {
-        "type" : "Public Company",
-        "ticker" : "BBBY",
-        "size" : "10,001+ employees",
-        "name" : "Bed Bath & Beyond",
-        "industry" : "Retail",
-        "id" : 7174
-      },
-      "id" : 373557304,
-      "isCurrent" : false,
-      "title" : "Cashier",
-      "endDate" : {
-        "month" : 8,
-        "year" : 2009
-      },
-      "startDate" : {
-        "month" : 6,
-        "year" : 2009
-      }
-    }
-  ],
-
 });
-
-
-
-//Peter Espinosa
-User.create({
-
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "gYd6XGSzom",
-    }
-  ],
-  "email" : "peterespinosa78@gmail.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 0,
-      "collaborators" : 0,
-      "space" : 307200,
-      "name" : "free"
-    },
-    "collaborators" : 0,
-    "disk_usage" : 6676,
-    "owned_private_repos" : 0,
-    "total_private_repos" : 0,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T01:27:48Z",
-    "created_at" : "2013-07-30T15:27:03Z",
-    "following" : 3,
-    "followers" : 3,
-    "public_gists" : 0,
-    "public_repos" : 3,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "",
-    "location" : "",
-    "blog" : "",
-    "company" : "",
-    "name" : "Peter Espinosa",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/peterespinosa/received_events",
-    "events_url" : "https://api.github.com/users/peterespinosa/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/peterespinosa/repos",
-    "organizations_url" : "https://api.github.com/users/peterespinosa/orgs",
-    "subscriptions_url" : "https://api.github.com/users/peterespinosa/subscriptions",
-    "starred_url" : "https://api.github.com/users/peterespinosa/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/peterespinosa/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/peterespinosa/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/peterespinosa/followers",
-    "html_url" : "https://github.com/peterespinosa",
-    "url" : "https://api.github.com/users/peterespinosa",
-    "gravatar_id" : "c6cb4f394a65e585ef01ff30cd9fddad",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/5122260?",
-    "id" : 5122260,
-    "login" : "peterespinosa"
-  },
-  "linkedin" : {
-    "skills" : {
-      "values" : [
-        {
-          "skill" : {
-            "name" : "Software Development"
-          },
-          "id" : 9
-        },
-        {
-          "skill" : {
-            "name" : "Software Engineering"
-          },
-          "id" : 10
-        },
-        {
-          "skill" : {
-            "name" : "Linux"
-          },
-          "id" : 11
-        },
-        {
-          "skill" : {
-            "name" : "Embedded Systems"
-          },
-          "id" : 12
-        },
-        {
-          "skill" : {
-            "name" : "Agile Methodologies"
-          },
-          "id" : 13
-        },
-        {
-          "skill" : {
-            "name" : "XML"
-          },
-          "id" : 14
-        },
-        {
-          "skill" : {
-            "name" : "JavaScript"
-          },
-          "id" : 15
-        },
-        {
-          "skill" : {
-            "name" : "SQL"
-          },
-          "id" : 16
-        },
-        {
-          "skill" : {
-            "name" : "Python"
-          },
-          "id" : 18
-        },
-        {
-          "skill" : {
-            "name" : "Web Services"
-          },
-          "id" : 19
-        }
-      ],
-      "_total" : 10
-    },
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=273467332&authType=name&authToken=71nc&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "F.",
-          "id" : "rbg3BBO1-S",
-          "firstName" : "Julie"
-        },
-        {
-          "lastName" : "U.",
-          "id" : "TaaWGFU5Zr",
-          "firstName" : "Jamie"
-        },
-        {
-          "lastName" : "J.",
-          "id" : "NooJPn--Rn",
-          "firstName" : "Arlene"
-        },
-        {
-          "lastName" : "L.",
-          "id" : "ncZxEcw2DT",
-          "firstName" : "Amarylis"
-        },
-        {
-          "lastName" : "B.",
-          "id" : "_etjwSlgCO",
-          "firstName" : "Millie"
-        },
-        {
-          "lastName" : "J.",
-          "id" : "z_L5pALvWQ",
-          "firstName" : "Harry"
-        },
-        {
-          "lastName" : "H.",
-          "id" : "HCcqgg52IH",
-          "firstName" : "Susan"
-        },
-        {
-          "lastName" : "M.",
-          "id" : "nzxeGpmwUS",
-          "firstName" : "Scott"
-        },
-        {
-          "lastName" : "F.",
-          "id" : "LWV_M2-tTp",
-          "firstName" : "Jason"
-        },
-        {
-          "lastName" : "F.",
-          "id" : "IMWA2zwYp3",
-          "firstName" : "Derek"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "positions" : {
-      "_total" : 0
-    },
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Espinosa",
-    "languages" : {
-      "values" : [
-        {
-          "language" : {
-            "name" : "English"
-          },
-          "id" : 1
-        },
-        {
-          "language" : {
-            "name" : "Spanish"
-          },
-          "id" : 2
-        }
-      ],
-      "_total" : 2
-    },
-    "id" : "gYd6XGSzom",
-    "headline" : "Software Engineer",
-    "firstName" : "Peter",
-    "emailAddress" : "peterespinosa78@gmail.com",
-    "educations" : {
-      "_total" : 0
-    }
-  },
-  "name" : "Peter Espinosa",
-  "roles" : [
-    "developer"
-  ]
-});
-
 
 //Peter Espinosa
 User.create({
@@ -4349,6 +4069,402 @@ User.create({
   ]
 })
 
+//Ji Hoo Kim (Tom's Data)
+User.create(
+  {
+  "__v" : 1,
+  "auth_methods" : [
+    {
+      "provider" : "linkedin",
+      "providerId" : "CSRTpH9PMC",
+    }
+  ],
+  "educations" : [
+    {
+      "activities" : "Dean's List, NYU CEDA Debate Team, ECAASU, NYU AEI Executive Council",
+      "degree" : "Bachelor of Arts (B.A.)",
+      "fieldOfStudy" : "Economics/Politics/Computer Science",
+      "id" : 99687789,
+      "schoolName" : "New York University",
+      "endDate" : {
+        "year" : 2015
+      },
+      "startDate" : {
+        "year" : 2011
+      }
+    }
+  ],
+  "email" : "jihokoo@gmail.com",
+  "events" : [ ],
+  "github" : {
+    "plan" : {
+      "private_repos" : 0,
+      "collaborators" : 0,
+      "space" : 307200,
+      "name" : "free"
+    },
+    "collaborators" : 0,
+    "disk_usage" : 13164,
+    "owned_private_repos" : 0,
+    "total_private_repos" : 6,
+    "private_gists" : 0,
+    "updated_at" : "2014-03-29T20:28:13Z",
+    "created_at" : "2012-10-21T18:53:35Z",
+    "following" : 6,
+    "followers" : 10,
+    "public_gists" : 0,
+    "public_repos" : 15,
+    "bio" : null,
+    "hireable" : true,
+    "email" : "jihokoo@gmail.com",
+    "location" : "New York, New York",
+    "blog" : "https://twitter.com/jihokoo",
+    "company" : "",
+    "name" : "Ji Ho Koo",
+    "site_admin" : false,
+    "type" : "User",
+    "received_events_url" : "https://api.github.com/users/jihokoo/received_events",
+    "events_url" : "https://api.github.com/users/jihokoo/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/jihokoo/repos",
+    "organizations_url" : "https://api.github.com/users/jihokoo/orgs",
+    "subscriptions_url" : "https://api.github.com/users/jihokoo/subscriptions",
+    "starred_url" : "https://api.github.com/users/jihokoo/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/jihokoo/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/jihokoo/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/jihokoo/followers",
+    "html_url" : "https://github.com/jihokoo",
+    "url" : "https://api.github.com/users/jihokoo",
+    "gravatar_id" : "96b8a16a648f888a66b9c82299537df2",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/2614565?",
+    "id" : 2614565,
+    "login" : "jihokoo"
+  },
+  "interested" : [ ],
+  "linkedin" : {
+    "skills" : {
+      "values" : [
+        {
+          "skill" : {
+            "name" : "JavaScript"
+          },
+          "id" : 31
+        },
+        {
+          "skill" : {
+            "name" : "Node.js"
+          },
+          "id" : 32
+        },
+        {
+          "skill" : {
+            "name" : "Express"
+          },
+          "id" : 33
+        },
+        {
+          "skill" : {
+            "name" : "AngularJS"
+          },
+          "id" : 34
+        },
+        {
+          "skill" : {
+            "name" : "MongoDB"
+          },
+          "id" : 35
+        },
+        {
+          "skill" : {
+            "name" : "Ruby"
+          },
+          "id" : 36
+        },
+        {
+          "skill" : {
+            "name" : "jQuery"
+          },
+          "id" : 37
+        },
+        {
+          "skill" : {
+            "name" : "CSS"
+          },
+          "id" : 38
+        },
+        {
+          "skill" : {
+            "name" : "HTML"
+          },
+          "id" : 39
+        }
+      ],
+      "_total" : 9
+    },
+    "siteStandardProfileRequest" : {
+      "url" : "http://www.linkedin.com/profile/view?id=168614628&authType=name&authToken=Mz6T&trk=api*a3226473*s3299743*"
+    },
+    "relatedProfileViews" : {
+      "values" : [
+        {
+          "lastName" : "Wallace",
+          "id" : "tIxs2lfEnw",
+          "firstName" : "Omari"
+        },
+        {
+          "lastName" : "Giraldo",
+          "id" : "2qKGhmTNbZ",
+          "firstName" : "Max"
+        },
+        {
+          "lastName" : "Yu",
+          "id" : "GDSYjeKb_Q",
+          "firstName" : "Kelvin"
+        },
+        {
+          "lastName" : "Pazmiño",
+          "id" : "En1mNn2tQC",
+          "firstName" : "Luis"
+        },
+        {
+          "lastName" : "Xiang",
+          "id" : "0CbQxKE7yn",
+          "firstName" : "Tong"
+        },
+        {
+          "lastName" : "Tsui",
+          "id" : "JmCfHALEkj",
+          "firstName" : "Jaclyn"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        },
+        {
+          "lastName" : "Tam",
+          "id" : "yV3QGJfBVK",
+          "firstName" : "Waine"
+        },
+        {
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
+        },
+        {
+          "lastName" : "D'Alessandro",
+          "id" : "WkMxcboGNL",
+          "firstName" : "Scott"
+        }
+      ],
+      "_total" : 10
+    },
+    "recommendationsReceived" : {
+      "_total" : 0
+    },
+    "primaryTwitterAccount" : {
+      "providerAccountName" : "jihokoo",
+      "providerAccountId" : "1931356736"
+    },
+    "positions" : {
+      "values" : [
+        {
+          "title" : "Software Developer",
+          "startDate" : {
+            "year" : 2014
+          },
+          "isCurrent" : false,
+          "id" : 517110966,
+          "endDate" : {
+            "year" : 2014
+          },
+          "company" : {
+            "type" : "Educational Institution",
+            "size" : "1-10 employees",
+            "name" : "Fullstack Academy",
+            "industry" : "Internet",
+            "id" : 4985867
+          }
+        },
+        {
+          "title" : "Investment Analyst Intern",
+          "startDate" : {
+            "year" : 2013,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 515127218,
+          "endDate" : {
+            "year" : 2013,
+            "month" : 8
+          },
+          "company" : {
+            "name" : "Pomona Capital",
+            "industry" : "International Affairs"
+          }
+        },
+        {
+          "title" : "Summer Analyst",
+          "startDate" : {
+            "year" : 2011
+          },
+          "isCurrent" : false,
+          "id" : 323426731,
+          "endDate" : {
+            "year" : 2011
+          },
+          "company" : {
+            "type" : "Public Company",
+            "ticker" : "AZ",
+            "size" : "1001-5000 employees",
+            "name" : "Allianz Global Investors",
+            "industry" : "Investment Management",
+            "id" : 7475
+          }
+        }
+      ],
+      "_total" : 3
+    },
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_HAcsUdbA_TRZOpZuH-bWUwq873edYpZuQviLUw6AKXy4TZ72kcFnzIt0T7HcjRM8d-zkN2Z5vk_X",
+    "phoneNumbers" : {
+      "_total" : 0
+    },
+    "numRecommenders" : 0,
+    "lastName" : "Koo",
+    "languages" : {
+      "values" : [
+        {
+          "language" : {
+            "name" : "English"
+          },
+          "id" : 14
+        },
+        {
+          "language" : {
+            "name" : "Korean"
+          },
+          "id" : 15
+        },
+        {
+          "language" : {
+            "name" : "Chinese"
+          },
+          "id" : 16
+        }
+      ],
+      "_total" : 3
+    },
+    "interests" : "Programming",
+    "id" : "CSRTpH9PMC",
+    "honorsAwards" : {
+      "values" : [
+        {
+          "name" : "Dean's List",
+          "issuer" : "New York University",
+          "id" : 11
+        },
+        {
+          "name" : "AMC Accenture Consulting Case Competition",
+          "issuer" : "Accenture",
+          "id" : 12
+        },
+        {
+          "name" : "Data Privacy Legal Hackathon",
+          "issuer" : "Legal Hackers, Hacker League",
+          "id" : 13
+        }
+      ],
+      "_total" : 3
+    },
+    "headline" : "Student at New York University",
+    "firstName" : "Ji Ho",
+    "emailAddress" : "jihokoo@gmail.com",
+    "educations" : {
+      "values" : [
+        {
+          "startDate" : {
+            "year" : 2011
+          },
+          "schoolName" : "New York University",
+          "id" : 99687789,
+          "fieldOfStudy" : "Economics/Politics/Computer Science",
+          "endDate" : {
+            "year" : 2015
+          },
+          "degree" : "Bachelor of Arts (B.A.)",
+          "activities" : "Dean's List, NYU CEDA Debate Team, ECAASU, NYU AEI Executive Council"
+        }
+      ],
+      "_total" : 1
+    }
+  },
+  "location" : [
+    "New York, New York",
+    ";",
+    "Willing To Relocate"
+  ],
+  "name" : "Ji Ho Koo",
+  "projects" : [ ],
+  "roles" : [
+    "developer"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 517110966,
+      "isCurrent" : false,
+      "title" : "Software Developer",
+      "endDate" : {
+        "year" : 2014
+      },
+      "startDate" : {
+        "year" : 2014
+      }
+    },
+    {
+      "company" : {
+        "name" : "Pomona Capital",
+        "industry" : "International Affairs"
+      },
+      "id" : 515127218,
+      "isCurrent" : false,
+      "title" : "Investment Analyst Intern",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2013
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "AZ",
+        "size" : "1001-5000 employees",
+        "name" : "Allianz Global Investors",
+        "industry" : "Investment Management",
+        "id" : 7475
+      },
+      "id" : 323426731,
+      "isCurrent" : false,
+      "title" : "Summer Analyst",
+      "endDate" : {
+        "year" : 2011
+      },
+      "startDate" : {
+        "year" : 2011
+      }
+    }
+  ]
+})
+
 //Jisan data
 // User.create({
 
@@ -5211,5 +5327,5 @@ User.create({
 
 
 console.log('Done Seeding Data');
-  res.send('200')
+  res.send("You've successfully seeded test data.")
 };

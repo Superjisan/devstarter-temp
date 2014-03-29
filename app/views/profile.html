@@ -36,25 +36,34 @@
 	    	<a class="resume-link" href="{{developer.resume}}"><span class="fa fa-file-text"></span> Resume</a>
 	    </p>
     {% endif %}
-
+		{% if user.interested.indexOf(developer.id) === -1 %}
     <p>
 	    <a class="btn btn-success" id="follow">
 	      <i class="fa fa-check-circle-o"></i> I'm interested
 	    </a>
     </p>
+    {% else %}
+    <p>
+	    <a class="btn btn-primary">
+	      <i class="fa fa-check-circle-o"></i> Marked as interested
+      </a>
+    </p>
+    {% endif %}
 
     {% if developer._id.toString() === user._id.toString() %}
     	<p><a href="/profile/edit" class="btn btn-warning">Edit My Profile</a></p>
 	  {% endif %}
+
   </div>
 </div>
 <!-- space for sidebar -->
-<div class="col-sm-3">
+<div class="col-sm-3" >
 
 </div>
 <!-- /end space for sidebar -->
 
 <!-- content panel -->
+
 <div class="col-sm-9" style="padding-left:20px">
 	{% if developer.video_url %}
 	<div class="video-container"><!-- fix for video responsive container -->
@@ -66,6 +75,7 @@
 			<div class="media white-bg">
 				<div class="media-body">
 					<h1 class='header'>{{developer.name}}</h1>
+
 					<div class="panel-body">
 						<h4>New York, NY
 						{% if developer.relocate %}
@@ -75,7 +85,7 @@
 						{% endif %}
 						</h4>
 						<h4 id='description'>{{developer.linkedin.headline}}</h4>
-						<p class="summary">{{developer.linkedin.summary}}</p>
+						<p class="summary">{{developer.summary || developer.linkedin.summary}}</p>
 						{% if developer.tagSkills().length > 0 %}
 							{% for i, skill in developer.tagSkills() %}
 	    					<span class='label label-success' style="margin-bottom:3px">{{ skill }}</span>
@@ -85,6 +95,7 @@
 				</div>
 			</div>
 	</div>
+
 
 	{% if developer.projects.length > 0 %}
 		<div class="text-muted"><h3 class='headings'>PROJECTS</h3></div>
@@ -121,6 +132,7 @@
 												{% endfor %}
 											</div>
 										</div>
+
 								</div>
 							</div>
 						</div>
@@ -154,7 +166,7 @@
 										<div class="muted">
 											<div class="icon-date"></div>
 											{% if work.startDate.year %}
-												{{work.startDate.year}} 
+												{{work.startDate.year}}
 											{% endif %}
 											{% if work.endDate.year %}
 											— {{work.endDate.year}}
@@ -177,7 +189,7 @@
 <div class="text-muted"><h3 class='headings'>EDUCATION</h3></div>
 
 <!-- insert EDUCATION swig loop BEGIN here -->
-	
+
 	{% for i, education in developer.educations | sortByDate %}
 	<div class="panel panel-default panel-timeline">
 		<div class="panel-heading">
@@ -197,7 +209,7 @@
 								<div class="muted">
 									<div class="icon-date"></div>
 									{% if education.startDate.year %}
-										{{education.startDate.year}} 
+										{{education.startDate.year}}
 									{% endif %}
 									{% if education.endDate.year %}
 									— {{education.endDate.year}}
@@ -232,12 +244,7 @@ jQuery(document).ready(function() {
 		$.post('/addfavorite', data, function(result,status,xhr){
 			console.log(result,status,xhr);
 		});
-		// jQuery.ajax({
-		// 	url:'/addfavorite',
-		// 	data: data,
-		// 	type: 'POST',
-		// 	async: true
-		// })
+		$('#follow').replaceWith("<a class='btn btn-primary'><i class='fa fa-check-circle-o'></i> Marked as interested</a>");
   });
 });
 </script>
