@@ -204,7 +204,7 @@ exports.workCreate = function(req, res) {
 		console.log(req.body);
 		user.work_experiences.push(req.body);
 		user.save(function(err) {
-			res.json({});
+			res.json(req.body);
 		});
 	});
 };
@@ -223,7 +223,7 @@ exports.educationCreate = function(req, res) {
 		console.log(req.body);
 		user.educations.push(req.body);
 		user.save(function(err) {
-			res.json({});
+			res.json(req.body);
 		});
 	});
 };

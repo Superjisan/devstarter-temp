@@ -11,10 +11,6 @@
 
 	<!-- Sidebar -->
   <div class="col-lg-3 col-sm-3 sidebar">
-    <div class="sidebar-inner">
-      <li>Personal Info</li>
-      <button type="submit" class="btn btn-primary">Save Profile</button>
-    </div>
   </div><!-- sidebar -->
 
 
@@ -173,7 +169,7 @@
 		              <td>[[work.startDate | workDate ]]</td>
 		              <td>[[work.endDate | workDate]]</td>
 		              <td class="table-action">
-		                <a href="" ng-click="removeWork($index)" class="delete-row"><i class="fa fa-trash-o"></i></a>
+		                <a href="" ng-click="removeObj(work, user.work_experiences, Work)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		              </td>
 		            </tr>
 		          </tbody>
@@ -225,7 +221,7 @@
 		              <td>[[college.startDate | workDate ]]</td>
 		              <td>[[college.endDate | workDate]]</td>
 		              <td class="table-action">
-		                <a href="" ng-click="removeEducation($index)" class="delete-row"><i class="fa fa-trash-o"></i></a>
+		                <a href="" ng-click="removeObj(college, user.educations, Education)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		              </td>
 		            </tr>
 		          </tbody>
@@ -319,7 +315,7 @@
 					<p>[[ project.description ]]</p>
 					<h3>[[ project.pitch ]]</h3>
 					<h6 ng-repeat="tag in project.tags">[[ tag ]]</h6>
-		    	<a href="" ng-click="removeProject($index)" class="delete-row"><i class="fa fa-trash-o"></i></a>
+		    	<a href="" ng-click="removeObj(project, user.projects, Project)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		    </div>
 
 		</div><!-- panel -->
