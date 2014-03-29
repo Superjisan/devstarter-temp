@@ -99,6 +99,7 @@ angular.module('mean.profile-edit', ['mean.directives'])
       //   $scope.projectTags.splice(index, 1);
       // }
 
+
       // $scope.addProjectTag = function(event) {
       //   if(event.which === 13) {
       //     $scope.projectTags.push($scope.currentTag);
