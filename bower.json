@@ -11,6 +11,7 @@
     "angular-bootstrap": "0.10.0",
     "angular-ui-router": "#master",
     "jquery-backstretch": "~2.0.4",
-    "masonry": "~3.1.5"
+    "masonry": "~3.1.5",
+    "lodash": "~2.4.1"
   }
 }
