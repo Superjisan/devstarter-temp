@@ -40,7 +40,7 @@ var UserSchema = new Schema({
     events: [EventsSchema],
     profiles_visited: [VisitedProfilesSchema],
     visited_profiles: [ProfileVisitsSchema],
-    location: [],
+    location: String,
     resume: String,
     skills: String,
     profile_picture: {

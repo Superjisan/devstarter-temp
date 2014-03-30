@@ -7,392 +7,17 @@ exports.seed = function(req, res) {
     console.log("Inserting data");
 
 
-// Migi's Data
-// User.create(
-// {
-
-//   "auth_methods" : [
-//     {
-//       "provider" : "linkedin",
-//       "providerId" : "hiyN8jWqPW",
-//     }
-//   ],
-//   "email" : "migi_72@yahoo.com",
-//   "github" : {
-//     "plan" : {
-//       "private_repos" : 0,
-//       "collaborators" : 0,
-//       "space" : 307200,
-//       "name" : "free"
-//     },
-//     "collaborators" : 0,
-//     "disk_usage" : 1500,
-//     "owned_private_repos" : 0,
-//     "total_private_repos" : 9,
-//     "private_gists" : 0,
-//     "updated_at" : "2014-03-25T03:15:53Z",
-//     "created_at" : "2013-06-29T08:17:38Z",
-//     "following" : 5,
-//     "followers" : 1,
-//     "public_gists" : 4,
-//     "public_repos" : 7,
-//     "site_admin" : false,
-//     "type" : "User",
-//     "received_events_url" : "https://api.github.com/users/migidomingo/received_events",
-//     "events_url" : "https://api.github.com/users/migidomingo/events{/privacy}",
-//     "repos_url" : "https://api.github.com/users/migidomingo/repos",
-//     "organizations_url" : "https://api.github.com/users/migidomingo/orgs",
-//     "subscriptions_url" : "https://api.github.com/users/migidomingo/subscriptions",
-//     "starred_url" : "https://api.github.com/users/migidomingo/starred{/owner}{/repo}",
-//     "gists_url" : "https://api.github.com/users/migidomingo/gists{/gist_id}",
-//     "following_url" : "https://api.github.com/users/migidomingo/following{/other_user}",
-//     "followers_url" : "https://api.github.com/users/migidomingo/followers",
-//     "html_url" : "https://github.com/migidomingo",
-//     "url" : "https://api.github.com/users/migidomingo",
-//     "gravatar_id" : "7cd6ddde82a4bc27c41b211909c75116",
-//     "avatar_url" : "https://avatars.githubusercontent.com/u/4880315?",
-//     "id" : 4880315,
-//     "login" : "migidomingo"
-//   },
-//   "linkedin" : {
-//     "skills" : {
-//       "values" : [
-//         {
-//           "skill" : {
-//             "name" : "Web Development"
-//           },
-//           "id" : 30
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Social Media Marketing"
-//           },
-//           "id" : 31
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Team Leadership"
-//           },
-//           "id" : 32
-//         },
-//         {
-//           "skill" : {
-//             "name" : "JavaScript"
-//           },
-//           "id" : 33
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Public Speaking"
-//           },
-//           "id" : 34
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Node.js"
-//           },
-//           "id" : 35
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Social Media"
-//           },
-//           "id" : 36
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Entertainment"
-//           },
-//           "id" : 37
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Ruby"
-//           },
-//           "id" : 38
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Express.js"
-//           },
-//           "id" : 39
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Angular.js"
-//           },
-//           "id" : 40
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Ruby on Rails"
-//           },
-//           "id" : 41
-//         },
-//         {
-//           "skill" : {
-//             "name" : "Music"
-//           },
-//           "id" : 42
-//         }
-//       ],
-//       "_total" : 13
-//     },
-//     "siteStandardProfileRequest" : {
-//       "url" : "http://www.linkedin.com/profile/view?id=238483169&authType=name&authToken=X4Qw&trk=api*a3226473*s3299743*"
-//     },
-//     "relatedProfileViews" : {
-//       "values" : [
-//         {
-//           "lastName" : "Zaman",
-//           "id" : "PvmfqY724t",
-//           "firstName" : "Jisan"
-//         },
-//         {
-//           "lastName" : "Ingram",
-//           "id" : "buLJshkhKq",
-//           "firstName" : "Russell"
-//         },
-//         {
-//           "lastName" : "Cook",
-//           "id" : "AjEGjDYQLv",
-//           "firstName" : "Eric"
-//         },
-//         {
-//           "lastName" : "Yu",
-//           "id" : "GDSYjeKb_Q",
-//           "firstName" : "Kelvin"
-//         },
-//         {
-//           "lastName" : "Drury",
-//           "id" : "hne4Az6W6H",
-//           "firstName" : "James"
-//         },
-//         {
-//           "lastName" : "Wallace",
-//           "id" : "tIxs2lfEnw",
-//           "firstName" : "Omari"
-//         },
-//         {
-//           "lastName" : "Giraldo",
-//           "id" : "2qKGhmTNbZ",
-//           "firstName" : "Max"
-//         },
-//         {
-//           "lastName" : "Kim",
-//           "id" : "f3MHAVxhZP",
-//           "firstName" : "Howard Jin"
-//         },
-//         {
-//           "lastName" : "Buchanan",
-//           "id" : "fGnvXFc51n",
-//           "firstName" : "Hannah Jane"
-//         },
-//         {
-//           "lastName" : "Bayogos",
-//           "id" : "RQSP6Wm6m7",
-//           "firstName" : "Sammie"
-//         }
-//       ],
-//       "_total" : 10
-//     },
-//     "recommendationsReceived" : {
-//       "_total" : 0
-//     },
-//     "primaryTwitterAccount" : {
-//       "providerAccountName" : "finch899",
-//       "providerAccountId" : "24293957"
-//     },
-//     "positions" : {
-//       "values" : [
-//         {
-//           "title" : "Student",
-//           "startDate" : {
-//             "year" : 2014,
-//             "month" : 1
-//           },
-//           "isCurrent" : true,
-//           "id" : 514054384,
-//           "company" : {
-//             "type" : "Educational Institution",
-//             "size" : "1-10 employees",
-//             "name" : "Fullstack Academy",
-//             "industry" : "Internet",
-//             "id" : 4985867
-//           }
-//         },
-//         {
-//           "title" : "Radio DJ",
-//           "summary" : "I play music and entertain people. I manage the content on my the second half of my Sunday show called Positive Note, aimed at helping people feel good through good music and inspirational stories.",
-//           "startDate" : {
-//             "year" : 2012,
-//             "month" : 10
-//           },
-//           "isCurrent" : false,
-//           "id" : 373551161,
-//           "endDate" : {
-//             "year" : 2013,
-//             "month" : 5
-//           },
-//           "company" : {
-//             "name" : "Magic 89.9",
-//             "industry" : "Broadcast Media"
-//           }
-//         },
-//         {
-//           "title" : "Cashier",
-//           "summary" : "I handled the front end of the store by dealing with customers and their purchases. I also added to customers' experiences by talking with them to make sure that everything went great!",
-//           "startDate" : {
-//             "year" : 2009,
-//             "month" : 6
-//           },
-//           "isCurrent" : false,
-//           "id" : 373557304,
-//           "endDate" : {
-//             "year" : 2009,
-//             "month" : 8
-//           },
-//           "company" : {
-//             "type" : "Public Company",
-//             "ticker" : "BBBY",
-//             "size" : "10,001+ employees",
-//             "name" : "Bed Bath & Beyond",
-//             "industry" : "Retail",
-//             "id" : 7174
-//           }
-//         }
-//       ],
-//       "_total" : 3
-//     },
-//     "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_-zC9rqnKf9N-Ppk0rrhLrB3p7qCPlVL0rBnWrBAuKAnCmY-xY1tVYc5CTsGS-jX1198H0rfQQfkS",
-//     "phoneNumbers" : {
-//       "_total" : 0
-//     },
-//     "numRecommenders" : 0,
-//     "lastName" : "Domingo",
-//     "languages" : {
-//       "values" : [
-//         {
-//           "language" : {
-//             "name" : "English"
-//           },
-//           "id" : 5
-//         },
-//         {
-//           "language" : {
-//             "name" : "Filipino"
-//           },
-//           "id" : 16
-//         }
-//       ],
-//       "_total" : 2
-//     },
-//     "id" : "hiyN8jWqPW",
-//     "headline" : "Web Developer",
-//     "firstName" : "Migi",
-//     "emailAddress" : "migi_72@yahoo.com",
-//     "educations" : {
-//       "_total" : 0
-//     }
-//   },
-//   "name" : "Migi Domingo",
-//   "roles" : [
-//     "developer",
-//     "admin"
-//   ],
-//   "work_experiences" : [
-//     {
-//       "company" : {
-//         "type" : "Educational Institution",
-//         "size" : "1-10 employees",
-//         "name" : "Fullstack Academy",
-//         "industry" : "Internet",
-//         "id" : 4985867
-//       },
-//       "id" : 514054384,
-//       "isCurrent" : true,
-//       "title" : "Student",
-//       "startDate" : {
-//         "month" : 1,
-//         "year" : 2014
-//       }
-//     },
-//     {
-//       "company" : {
-//         "name" : "Magic 89.9",
-//         "industry" : "Broadcast Media"
-//       },
-//       "id" : 373551161,
-//       "isCurrent" : false,
-//       "title" : "Radio DJ",
-//       "endDate" : {
-//         "month" : 5,
-//         "year" : 2013
-//       },
-//       "startDate" : {
-//         "month" : 10,
-//         "year" : 2012
-//       }
-//     },
-//     {
-//       "company" : {
-//         "type" : "Public Company",
-//         "ticker" : "BBBY",
-//         "size" : "10,001+ employees",
-//         "name" : "Bed Bath & Beyond",
-//         "industry" : "Retail",
-//         "id" : 7174
-//       },
-//       "id" : 373557304,
-//       "isCurrent" : false,
-//       "title" : "Cashier",
-//       "endDate" : {
-//         "month" : 8,
-//         "year" : 2009
-//       },
-//       "startDate" : {
-//         "month" : 6,
-//         "year" : 2009
-//       }
-//     }
-//   ]
-// });
-
-//Howard Kim
-User.create({
-  "location": [';', 'Willing to relocate'],
+//Migi's Data
+User.create(
+{
+  "location": 'Phillippines',
   "auth_methods" : [
     {
       "provider" : "linkedin",
-      "providerId" : "f3MHAVxhZP",
+      "providerId" : "hiyN8jWqPW",
     }
   ],
-  "educations" : [
-    {
-      "id" : 205761463,
-      "notes" : "Fullstack Academy is an immersive, full-time course in web development offered in New York City. After completing the Fullstack Curriculum, you will be ready for top development jobs at tech firms and startups. You provide the enthusiasm, hunger and dedication to learning and we will provide a world-class environment for becoming a great software developer.",
-      "schoolName" : "Fullstack Academy",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "activities" : "Northeastern University Entrepreneurs' Club, Northeastern University Investments' Club",
-      "fieldOfStudy" : "Computer Science, Business Administration",
-      "id" : 175470293,
-      "schoolName" : "Northeastern University",
-      "endDate" : {
-        "year" : 2013
-      },
-      "startDate" : {
-        "year" : 2012
-      }
-    }
-  ],
-  "email" : "howardjink@gmail.com",
+  "email" : "migi_72@yahoo.com",
   "github" : {
     "plan" : {
       "private_repos" : 0,
@@ -401,59 +26,100 @@ User.create({
       "name" : "free"
     },
     "collaborators" : 0,
-    "disk_usage" : 5432,
+    "disk_usage" : 1500,
     "owned_private_repos" : 0,
-    "total_private_repos" : 14,
+    "total_private_repos" : 9,
     "private_gists" : 0,
-    "updated_at" : "2014-03-25T16:38:43Z",
-    "created_at" : "2014-01-14T04:30:54Z",
-    "following" : 2,
-    "followers" : 4,
-    "public_gists" : 0,
-    "public_repos" : 5,
+    "updated_at" : "2014-03-25T03:15:53Z",
+    "created_at" : "2013-06-29T08:17:38Z",
+    "following" : 5,
+    "followers" : 1,
+    "public_gists" : 4,
+    "public_repos" : 7,
     "site_admin" : false,
     "type" : "User",
-    "received_events_url" : "https://api.github.com/users/kimhowardj/received_events",
-    "events_url" : "https://api.github.com/users/kimhowardj/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/kimhowardj/repos",
-    "organizations_url" : "https://api.github.com/users/kimhowardj/orgs",
-    "subscriptions_url" : "https://api.github.com/users/kimhowardj/subscriptions",
-    "starred_url" : "https://api.github.com/users/kimhowardj/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/kimhowardj/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/kimhowardj/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/kimhowardj/followers",
-    "html_url" : "https://github.com/kimhowardj",
-    "url" : "https://api.github.com/users/kimhowardj",
-    "gravatar_id" : "cbac2ab761193b9b51f2ba938d7924a4",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/6396188?",
-    "id" : 6396188,
-    "login" : "kimhowardj"
+    "received_events_url" : "https://api.github.com/users/migidomingo/received_events",
+    "events_url" : "https://api.github.com/users/migidomingo/events{/privacy}",
+    "repos_url" : "https://api.github.com/users/migidomingo/repos",
+    "organizations_url" : "https://api.github.com/users/migidomingo/orgs",
+    "subscriptions_url" : "https://api.github.com/users/migidomingo/subscriptions",
+    "starred_url" : "https://api.github.com/users/migidomingo/starred{/owner}{/repo}",
+    "gists_url" : "https://api.github.com/users/migidomingo/gists{/gist_id}",
+    "following_url" : "https://api.github.com/users/migidomingo/following{/other_user}",
+    "followers_url" : "https://api.github.com/users/migidomingo/followers",
+    "html_url" : "https://github.com/migidomingo",
+    "url" : "https://api.github.com/users/migidomingo",
+    "gravatar_id" : "7cd6ddde82a4bc27c41b211909c75116",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/4880315?",
+    "id" : 4880315,
+    "login" : "migidomingo"
   },
   "linkedin" : {
-    "summary" : "In a nutshell: I was born in Seoul, Korea until my Dad sought better opportunities for the family and decided that we move to America which led us to New York City. I then matriculated to Northeastern University (Boston, MA) for Computer Science and Business Administration until I realized I wasn't getting the kind of education I really wanted. So I dropped out and now, I'm currently in Fullstack Academy (a programming bootcamp) where I'm learning the full-stack of web development; I'm basically living my dream.",
     "skills" : {
       "values" : [
         {
           "skill" : {
-            "name" : "HTML 5"
+            "name" : "Web Development"
           },
-          "id" : 37
+          "id" : 30
         },
         {
           "skill" : {
-            "name" : "CSS3"
+            "name" : "Social Media Marketing"
           },
-          "id" : 38
+          "id" : 31
+        },
+        {
+          "skill" : {
+            "name" : "Team Leadership"
+          },
+          "id" : 32
         },
         {
           "skill" : {
             "name" : "JavaScript"
           },
-          "id" : 39
+          "id" : 33
+        },
+        {
+          "skill" : {
+            "name" : "Public Speaking"
+          },
+          "id" : 34
         },
         {
           "skill" : {
             "name" : "Node.js"
+          },
+          "id" : 35
+        },
+        {
+          "skill" : {
+            "name" : "Social Media"
+          },
+          "id" : 36
+        },
+        {
+          "skill" : {
+            "name" : "Entertainment"
+          },
+          "id" : 37
+        },
+        {
+          "skill" : {
+            "name" : "Ruby"
+          },
+          "id" : 38
+        },
+        {
+          "skill" : {
+            "name" : "Express.js"
+          },
+          "id" : 39
+        },
+        {
+          "skill" : {
+            "name" : "Angular.js"
           },
           "id" : 40
         },
@@ -465,78 +131,28 @@ User.create({
         },
         {
           "skill" : {
-            "name" : "Git"
+            "name" : "Music"
           },
           "id" : 42
-        },
-        {
-          "skill" : {
-            "name" : "MongoDB"
-          },
-          "id" : 43
-        },
-        {
-          "skill" : {
-            "name" : "Test Driven Development"
-          },
-          "id" : 44
-        },
-        {
-          "skill" : {
-            "name" : "SQLite"
-          },
-          "id" : 45
-        },
-        {
-          "skill" : {
-            "name" : "Github"
-          },
-          "id" : 46
-        },
-        {
-          "skill" : {
-            "name" : "MySQL"
-          },
-          "id" : 47
-        },
-        {
-          "skill" : {
-            "name" : "Java"
-          },
-          "id" : 48
-        },
-        {
-          "skill" : {
-            "name" : "Racket"
-          },
-          "id" : 49
-        },
-        {
-          "skill" : {
-            "name" : "Stocks"
-          },
-          "id" : 50
-        },
-        {
-          "skill" : {
-            "name" : "RSpec"
-          },
-          "id" : 51
-        },
-        {
-          "skill" : {
-            "name" : "Angular.js"
-          },
-          "id" : 52
         }
       ],
-      "_total" : 16
+      "_total" : 13
     },
     "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=282326395&authType=name&authToken=C58_&trk=api*a3226473*s3299743*"
+      "url" : "http://www.linkedin.com/profile/view?id=238483169&authType=name&authToken=X4Qw&trk=api*a3226473*s3299743*"
     },
     "relatedProfileViews" : {
       "values" : [
+        {
+          "lastName" : "Zaman",
+          "id" : "PvmfqY724t",
+          "firstName" : "Jisan"
+        },
+        {
+          "lastName" : "Ingram",
+          "id" : "buLJshkhKq",
+          "firstName" : "Russell"
+        },
         {
           "lastName" : "Cook",
           "id" : "AjEGjDYQLv",
@@ -548,9 +164,9 @@ User.create({
           "firstName" : "Kelvin"
         },
         {
-          "lastName" : "Tam",
-          "id" : "yV3QGJfBVK",
-          "firstName" : "Waine"
+          "lastName" : "Drury",
+          "id" : "hne4Az6W6H",
+          "firstName" : "James"
         },
         {
           "lastName" : "Wallace",
@@ -558,34 +174,24 @@ User.create({
           "firstName" : "Omari"
         },
         {
-          "lastName" : "Tsui",
-          "id" : "JmCfHALEkj",
-          "firstName" : "Jaclyn"
-        },
-        {
           "lastName" : "Giraldo",
           "id" : "2qKGhmTNbZ",
           "firstName" : "Max"
         },
         {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
+          "lastName" : "Kim",
+          "id" : "f3MHAVxhZP",
+          "firstName" : "Howard Jin"
         },
         {
-          "lastName" : "Ingram",
-          "id" : "buLJshkhKq",
-          "firstName" : "Russell"
+          "lastName" : "Buchanan",
+          "id" : "fGnvXFc51n",
+          "firstName" : "Hannah Jane"
         },
         {
-          "lastName" : "Koo",
-          "id" : "CSRTpH9PMC",
-          "firstName" : "Ji Ho"
-        },
-        {
-          "lastName" : "D'Alessandro",
-          "id" : "WkMxcboGNL",
-          "firstName" : "Scott"
+          "lastName" : "Bayogos",
+          "id" : "RQSP6Wm6m7",
+          "firstName" : "Sammie"
         }
       ],
       "_total" : 10
@@ -593,17 +199,20 @@ User.create({
     "recommendationsReceived" : {
       "_total" : 0
     },
+    "primaryTwitterAccount" : {
+      "providerAccountName" : "finch899",
+      "providerAccountId" : "24293957"
+    },
     "positions" : {
       "values" : [
         {
-          "title" : "Web Developer in Training",
-          "summary" : "Making the whole sandwich: HTML, CSS, Javascript, Node.js, etc.",
+          "title" : "Student",
           "startDate" : {
             "year" : 2014,
             "month" : 1
           },
           "isCurrent" : true,
-          "id" : 504279362,
+          "id" : 514054384,
           "company" : {
             "type" : "Educational Institution",
             "size" : "1-10 employees",
@@ -613,231 +222,147 @@ User.create({
           }
         },
         {
-          "title" : "Barista",
-          "summary" : "Can make a mean cup of coffee.",
+          "title" : "Radio DJ",
+          "summary" : "I play music and entertain people. I manage the content on my the second half of my Sunday show called Positive Note, aimed at helping people feel good through good music and inspirational stories.",
           "startDate" : {
-            "year" : 2013,
-            "month" : 4
+            "year" : 2012,
+            "month" : 10
           },
           "isCurrent" : false,
-          "id" : 504278333,
+          "id" : 373551161,
           "endDate" : {
             "year" : 2013,
-            "month" : 11
+            "month" : 5
+          },
+          "company" : {
+            "name" : "Magic 89.9",
+            "industry" : "Broadcast Media"
+          }
+        },
+        {
+          "title" : "Cashier",
+          "summary" : "I handled the front end of the store by dealing with customers and their purchases. I also added to customers' experiences by talking with them to make sure that everything went great!",
+          "startDate" : {
+            "year" : 2009,
+            "month" : 6
+          },
+          "isCurrent" : false,
+          "id" : 373557304,
+          "endDate" : {
+            "year" : 2009,
+            "month" : 8
           },
           "company" : {
             "type" : "Public Company",
-            "ticker" : "SBUX",
+            "ticker" : "BBBY",
             "size" : "10,001+ employees",
-            "name" : "Starbucks",
+            "name" : "Bed Bath & Beyond",
             "industry" : "Retail",
-            "id" : 2271
+            "id" : 7174
           }
         }
       ],
-      "_total" : 2
+      "_total" : 3
     },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_oCf8Sdu-c4xI9h1EeipPSE2gvRHoq5CEHhR0SEw2EOpRI3voQk0uio0GUveqBC_QITDYCDJxk6vm",
+    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_-zC9rqnKf9N-Ppk0rrhLrB3p7qCPlVL0rBnWrBAuKAnCmY-xY1tVYc5CTsGS-jX1198H0rfQQfkS",
     "phoneNumbers" : {
       "_total" : 0
     },
     "numRecommenders" : 0,
-    "lastName" : "Kim",
+    "lastName" : "Domingo",
     "languages" : {
       "values" : [
         {
           "language" : {
             "name" : "English"
           },
-          "id" : 58
+          "id" : 5
         },
         {
           "language" : {
-            "name" : "Korean"
+            "name" : "Filipino"
           },
-          "id" : 59
-        },
-        {
-          "language" : {
-            "name" : "Spanish"
-          },
-          "id" : 60
-        }
-      ],
-      "_total" : 3
-    },
-    "id" : "f3MHAVxhZP",
-    "headline" : "Web Developer in Training at Fullstack Academy",
-    "firstName" : "Howard Jin",
-    "emailAddress" : "howardjink@gmail.com",
-    "educations" : {
-
-      "_total" : 0
-    }
-  },
-  "name" : "Howard Kim",
-  "roles" : [
-    "developer",
-    "admin"
-  ],
-});
-
-//Peter Espinosa
-User.create({
-  "location": [';', 'Willing to relocate'],
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "gYd6XGSzom",
-    }
-
-  ],
-  "email" : "hi@maxgiraldo.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 5,
-      "collaborators" : 1,
-      "space" : 614400,
-      "name" : "micro"
-    },
-    "collaborators" : 3,
-    "disk_usage" : 1587,
-    "owned_private_repos" : 3,
-    "total_private_repos" : 9,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T01:58:48Z",
-    "created_at" : "2013-07-01T23:21:12Z",
-    "following" : 7,
-    "followers" : 6,
-    "public_gists" : 0,
-    "public_repos" : 2,
-    "bio" : null,
-    "hireable" : false,
-    "email" : "",
-    "location" : "nyc",
-    "blog" : "maxgiraldo.com",
-    "company" : "",
-    "name" : "Max",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/maxgiraldo/received_events",
-    "events_url" : "https://api.github.com/users/maxgiraldo/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/maxgiraldo/repos",
-    "organizations_url" : "https://api.github.com/users/maxgiraldo/orgs",
-    "subscriptions_url" : "https://api.github.com/users/maxgiraldo/subscriptions",
-    "starred_url" : "https://api.github.com/users/maxgiraldo/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/maxgiraldo/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/maxgiraldo/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/maxgiraldo/followers",
-    "html_url" : "https://github.com/maxgiraldo",
-    "url" : "https://api.github.com/users/maxgiraldo",
-    "gravatar_id" : "4b1bd19834c6b4adfcf3286d880bba0a",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/4913413?",
-    "id" : 4913413,
-    "login" : "maxgiraldo"
-  },
-  "linkedin" : {
-    "summary" : "maxgiraldo.com",
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=63020039&authType=name&authToken=JuKE&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Wallace",
-          "id" : "tIxs2lfEnw",
-          "firstName" : "Omari"
-        },
-        {
-          "lastName" : "Yu",
-          "id" : "GDSYjeKb_Q",
-          "firstName" : "Kelvin"
-        },
-        {
-          "lastName" : "Koo",
-          "id" : "CSRTpH9PMC",
-          "firstName" : "Ji Ho"
-        },
-        {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
-        },
-        {
-          "lastName" : "Ingram",
-          "id" : "buLJshkhKq",
-          "firstName" : "Russell"
-        },
-        {
-          "lastName" : "Xiang",
-          "id" : "0CbQxKE7yn",
-          "firstName" : "Tong"
-        },
-        {
-          "lastName" : "D'Alessandro",
-          "id" : "WkMxcboGNL",
-          "firstName" : "Scott"
-        },
-        {
-          "lastName" : "Tam",
-          "id" : "yV3QGJfBVK",
-          "firstName" : "Waine"
-        },
-        {
-          "lastName" : "Buchanan",
-          "id" : "fGnvXFc51n",
-          "firstName" : "Hannah Jane"
-        },
-        {
-          "lastName" : "Dorman",
-          "id" : "RA_dFGEbz-",
-          "firstName" : "Kyle"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "primaryTwitterAccount" : {
-      "providerAccountName" : "maxgiraldo",
-      "providerAccountId" : "34191752"
-    },
-    "positions" : {
-      "values" : [
-        {
-
-          "language" : {
-            "name" : "English"
-          },
-          "id" : 1
-        },
-        {
-          "language" : {
-            "name" : "Spanish"
-          },
-          "id" : 2
+          "id" : 16
         }
       ],
       "_total" : 2
     },
-    "id" : "gYd6XGSzom",
-    "headline" : "Software Engineer",
-    "firstName" : "Peter",
-    "emailAddress" : "peterespinosa78@gmail.com",
+    "id" : "hiyN8jWqPW",
+    "headline" : "Web Developer",
+    "firstName" : "Migi",
+    "emailAddress" : "migi_72@yahoo.com",
     "educations" : {
       "_total" : 0
     }
   },
-  "name" : "Peter Espinosa",
+  "name" : "Migi Domingo",
   "roles" : [
-    "developer"
+    "developer",
+    "admin"
+  ],
+  "work_experiences" : [
+    {
+      "company" : {
+        "type" : "Educational Institution",
+        "size" : "1-10 employees",
+        "name" : "Fullstack Academy",
+        "industry" : "Internet",
+        "id" : 4985867
+      },
+      "id" : 514054384,
+      "isCurrent" : true,
+      "title" : "Student",
+      "startDate" : {
+        "month" : 1,
+        "year" : 2014
+      }
+    },
+    {
+      "company" : {
+        "name" : "Magic 89.9",
+        "industry" : "Broadcast Media"
+      },
+      "id" : 373551161,
+      "isCurrent" : false,
+      "title" : "Radio DJ",
+      "endDate" : {
+        "month" : 5,
+        "year" : 2013
+      },
+      "startDate" : {
+        "month" : 10,
+        "year" : 2012
+      }
+    },
+    {
+      "company" : {
+        "type" : "Public Company",
+        "ticker" : "BBBY",
+        "size" : "10,001+ employees",
+        "name" : "Bed Bath & Beyond",
+        "industry" : "Retail",
+        "id" : 7174
+      },
+      "id" : 373557304,
+      "isCurrent" : false,
+      "title" : "Cashier",
+      "endDate" : {
+        "month" : 8,
+        "year" : 2009
+      },
+      "startDate" : {
+        "month" : 6,
+        "year" : 2009
+      }
+    }
   ]
 });
 
+
 //Max Giraldo
 User.create({
-  "location": ['nyc',';', 'Willing to relocate'],
+  "location": 'New York',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -1084,7 +609,8 @@ User.create({
 
 //Nathan Grotticelli
 User.create({
-  "location": [';', 'Willing to relocate'],
+  "location": 'New York',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -1725,11 +1251,10 @@ User.create({
   ]
 });
 
-
-
 //Eric Cook
 User.create({
-  "location": [null,';', 'Willing to relocate'],
+  "location": 'New York',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -2209,7 +1734,8 @@ User.create({
 
 //Kelvin Yu
 User.create({
-  "location": [';', 'Willing to relocate'],
+  "location": 'New York',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -2760,7 +2286,8 @@ User.create({
 
 //Lauren Ashpole
 User.create({
-  "location": ['',';', 'Willing to relocate'],
+  "location": 'New York',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -3052,95 +2579,11 @@ User.create({
   ]
 })
 
-//Andrew Ross
-User.create({
-  "location": [';', 'Willing to relocate'],
-
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "BOUAn90rFk",
-    }
-  ],
-  "email" : "andrewlyross@gmail.com",
-  "github" : {
-    "plan" : {
-      "private_repos" : 0,
-      "collaborators" : 0,
-      "space" : 307200,
-      "name" : "free"
-    },
-    "collaborators" : 0,
-    "disk_usage" : 5396,
-    "owned_private_repos" : 0,
-    "total_private_repos" : 9,
-    "private_gists" : 0,
-    "updated_at" : "2014-03-26T21:47:11Z",
-    "created_at" : "2014-01-13T19:50:20Z",
-    "following" : 0,
-    "followers" : 4,
-    "public_gists" : 0,
-    "public_repos" : 8,
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/andrewlyross/received_events",
-    "events_url" : "https://api.github.com/users/andrewlyross/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/andrewlyross/repos",
-    "organizations_url" : "https://api.github.com/users/andrewlyross/orgs",
-    "subscriptions_url" : "https://api.github.com/users/andrewlyross/subscriptions",
-    "starred_url" : "https://api.github.com/users/andrewlyross/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/andrewlyross/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/andrewlyross/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/andrewlyross/followers",
-    "html_url" : "https://github.com/andrewlyross",
-    "url" : "https://api.github.com/users/andrewlyross",
-    "gravatar_id" : "d3cb81fd6eb5f85cd02dfc73a34f868d",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/6392921?",
-    "id" : 6392921,
-    "login" : "andrewlyross"
-  },
-  "linkedin" : {
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=297784008&authType=name&authToken=rzeP&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Bedford",
-          "id" : "YDZ5S68Xsi",
-          "firstName" : "Beau"
-        }
-      ],
-      "_total" : 1
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "positions" : {
-      "_total" : 0
-    },
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Ross",
-    "id" : "BOUAn90rFk",
-    "headline" : "--",
-    "firstName" : "Andrew",
-    "emailAddress" : "andrewlyross@gmail.com",
-    "educations" : {
-      "_total" : 0
-    }
-  },
-  "name" : "Andrew Ross",
-  "roles" : [
-    "developer"
-  ]
-});
 
 //Jaclyn Tsui
 User.create({
-  "location": ['Hong Kong',';', 'Willing to relocate'],
+  "location": 'Hong Kong',
+  "relocate": true,
 
   "auth_methods" : [
     {
@@ -3564,6 +3007,8 @@ User.create({
 
 //James Drury
 User.create({
+  "location": 'New York',
+  "relocate": true,
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -4070,9 +3515,9 @@ User.create({
 })
 
 //Ji Hoo Kim (Tom's Data)
-User.create(
-  {
-  "__v" : 1,
+User.create({
+ "location": 'New York',
+  "relocate": true,
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -4467,7 +3912,8 @@ User.create(
 
 //Jisan data
 User.create({
-
+  "location": 'New York',
+  "relocate": true,
   "auth_methods" : [
     {
       "provider" : "linkedin",
