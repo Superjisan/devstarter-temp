@@ -16,4 +16,4 @@ angular.module('mean.favorites', []);
 angular.module('mean').constant('_', _);
 
 
-// Removed ui-router
+// Removed ui-router.
