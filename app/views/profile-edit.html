@@ -166,36 +166,21 @@
 		    </div>
 
 		    <div class="panel-body">
-
-		      <div class="form-inline">
-		        <div class="form-group">
-		          <label class="sr-only" for="">Company Name</label>
-		          <input type="text" class="form-control form-company" ng-model="new_work.company.name" placeholder="Company Name">
-		        </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">Title </label>
-		          <input type="text" class="form-control form-date" ng-model="new_work.title" placeholder="Title">
-		        </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">Start Date</label>
-		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.startDate" placeholder="Start Date">
-		        </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">End Date</label>
-		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.endDate" placeholder="End Date">
-		        </div>
-		       <!--  <a href="" ng-click="addWork()" class="delete-row"><i class="fa fa-plus"></i></a> -->
-		       <button type="submit" ng-click="addWork()" class="btn btn-form btn-success">Add</button>
-		      </div>
-
 		      <div class="table-responsive">
 		        <table class="table mb30">
 		          <tbody>
+                <tr>
+                  <td><input type="text" class="form-control " ng-model="new_work.company.name" placeholder="Company Name"></td>
+                  <td><input type="text" class="form-control " ng-model="new_work.title" placeholder="Title"></td>
+                  <td><input type="text" class="form-control " datepicker-popup ng-model="new_work.startDate" placeholder="Start Date"></td>
+                  <td><input type="text" class="form-control " datepicker-popup ng-model="new_work.endDate" placeholder="End Date"></td>
+                  <td><a href="" ng-click="addWork()" class=""><i class="fa fa-plus"></i></a></td>
+                </tr>
 		            <tr ng-repeat="work in user.work_experiences | orderBy:'startDate.year':true">
-		              <td class="col-sm-3">[[work.company.name]]</td>
-		              <td><div class="col-sm-3">[[work.title]]</div></td>
-		              <td><div class="col-sm-3">[[work.startDate | workDate ]]</div></td>
-		              <td><div class="col-sm-3">[[work.endDate | workDate]]</div></td>
+		              <td>[[work.company.name]]</td>
+		              <td>[[work.title]]</td>
+		              <td>[[work.startDate | workDate ]]</td>
+		              <td>[[work.endDate | workDate]]</td>
 		              <td class="table-action">
 		                <a href="" ng-click="removeObj(work, user.work_experiences, Work)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		              </td>
@@ -220,34 +205,17 @@
 		    </div>
 
 		    <div class="panel-body">
-		      <div class="form-inline">
-		        <div class="form-group">
-		          <label class="sr-only" for="">College/University</label>
-		          <input type="text" class="form-control form-company" ng-model="new_education.schoolName" placeholder="College Name">
-		        </div>
-            <div class="form-group">
-              <label class="sr-only" for="">Degree</label>
-              <input type="text" class="form-control form-date" ng-model="new_education.degree" placeholder="Degree">
-            </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">Field of Study</label>
-		          <input type="text" class="form-control form-date" ng-model="new_education.fieldOfStudy" placeholder="Study">
-		        </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">Start Date</label>
-		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date">
-		        </div>
-		        <div class="form-group">
-		          <label class="sr-only" for="">End Date</label>
-		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.endDate" placeholder="End Date">
-		        </div>
-		        <!-- <a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus"></i></a> -->
-		        <button type="submit" ng-click="addEducation()" class="btn btn-form btn-success">Add</button>
-		      </div>
-
 		      <div class="table-responsive">
 		        <table class="table mb30">
 		          <tbody>
+                <tr>
+                  <td><input type="text" class="form-control" ng-model="new_education.schoolName" placeholder="College Name"></td>
+                  <td><input type="text" class="form-control" ng-model="new_education.degree" placeholder="Degree"></td>
+                  <td><input type="text" class="form-control" ng-model="new_education.fieldOfStudy" placeholder="Study"></td>
+                  <td><input type="text" class="form-control" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date"></td>
+                  <td><input type="text" class="form-control" datepicker-popup ng-model="new_education.endDate" placeholder="End Date"></td>
+                  <td><a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus"></i></a></td>
+                </tr>
 		            <tr ng-repeat="college in user.educations | orderBy:'startDate.year':true">
 		              <td>[[college.schoolName]]</td>
                   <td>[[college.degree]]</td>
@@ -329,9 +297,10 @@
             <div class="form-group">
               <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" ng-model="new_project.video" placeholder="https://www.youtube.com/embed/ab3NscEJ80s">
+                <input type="text" class="form-control" ng-model="new_project.video" placeholder="//www.youtube.com/embed/ab3NscEJ80s">
               </div>
             </div>
+
 
 		        <div class="form-group file-picker" data-resource="new_project" data-attachment="image" data-crop-size="150x150">
               <label class="col-sm-3 control-label">Project Picture <span class="asterisk">*</span></label>
@@ -356,30 +325,18 @@
 
 		    </div><!-- panel-body -->
 
-
-
-<!-- 		    <div ng-repeat="project in user.projects" class="panel-body">
-		    	<h1>[[ project.name ]]</h1>
-		    	<a href="[[ project.githubUrl ]]">[[ project.githubUrl ]]</a>
-		    	<img ng-repeat="img in user.projects.images" src="[[ project.images ]]" class="img-responsive">
-					<p>[[ project.description ]]</p>
-					<h3>[[ project.pitch ]]</h3>
-					<h6 ng-repeat="tag in project.tags">[[ tag ]]</h6>
-		    	<a href="" ng-click="removeObj(project, user.projects, Project)" class="delete-row"><i class="fa fa-trash-o"></i></a>
-		    </div> -->
-
 				<div ng-repeat="project in user.projects" class="panel-body">
 				  <div class="panel panel-primary panel-alt">
 				  <div class="panel-heading">
 				    <div class="panel-btns">
-				      <a ng-click="removeObj(project, user.projects, Project)" href="" class="panel-close">×</a>
+              <a ng-click="removeObj(project, user.projects, Project)" href="" class="panel-close">Remove</a>
+              <a ng-click="editProject(project)" href="#">Edit</a>
 				    </div><!-- panel-btns -->
 				    <h3 class="panel-title">[[ project.name ]]</h3>
 				    <p>[[ project.pitch ]]</p>
 				  </div>
 				    <div class="panel-body">
 				      [[ project.description ]]
-				      <span class="glyphicon glyphicon-user"></span>
 				    </div>
 				  </div><!-- panel -->
 				</div>
