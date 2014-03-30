@@ -34,6 +34,6 @@ module.exports = {
         clientID: process.env.LINKEDIN_KEY,
         clientSecret: process.env.LINKEDIN_SECRET,
         callbackURL: 'http://hire.fullstackacademy.com/auth/linkedin/callback',
-        profileFields: ['id','first-name', 'last-name', 'email-address', 'headline', 'summary', 'specialties', 'picture-url', 'site-standard-profile-request', 'primary-twitter-account', 'interests', 'languages', 'skills', 'certifications', 'educations', 'courses', 'volunteer', 'three-current-positions', 'three-past-positions', 'num-recommenders', 'recommendations-received', 'date-of-birth', 'related-profile-views', 'honors-awards']
+        profileFields: ['id','first-name', 'last-name', 'email-address', 'headline', 'summary', 'specialties', 'picture-url', 'site-standard-profile-request', 'phone-numbers', 'primary-twitter-account', 'interests', 'languages', 'skills', 'certifications', 'educations', 'courses', 'volunteer', 'positions', 'num-recommenders', 'recommendations-received', 'date-of-birth', 'related-profile-views', 'honors-awards']
     }
 };
