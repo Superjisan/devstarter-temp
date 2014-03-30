@@ -23,7 +23,8 @@ var parseLinkedIn = function(profile) {
     skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
     linkedin: profile._json,
     linkedin_url: profile._json.siteStandardProfileRequest.url,
-    relocate: true
+    relocate: true,
+
   };
 };
 module.exports = function(passport) {
@@ -65,7 +66,7 @@ module.exports = function(passport) {
                           if(err) console.log(err);
                             user.github = profile._json;
                             user.github_url = profile._json.html_url;
-                            user.roles.push('developer');
+                         ;
                             user.location = profile._json.location;
                             console.log(user);
                             user.save(function(err){
@@ -100,6 +101,7 @@ module.exports = function(passport) {
                 if (!user) {
                 	var linkedInFields = parseLinkedIn(profile);
                     user = new User(linkedInFields);
+                    user.roles.push('developer')
                     user.save(function(err) {
                         if (err) console.log(err);
                         return done(err, user);

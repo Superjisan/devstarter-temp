@@ -83,4 +83,20 @@
 
 {% endblock%}
 
+{% block js_footer %}
+<script>
+jQuery(window).load(function(){
+
+    var container = document.querySelector('.people-list .row');
+    if(container) {
+      var msnry = new Masonry( container, {
+        // options
+        columnWidth: '.col-md-6',
+        itemSelector: '.col-md-6'
+      });
+    }
+
+  });
+</script>
+{% endblock %}
 
