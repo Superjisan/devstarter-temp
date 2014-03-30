@@ -296,18 +296,29 @@
                 <input type="text" class="form-control" ng-model="new_project.role" placeholder="Front End Developer, Backend, Scraping....">
               </div>
             </div>
-		        <div class="form-group">
-		          <label class="col-sm-3 control-label">Images <span class="asterisk">*</span></label>
-		          <div class="col-sm-9">
-		          	<input type="file" class="form-control" ng-model="new_project.images" placeholder="Select Image">
-		          </div>
-		        </div>
-		        <div class="form-group">
-		          <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
-		          <div class="col-sm-9">
-		          	<input type="file" class="form-control" ng-model="new_project.video" placeholder="Video">
-		          </div>
-		        </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" ng-model="new_project.video" placeholder="//www.youtube.com/embed/ab3NscEJ80s">
+              </div>
+            </div>
+
+
+		        <div class="form-group file-picker" data-resource="new_project" data-attachment="image" data-crop-size="150x150">
+              <label class="col-sm-3 control-label">Project Picture <span class="asterisk">*</span></label>
+              <div class="col-sm-9">
+                <div ng-hide='new_project.image.original'>
+                  <img src="holder.js/150x150"><br/><br/>
+                  <button ng-click='pickFiles($event)'>Add Picture</button>
+                </div>
+                <div ng-show='new_project.image.original'>
+                  <img class="img-responsive col-md-5" ng-src="[[new_project.image.crops._150x150]]" />
+                  <br /><br />
+                  <button ng-click='pickFiles($event)'>Change Picture</button>
+                </div>
+              </div>
+            </div>
+
             <button ng-click="addOrSaveProject()" class=" btn btn-large btn-primary" ng-hide="new_project._id">Create Project</button>
             <button ng-click="addOrSaveProject()" class=" btn btn-large btn-primary" ng-show="new_project._id">Update Project</button>
             <button ng-click="new_project={}" class=" btn btn-large btn-error" ng-show="new_project._id">Cancel</button>

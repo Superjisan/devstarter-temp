@@ -38,6 +38,7 @@ angular.module('mean.directives')
                 };
 
                 saveCrop(options, function(filepickerCropUrl){
+                  debugger;
                   if (!$scope.$eval($attrs.resource)[options.attachment]) {
                     $scope.$eval($attrs.resource)[options.attachment] = { crops: {}};
                   }
@@ -84,10 +85,14 @@ angular.module('mean.directives')
             }
 
             function saveAttachment(url, payload, cb) {
-              $http.put(url, payload).success(function(data, status, headers) {
-                resetModal();
+              if( $attrs.attachmentPath ) {
+                $http.put(url, payload).success(function(data, status, headers) {
+                  resetModal();
+                  if (cb) cb();
+                });
+              } else {
                 if (cb) cb();
-              });
+              }
             }
 
             function resetModal() {
@@ -109,6 +114,11 @@ angular.module('mean.directives')
             }, function (InkBlobs){
 
               inkBlob = InkBlobs[0];
+              debugger;
+
+              if (!$scope.$eval($attrs.resource)[$attrs.attachment]) {
+                $scope.$eval($attrs.resource)[$attrs.attachment] = { original: inkBlob.url, crops: {}};
+              }
 
               if ($attrs.cropSize) {
                 return launchEditor(inkBlob);
