@@ -26,7 +26,7 @@
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers | filter: searchFn" ng-cloak class ="col-md-6">
+          <div ng-repeat="developer in developers | filter: searchFn track by developer._id" ng-cloak class ="col-md-6">
           <div >
 
             <div class="people-item">
@@ -42,9 +42,9 @@
 
 
                    <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
-                    <span ng-repeat="location in developer.location " >[[location]] </span>
+                    <span ng-repeat="location in developer.location" >[[developer.location]] </span>
                   </div>
-                  <div ng-hide="global.user"> [[developer.relocate]] </div>
+
                   <ul class="social-list">
                     <li ><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github" ng-show="[[developer.github_url]]"><i class="fa fa-github"></i></a></li>
                   <li><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>

@@ -11,6 +11,7 @@ exports.seed = function(req, res) {
 User.create(
 {
   "location": 'Phillippines',
+  "relocate": true,
   "auth_methods" : [
     {
       "provider" : "linkedin",
@@ -3842,11 +3843,7 @@ User.create({
       "_total" : 1
     }
   },
-  "location" : [
-    "New York, New York",
-    ";",
-    "Willing To Relocate"
-  ],
+
   "name" : "Ji Ho Koo",
   "projects" : [ ],
   "roles" : [
