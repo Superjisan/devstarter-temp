@@ -12,11 +12,11 @@
 	<!-- Sidebar -->
 	<div class='mini-profile-edit' style="margin-left:12px">
 	  <div class='info'>
-    	<p class="pageheader"><a href="#personal-info">Personal Info</a></p>
-    	<p class="pageheader"><a href="#work-experience">Work Experience</a></p>
-    	<p class="pageheader"><a href="#education">Education</a></p>
-    	<p class="pageheader"><a href="#project">Project</a></p>
-	    <button type="submit" class="btn btn-primary">Save Profile</button>
+    	<a href="#personal-info"><button class="btn btn-primary btn-large btn-block">Personal Info</button></a>
+    	<a href="#work-experience"><button class="btn btn-primary btn-large btn-block">Work Experience</button></a>
+    	<a href="#education"><button class="btn btn-primary btn-large btn-block">Education</button></a>
+    	<a href="#project"><button class="btn btn-primary btn-large btn-block">Projects</button></a>
+	    <button type="submit" class="btn btn-large btn-success btn-block">Save Profile</button>
 	  </div>
 	</div>
 	<!-- end sidebar -->
@@ -34,7 +34,7 @@
 
         <div class="panel-heading" id="personal-info">
           <h1 class="panel-title">Personal Info</h1>
-          <p>Please provide your name, email address (won't be published) and a summary.</p>
+          <p>Please provide your name, email address, location, and a resume.</p>
         </div>
 
         <div class="panel-body">
@@ -43,8 +43,7 @@
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.profile_picture'>
-                <img src="holder.js/200x200"><br/><br/>
-                <button ng-click='pickFiles($event)'>Add Picture</button>
+                <a href="" ng-click='pickFiles($event)'><img src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.profile_picture'>
                 <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" />
@@ -58,8 +57,7 @@
             <label class="col-sm-3 control-label">Funny Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.funny_profile_picture'>
-                <img src="holder.js/200x200"><br/><br/>
-                <button ng-click='pickFiles($event)'>Add Picture</button>
+                <a href="" ng-click='pickFiles($event)'><img src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.funny_profile_picture'>
 
@@ -80,7 +78,7 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Video URL</label>
             <div class="col-sm-9">
-              <input ng-model="user.video_url" type="text" name="video_url" placeholder="//www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
+              <input ng-model="user.video_url" type="text" name="video_url" placeholder="https://www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
             </div>
           </div>
 
@@ -94,14 +92,14 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Headline</label>
             <div class="col-sm-9">
-              <input ng-model="user.linkedin.headline" type="text" name="headline" class="form-control" />
+              <input ng-model="user.linkedin.headline" type="text" name="headline" class="form-control" placeholder="e.g. Web Developer, Software Engineer, Chipotle Fanatic, etc." />
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Location <span class="asterisk">*</span></label>
             <div class="col-sm-9">
-              <input ng-model="user.location" type="text" name="location" class="form-control" />
+              <input ng-model="user.location" type="text" name="location" class="form-control" placeholder="e.g. New York, NY" />
               <div class="ckbox ckbox-default">
                 <input ng-model="user.relocate" type="checkbox" value="1" id="checkboxDefault" checked="checked">
                 <label for="checkboxDefault">Willing to relocate?</label>
@@ -127,14 +125,14 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Summary </label>
             <div class="col-sm-9">
-              <textarea ng-model="user.summary" rows="5" class="form-control" placeholder="Type your comment..." required></textarea>
+              <textarea ng-model="user.summary" rows="5" class="form-control" placeholder="Tell us about yourself..."></textarea>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Skill Tags </label>
             <div class="col-sm-9">
-              <textarea ng-model="user.skills" rows="5" class="form-control" placeholder="Comma Separated Values... like 'Angular, Node.js, Express'"></textarea>
+              <textarea ng-model="user.skills" rows="5" class="form-control" placeholder="Comma Separated Values: e.g. 'Angular, Node.js, Express'"></textarea>
             </div>
           </div>
 
@@ -142,7 +140,7 @@
             <label class="col-sm-3 control-label">Resume (PDF/DOC) <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.resume'>
-                <button ng-click='pickFiles($event)'>Add Resume</button>
+                <button ng-click='pickFiles($event)' class="btn btn-default">Add Resume</button>
               </div>
               <div ng-show='user.resume'>
                 <a href="[[user.resume]]"><span class="fa fa-file-text"></span> Resume</a><br /><br />
@@ -160,7 +158,7 @@
 
 
 		<!-- Work Experience form -->
-		<div class="panel panel-default" novalidate id="foo">
+		<div class="panel panel-default" novalidate>
 
 		    <div class="panel-heading">
 		      <h1 class="panel-title" id="work-experience">Work Experience</h1>
@@ -168,6 +166,28 @@
 		    </div>
 
 		    <div class="panel-body">
+
+		      <div class="form-inline">
+		        <div class="form-group">
+		          <label class="sr-only" for="">Company Name</label>
+		          <input type="text" class="form-control form-company" ng-model="new_work.company.name" placeholder="Company Name">
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">Title </label>
+		          <input type="text" class="form-control form-date" ng-model="new_work.title" placeholder="Title">
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">Start Date</label>
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.startDate" placeholder="Start Date">
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">End Date</label>
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_work.endDate" placeholder="End Date">
+		        </div>
+		       <!--  <a href="" ng-click="addWork()" class="delete-row"><i class="fa fa-plus"></i></a> -->
+		       <button type="submit" ng-click="addWork()" class="btn btn-form btn-success">Add</button>
+		      </div>
+
 		      <div class="table-responsive">
 		        <table class="table mb30">
 		          <tbody>
@@ -179,10 +199,10 @@
                   <td><a href="" ng-click="addWork()" class=""><i class="fa fa-plus"></i></a></td>
                 </tr>
 		            <tr ng-repeat="work in user.work_experiences | orderBy:'startDate.year':true">
-		              <td>[[work.company.name]]</td>
-		              <td>[[work.title]]</td>
-		              <td>[[work.startDate | workDate ]]</td>
-		              <td>[[work.endDate | workDate]]</td>
+		              <td class="col-sm-3">[[work.company.name]]</td>
+		              <td><div class="col-sm-3">[[work.title]]</div></td>
+		              <td><div class="col-sm-3">[[work.startDate | workDate ]]</div></td>
+		              <td><div class="col-sm-3">[[work.endDate | workDate]]</div></td>
 		              <td class="table-action">
 		                <a href="" ng-click="removeObj(work, user.work_experiences, Work)" class="delete-row"><i class="fa fa-trash-o"></i></a>
 		              </td>
@@ -207,6 +227,34 @@
 		    </div>
 
 		    <div class="panel-body">
+<<<<<<< HEAD
+=======
+		      <div class="form-inline">
+		        <div class="form-group">
+		          <label class="sr-only" for="">College/University</label>
+		          <input type="text" class="form-control form-company" ng-model="new_education.schoolName" placeholder="College Name">
+		        </div>
+            <div class="form-group">
+              <label class="sr-only" for="">Degree</label>
+              <input type="text" class="form-control form-date" ng-model="new_education.degree" placeholder="Degree">
+            </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">Field of Study</label>
+		          <input type="text" class="form-control form-date" ng-model="new_education.fieldOfStudy" placeholder="Study">
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">Start Date</label>
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date">
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="">End Date</label>
+		          <input type="text" class="form-control form-date" datepicker-popup ng-model="new_education.endDate" placeholder="End Date">
+		        </div>
+		        <!-- <a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus"></i></a> -->
+		        <button type="submit" ng-click="addEducation()" class="btn btn-form btn-success">Add</button>
+		      </div>
+
+>>>>>>> ProfileV3
 		      <div class="table-responsive">
 		        <table class="table mb30">
 		          <tbody>
@@ -296,6 +344,7 @@
                 <input type="text" class="form-control" ng-model="new_project.role" placeholder="Front End Developer, Backend, Scraping....">
               </div>
             </div>
+<<<<<<< HEAD
             <div class="form-group">
               <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
               <div class="col-sm-9">
@@ -324,12 +373,29 @@
             <button ng-click="new_project={}" class=" btn btn-large btn-error" ng-show="new_project._id">Cancel</button>
 
 
+=======
+		        <div class="form-group">
+		          <label class="col-sm-3 control-label">Images <span class="asterisk">*</span></label>
+		          <div class="col-sm-9">
+		          	<input type="file" class="form-control" ng-model="new_project.images" placeholder="Select Image">
+		          </div>
+		        </div>
+		        <div class="form-group">
+		          <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
+		          <div class="col-sm-9">
+		          	<input type="file" class="form-control" ng-model="new_project.video" placeholder="Video">
+		          </div>
+		        </div>
+		        <!-- <a href="" ng-click="addProject()" class="delete-row"><i class="fa fa-plus"></i></a> -->
+		        <button type="submit" ng-click="addProject()" class="btn btn-form btn-success">Add</button>
+>>>>>>> ProfileV3
 
 		      </div>
 
 		    </div><!-- panel-body -->
 
 
+<<<<<<< HEAD
           <div class="table-responsive">
             <table class="table mb30">
               <tbody>
@@ -344,6 +410,33 @@
               </tbody>
             </table>
           </div>
+=======
+<!-- 		    <div ng-repeat="project in user.projects" class="panel-body">
+		    	<h1>[[ project.name ]]</h1>
+		    	<a href="[[ project.githubUrl ]]">[[ project.githubUrl ]]</a>
+		    	<img ng-repeat="img in user.projects.images" src="[[ project.images ]]" class="img-responsive">
+					<p>[[ project.description ]]</p>
+					<h3>[[ project.pitch ]]</h3>
+					<h6 ng-repeat="tag in project.tags">[[ tag ]]</h6>
+		    	<a href="" ng-click="removeObj(project, user.projects, Project)" class="delete-row"><i class="fa fa-trash-o"></i></a>
+		    </div> -->
+
+				<div ng-repeat="project in user.projects" class="panel-body">
+				  <div class="panel panel-primary panel-alt">
+				  <div class="panel-heading">
+				    <div class="panel-btns">
+				      <a ng-click="removeObj(project, user.projects, Project)" href="" class="panel-close">×</a>
+				    </div><!-- panel-btns -->
+				    <h3 class="panel-title">[[ project.name ]]</h3>
+				    <p>[[ project.pitch ]]</p>
+				  </div>
+				    <div class="panel-body">
+				      [[ project.description ]]
+				      <span class="glyphicon glyphicon-user"></span>
+				    </div>
+				  </div><!-- panel -->
+				</div>
+>>>>>>> ProfileV3
 
 		</div><!-- panel -->
 		<!-- end projects form -->

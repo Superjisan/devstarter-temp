@@ -37,6 +37,7 @@ angular.module('mean.tracking')
 			console.log($window.eventTracker);
 		}
 
+
 		$scope.startTracking = function() {
 
 			var time_visited = new Date();

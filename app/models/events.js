@@ -15,7 +15,7 @@ var EventsSchema = new Schema({
 									organization: {type: String, ref: 'Users'},
 									time_visited: Date
 								},
-	users_visited: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+	user_visited: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
 								name: {type: String, ref: 'Users'},
 								organization: {type: String, ref: 'Users'},
 								time_visited: Date
