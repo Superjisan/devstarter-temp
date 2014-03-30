@@ -20,6 +20,11 @@ module.exports = {
         clientSecret: 'APP_SECRET',
         callbackURL: 'http://localhost:3000/auth/github/callback'
     },
+    google: {
+        email: 'hirefullstackacademy@gmail.com',
+        password: 'devstarter'
+    },
+    
     // google: {
     //     clientID: 'APP_ID',
     //     clientSecret: 'APP_SECRET',
