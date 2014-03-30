@@ -52,6 +52,13 @@ module.exports = function(app, passport, db) {
             }
         }).reverse();
     });
+
+    swig.setFilter('joinNonNull', function(input, joiner) {
+        return input.filter(function(el) {
+            console.log(el);
+            return el != null && typeof el !== "undefined" && el.length != 0;
+        }).join(joiner);
+    });
     // assign the template engine to .html files
     app.engine('html', consolidate[config.templateEngine]);
 

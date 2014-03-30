@@ -202,19 +202,14 @@
 								<span class="work-company">{{ education.schoolName }}</span>
 								<div class="muted">
 									<div class="icon-position"></div>
-									{{ education.degree }} - {{ education.fieldOfStudy }}
+									{{ [education.degree, education.fieldOfStudy] | joinNonNull(" — ")  }}
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 text-right">
 								<div>&nbsp;</div>
 								<div class="muted">
 									<div class="icon-date"></div>
-									{% if education.startDate.year %}
-										{{education.startDate.year}}
-									{% endif %}
-									{% if education.endDate.year %}
-									— {{education.endDate.year}}
-									{% endif %}
+									{{ [education.startDate.year, education.endDate.year] | joinNonNull(" — ") }}
 								</div>
 							</div>
 						</div>
