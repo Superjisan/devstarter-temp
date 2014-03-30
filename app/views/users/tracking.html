@@ -17,7 +17,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="event in user.profiles_visited" >
+              <tr ng-repeat="event in user.visited_profiles" >
                 <th>[[$index + 1]]</th>
                 <td><a href="/profile/[[event.visited_users.id]]">[[event.users.name]]</a></td>
                 <td>[[event.users.organization]]</td>
@@ -44,7 +44,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="event in user.visited_profiles" >
+              <tr ng-repeat="event in user.profiles_visited" >
                 <th>[[$index + 1]]</th>
                 <td>[[event.users.name]]</td>
                 <td>[[event.users.organization]]</td>
