@@ -176,8 +176,9 @@ exports.profile = function(req, res) {
 	User.findOne({_id: req.params.id}, function(err, developer) {
 		// console.log(developer)
 		// console.log("this is req.developer: ", req.developer)
+		req.developer = developer;
 		res.render('profile', {
-			developer: developer,
+			developer: req.developer,
 			user: req.user
 		});
 	});

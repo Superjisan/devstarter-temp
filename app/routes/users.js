@@ -91,8 +91,8 @@ module.exports = function(app, passport) {
 		}), users.authCallback);
 
 	//Events post events
-	app.post("/api/events", authorization.requiresLogin, tracker.visitedByCreate)
-	app.post("/api/events/developer", authorization.requiresLogin, tracker.visitedCreate)
+	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate)
+	app.post("/api/events/developer", authorization.requiresLogin, tracker.visitedByCreate)
 
 };
 

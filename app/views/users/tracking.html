@@ -4,7 +4,7 @@
 
 <div class="contentpanel" ng-controller="TrackingController">
   <div class="col-md-6">
-          <h5 class="subtitle mb5">Profile Visits</h5>
+          <h5 class="subtitle mb5">Your Profile Visits</h5>
 
           <div class="table-responsive">
           <table class="table table-striped mb30">
@@ -17,11 +17,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="event in user.profiles_visited" >
+              <tr ng-repeat="event in user.visited_profiles" >
                 <th>[[$index + 1]]</th>
-                <td><a href="/profile/[[event.visited_users.id]]">[[event.users_visited.name]]</a></td>
-                <td>[[event.users_visited.organization]]</td>
-                <td>[[ISOdate.format(event.users_visited.time_visited)]]</td>              </tr>
+                <td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
+                <td>[[event.users.organization]]</td>
+                <td>[[ISOdate.format(event.users.time_visited)]]</td>              </tr>
 
             </tbody>
           </table>
@@ -31,7 +31,7 @@
 
 
   <div class="col-md-6">
-          <h5 class="subtitle mb5">Profiles Viewed</h5>
+          <h5 class="subtitle mb5">Profiles You Viewed</h5>
 
           <div class="table-responsive">
           <table class="table table-striped mb30">
@@ -44,11 +44,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="event in user.visited_profiles" >
+              <tr ng-repeat="event in user.profiles_visited" >
                 <th>[[$index + 1]]</th>
-                <td>[[event.visited_users.name]]</td>
-                <td>[[event.visited_users.organization]]</td>
-                <td>[[ISOdate.format(event.visited_users.time_visited)]]</td>
+                <td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
+                <td>[[event.users.organization]]</td>
+                <td>[[ISOdate.format(event.users.time_visited)]]</td>
               </tr>
 
             </tbody>
