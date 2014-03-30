@@ -38,7 +38,8 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: { 
-                mangle: false
+                mangle: false, 
+                compress: false // for holder.js
             },
             production: {
                 files: '<%= assets.js %>'
