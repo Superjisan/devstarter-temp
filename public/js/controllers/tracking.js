@@ -19,13 +19,13 @@ angular.module('mean.tracking')
       });
 
 
-      	$scope.developer = $window.developers
+      	$scope.developer = $window.developer
 
 
 		$scope.startTimer = function(){
 			var startTime = new Date();
 			var visitingUser = $window.user;
-			var userVisited = $window.developers;
+			var userVisited = $window.developer;
 			$window.eventTracker.start_time = startTime;
 			$window.eventTracker.visitor = visitingUser;
 			$window.eventTracker.visited = userVisited;
@@ -35,12 +35,51 @@ angular.module('mean.tracking')
 			console.log($window.eventTracker);
 		}
 
-		$scope.addVisitingUser = function() {
+		$scope.addUsersVisited = function() {
+
 			var time_visited = new Date();
 			var visitingUser = $window.user;
-			var userVisited = $window.developers;
+			var userVisited = $window.developer;
+
+			console.log("Add Users Visited is running")
+			console.log("scope user: ", $scope.user.events.length, $scope.user.events)
+			var eventsObj = {}
+			eventsObj.user_visited = {};
+			var userInfo = eventsObj.users_visited;
+
+			userInfo.id = $scope.user._id;
+			userInfo.name = $scope.user.name;
+			userInfo.time_visited = time_visited;
+			userInfo.organization = $scope.user.work_experiences[0].company.name;
 
 
+			var userEvent = new Visited(eventsObj);
+			userEvent.$save(function(){
+
+				$scope.user.events.push(eventsObj)
+			})
+
+		};
+
+		$scope.addVisitedUsers = function(){
+			var time_visited = new Date();
+			var visitingUser = $window.user;
+			var userVisited = $window.developer;
+			console.log("add to users_visited is getting called")
+			console.log("scope developer: ", $scope.developer.name)
+			var eventsObj = {}
+			eventsObj.visited_users = {};
+			var developerInfo = eventsObj.visited_users;
+
+			developerInfo.id = $scope.developer._id;
+			developerInfo.name = $scope.developer.name;
+			developerInfo.organization = $scope.developer.work_experiences[0].company.name;
+
+			var userEvent = new VisitedBy(eventsObj);
+			userEvent.$save(function(){
+
+				$scope.developer.events.push(eventsObj)
+			})
 		}
 
 		$scope.addDeveloperEvent = function(click){
@@ -48,7 +87,7 @@ angular.module('mean.tracking')
 			console.log("it works")
 			console.log("scope user: ", $scope.user.events.length, $scope.user.events)
 			var eventsObj = {}
-			eventsObj.user_visited = {};
+			eventsObj.users_visited = {};
 			var userInfo = eventsObj.user_visited;
 			eventsObj.clicks = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1];
 			eventsObj.start_time = $window.eventTracker.start_time;
@@ -69,8 +108,8 @@ angular.module('mean.tracking')
 			console.log("add to developer is getting called")
 			console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
-			eventsObj.visiting_user = {};
-			var developerInfo = eventsObj.visiting_user;
+			eventsObj.visited_users = {};
+			var developerInfo = eventsObj.visited_users;
 			eventsObj.clicks = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1];
 			eventsObj.start_time = $window.eventTracker.start_time;
 			eventsObj.end_time = $window.eventTracker.end_time;
