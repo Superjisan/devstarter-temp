@@ -9,6 +9,9 @@ var mongoose = require('mongoose'),
 		EducationSchema = require('./work_experience').EducationSchema,
 		ClicksSchema = require('./events').ClicksSchema,
 		EventsSchema = require('./events').EventsSchema,
+        ProfileVisitsSchema = require('./events').ProfileVisitsSchema,
+        VisitedProfilesSchema = require('./events').VisitedProfilesSchema,
+
     ProjectSchema = require('./work_experience').ProjectSchema;
 /**
  * User Schema
@@ -35,8 +38,9 @@ var UserSchema = new Schema({
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
+    profiles_visited: [ProfileVisitsSchema],
+    visited_profiles: [VisitedProfilesSchema],
     location: [],
-
     resume: String,
     skills: String,
     profile_picture: {

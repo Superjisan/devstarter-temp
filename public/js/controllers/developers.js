@@ -26,7 +26,7 @@ angular.module('mean.developers')
       var dev_text = ('' + dev.name + dev.linkedin.summary + dev.linkedin.headline).toLowerCase();
       if(st.length > 0) {
         if ( dev_text.indexOf(st) > -1) {
-          text_val = true; 
+          text_val = true;
         } else {
           text_val = false;
         }

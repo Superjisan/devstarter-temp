@@ -2,26 +2,10 @@
 
 
 
-{% block pageheader %}
-
-
-      <h2><i class="fa fa-user"></i> <a href="/">hire fullstack </a> <span> Find your next Fullstack developer... </span></h2>
-      <div class="breadcrumb-wrapper">
-        <span class="label">You are here:</span>
-        <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li class="active">Search</a></li>
-          <li><a href="/profile/{{req.user._id.toString()}}"> Profile</a></li>
-        </ol>
-      </div>
-
-{% endblock %}
-
 {% block content%}
 
 <div class="contentpanel" ng-controller="DevelopersController">
 
-  <div>
 
     <div class="col-md-3 col-lg-3" style="padding-left:0px">
       <input type="text" class="form-control" name="keyword" placeholder="Search" ng-model="search.name"/>
@@ -60,6 +44,7 @@
                    <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
                     <span ng-repeat="location in developer.location " >[[location]] </span>
                   </div>
+                  <div ng-hide="global.user"> [[developer.relocate]] </div>
                   <ul class="social-list">
                     <li><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
                   <li><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
@@ -79,7 +64,7 @@
 
     </div><!-- Developer Controller -->
   </div><!-- contentpanel -->
-</div>
+
 
 {% endblock%}
 

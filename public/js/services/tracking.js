@@ -15,9 +15,13 @@ angular.module('mean.tracking')
     return $resource('/api/events', {
       visitedId: "@_id"
     });
-  }])
-  .factory('VisitedBy', ['$resource', function($resource) {
-    return $resource('/api/events', {
+  }]);
+
+
+angular.module('mean.tracking')
+.factory('VisitedBy', ['$resource', function($resource) {
+    return $resource('/api/events/developer', {
       visitedById: "@_id"
     });
-  }])
+  }]);
+

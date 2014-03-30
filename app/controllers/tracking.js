@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
 exports.visitedCreate = function(req, res) {
   User.findOne( { "_id": req.user._id }, function(err, user) {
     console.log(req.body);
-    user.events.push(req.body);
+    user.profiles_visited.push(req.body);
     user.save(function(err) {
       res.json({});
     });
@@ -17,10 +17,13 @@ exports.visitedCreate = function(req, res) {
 };
 
 exports.visitedByCreate = function(req, res){
-  User.findOne({ "_id": req.developers._id}, function(err, developers){
+
+  User.findOne({ "_id": req.body.users_visited.id}, function(err, developers){
+    if (err) {console.log(err)}
     console.log(req.body);
-    developers.events.push(req.body)
+    developers.visited_profiles.push(req.body)
     developers.save(function(err) {
+      if (err) {console.log(err)}
       res.json({})
     })
   })
