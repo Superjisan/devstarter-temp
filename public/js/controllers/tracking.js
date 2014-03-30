@@ -16,8 +16,8 @@ angular.module('mean.tracking')
 
 
 
-				$scope.user = $window.user
-      	$scope.developer = $window.developer
+				$scope.user = $window.user;
+      	$scope.developer = $window.developer;
 
     $scope.toLocalTime = function(date) {
     	return date.toLocaleString()
@@ -58,7 +58,7 @@ angular.module('mean.tracking')
 
 				$scope.user.visited_profiles.push(eventsObj1)
 			})
-/////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////
 			console.log("add to users_visited is getting called")
 			console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
@@ -142,5 +142,68 @@ angular.module('mean.tracking')
 			$window.eventTracker.clicks.push(clickObj);
 			console.log($window.eventTracker.clicks);
 		}
-	}])
+
+		//function gotten from http://stackoverflow.com/questions/498578/how-can-i-convert-a-date-value-in-iso-8601-format-to-a-date-object-in-javascript
+		$scope.ISOdate = {
+				  convert :
+				    function (input){
+				      if (!(typeof input === "string")) throw "ISODate, convert: input must be a string";
+				      var d = input.match(/^(\d{4})-?(\d{2})-?(\d{2})[T ](\d{2}):?(\d{2}):?(\d{2})(\.\d+)?(Z|(?:([+-])(\d{2}):?(\d{2})))$/i);
+				      if (!d) throw "ISODate, convert: Illegal format";
+				      return new Date(
+				        Date.UTC(
+				          d[1], d[2]-1, d[3],
+				          d[4], d[5], d[6], d[7] || 0 % 1 * 1000 | 0
+				        ) + (
+				          d[8].toUpperCase() === "Z" ? 0 :
+				            (d[10]*3600 + d[11]*60) * (d[9] === "-" ? 1000 : -1000)
+				        )
+				      );
+				    },
+				  format :
+				    function(date, utc){
+				      if (typeof date === "string") date = this.convert(date);
+				      if (!(date instanceof Date)) throw "ISODate, format: t is not a date object";
+
+				      var t={'FullYear':0, 'Month':0, 'Date':0, 'Hours':0, 'Minutes':0, 'Seconds':0};
+				      for (var key in t) {
+				        if (t.hasOwnProperty(key)) t[key] = date["get" +(utc ? "UTC" :"") + key]()
+				      }
+
+				      return this.month[t.Month]
+				        + " "
+				        + this.ordinal(t.Date)
+				        + ", "
+				        + t.FullYear
+				        + " @ "
+				        + this.clock12(t.Hours,t.Minutes);
+				      },
+				  month:
+				    [
+				      "January", "February", "March", "April", "May", "June",
+				      "July", "August", "September", "October", "November", "December"
+				    ],
+				  ordinal:
+				    function(n) {
+				      return n+(
+				        [
+				          "th", "st", "nd", "rd"
+				        ][
+				          (( n % 100 / 10) | 0) === 1 ? 0 : n % 10 < 4 ? n % 10 : 0
+				        ]
+				      );
+				  },
+				  clock12:
+				    function(h24, m, s){
+				      h24%=24;
+				      var h12 = (h24 % 12) || 12;
+				      return h12 + ":" +
+				        (m < 10 ? "0" + m : m) +
+				        (isFinite(s) ? ":" + (s < 10 ? "0" + s : s ) : "") +
+				        (h24 < 12 ? "AM" : "PM");
+				      }
+				};
+
+	}//end of function
+	])
 
