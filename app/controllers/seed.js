@@ -3908,865 +3908,865 @@ User.create({
 })
 
 //Jisan data
-User.create({
-  "location": 'New York',
-  "relocate": true,
-  "auth_methods" : [
-    {
-      "provider" : "linkedin",
-      "providerId" : "PvmfqY724t",
+// User.create({
+//   "location": 'New York',
+//   "relocate": true,
+//   "auth_methods" : [
+//     {
+//       "provider" : "linkedin",
+//       "providerId" : "PvmfqY724t",
 
-    }
-  ],
-  "educations" : [
-    {
-      "fieldOfStudy" : "Web Development",
-      "id" : 204678887,
-      "schoolName" : "Fullstack Academy of Code",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "degree" : "Bachelors",
-      "fieldOfStudy" : "History",
-      "id" : 74426792,
-      "schoolName" : "Wesleyan University",
-      "endDate" : {
-        "year" : 2012
-      },
-      "startDate" : {
-        "year" : 2008
-      }
-    },
-    {
-      "id" : 81501045,
-      "notes" : "",
-      "schoolName" : "Stuyvesant High School",
-      "endDate" : {
-        "year" : 2008
-      },
-      "startDate" : {
-        "year" : 2005
-      }
-    }
-  ],
-  "email" : "jzaman@wesleyan.edu",
-  "github" : {
-    "plan" : {
-      "private_repos" : 0,
-      "collaborators" : 0,
-      "space" : 307200,
-      "name" : "free"
-    },
-    "collaborators" : 0,
-    "disk_usage" : 89065,
-    "owned_private_repos" : 0,
-    "total_private_repos" : 11,
-    "private_gists" : 1,
-    "updated_at" : "2014-03-25T16:07:33Z",
-    "created_at" : "2013-05-22T16:40:57Z",
-    "following" : 29,
-    "followers" : 12,
-    "public_gists" : 15,
-    "public_repos" : 36,
-    "bio" : null,
-    "hireable" : true,
-    "email" : "jzaman@wesleyan.edu",
-    "location" : "New York, NY",
-    "blog" : "jisan-octopress.herokuapp.com",
-    "company" : "",
-    "name" : "Jisan Zaman",
-    "site_admin" : false,
-    "type" : "User",
-    "received_events_url" : "https://api.github.com/users/Superjisan/received_events",
-    "events_url" : "https://api.github.com/users/Superjisan/events{/privacy}",
-    "repos_url" : "https://api.github.com/users/Superjisan/repos",
-    "organizations_url" : "https://api.github.com/users/Superjisan/orgs",
-    "subscriptions_url" : "https://api.github.com/users/Superjisan/subscriptions",
-    "starred_url" : "https://api.github.com/users/Superjisan/starred{/owner}{/repo}",
-    "gists_url" : "https://api.github.com/users/Superjisan/gists{/gist_id}",
-    "following_url" : "https://api.github.com/users/Superjisan/following{/other_user}",
-    "followers_url" : "https://api.github.com/users/Superjisan/followers",
-    "html_url" : "https://github.com/Superjisan",
-    "url" : "https://api.github.com/users/Superjisan",
-    "gravatar_id" : "a2619a8a1f6182567a9e63521a3bf982",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/4501479?",
-    "id" : 4501479,
-    "login" : "Superjisan"
-  },
-  "linkedin" : {
-    "volunteer" : {
-      "volunteerExperiences" : {
-        "values" : [
-          {
-            "role" : "Big Brother",
-            "organization" : {
-              "name" : "Big Brothers Big Sisters",
-              "id" : 7171
-            },
-            "id" : 62
-          },
-          {
-            "role" : "Google Hangout Current Events Instructor",
-            "organization" : {
-              "name" : "Selfhelp Community Services",
-              "id" : 121309
-            },
-            "id" : 63
-          }
-        ],
-        "_total" : 2
-      }
-    },
-    "summary" : "I am a junior website developer who is well-versed in JavaScript and Ruby. I am trained in the MEAN (MongoDB, Express, Angular.JS, Node.JS) Stack but am also familiar with Ruby on Rails, Ember.JS, Backbone.JS, and the LAMP stack (Linux, Apache, MySQL, and Perl/Python/PHP). My computer is a Linux Ubuntu machine, and my blog is maintained in WordPress.\n\nI am working on several apps right now that showcase my skills in these different platforms as well as in mobile development. Check out my GitHub page: Superjisan.github.com for some of the projects and code I've done.\n\nHere's my blog about my coding adventures at Fullstack Academy: Superjisan.org/devblog.",
-    "skills" : {
-      "values" : [
-        {
-          "skill" : {
-            "name" : "Tutoring"
-          },
-          "id" : 16
-        },
-        {
-          "skill" : {
-            "name" : "SPSS"
-          },
-          "id" : 38
-        },
-        {
-          "skill" : {
-            "name" : "Data Analysis"
-          },
-          "id" : 39
-        },
-        {
-          "skill" : {
-            "name" : "Critical Thinking"
-          },
-          "id" : 6
-        },
-        {
-          "skill" : {
-            "name" : "Market Research"
-          },
-          "id" : 42
-        },
-        {
-          "skill" : {
-            "name" : "Small Talk"
-          },
-          "id" : 37
-        },
-        {
-          "skill" : {
-            "name" : "Listening Skills"
-          },
-          "id" : 5
-        },
-        {
-          "skill" : {
-            "name" : "Writing"
-          },
-          "id" : 9
-        },
-        {
-          "skill" : {
-            "name" : "Swing Dancing"
-          },
-          "id" : 10
-        },
-        {
-          "skill" : {
-            "name" : "Money Management"
-          },
-          "id" : 11
-        },
-        {
-          "skill" : {
-            "name" : "Supervising"
-          },
-          "id" : 12
-        },
-        {
-          "skill" : {
-            "name" : "Microsoft Excel"
-          },
-          "id" : 30
-        },
-        {
-          "skill" : {
-            "name" : "Microsoft Office"
-          },
-          "id" : 31
-        },
-        {
-          "skill" : {
-            "name" : "Product Management"
-          },
-          "id" : 32
-        },
-        {
-          "skill" : {
-            "name" : "Mobile Marketing"
-          },
-          "id" : 35
-        },
-        {
-          "skill" : {
-            "name" : "Problem Solving"
-          },
-          "id" : 4
-        },
-        {
-          "skill" : {
-            "name" : "Bengali"
-          },
-          "id" : 14
-        },
-        {
-          "skill" : {
-            "name" : "Youth Mentoring"
-          },
-          "id" : 17
-        },
-        {
-          "skill" : {
-            "name" : "Product Development"
-          },
-          "id" : 33
-        },
-        {
-          "skill" : {
-            "name" : "Editing"
-          },
-          "id" : 41
-        },
-        {
-          "skill" : {
-            "name" : "HTML"
-          },
-          "id" : 44
-        },
-        {
-          "skill" : {
-            "name" : "WordPress"
-          },
-          "id" : 51
-        },
-        {
-          "skill" : {
-            "name" : "Blues Dancing"
-          },
-          "id" : 29
-        },
-        {
-          "skill" : {
-            "name" : "HTML 5"
-          },
-          "id" : 45
-        },
-        {
-          "skill" : {
-            "name" : "CSS"
-          },
-          "id" : 46
-        },
-        {
-          "skill" : {
-            "name" : "Ruby"
-          },
-          "id" : 47
-        },
-        {
-          "skill" : {
-            "name" : "Ruby on Rails"
-          },
-          "id" : 48
-        },
-        {
-          "skill" : {
-            "name" : "JavaScript"
-          },
-          "id" : 49
-        },
-        {
-          "skill" : {
-            "name" : "jQuery"
-          },
-          "id" : 50
-        },
-        {
-          "skill" : {
-            "name" : "Web Development"
-          },
-          "id" : 52
-        },
-        {
-          "skill" : {
-            "name" : "Node.js"
-          },
-          "id" : 54
-        },
-        {
-          "skill" : {
-            "name" : "Backbone.js"
-          },
-          "id" : 55
-        },
-        {
-          "skill" : {
-            "name" : "JSON"
-          },
-          "id" : 56
-        },
-        {
-          "skill" : {
-            "name" : "SQL"
-          },
-          "id" : 57
-        },
-        {
-          "skill" : {
-            "name" : "SQLite"
-          },
-          "id" : 58
-        },
-        {
-          "skill" : {
-            "name" : "MongoDB"
-          },
-          "id" : 59
-        },
-        {
-          "skill" : {
-            "name" : "Redis"
-          },
-          "id" : 60
-        },
-        {
-          "skill" : {
-            "name" : "Cricket"
-          },
-          "id" : 64
-        }
-      ],
-      "_total" : 38
-    },
-    "siteStandardProfileRequest" : {
-      "url" : "http://www.linkedin.com/profile/view?id=118698139&authType=name&authToken=3H8C&trk=api*a3226473*s3299743*"
-    },
-    "relatedProfileViews" : {
-      "values" : [
-        {
-          "lastName" : "Domingo",
-          "id" : "hiyN8jWqPW",
-          "firstName" : "Migi"
-        },
-        {
-          "lastName" : "Yu",
-          "id" : "GDSYjeKb_Q",
-          "firstName" : "Kelvin"
-        },
-        {
-          "lastName" : "Cook",
-          "id" : "AjEGjDYQLv",
-          "firstName" : "Eric"
-        },
-        {
-          "lastName" : "Wallace",
-          "id" : "tIxs2lfEnw",
-          "firstName" : "Omari"
-        },
-        {
-          "lastName" : "Ingram",
-          "id" : "buLJshkhKq",
-          "firstName" : "Russell"
-        },
-        {
-          "lastName" : "Pazmiño",
-          "id" : "En1mNn2tQC",
-          "firstName" : "Luis"
-        },
-        {
-          "lastName" : "Tsui",
-          "id" : "JmCfHALEkj",
-          "firstName" : "Jaclyn"
-        },
-        {
-          "lastName" : "Giraldo",
-          "id" : "2qKGhmTNbZ",
-          "firstName" : "Max"
-        },
-        {
-          "lastName" : "Maru",
-          "id" : "7xiZaujHrb",
-          "firstName" : "Nimit"
-        },
-        {
-          "lastName" : "Drury",
-          "id" : "hne4Az6W6H",
-          "firstName" : "James"
-        }
-      ],
-      "_total" : 10
-    },
-    "recommendationsReceived" : {
-      "_total" : 0
-    },
-    "positions" : {
-      "values" : [
-        {
-          "title" : "Student",
-          "startDate" : {
-            "year" : 2014
-          },
-          "isCurrent" : false,
-          "id" : 513835875,
-          "endDate" : {
-            "year" : 2014
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "1-10 employees",
-            "name" : "Fullstack Academy",
-            "industry" : "Internet",
-            "id" : 4985867
-          }
-        },
-        {
-          "title" : "Student",
-          "startDate" : {
-            "year" : 2014
-          },
-          "isCurrent" : false,
-          "id" : 513838091,
-          "endDate" : {
-            "year" : 2014
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "1-10 employees",
-            "name" : "Fullstack Academy",
-            "industry" : "Internet",
-            "id" : 4985867
-          }
-        },
-        {
-          "title" : "Research Assistant",
-          "summary" : "1. Overseeing Product and App Development; \n2. Recruitment for panel and specific project; \n3. Organizing Support/Service Infrastructure; \n4. Developed Company Metrics and Reports; Testing Specialist; Authored Surveys; \n5. Assisted in  development of new technology Location Based Services; \n6. Creating reporting portals for clients and internal evaluations; \n7. Managed the creation of a new Website; \n8. Managed company project planning via ASANA.\n9. Maintained a panel of 100,000+ people and their demographic datapoints via proprietary technology tool.\n10. Manage client projects, present deliverable to clients.",
-          "startDate" : {
-            "year" : 2012,
-            "month" : 10
-          },
-          "isCurrent" : false,
-          "id" : 342035594,
-          "endDate" : {
-            "year" : 2013,
-            "month" : 10
-          },
-          "company" : {
-            "type" : "Partnership",
-            "size" : "11-50 employees",
-            "name" : "Paradigm Sample",
-            "industry" : "Market Research",
-            "id" : 252666
-          }
-        },
-        {
-          "title" : "Residential Assistant",
-          "summary" : "1.Assisted students and staff to ensure a safe and fun environment for learning;\n2.Supervised special-needs students with ADHD, Asperger, and Bipolar disorder; \n3.Organized the yearbook committee and created an online yearbook; \n4.Led fun and educational activities during afternoons and weekends; \n5.Supervised students during dances, weekends, quad-time and field trips; \n6.Maintained a high-energy and positive attitude throughout 6 weeks to provide a better work environment; \n7.Handled emergency situations on a 24-hour basis.",
-          "startDate" : {
-            "year" : 2010,
-            "month" : 6
-          },
-          "isCurrent" : false,
-          "id" : 214911824,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 8
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "10,001+ employees",
-            "name" : "Johns Hopkins University Center for Talented Youth",
-            "industry" : "Higher Education",
-            "id" : 3528
-          }
-        },
-        {
-          "title" : "Treasurer",
-          "summary" : "1.Managed a $200,000 budget; \n2.Created the budget for the upcoming year; Collected rents and dues from members;\n3. Reported to the Adelphic Literary Society (alumni branch) regarding budgetary concerns; \n4. Managed a  $15,000 fund for the Adelphic Educational Fund (AEF), a 501(c) organization ;\n5. Worked with members of the society to create payment plans for students with financial need in order to make membership more accessible; \n6.Followed up with other officers of the Society, its members, local businesses regarding financial transactions;\n7. Partnered with Alumni members to purchase new equipment to increase office functionality; \n8. Institutionalized the use of software such as Google Docs, Boomerang, Expensify for better record keeping; \n9. Received “The Brown Award for Service to the Community” from the AEF.",
-          "startDate" : {
-            "year" : 2011,
-            "month" : 5
-          },
-          "isCurrent" : false,
-          "id" : 214912397,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "51-200 employees",
-            "name" : "Alpha Delta Phi Society",
-            "industry" : "Higher Education",
-            "id" : 2073909
-          }
-        },
-        {
-          "title" : "Admissions Office Tour Guide",
-          "summary" : "1.Gave over 300 tours to prospective students, parents, alumni, and high school counselors- the most in school history; \n2.Provided a personal and professional perspective about Wesleyan; \n3.Interacted with various people of many different backgrounds; \n4.Showed the facilities that highlighted the university and promoted its reputation, programs and environment;\n5. Acquired knowledge about all aspects of the University thoroughly and incorporated personal stories in order to give factual yet exciting tours; \n6.Earned the “Tour Guide of the Month” award after only one semester.",
-          "startDate" : {
-            "year" : 2009,
-            "month" : 3
-          },
-          "isCurrent" : false,
-          "id" : 214910839,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        },
-        {
-          "title" : "Student",
-          "summary" : "B.A. in History with Honors",
-          "startDate" : {
-            "year" : 2008,
-            "month" : 9
-          },
-          "isCurrent" : false,
-          "id" : 185342794,
-          "endDate" : {
-            "year" : 2012,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        },
-        {
-          "title" : "Van Driver",
-          "startDate" : {
-            "year" : 2008
-          },
-          "isCurrent" : false,
-          "id" : 244958520,
-          "endDate" : {
-            "year" : 2012
-          },
-          "company" : {
-            "name" : "Wesleyan University Office of Community Service",
-            "industry" : "Higher Education"
-          }
-        },
-        {
-          "title" : "Resident Advisor",
-          "summary" : "1.Fostered a community in two different resident halls; \n2. Acted as a liaison between the Office of Residential Life and the residents in the hall; \n3.Advised students on various issues that included policy enforcement, drugs and alcohol, social justice; Updated residents about events on campus;\n4. Raised over $2,000 for community service projects around Wesleyan and Middletown, CT. \n5.Organized various programs that promoted a sense of community; \n6. Earned the “Resident Advisor Of the Year” Award in Spring 2011.",
-          "startDate" : {
-            "year" : 2009,
-            "month" : 8
-          },
-          "isCurrent" : false,
-          "id" : 199950435,
-          "endDate" : {
-            "year" : 2011,
-            "month" : 5
-          },
-          "company" : {
-            "type" : "Educational Institution",
-            "size" : "501-1000 employees",
-            "name" : "Wesleyan University",
-            "industry" : "Higher Education",
-            "id" : 15668
-          }
-        }
-      ],
-      "_total" : 9
-    },
-    "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_jE7gvrM4ZX5CbGoP0muGvtZVs_PCbXVP0HUGvPJo5QbPZ8D1luxlR1SXND1yXiRxpWS_sqFixbuY",
-    "phoneNumbers" : {
-      "_total" : 0
-    },
-    "numRecommenders" : 0,
-    "lastName" : "Zaman",
-    "id" : "PvmfqY724t",
-    "honorsAwards" : {
-      "values" : [
-        {
-          "name" : "Tour Guide of the Month",
-          "issuer" : "Wesleyan University Office of Admissions",
-          "id" : 23
-        },
-        {
-          "name" : "Resident Advisor of The Year",
-          "issuer" : "Wesleyan University Office of Residential Life",
-          "id" : 24
-        },
-        {
-          "name" : "Departmental Honors",
-          "issuer" : "Wesleyan University History Department",
-          "id" : 25
-        },
-        {
-          "name" : "AP Scholar with Distinction",
-          "issuer" : "CollegeBoard",
-          "id" : 26
-        },
-        {
-          "name" : "Gram Award for Service to the Community",
-          "issuer" : "Adelphic Literary Society",
-          "id" : 27
-        },
-        {
-          "name" : "Most Outstanding Cricket Player",
-          "issuer" : "Stuyvesant High School Athletics Department",
-          "id" : 40
-        }
-      ],
-      "_total" : 6
-    },
-    "headline" : "Web Developer, Student at Fullstack Academy of Code",
-    "firstName" : "Jisan",
-    "emailAddress" : "jzaman@wesleyan.edu",
-    "educations" : {
-      "values" : [
-        {
-          "startDate" : {
-            "year" : 2014
-          },
-          "schoolName" : "Fullstack Academy of Code",
-          "id" : 204678887,
-          "fieldOfStudy" : "Web Development",
-          "endDate" : {
-            "year" : 2014
-          }
-        },
-        {
-          "startDate" : {
-            "year" : 2008
-          },
-          "schoolName" : "Wesleyan University",
-          "id" : 74426792,
-          "fieldOfStudy" : "History",
-          "endDate" : {
-            "year" : 2012
-          },
-          "degree" : "Bachelors"
-        },
-        {
-          "startDate" : {
-            "year" : 2005
-          },
-          "schoolName" : "Stuyvesant High School",
-          "notes" : "",
-          "id" : 81501045,
-          "endDate" : {
-            "year" : 2008
-          }
-        }
-      ],
-      "_total" : 3
-    },
-    "dateOfBirth" : {
-      "year" : 1990,
-      "month" : 6,
-      "day" : 4
-    }
-  },
-  "name" : "Jisan Zaman",
-  "roles" : [
-    "developer"
-  ],
-  "work_experiences" : [
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "1-10 employees",
-        "name" : "Fullstack Academy",
-        "industry" : "Internet",
-        "id" : 4985867
-      },
-      "id" : 513835875,
-      "isCurrent" : false,
-      "title" : "Student",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "1-10 employees",
-        "name" : "Fullstack Academy",
-        "industry" : "Internet",
-        "id" : 4985867
-      },
-      "id" : 513838091,
-      "isCurrent" : false,
-      "title" : "Student",
-      "endDate" : {
-        "year" : 2014
-      },
-      "startDate" : {
-        "year" : 2014
-      }
-    },
-    {
-      "company" : {
-        "type" : "Partnership",
-        "size" : "11-50 employees",
-        "name" : "Paradigm Sample",
-        "industry" : "Market Research",
-        "id" : 252666
-      },
-      "id" : 342035594,
-      "isCurrent" : false,
-      "title" : "Research Assistant",
-      "endDate" : {
-        "month" : 10,
-        "year" : 2013
-      },
-      "startDate" : {
-        "month" : 10,
-        "year" : 2012
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "10,001+ employees",
-        "name" : "Johns Hopkins University Center for Talented Youth",
-        "industry" : "Higher Education",
-        "id" : 3528
-      },
-      "id" : 214911824,
-      "isCurrent" : false,
-      "title" : "Residential Assistant",
-      "endDate" : {
-        "month" : 8,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 6,
-        "year" : 2010
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "51-200 employees",
-        "name" : "Alpha Delta Phi Society",
-        "industry" : "Higher Education",
-        "id" : 2073909
-      },
-      "id" : 214912397,
-      "isCurrent" : false,
-      "title" : "Treasurer",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 5,
-        "year" : 2011
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 214910839,
-      "isCurrent" : false,
-      "title" : "Admissions Office Tour Guide",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 3,
-        "year" : 2009
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 185342794,
-      "isCurrent" : false,
-      "title" : "Student",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2012
-      },
-      "startDate" : {
-        "month" : 9,
-        "year" : 2008
-      }
-    },
-    {
-      "company" : {
-        "name" : "Wesleyan University Office of Community Service",
-        "industry" : "Higher Education"
-      },
-      "id" : 244958520,
-      "isCurrent" : false,
-      "title" : "Van Driver",
-      "endDate" : {
-        "year" : 2012
-      },
-      "startDate" : {
-        "year" : 2008
-      }
-    },
-    {
-      "company" : {
-        "type" : "Educational Institution",
-        "size" : "501-1000 employees",
-        "name" : "Wesleyan University",
-        "industry" : "Higher Education",
-        "id" : 15668
-      },
-      "id" : 199950435,
-      "isCurrent" : false,
-      "title" : "Resident Advisor",
-      "endDate" : {
-        "month" : 5,
-        "year" : 2011
-      },
-      "startDate" : {
-        "month" : 8,
-        "year" : 2009
-      }
-    }
-  ]
-});
+//     }
+//   ],
+//   "educations" : [
+//     {
+//       "fieldOfStudy" : "Web Development",
+//       "id" : 204678887,
+//       "schoolName" : "Fullstack Academy of Code",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "degree" : "Bachelors",
+//       "fieldOfStudy" : "History",
+//       "id" : 74426792,
+//       "schoolName" : "Wesleyan University",
+//       "endDate" : {
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "id" : 81501045,
+//       "notes" : "",
+//       "schoolName" : "Stuyvesant High School",
+//       "endDate" : {
+//         "year" : 2008
+//       },
+//       "startDate" : {
+//         "year" : 2005
+//       }
+//     }
+//   ],
+//   "email" : "jzaman@wesleyan.edu",
+//   "github" : {
+//     "plan" : {
+//       "private_repos" : 0,
+//       "collaborators" : 0,
+//       "space" : 307200,
+//       "name" : "free"
+//     },
+//     "collaborators" : 0,
+//     "disk_usage" : 89065,
+//     "owned_private_repos" : 0,
+//     "total_private_repos" : 11,
+//     "private_gists" : 1,
+//     "updated_at" : "2014-03-25T16:07:33Z",
+//     "created_at" : "2013-05-22T16:40:57Z",
+//     "following" : 29,
+//     "followers" : 12,
+//     "public_gists" : 15,
+//     "public_repos" : 36,
+//     "bio" : null,
+//     "hireable" : true,
+//     "email" : "jzaman@wesleyan.edu",
+//     "location" : "New York, NY",
+//     "blog" : "jisan-octopress.herokuapp.com",
+//     "company" : "",
+//     "name" : "Jisan Zaman",
+//     "site_admin" : false,
+//     "type" : "User",
+//     "received_events_url" : "https://api.github.com/users/Superjisan/received_events",
+//     "events_url" : "https://api.github.com/users/Superjisan/events{/privacy}",
+//     "repos_url" : "https://api.github.com/users/Superjisan/repos",
+//     "organizations_url" : "https://api.github.com/users/Superjisan/orgs",
+//     "subscriptions_url" : "https://api.github.com/users/Superjisan/subscriptions",
+//     "starred_url" : "https://api.github.com/users/Superjisan/starred{/owner}{/repo}",
+//     "gists_url" : "https://api.github.com/users/Superjisan/gists{/gist_id}",
+//     "following_url" : "https://api.github.com/users/Superjisan/following{/other_user}",
+//     "followers_url" : "https://api.github.com/users/Superjisan/followers",
+//     "html_url" : "https://github.com/Superjisan",
+//     "url" : "https://api.github.com/users/Superjisan",
+//     "gravatar_id" : "a2619a8a1f6182567a9e63521a3bf982",
+//     "avatar_url" : "https://avatars.githubusercontent.com/u/4501479?",
+//     "id" : 4501479,
+//     "login" : "Superjisan"
+//   },
+//   "linkedin" : {
+//     "volunteer" : {
+//       "volunteerExperiences" : {
+//         "values" : [
+//           {
+//             "role" : "Big Brother",
+//             "organization" : {
+//               "name" : "Big Brothers Big Sisters",
+//               "id" : 7171
+//             },
+//             "id" : 62
+//           },
+//           {
+//             "role" : "Google Hangout Current Events Instructor",
+//             "organization" : {
+//               "name" : "Selfhelp Community Services",
+//               "id" : 121309
+//             },
+//             "id" : 63
+//           }
+//         ],
+//         "_total" : 2
+//       }
+//     },
+//     "summary" : "I am a junior website developer who is well-versed in JavaScript and Ruby. I am trained in the MEAN (MongoDB, Express, Angular.JS, Node.JS) Stack but am also familiar with Ruby on Rails, Ember.JS, Backbone.JS, and the LAMP stack (Linux, Apache, MySQL, and Perl/Python/PHP). My computer is a Linux Ubuntu machine, and my blog is maintained in WordPress.\n\nI am working on several apps right now that showcase my skills in these different platforms as well as in mobile development. Check out my GitHub page: Superjisan.github.com for some of the projects and code I've done.\n\nHere's my blog about my coding adventures at Fullstack Academy: Superjisan.org/devblog.",
+//     "skills" : {
+//       "values" : [
+//         {
+//           "skill" : {
+//             "name" : "Tutoring"
+//           },
+//           "id" : 16
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SPSS"
+//           },
+//           "id" : 38
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Data Analysis"
+//           },
+//           "id" : 39
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Critical Thinking"
+//           },
+//           "id" : 6
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Market Research"
+//           },
+//           "id" : 42
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Small Talk"
+//           },
+//           "id" : 37
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Listening Skills"
+//           },
+//           "id" : 5
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Writing"
+//           },
+//           "id" : 9
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Swing Dancing"
+//           },
+//           "id" : 10
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Money Management"
+//           },
+//           "id" : 11
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Supervising"
+//           },
+//           "id" : 12
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Microsoft Excel"
+//           },
+//           "id" : 30
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Microsoft Office"
+//           },
+//           "id" : 31
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Product Management"
+//           },
+//           "id" : 32
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Mobile Marketing"
+//           },
+//           "id" : 35
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Problem Solving"
+//           },
+//           "id" : 4
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Bengali"
+//           },
+//           "id" : 14
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Youth Mentoring"
+//           },
+//           "id" : 17
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Product Development"
+//           },
+//           "id" : 33
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Editing"
+//           },
+//           "id" : 41
+//         },
+//         {
+//           "skill" : {
+//             "name" : "HTML"
+//           },
+//           "id" : 44
+//         },
+//         {
+//           "skill" : {
+//             "name" : "WordPress"
+//           },
+//           "id" : 51
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Blues Dancing"
+//           },
+//           "id" : 29
+//         },
+//         {
+//           "skill" : {
+//             "name" : "HTML 5"
+//           },
+//           "id" : 45
+//         },
+//         {
+//           "skill" : {
+//             "name" : "CSS"
+//           },
+//           "id" : 46
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Ruby"
+//           },
+//           "id" : 47
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Ruby on Rails"
+//           },
+//           "id" : 48
+//         },
+//         {
+//           "skill" : {
+//             "name" : "JavaScript"
+//           },
+//           "id" : 49
+//         },
+//         {
+//           "skill" : {
+//             "name" : "jQuery"
+//           },
+//           "id" : 50
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Web Development"
+//           },
+//           "id" : 52
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Node.js"
+//           },
+//           "id" : 54
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Backbone.js"
+//           },
+//           "id" : 55
+//         },
+//         {
+//           "skill" : {
+//             "name" : "JSON"
+//           },
+//           "id" : 56
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SQL"
+//           },
+//           "id" : 57
+//         },
+//         {
+//           "skill" : {
+//             "name" : "SQLite"
+//           },
+//           "id" : 58
+//         },
+//         {
+//           "skill" : {
+//             "name" : "MongoDB"
+//           },
+//           "id" : 59
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Redis"
+//           },
+//           "id" : 60
+//         },
+//         {
+//           "skill" : {
+//             "name" : "Cricket"
+//           },
+//           "id" : 64
+//         }
+//       ],
+//       "_total" : 38
+//     },
+//     "siteStandardProfileRequest" : {
+//       "url" : "http://www.linkedin.com/profile/view?id=118698139&authType=name&authToken=3H8C&trk=api*a3226473*s3299743*"
+//     },
+//     "relatedProfileViews" : {
+//       "values" : [
+//         {
+//           "lastName" : "Domingo",
+//           "id" : "hiyN8jWqPW",
+//           "firstName" : "Migi"
+//         },
+//         {
+//           "lastName" : "Yu",
+//           "id" : "GDSYjeKb_Q",
+//           "firstName" : "Kelvin"
+//         },
+//         {
+//           "lastName" : "Cook",
+//           "id" : "AjEGjDYQLv",
+//           "firstName" : "Eric"
+//         },
+//         {
+//           "lastName" : "Wallace",
+//           "id" : "tIxs2lfEnw",
+//           "firstName" : "Omari"
+//         },
+//         {
+//           "lastName" : "Ingram",
+//           "id" : "buLJshkhKq",
+//           "firstName" : "Russell"
+//         },
+//         {
+//           "lastName" : "Pazmiño",
+//           "id" : "En1mNn2tQC",
+//           "firstName" : "Luis"
+//         },
+//         {
+//           "lastName" : "Tsui",
+//           "id" : "JmCfHALEkj",
+//           "firstName" : "Jaclyn"
+//         },
+//         {
+//           "lastName" : "Giraldo",
+//           "id" : "2qKGhmTNbZ",
+//           "firstName" : "Max"
+//         },
+//         {
+//           "lastName" : "Maru",
+//           "id" : "7xiZaujHrb",
+//           "firstName" : "Nimit"
+//         },
+//         {
+//           "lastName" : "Drury",
+//           "id" : "hne4Az6W6H",
+//           "firstName" : "James"
+//         }
+//       ],
+//       "_total" : 10
+//     },
+//     "recommendationsReceived" : {
+//       "_total" : 0
+//     },
+//     "positions" : {
+//       "values" : [
+//         {
+//           "title" : "Student",
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "isCurrent" : false,
+//           "id" : 513835875,
+//           "endDate" : {
+//             "year" : 2014
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "1-10 employees",
+//             "name" : "Fullstack Academy",
+//             "industry" : "Internet",
+//             "id" : 4985867
+//           }
+//         },
+//         {
+//           "title" : "Student",
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "isCurrent" : false,
+//           "id" : 513838091,
+//           "endDate" : {
+//             "year" : 2014
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "1-10 employees",
+//             "name" : "Fullstack Academy",
+//             "industry" : "Internet",
+//             "id" : 4985867
+//           }
+//         },
+//         {
+//           "title" : "Research Assistant",
+//           "summary" : "1. Overseeing Product and App Development; \n2. Recruitment for panel and specific project; \n3. Organizing Support/Service Infrastructure; \n4. Developed Company Metrics and Reports; Testing Specialist; Authored Surveys; \n5. Assisted in  development of new technology Location Based Services; \n6. Creating reporting portals for clients and internal evaluations; \n7. Managed the creation of a new Website; \n8. Managed company project planning via ASANA.\n9. Maintained a panel of 100,000+ people and their demographic datapoints via proprietary technology tool.\n10. Manage client projects, present deliverable to clients.",
+//           "startDate" : {
+//             "year" : 2012,
+//             "month" : 10
+//           },
+//           "isCurrent" : false,
+//           "id" : 342035594,
+//           "endDate" : {
+//             "year" : 2013,
+//             "month" : 10
+//           },
+//           "company" : {
+//             "type" : "Partnership",
+//             "size" : "11-50 employees",
+//             "name" : "Paradigm Sample",
+//             "industry" : "Market Research",
+//             "id" : 252666
+//           }
+//         },
+//         {
+//           "title" : "Residential Assistant",
+//           "summary" : "1.Assisted students and staff to ensure a safe and fun environment for learning;\n2.Supervised special-needs students with ADHD, Asperger, and Bipolar disorder; \n3.Organized the yearbook committee and created an online yearbook; \n4.Led fun and educational activities during afternoons and weekends; \n5.Supervised students during dances, weekends, quad-time and field trips; \n6.Maintained a high-energy and positive attitude throughout 6 weeks to provide a better work environment; \n7.Handled emergency situations on a 24-hour basis.",
+//           "startDate" : {
+//             "year" : 2010,
+//             "month" : 6
+//           },
+//           "isCurrent" : false,
+//           "id" : 214911824,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 8
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "10,001+ employees",
+//             "name" : "Johns Hopkins University Center for Talented Youth",
+//             "industry" : "Higher Education",
+//             "id" : 3528
+//           }
+//         },
+//         {
+//           "title" : "Treasurer",
+//           "summary" : "1.Managed a $200,000 budget; \n2.Created the budget for the upcoming year; Collected rents and dues from members;\n3. Reported to the Adelphic Literary Society (alumni branch) regarding budgetary concerns; \n4. Managed a  $15,000 fund for the Adelphic Educational Fund (AEF), a 501(c) organization ;\n5. Worked with members of the society to create payment plans for students with financial need in order to make membership more accessible; \n6.Followed up with other officers of the Society, its members, local businesses regarding financial transactions;\n7. Partnered with Alumni members to purchase new equipment to increase office functionality; \n8. Institutionalized the use of software such as Google Docs, Boomerang, Expensify for better record keeping; \n9. Received “The Brown Award for Service to the Community” from the AEF.",
+//           "startDate" : {
+//             "year" : 2011,
+//             "month" : 5
+//           },
+//           "isCurrent" : false,
+//           "id" : 214912397,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "51-200 employees",
+//             "name" : "Alpha Delta Phi Society",
+//             "industry" : "Higher Education",
+//             "id" : 2073909
+//           }
+//         },
+//         {
+//           "title" : "Admissions Office Tour Guide",
+//           "summary" : "1.Gave over 300 tours to prospective students, parents, alumni, and high school counselors- the most in school history; \n2.Provided a personal and professional perspective about Wesleyan; \n3.Interacted with various people of many different backgrounds; \n4.Showed the facilities that highlighted the university and promoted its reputation, programs and environment;\n5. Acquired knowledge about all aspects of the University thoroughly and incorporated personal stories in order to give factual yet exciting tours; \n6.Earned the “Tour Guide of the Month” award after only one semester.",
+//           "startDate" : {
+//             "year" : 2009,
+//             "month" : 3
+//           },
+//           "isCurrent" : false,
+//           "id" : 214910839,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         },
+//         {
+//           "title" : "Student",
+//           "summary" : "B.A. in History with Honors",
+//           "startDate" : {
+//             "year" : 2008,
+//             "month" : 9
+//           },
+//           "isCurrent" : false,
+//           "id" : 185342794,
+//           "endDate" : {
+//             "year" : 2012,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         },
+//         {
+//           "title" : "Van Driver",
+//           "startDate" : {
+//             "year" : 2008
+//           },
+//           "isCurrent" : false,
+//           "id" : 244958520,
+//           "endDate" : {
+//             "year" : 2012
+//           },
+//           "company" : {
+//             "name" : "Wesleyan University Office of Community Service",
+//             "industry" : "Higher Education"
+//           }
+//         },
+//         {
+//           "title" : "Resident Advisor",
+//           "summary" : "1.Fostered a community in two different resident halls; \n2. Acted as a liaison between the Office of Residential Life and the residents in the hall; \n3.Advised students on various issues that included policy enforcement, drugs and alcohol, social justice; Updated residents about events on campus;\n4. Raised over $2,000 for community service projects around Wesleyan and Middletown, CT. \n5.Organized various programs that promoted a sense of community; \n6. Earned the “Resident Advisor Of the Year” Award in Spring 2011.",
+//           "startDate" : {
+//             "year" : 2009,
+//             "month" : 8
+//           },
+//           "isCurrent" : false,
+//           "id" : 199950435,
+//           "endDate" : {
+//             "year" : 2011,
+//             "month" : 5
+//           },
+//           "company" : {
+//             "type" : "Educational Institution",
+//             "size" : "501-1000 employees",
+//             "name" : "Wesleyan University",
+//             "industry" : "Higher Education",
+//             "id" : 15668
+//           }
+//         }
+//       ],
+//       "_total" : 9
+//     },
+//     "pictureUrl" : "http://m.c.lnkd.licdn.com/mpr/mprx/0_jE7gvrM4ZX5CbGoP0muGvtZVs_PCbXVP0HUGvPJo5QbPZ8D1luxlR1SXND1yXiRxpWS_sqFixbuY",
+//     "phoneNumbers" : {
+//       "_total" : 0
+//     },
+//     "numRecommenders" : 0,
+//     "lastName" : "Zaman",
+//     "id" : "PvmfqY724t",
+//     "honorsAwards" : {
+//       "values" : [
+//         {
+//           "name" : "Tour Guide of the Month",
+//           "issuer" : "Wesleyan University Office of Admissions",
+//           "id" : 23
+//         },
+//         {
+//           "name" : "Resident Advisor of The Year",
+//           "issuer" : "Wesleyan University Office of Residential Life",
+//           "id" : 24
+//         },
+//         {
+//           "name" : "Departmental Honors",
+//           "issuer" : "Wesleyan University History Department",
+//           "id" : 25
+//         },
+//         {
+//           "name" : "AP Scholar with Distinction",
+//           "issuer" : "CollegeBoard",
+//           "id" : 26
+//         },
+//         {
+//           "name" : "Gram Award for Service to the Community",
+//           "issuer" : "Adelphic Literary Society",
+//           "id" : 27
+//         },
+//         {
+//           "name" : "Most Outstanding Cricket Player",
+//           "issuer" : "Stuyvesant High School Athletics Department",
+//           "id" : 40
+//         }
+//       ],
+//       "_total" : 6
+//     },
+//     "headline" : "Web Developer, Student at Fullstack Academy of Code",
+//     "firstName" : "Jisan",
+//     "emailAddress" : "jzaman@wesleyan.edu",
+//     "educations" : {
+//       "values" : [
+//         {
+//           "startDate" : {
+//             "year" : 2014
+//           },
+//           "schoolName" : "Fullstack Academy of Code",
+//           "id" : 204678887,
+//           "fieldOfStudy" : "Web Development",
+//           "endDate" : {
+//             "year" : 2014
+//           }
+//         },
+//         {
+//           "startDate" : {
+//             "year" : 2008
+//           },
+//           "schoolName" : "Wesleyan University",
+//           "id" : 74426792,
+//           "fieldOfStudy" : "History",
+//           "endDate" : {
+//             "year" : 2012
+//           },
+//           "degree" : "Bachelors"
+//         },
+//         {
+//           "startDate" : {
+//             "year" : 2005
+//           },
+//           "schoolName" : "Stuyvesant High School",
+//           "notes" : "",
+//           "id" : 81501045,
+//           "endDate" : {
+//             "year" : 2008
+//           }
+//         }
+//       ],
+//       "_total" : 3
+//     },
+//     "dateOfBirth" : {
+//       "year" : 1990,
+//       "month" : 6,
+//       "day" : 4
+//     }
+//   },
+//   "name" : "Jisan Zaman",
+//   "roles" : [
+//     "developer"
+//   ],
+//   "work_experiences" : [
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "1-10 employees",
+//         "name" : "Fullstack Academy",
+//         "industry" : "Internet",
+//         "id" : 4985867
+//       },
+//       "id" : 513835875,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "1-10 employees",
+//         "name" : "Fullstack Academy",
+//         "industry" : "Internet",
+//         "id" : 4985867
+//       },
+//       "id" : 513838091,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "year" : 2014
+//       },
+//       "startDate" : {
+//         "year" : 2014
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Partnership",
+//         "size" : "11-50 employees",
+//         "name" : "Paradigm Sample",
+//         "industry" : "Market Research",
+//         "id" : 252666
+//       },
+//       "id" : 342035594,
+//       "isCurrent" : false,
+//       "title" : "Research Assistant",
+//       "endDate" : {
+//         "month" : 10,
+//         "year" : 2013
+//       },
+//       "startDate" : {
+//         "month" : 10,
+//         "year" : 2012
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "10,001+ employees",
+//         "name" : "Johns Hopkins University Center for Talented Youth",
+//         "industry" : "Higher Education",
+//         "id" : 3528
+//       },
+//       "id" : 214911824,
+//       "isCurrent" : false,
+//       "title" : "Residential Assistant",
+//       "endDate" : {
+//         "month" : 8,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 6,
+//         "year" : 2010
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "51-200 employees",
+//         "name" : "Alpha Delta Phi Society",
+//         "industry" : "Higher Education",
+//         "id" : 2073909
+//       },
+//       "id" : 214912397,
+//       "isCurrent" : false,
+//       "title" : "Treasurer",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 5,
+//         "year" : 2011
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 214910839,
+//       "isCurrent" : false,
+//       "title" : "Admissions Office Tour Guide",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 3,
+//         "year" : 2009
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 185342794,
+//       "isCurrent" : false,
+//       "title" : "Student",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "month" : 9,
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "company" : {
+//         "name" : "Wesleyan University Office of Community Service",
+//         "industry" : "Higher Education"
+//       },
+//       "id" : 244958520,
+//       "isCurrent" : false,
+//       "title" : "Van Driver",
+//       "endDate" : {
+//         "year" : 2012
+//       },
+//       "startDate" : {
+//         "year" : 2008
+//       }
+//     },
+//     {
+//       "company" : {
+//         "type" : "Educational Institution",
+//         "size" : "501-1000 employees",
+//         "name" : "Wesleyan University",
+//         "industry" : "Higher Education",
+//         "id" : 15668
+//       },
+//       "id" : 199950435,
+//       "isCurrent" : false,
+//       "title" : "Resident Advisor",
+//       "endDate" : {
+//         "month" : 5,
+//         "year" : 2011
+//       },
+//       "startDate" : {
+//         "month" : 8,
+//         "year" : 2009
+//       }
+//     }
+//   ]
+// });
 
 
 console.log('Done Seeding Data');

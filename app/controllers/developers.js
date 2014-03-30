@@ -19,7 +19,8 @@ exports.all = function(req, res) {
 			'linkedin_url': 1,
 			'twitter_url': 1,
 			'summary': 1,
-			'relocate': 1
+			'relocate': 1,
+			'profile_picture': 1
 		};
 
 	User.find({ roles: 'approved'}, fields).exec(function(err, developers){
