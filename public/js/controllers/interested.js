@@ -10,13 +10,12 @@ angular.module('mean.favorites')
 
 .controller('InterestedController',
 	['$scope',
-	'$stateParams',
 	'$location',
 	'$window',
 	'Global',
 	'FollowService',
 	'$http',
-	function($scope, $stateParams, $location, $window,  Global, FollowService, $http) {
+	function($scope, $location, $window,  Global, FollowService, $http) {
 		$scope.global = Global;
 		$scope.limitct = 10;
 		// $scope.names = $window.names;
