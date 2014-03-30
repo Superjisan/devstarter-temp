@@ -4,7 +4,6 @@ angular.module('mean.tracking')
 
 .controller('TrackingController',
 	['$scope',
-	'$stateParams',
 	'$location',
 	'$window',
 	'Global',
@@ -12,13 +11,12 @@ angular.module('mean.tracking')
 	'Visited',
 	'DeveloperSrvc',
 	'ProfileEditSrvc',
-	function($scope, $stateParams, $location, $window, Global, VisitedBy, Visited, DeveloperSrvc, ProfileEditSrvc){
+	function($scope, $location, $window, Global, VisitedBy, Visited, DeveloperSrvc, ProfileEditSrvc){
 		$scope.global = Global;
-		ProfileEditSrvc.getProfile(function(data) {
-      	$scope.user = data;
-      });
 
 
+
+				$scope.user = $window.user
       	$scope.developer = $window.developer
 
 
@@ -35,7 +33,7 @@ angular.module('mean.tracking')
 			console.log($window.eventTracker);
 		}
 
-		$scope.addUsersVisited = function() {
+		$scope.startTracking = function() {
 
 			var time_visited = new Date();
 			var visitingUser = $window.user;
@@ -44,13 +42,13 @@ angular.module('mean.tracking')
 			console.log("Add Users Visited is running")
 			console.log("scope user: ", $scope.user.events.length, $scope.user.events)
 			var eventsObj = {}
-			eventsObj.user_visited = {};
+			eventsObj.users_visited = {};
 			var userInfo = eventsObj.users_visited;
 
-			userInfo.id = $scope.user._id;
-			userInfo.name = $scope.user.name;
+			userInfo.id = $scope.developer._id;
+			userInfo.name = $scope.developer.name;
 			userInfo.time_visited = time_visited;
-			userInfo.organization = $scope.user.work_experiences[0].company.name;
+			userInfo.organization = $scope.developer.work_experiences[0].company.name;
 
 
 			var userEvent = new Visited(eventsObj);
@@ -59,27 +57,28 @@ angular.module('mean.tracking')
 				$scope.user.events.push(eventsObj)
 			})
 
-		};
-
-		$scope.addVisitedUsers = function(){
-			var time_visited = new Date();
-			var visitingUser = $window.user;
-			var userVisited = $window.developer;
 			console.log("add to users_visited is getting called")
 			console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
 			eventsObj.visited_users = {};
 			var developerInfo = eventsObj.visited_users;
 
-			developerInfo.id = $scope.developer._id;
-			developerInfo.name = $scope.developer.name;
-			developerInfo.organization = $scope.developer.work_experiences[0].company.name;
+			developerInfo.id = $scope.user._id;
+			developerInfo.name = $scope.user.name;
+			developerInfo.organization = $scope.user.work_experiences[0].company.name;
 
 			var userEvent = new VisitedBy(eventsObj);
 			userEvent.$save(function(){
 
 				$scope.developer.events.push(eventsObj)
 			})
+		};
+
+		$scope.addVisitedUsers = function(){
+			var time_visited = new Date();
+			var visitingUser = $window.user;
+			var userVisited = $window.developer;
+
 		}
 
 		$scope.addDeveloperEvent = function(click){

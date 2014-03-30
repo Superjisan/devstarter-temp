@@ -208,7 +208,8 @@ exports.apiProfileEdit = function(req, res) {
 		"video_url",
 		"twitter_url",
 		"github_url",
-		"skills"
+		"skills",
+		"events"
 		];
 
 	var newUser = _.pick(newUser, clean_values);
