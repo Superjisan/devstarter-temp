@@ -33,7 +33,10 @@ var ProjectSchema = new Schema({
 	description: String,
 	tags: [String],
 	tech_tags: String,
-	images: [{url: String}],
+	image: {
+    crops: Object,
+    original: String
+  },
 	video: String,
 	url: String,
 	role: String
