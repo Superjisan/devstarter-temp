@@ -44,9 +44,9 @@ angular.module('mean.tracking')
 			console.log("Add Users Visited is running")
 			console.log("scope user: ", $scope.user.visited_profiles.length, $scope.user.visited_profiles)
 			var eventsObj1 = {}
-			eventsObj1.users_visited = {};
-			var userInfo = eventsObj1.users_visited;
-
+			eventsObj1.users = {};
+			eventsObj1.develId = $scope.developer._id;
+			var userInfo = eventsObj1.users;
 			userInfo.id = $scope.user._id;
 			userInfo.name = $scope.user.name;
 			userInfo.time_visited = time_visited;
@@ -62,8 +62,8 @@ angular.module('mean.tracking')
 			console.log("add to users_visited is getting called")
 			console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
-			eventsObj.visited_users = {};
-			var developerInfo = eventsObj.visited_users;
+			eventsObj.users = {};
+			var developerInfo = eventsObj.users;
 
 			developerInfo.id = $scope.developer._id;
 			developerInfo.name = $scope.developer.name;
