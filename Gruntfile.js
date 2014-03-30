@@ -37,6 +37,9 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
+            options: { 
+                mangle: false
+            },
             production: {
                 files: '<%= assets.js %>'
             }
@@ -117,6 +120,7 @@ module.exports = function(grunt) {
     });
 
     //Load NPM tasks
+    grunt.loadNpmTasks('grunt-ngmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-csslint');
