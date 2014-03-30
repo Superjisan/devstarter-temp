@@ -46,8 +46,9 @@
                   </div>
 
                   <ul class="social-list">
-                    <li ><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github" ng-show="[[developer.github_url]]"><i class="fa fa-github"></i></a></li>
-                  <li><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                    <li ng-show="developer.twitter_url"><a href="[[developer.twitter_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-twitter"></i></a></li>
+                    <li ng-show="developer.github_url"><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+                    <li ng-show="developer.linkedin_url"><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 
                   </ul>
                   <p ng-if="developer.linkedin.summary">[[developer.linkedin.summary]] </p>

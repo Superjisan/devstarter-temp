@@ -17,6 +17,7 @@ exports.all = function(req, res) {
 			'location': 1,
 			'github_url': 1,
 			'linkedin_url': 1,
+			'twitter_url': 1,
 			'summary': 1,
 			'relocate': 1
 		};
