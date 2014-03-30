@@ -174,8 +174,11 @@ exports.deny = function(req, res){
 exports.profile = function(req, res) {
 	// console.log(req.params.id);
 	User.findOne({_id: req.params.id}, function(err, developer) {
+		// console.log(developer)
+		// console.log("this is req.developer: ", req.developer)
+		req.developer = developer;
 		res.render('profile', {
-			developer: developer,
+			developer: req.developer,
 			user: req.user
 		});
 	});
@@ -208,7 +211,10 @@ exports.apiProfileEdit = function(req, res) {
 		"video_url",
 		"twitter_url",
 		"github_url",
-		"skills"
+		"skills",
+		"events",
+		"profiles_visited",
+		"visited_profiles"
 		];
 
 	var newUser = _.pick(newUser, clean_values);

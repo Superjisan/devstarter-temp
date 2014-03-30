@@ -10,7 +10,7 @@ var ClicksSchema = new Schema({
 })
 
 var EventsSchema = new Schema({
-	visiting_user: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+	visited_users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
 									name: {type: String, ref: 'Users'},
 									organization: {type: String, ref: 'Users'},
 									time_visited: Date
@@ -25,6 +25,25 @@ var EventsSchema = new Schema({
 	clicks: [ClicksSchema]
 });
 
+var ProfileVisitsSchema = new Schema({
+	users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+									name: {type: String, ref: 'Users'},
+									organization: {type: String, ref: 'Users'},
+									time_visited: Date
+								}
+});
+
+var VisitedProfilesSchema = new Schema({
+	users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+								name: {type: String, ref: 'Users'},
+								organization: {type: String, ref: 'Users'},
+								time_visited: Date
+								}
+})
+
 exports.ClicksSchema = ClicksSchema;
 exports.EventsSchema = EventsSchema;
+exports.VisitedProfilesSchema = VisitedProfilesSchema;
+exports.ProfileVisitsSchema = ProfileVisitsSchema;
+
 
