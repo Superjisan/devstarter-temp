@@ -34,6 +34,15 @@ angular.module('mean.tracking')
 			$window.eventTracker.clicks = [];
 			console.log($window.eventTracker);
 		}
+
+		$scope.addVisitingUser = function() {
+			var time_visited = new Date();
+			var visitingUser = $window.user;
+			var userVisited = $window.developers;
+
+
+		}
+
 		$scope.addDeveloperEvent = function(click){
 
 			console.log("it works")
