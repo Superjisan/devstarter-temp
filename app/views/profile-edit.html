@@ -43,7 +43,7 @@
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.profile_picture'>
-                <a href="" ng-click='pickFiles($event)'><img src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
+                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.profile_picture'>
                 <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" />
@@ -57,7 +57,7 @@
             <label class="col-sm-3 control-label">Funny Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.funny_profile_picture'>
-                <a href="" ng-click='pickFiles($event)'><img src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
+                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.funny_profile_picture'>
 
@@ -306,7 +306,7 @@
               <label class="col-sm-3 control-label">Project Picture <span class="asterisk">*</span></label>
               <div class="col-sm-9">
                 <div ng-hide='new_project.image.original'>
-                  <img src="holder.js/150x150"><br/><br/>
+                  <img data-src="holder.js/150x150"><br/><br/>
                   <button ng-click='pickFiles($event)'>Add Picture</button>
                 </div>
                 <div ng-show='new_project.image.original'>
