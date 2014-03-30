@@ -38,7 +38,7 @@ angular.module('mean.directives')
                 };
 
                 saveCrop(options, function(filepickerCropUrl){
-                  debugger;
+                  // debugger;
                   if (!$scope.$eval($attrs.resource)[options.attachment]) {
                     $scope.$eval($attrs.resource)[options.attachment] = { crops: {}};
                   }
@@ -114,7 +114,7 @@ angular.module('mean.directives')
             }, function (InkBlobs){
 
               inkBlob = InkBlobs[0];
-              debugger;
+              // debugger;
 
               if (!$scope.$eval($attrs.resource)[$attrs.attachment]) {
                 $scope.$eval($attrs.resource)[$attrs.attachment] = { original: inkBlob.url, crops: {}};
