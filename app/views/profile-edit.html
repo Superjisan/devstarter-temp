@@ -1,7 +1,7 @@
 {% extends 'layouts/theme.html' %}
 
 {% block pageheader %}
-      <h2><i class="fa fa-pencil"></i> Profile Edit <span>Subtitle goes here...</span></h2>
+ <h2><i class="fa fa-pencil"></i> Profile Edit <span>Subtitle goes here...</span></h2>
 
 {% endblock %}
 
@@ -10,9 +10,21 @@
 <div class="row" ng-controller="ProfileEditCtrl">
 
 	<!-- Sidebar -->
-  <div class="col-lg-3 col-sm-3 sidebar">
-  </div><!-- sidebar -->
+	<div class='mini-profile-edit' style="margin-left:12px">
+	  <div class='info'>
+    	<p><a href="#personal-info">Personal Info</a></p>
+    	<p><a href="#work-experience">Work Experience</a></p>
+    	<p><a href="#education">Education</a></p>
+    	<p><a href="#project">Project</a></p>
+	    <button type="submit" class="btn btn-primary">Save Profile</button>
+	  </div>
+	</div>
+	<!-- end sidebar -->
 
+	<!-- space for sidebar -->
+	<div class="col-lg-3">
+	</div>
+	<!-- end space for sidebar -->
 
   <div class="col-lg-9">
 
@@ -20,7 +32,7 @@
 
       <div class="panel panel-default">
 
-        <div class="panel-heading">
+        <div class="panel-heading" id="personal-info">
           <h1 class="panel-title">Personal Info</h1>
           <p>Please provide your name, email address (won't be published) and a summary.</p>
         </div>
@@ -138,7 +150,7 @@
               </div>
             </div>
           </div>
-					<button type="submit" class="btn btn-primary">Save Profile</button>
+					<!-- <button type="submit" class="btn btn-primary">Save Profile</button> -->
 					<!-- removed ng-disabled="basicForm.$invalid" from button because it wasn't validating correctly -->
         </div><!-- panel-body -->
 
@@ -148,10 +160,10 @@
 
 
 		<!-- Work Experience form -->
-		<div class="panel panel-default" novalidate>
+		<div class="panel panel-default" novalidate id="foo">
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title">Work Experience</h1>
+		      <h1 class="panel-title" id="work-experience">Work Experience</h1>
 		      <p>Foo is king.</p>
 		    </div>
 
@@ -204,7 +216,7 @@
 		<div class="panel panel-default" novalidate>
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title">Education</h1>
+		      <h1 class="panel-title" id="education">Education</h1>
 
 		    </div>
 
@@ -262,7 +274,7 @@
 		<div class="panel panel-default">
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title">Project</h1>
+		      <h1 class="panel-title" id="project">Project</h1>
 
 		    </div>
 
