@@ -19,10 +19,9 @@
             <tbody>
               <tr ng-repeat="event in user.profiles_visited" >
                 <th>[[$index]]</th>
-                <td>[[event.visited_users.name]]</td>
-                <td>[[event.visited_users.organization]]</td>
-                <td>[[event.visited_users.time_visited]]</td>
-              </tr>
+                <td><a href="/profile/[[event.visited_users.id]]">[[event.users_visited.name]]</a></td>
+                <td>[[event.users_visited.organization]]</td>
+                <td>[[event.users_visited.time_visited]]</td>              </tr>
 
             </tbody>
           </table>
@@ -47,9 +46,9 @@
             <tbody>
               <tr ng-repeat="event in user.visited_profiles" >
                 <th>[[$index]]</th>
-                <td><a href="/profile/[[event.visited_users.id]]">[[event.users_visited.name]]</a></td>
-                <td>[[event.users_visited.organization]]</td>
-                <td>[[event.users_visited.time_visited]]</td>
+                <td>[[event.visited_users.name]]</td>
+                <td>[[event.visited_users.organization]]</td>
+                <td>[[event.visited_users.time_visited]]</td>
               </tr>
 
             </tbody>

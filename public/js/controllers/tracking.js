@@ -40,8 +40,6 @@ angular.module('mean.tracking')
 		$scope.startTracking = function() {
 
 			var time_visited = new Date();
-			var visitingUser = $window.user;
-			var userVisited = $window.developer;
 
 			console.log("Add Users Visited is running")
 			console.log("scope user: ", $scope.user.visited_profiles.length, $scope.user.visited_profiles)
@@ -49,13 +47,13 @@ angular.module('mean.tracking')
 			eventsObj1.users_visited = {};
 			var userInfo = eventsObj1.users_visited;
 
-			userInfo.id = $scope.developer._id;
-			userInfo.name = $scope.developer.name;
+			userInfo.id = $scope.user._id;
+			userInfo.name = $scope.user.name;
 			userInfo.time_visited = time_visited;
-			userInfo.organization = $scope.developer.work_experiences[0].company.name;
+			userInfo.organization = $scope.user.work_experiences[0].company.name;
 
 
-			var userEvent1 = new Visited(eventsObj1);
+			var userEvent1 = new VisitedBy(eventsObj1);
 			userEvent1.$save(function(){
 
 				$scope.user.visited_profiles.push(eventsObj1)
@@ -67,12 +65,12 @@ angular.module('mean.tracking')
 			eventsObj.visited_users = {};
 			var developerInfo = eventsObj.visited_users;
 
-			developerInfo.id = $scope.user._id;
-			developerInfo.name = $scope.user.name;
+			developerInfo.id = $scope.developer._id;
+			developerInfo.name = $scope.developer.name;
 			developerInfo.time_visited = time_visited;
-			developerInfo.organization = $scope.user.work_experiences[0].company.name;
+			developerInfo.organization = $scope.developer.work_experiences[0].company.name;
 
-			var userEvent = new VisitedBy(eventsObj);
+			var userEvent = new Visited(eventsObj);
 			userEvent.$save(function(){
 
 				$scope.developer.profiles_visited.push(eventsObj)
