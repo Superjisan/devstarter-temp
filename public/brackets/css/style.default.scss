@@ -59,6 +59,15 @@ h1,h2,h3,h4,h5 {
   box-shadow: 0 1px 1px rgba(0,0,0,0.05);
   border-color: #ddd;
 }
+.mini-profile-edit {
+  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  width: 230px;
+  // height: 247px;
+  border-color: #ddd;
+}
 .profile-img {
   border-radius: 3px;
   margin-left: auto;
