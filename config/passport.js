@@ -66,7 +66,6 @@ module.exports = function(passport) {
                           if(err) console.log(err);
                             user.github = profile._json;
                             user.github_url = profile._json.html_url;
-                         ;
                             user.location = profile._json.location;
                             console.log(user);
                             user.save(function(err){

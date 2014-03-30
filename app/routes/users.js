@@ -16,6 +16,13 @@ module.exports = function(app, passport) {
 	app.post('/users/admin/approve', authorization.isAdmin, users.approve);
 	app.post('/users/admin/deny', authorization.isAdmin, users.deny);
 
+	app.get('/users/tracking', authorization.requiresLogin, function(req,res){
+		res.render('users/tracking', {
+			title: 'Tracking Page',
+			user: req.user
+		})
+	})
+
 
 	// Setting up the users api
 	// app.post('/users', users.create);
@@ -42,6 +49,7 @@ module.exports = function(app, passport) {
 	app.delete("/api/education/:id", authorization.requiresLogin, users.educationDelete);
 
 	app.post("/api/project", authorization.requiresLogin, users.projectCreate);
+	app.post("/api/project/:id", authorization.requiresLogin, users.projectUpdate);
 	app.delete("/api/project/:id", authorization.requiresLogin, users.projectDelete);
 
 	app.put("/api/attachments", authorization.requiresLogin, users.addAttachment);
@@ -83,8 +91,8 @@ module.exports = function(app, passport) {
 		}), users.authCallback);
 
 	//Events post events
-	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate, tracker.visitedByCreate)
-
+	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate)
+	app.post("/api/events/developer", authorization.requiresLogin, tracker.visitedByCreate)
 
 };
 

@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class='mini-profile'>
+<div class='mini-profile' data-ng-controller="TrackingController" ng-init="startTracking()">
   <div class='info'>
     <img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
     <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="{{developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200 }}" />
@@ -12,8 +12,7 @@
     <h4 class='extra-info'><span class="fa fa-map-marker"></span> {{developer.location}}
 			{% if developer.relocate %}
 	    	<span class='mini-profile-span'><span class="fa fa-check">Willing to Relocate</span>
-			{% else %}
-	    	<span class='mini-profile-span'><span class="fa fa-ban"></span>Not Willing to Relocate</span>
+
 			{% endif %}
 			</h4>
     {% if developer.github_url || developer.linkedin_url || developer.twitter_url %}
@@ -76,11 +75,10 @@
 					<h1 class='header'>{{developer.name}}</h1>
 
 					<div class="panel-body">
-						<h4><span class="fa fa-map-marker"></span> New York, NY
+						<h4><span class="fa fa-map-marker"></span> New York, NY;
 						{% if developer.relocate %}
-							<span class='relocate'><span class="fa fa-check"></span> Willing to relocate</span>
-						{% else %}
-							<span class='relocate'><span class="fa fa-ban"></span> Not Willing to relocate</span>
+							<span class='relocate'>Willing to relocate</span>
+
 						{% endif %}
 						</h4>
 						<h4 id='description'>{{developer.linkedin.headline}}</h4>
@@ -107,7 +105,11 @@
 							<div class="media-body">
 								<div class="panel-body">
 									<div class="media white-bg">
+										{% if project.image.crops._150x150 %}
+											<img alt="" src="{{project.image.crops._150x150}}" class="img-responsive media-object pull-left">
+										{% else %}
 											<img alt="" src="holder.js/150x150" class="media-object pull-left">
+										{% endif %}
 											<div class="media-body" style="padding-left: 10px">
 												<h3 style="margin-top:0px">{{project.name}}
 													{% if project.githubUrl %}

@@ -2,26 +2,10 @@
 
 
 
-{% block pageheader %}
-
-
-      <h2><i class="fa fa-user"></i> <a href="/">hire fullstack </a> <span> Find your next Fullstack developer... </span></h2>
-      <div class="breadcrumb-wrapper">
-        <span class="label">You are here:</span>
-        <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li class="active">Search</a></li>
-          <li><a href="/profile/{{req.user._id.toString()}}"> Profile</a></li>
-        </ol>
-      </div>
-
-{% endblock %}
-
 {% block content%}
 
 <div class="contentpanel" ng-controller="DevelopersController">
 
-  <div>
 
     <div class="col-md-3 col-lg-3" style="padding-left:0px">
       <input type="text" class="form-control" name="keyword" placeholder="Search" ng-model="search.name"/>
@@ -42,7 +26,7 @@
       <div class="people-list">
         <div class="row">
 
-          <div ng-repeat="developer in developers | filter: searchFn" ng-cloak class ="col-md-6">
+          <div ng-repeat="developer in developers | filter: searchFn track by developer._id" ng-cloak class ="col-md-6">
           <div >
 
             <div class="people-item">
@@ -50,7 +34,7 @@
                 <a href="#" class="pull-left"></a>
 
                 <div class="media-body">
-                  <div class="pull-right"> <img class="img-responsive" src=[[developer.linkedin.pictureUrl]]> </div>
+                  <div class="pull-right" > <img class="img-responsive"  src=[[developer.linkedin.pictureUrl]]> </div>
                   <a href="/profile/[[developer._id.toString()]]">
                   <h4 class="person-name">[[developer.name]]</h4> </a>
 
@@ -58,10 +42,11 @@
 
 
                    <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
-                    <span ng-repeat="location in developer.location " >[[location]] </span>
+                    <span ng-repeat="location in developer.location" >[[developer.location]] </span>
                   </div>
+
                   <ul class="social-list">
-                    <li><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+                    <li ><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github" ng-show="[[developer.github_url]]"><i class="fa fa-github"></i></a></li>
                   <li><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 
                   </ul>
@@ -79,8 +64,24 @@
 
     </div><!-- Developer Controller -->
   </div><!-- contentpanel -->
-</div>
+
 
 {% endblock%}
 
+{% block js_footer %}
+<script>
+jQuery(window).load(function(){
+
+    var container = document.querySelector('.people-list .row');
+    if(container) {
+      var msnry = new Masonry( container, {
+        // options
+        columnWidth: '.col-md-6',
+        itemSelector: '.col-md-6'
+      });
+    }
+
+  });
+</script>
+{% endblock %}
 

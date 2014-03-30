@@ -174,8 +174,11 @@ exports.deny = function(req, res){
 exports.profile = function(req, res) {
 	// console.log(req.params.id);
 	User.findOne({_id: req.params.id}, function(err, developer) {
+		// console.log(developer)
+		// console.log("this is req.developer: ", req.developer)
+		req.developer = developer;
 		res.render('profile', {
-			developer: developer,
+			developer: req.developer,
 			user: req.user
 		});
 	});
@@ -208,7 +211,10 @@ exports.apiProfileEdit = function(req, res) {
 		"video_url",
 		"twitter_url",
 		"github_url",
-		"skills"
+		"skills",
+		"events",
+		"profiles_visited",
+		"visited_profiles"
 		];
 
 	var newUser = _.pick(newUser, clean_values);
@@ -239,7 +245,7 @@ exports.workCreate = function(req, res) {
 		console.log(req.body);
 		user.work_experiences.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.work_experiences));
 		});
 	});
 };
@@ -258,7 +264,7 @@ exports.educationCreate = function(req, res) {
 		console.log(req.body);
 		user.educations.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.educations));
 		});
 	});
 };
@@ -274,13 +280,23 @@ exports.educationDelete = function(req, res) {
 
 exports.projectCreate = function(req, res) {
 	User.findOne( {"_id": req.user._id }, function(err, user) {
-		console.log(req.body);
 		user.projects.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.projects));
 		})
 	})
 }
+
+exports.projectUpdate = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+
+		user.projects.id(req.params.id).remove();
+		user.projects.push(req.body);
+		user.save(function(err) {
+			res.json(_.last(user.projects));
+		})
+	})
+};
 
 exports.projectDelete = function(req, res) {
 	User.findOne({ "projects._id": req.params.id }, function(err, user) {
