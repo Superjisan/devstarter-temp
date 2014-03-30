@@ -49,6 +49,7 @@ module.exports = function(app, passport) {
 	app.delete("/api/education/:id", authorization.requiresLogin, users.educationDelete);
 
 	app.post("/api/project", authorization.requiresLogin, users.projectCreate);
+	app.post("/api/project/:id", authorization.requiresLogin, users.projectUpdate);
 	app.delete("/api/project/:id", authorization.requiresLogin, users.projectDelete);
 
 	app.put("/api/attachments", authorization.requiresLogin, users.addAttachment);

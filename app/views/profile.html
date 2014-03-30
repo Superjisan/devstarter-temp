@@ -107,7 +107,11 @@
 							<div class="media-body">
 								<div class="panel-body">
 									<div class="media white-bg">
+										{% if project.image.crops._150x150 %}
+											<img alt="" src="{{project.image.crops._150x150}}" class="img-responsive media-object pull-left">
+										{% else %}
 											<img alt="" src="holder.js/150x150" class="media-object pull-left">
+										{% endif %}
 											<div class="media-body" style="padding-left: 10px">
 												<h3 style="margin-top:0px">{{project.name}}
 													{% if project.githubUrl %}

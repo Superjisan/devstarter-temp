@@ -244,7 +244,7 @@ exports.workCreate = function(req, res) {
 		console.log(req.body);
 		user.work_experiences.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.work_experiences));
 		});
 	});
 };
@@ -263,7 +263,7 @@ exports.educationCreate = function(req, res) {
 		console.log(req.body);
 		user.educations.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.educations));
 		});
 	});
 };
@@ -279,13 +279,23 @@ exports.educationDelete = function(req, res) {
 
 exports.projectCreate = function(req, res) {
 	User.findOne( {"_id": req.user._id }, function(err, user) {
-		console.log(req.body);
 		user.projects.push(req.body);
 		user.save(function(err) {
-			res.json(req.body);
+			res.json(_.last(user.projects));
 		})
 	})
 }
+
+exports.projectUpdate = function(req, res) {
+	User.findOne( {"_id": req.user._id }, function(err, user) {
+
+		user.projects.id(req.params.id).remove();
+		user.projects.push(req.body);
+		user.save(function(err) {
+			res.json(_.last(user.projects));
+		})
+	})
+};
 
 exports.projectDelete = function(req, res) {
 	User.findOne({ "projects._id": req.params.id }, function(err, user) {

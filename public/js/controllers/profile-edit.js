@@ -7,12 +7,7 @@ angular.module('mean.profile-edit', ['mean.directives'])
       $scope.Work = Work;
       $scope.Education = Education;
       $scope.Project = Project;
-      $scope.new_project = {
-          image: {
-            crops: {
-            }
-          }
-      };
+      $scope.new_project = {};
 
       ProfileEditSrvc.getProfile(function(data) {
         $scope.user = data;
@@ -58,6 +53,7 @@ angular.module('mean.profile-edit', ['mean.directives'])
         });
       };
 
+
       function convertToDate(dateObj) {
         if (!dateObj) {
           return undefined;
@@ -67,22 +63,24 @@ angular.module('mean.profile-edit', ['mean.directives'])
         return { "year": dateObj.getFullYear(), "month": dateObj.getMonth()+1 };
       }
 
-      $scope.removeProject = function(projId) {
-        var removedProject = _.remove($scope.user.projects, function(proj) {
-          return proj._id === projId;
-        });
-        var project = new Project(removedProject[0]);
-        project.$remove();
-      }
+      /* PROJECTS */
+      $scope.editProject = function(project) {
+        $scope.new_project = project;
+      };
 
-      $scope.addProject = function() {
+      $scope.addOrSaveProject = function() {
         // $scope.new_project.tags = $scope.projectTags;
         var project = new Project($scope.new_project);
 
-        project.$save(function() {
-          $scope.user.projects.unshift($scope.new_project);
+        project.$save(function(saved_project) {
+          var index = _.findIndex($scope.user.projects, function(project) { return project._id === saved_project._id });
+          if(index > -1) {
+            $scope.user.projects[index] = saved_project;
+          } else {
+            $scope.user.projects.unshift(saved_project);
+          }
+          // $scope.user.projects = projects;
           $scope.new_project = {};
-          // $scope.projectTags = [];
         })
       }
 
