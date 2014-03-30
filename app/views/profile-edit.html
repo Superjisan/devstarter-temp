@@ -16,7 +16,7 @@
     	<a href="#work-experience"><button class="btn btn-primary btn-large btn-block">Work Experience</button></a>
     	<a href="#education"><button class="btn btn-primary btn-large btn-block">Education</button></a>
     	<a href="#project"><button class="btn btn-primary btn-large btn-block">Projects</button></a>
-	    <button type="submit" class="btn btn-large btn-success btn-block">Save Profile</button>
+	    <button type="submit" class="btn btn-large btn-success btn-block" ng-click="submitForm(basicForm.$valid)">Save Profile</button>
 	  </div>
 	</div>
 	<!-- end sidebar -->
@@ -28,7 +28,7 @@
 
   <div class="col-lg-9">
 
-    <form name="basicForm" ng-submit="submitForm(basicForm.$valid)" class="form-horizontal form-bordered" novalidate>
+    <form name="basicForm" class="form-horizontal form-bordered" novalidate>
 
       <div class="panel panel-default">
 
