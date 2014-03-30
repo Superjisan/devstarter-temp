@@ -38,6 +38,10 @@ angular.module('mean.directives')
                 };
 
                 saveCrop(options, function(filepickerCropUrl){
+                  if (!$scope.$eval($attrs.resource)[options.attachment]) {
+                    $scope.$eval($attrs.resource)[options.attachment] = { crops: {}};
+                  }
+
                   $scope.$eval($attrs.resource)[options.attachment].crops['_'+options.size] = filepickerCropUrl;
                   featherEditor.close();
                 });
