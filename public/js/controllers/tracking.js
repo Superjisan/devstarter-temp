@@ -34,7 +34,7 @@ angular.module('mean.tracking')
 
 
 			$window.eventTracker.clicks = [];
-			console.log($window.eventTracker);
+			// console.log($window.eventTracker);
 		}
 
 
@@ -42,8 +42,8 @@ angular.module('mean.tracking')
 
 			var time_visited = new Date();
 
-			console.log("Add Users Visited is running")
-			console.log("scope user: ", $scope.user.visited_profiles.length, $scope.user.visited_profiles)
+			// console.log("Add Users Visited is running")
+			// console.log("scope user: ", $scope.user.visited_profiles.length, $scope.user.visited_profiles)
 			var eventsObj1 = {}
 			eventsObj1.users = {};
 			eventsObj1.develId = $scope.developer._id;
@@ -60,8 +60,8 @@ angular.module('mean.tracking')
 				$scope.user.visited_profiles.push(eventsObj1)
 			})
       /////////////////////////////////////////////////////////////////
-			console.log("add to users_visited is getting called")
-			console.log("scope developer: ", $scope.developer.name)
+			// console.log("add to users_visited is getting called")
+			// console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
 			eventsObj.users = {};
 			var developerInfo = eventsObj.users;
@@ -87,8 +87,8 @@ angular.module('mean.tracking')
 
 		$scope.addDeveloperEvent = function(click){
 
-			console.log("it works")
-			console.log("scope user: ", $scope.user.events.length, $scope.user.events)
+			// console.log("it works")
+			// console.log("scope user: ", $scope.user.events.length, $scope.user.events)
 			var eventsObj = {}
 			eventsObj.users_visited = {};
 			var userInfo = eventsObj.user_visited;
@@ -108,8 +108,8 @@ angular.module('mean.tracking')
 		};
 
 		$scope.addUserEvent= function(click){
-			console.log("add to developer is getting called")
-			console.log("scope developer: ", $scope.developer.name)
+			// console.log("add to developer is getting called")
+			// console.log("scope developer: ", $scope.developer.name)
 			var eventsObj = {}
 			eventsObj.visited_users = {};
 			var developerInfo = eventsObj.visited_users;
@@ -132,7 +132,7 @@ angular.module('mean.tracking')
 			var date = new Date();
 			clickObj.time_clicked = date;
 			clickObj.url = tab;
-			console.log($window.eventTracker.clicks.length)
+			// console.log($window.eventTracker.clicks.length)
 			if ($window.eventTracker.clicks.length > 0) {
 				var last_click = $window.eventTracker.clicks[$window.eventTracker.clicks.length - 1]
 				last_click.end_time = date;
@@ -141,7 +141,7 @@ angular.module('mean.tracking')
 			}
 
 			$window.eventTracker.clicks.push(clickObj);
-			console.log($window.eventTracker.clicks);
+			// console.log($window.eventTracker.clicks);
 		}
 
 		//function gotten from http://stackoverflow.com/questions/498578/how-can-i-convert-a-date-value-in-iso-8601-format-to-a-date-object-in-javascript
