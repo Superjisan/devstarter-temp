@@ -19,10 +19,7 @@ exports.authCallback = function(req, res) {
   // console.log(req);
   // console.log(res);
   
-  console.log('@@@@ in authCallback');
-  
-  if (!req.user.signed_employer_agreement) {
-    console.log('@@@@ authCallback: show agreement');
+  if (!req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
   	res.redirect('/agreement');
   } else {
   	res.redirect('/developers');
