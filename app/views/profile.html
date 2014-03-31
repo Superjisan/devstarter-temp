@@ -62,7 +62,7 @@
 <!-- content panel -->
 
 <div class="col-sm-9" style="padding-left:20px">
-	{% if developer.video_url %}
+	{% if developer.intro_video_url || developer.intro_video_url || developer.future_video_url %}
 	<div class="video-container"><!-- fix for video responsive container -->
 		<iframe id="userVid" width="725" height="480" src="{{ developer.video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 	</div>
