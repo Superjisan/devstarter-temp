@@ -1,0 +1,38 @@
+{% extends 'layouts/cover.html' %}
+
+{% block pagecontent %}
+  <div class="inner cover">
+  
+  <style>
+    #agreement_text {
+      background: rgba(0,0,0,.4);
+      padding: 20px;
+      text-align: left;
+      color: #ddd;
+    }
+    p.lead {
+      font-size: 18px;
+    }
+  </style>
+  <h1 class="cover-heading">Fullstack's Placement Agreement</h1>
+  <p class="lead">Before meeting our graduating developers, please agree to our placement agreement.</p>
+  <div id='agreement_text'>
+  
+    <strong>Services:</strong> Fullstack Academy trains students in the practice of building web applications. If you accept the terms of this agreement, you will have an opportunity to hire our graduates through our placement service.<br><br>
+    <strong>Placement fee:</strong> If you hire any student who has graduated from Fullstack Academy, you will pay us 15% of that student’s first-year salary within 30 days of the day that student starts working for you. If a student approaches you directly or through a placement firm, you will notify us in writing within 48 hours and, if you hire that student, you will pay us according to the above terms.<br><br>
+    <strong>Guarantee:</strong> We are confident that you will find Fullstack Academy graduates to be top-notch Junior developers, however, if a student you have hired resigns or is fired for cause within the first 90 days of employment with you, we will give you a full refund of your placement fee.
+  
+  </div>
+  <br>
+  <p>
+    By clicking Agree, you are agreeing to Fullstack Academy's Placement Agreement on your company's behalf.<br><br>
+    <a href="/agreement?agree=yes" class="btn btn-lg btn-primary">I Agree</a>
+  </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+    <script type="text/javascript">
+        window.user = {{user|safe}};
+    </script>
+{% endblock %}

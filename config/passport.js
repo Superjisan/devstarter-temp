@@ -102,20 +102,25 @@ module.exports = function(passport) {
             consumerKey: config.linkedin.clientID,
             consumerSecret: config.linkedin.clientSecret,
             callbackURL: config.linkedin.callbackURL,
-            profileFields: config.linkedin.profileFields
+            profileFields: config.linkedin.profileFields,
+            passReqToCallback: true
         },
-        function(accessToken, refreshToken, profile, done) {
-        	console.log(profile);
+        function(req, accessToken, refreshToken, profile, done) {
+          // console.log(profile);
             User.findOne({
                 'linkedin.id' : profile.id
             }, function(err, user) {
                 if (!user) {
                 	var linkedInFields = parseLinkedIn(profile);
                     user = new User(linkedInFields);
-                    user.roles.push('developer')
-                    user.save(function(err) {
+                    if (req.session.developer_register) {
+                      user.roles.push('developer');
+                    } else {
+                      user.roles.push('employer');
+                    }
+                    user.save(function(err, saveduser) {
                         if (err) console.log(err);
-                        return done(err, user);
+                        return done(err, saveduser);
                     });
                 } else {
                     return done(err, user);
