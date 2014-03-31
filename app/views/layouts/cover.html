@@ -20,16 +20,14 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    
   </head>
 
   <body>
-
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand"><a href="http://fullstackacademy.com"><img src="/img/fullstack-logo.png"></a></h3>
@@ -70,6 +68,8 @@
         </div>
 
       </div>
+      <div id='big-mask'></div>
+      
 
     </div>
     {# {{ req.user | json |safe }} #}
@@ -80,16 +80,21 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-			<script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script>
-			<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.js"></script>
-			<script type="text/javascript" src="/lib/jquery-backstretch/jquery.backstretch.js"></script>
+			<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/lib/jquery-backstretch/jquery.backstretch.min.js"></script>
 			<script>
 			$(function() {
 				// Or, to start a slideshow, just pass in an array of images
-				$(".site-wrapper").backstretch([
-					"https://pbs.twimg.com/media/BjdpGaiIYAA-Rel.jpg:large",
-				  "https://pbs.twimg.com/media/BgEMfL-IUAAaC_r.jpg:large"
-				], {fade: 500, duration: 2000});
+        var numphotos=9;
+        var imgarr = [];
+        var imgname;
+        while(numphotos--) {
+          imgname = numphotos+1;
+          imgarr.push("/img/backstretch-pics/"+imgname+".jpg");
+        }
+        
+				$(".site-wrapper").backstretch(imgarr, {fade: 500, duration: 2000});
 			});
 			</script>
 <script>
