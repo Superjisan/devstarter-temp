@@ -75,7 +75,9 @@
 					<h1 class='header'>{{developer.name}}</h1>
 
 					<div class="panel-body">
-						<h4><span class="fa fa-map-marker"></span> New York, NY;
+						{% if developer.location %}
+						<h4><span class="fa fa-map-marker"></span> {{developer.location }};
+						{% endif %}
 						{% if developer.relocate %}
 							<span class='relocate'>Willing to relocate</span>
 
