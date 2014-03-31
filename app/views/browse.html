@@ -24,9 +24,9 @@
     <br><br><br><br>
 
       <div class="people-list">
-        <div class="row">
+        <div masonry load-images="false" class="row">
 
-          <div ng-animate="'animate'" ng-repeat="developer in developers | filter: searchFn track by developer._id" ng-cloak class ="col-md-6">
+          <div ng-repeat="developer in developers | filter: searchFn track by developer._id" ng-cloak class ="masonry-brick col-md-6">
           <div >
 
             <div class="people-item">
@@ -74,19 +74,5 @@
 {% endblock%}
 
 {% block js_footer %}
-<script>
-jQuery(window).load(function(){
-
-    var container = document.querySelector('.people-list .row');
-    if(container) {
-      var msnry = new Masonry( container, {
-        // options
-        columnWidth: '.col-md-6',
-        itemSelector: '.col-md-6'
-      });
-    }
-
-  });
-</script>
 {% endblock %}
 
