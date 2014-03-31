@@ -27,6 +27,7 @@ var UserSchema = new Schema({
     relocate: Boolean,
     provider: String,
     roles: [],
+    signed_employer_agreement: {type: Boolean, default: false},
     github: {},
     linkedin: {},
     github_url: String,

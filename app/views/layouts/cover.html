@@ -8,15 +8,12 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>{% block title %}Hire at Fullstack Academy{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/cover.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,19 +40,21 @@
               </ul> -->
             </div>
           </div>
-					{% if !req.user %}
-          <div class="inner cover">
-            <h1 class="cover-heading">Looking for awesome developers?</h1>
-            <p class="lead">Just connect with Linkedin. It's that simple.</p>
-            <p class="lead">
-              <a href="/auth/linkedin" class="btn btn-lg btn-primary">Login</a>
-            </p>
-          </div>
-					{% else %}
-          <div class="inner cover">
-          	<a href="/developers" class="btn btn-lg btn-danger">View Developers</a>
-          </div>
-          {% endif %}
+          {% block pagecontent %}
+  					{% if !req.user %}
+            <div class="inner cover">
+                <h1 class="cover-heading">Looking for awesome developers?</h1>
+                <p class="lead">Just connect with Linkedin. It's that simple.</p>
+                <p class="lead">
+                  <a href="/auth/linkedin" class="btn btn-lg btn-primary">Login</a>
+                </p>
+            </div>
+  					{% else %}
+            <div class="inner cover">
+            	<a href="/developers" class="btn btn-lg btn-danger">View Developers</a>
+            </div>
+            {% endif %}
+          {% endblock %}
 
 					{% if req.user && req.user.roles.indexOf('admin') !== -1 %}
 					<div class="inner cover">
@@ -73,7 +72,8 @@
       </div>
 
     </div>
-    <!-- {{ req.user | json |safe }} -->
+    {# {{ req.user | json |safe }} #}
+    
     {% block content %}
     {% endblock %}
 

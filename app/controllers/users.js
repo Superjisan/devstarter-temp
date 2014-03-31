@@ -16,7 +16,18 @@ exports.authCallback = function(req, res) {
 	// if (req.user.github){
 	// 	res.redirect('/profile/' + req.user.id);
 	// } else {
-	res.redirect('/developers');
+  // console.log(req);
+  // console.log(res);
+  
+  console.log('@@@@ in authCallback');
+  
+  if (!req.user.signed_employer_agreement) {
+    console.log('@@@@ authCallback: show agreement');
+  	res.redirect('/agreement');
+  } else {
+  	res.redirect('/developers');
+  }
+	
 	// }
 };
 
