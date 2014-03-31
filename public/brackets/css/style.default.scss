@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5 {
 }
 .mini-profile-edit {
   font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
   position: fixed;
   width: 230px;
@@ -4516,7 +4516,24 @@ body {
 .btn {
 	border-radius: 0px !important;
 }
-
+.mini-profile-edit .btn {
+	padding: 10px 0;
+}
+.mini-profile-edit a {
+	text-decoration: none;
+}
+.mini-profile-edit .btn-primary {
+	background-color: #1d2939;
+	border-color: #1d2939;
+}
+.mini-profile-edit .btn-primary:hover {
+	background-color: #1caf9a;
+	border-color: #1caf9a;
+}
+.mini-profile-edit .btn-success {
+	background-color: #1caf9a;
+	border-color: #1caf9a;
+}
 
 
 #filepickerFrame {
