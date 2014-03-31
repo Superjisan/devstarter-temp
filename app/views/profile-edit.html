@@ -12,11 +12,11 @@
 	<!-- Sidebar -->
 	<div class='mini-profile-edit' style="margin-left:10px">
 	  <div class='info'>
-    	<a href="#personal-info"><button class="btn btn-primary btn-large btn-block">PERSONAL INFO</button></a>
-    	<a href="#work-experience"><button class="btn btn-primary btn-large btn-block">WORK EXPERIENCE</button></a>
-    	<a href="#education"><button class="btn btn-primary btn-large btn-block">EDUCATION</button></a>
-    	<a href="#project"><button class="btn btn-primary btn-large btn-block">PROJECTS</button></a>
-	    <button type="submit" class="btn btn-large btn-success btn-block" ng-click="submitForm(basicForm.$valid)">[[saveButtonText]]</button>
+    	<a ng-click="scrollTo('personal-info')"><button class="btn btn-primary btn-large btn-block">PERSONAL INFO</button></a>
+    	<a ng-click="scrollTo('work-experience')"><button class="btn btn-primary btn-large btn-block">WORK EXPERIENCE</button></a>
+    	<a ng-click="scrollTo('education')"><button class="btn btn-primary btn-large btn-block">EDUCATION</button></a>
+    	<a ng-click="scrollTo('project')"><button class="btn btn-primary btn-large btn-block">PROJECTS</button></a>
+      <button type="submit" class="btn btn-large btn-success btn-block" ng-click="submitForm(basicForm.$valid)">[[saveButtonText]]</button>
 	  </div>
 	</div>
 	<!-- end sidebar -->
