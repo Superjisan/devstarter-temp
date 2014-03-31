@@ -7,11 +7,15 @@
     "angular-cookies": "latest",
     "angular-mocks": "latest",
     "angular-route": "latest",
-    "bootstrap": "3.0.3",
+    "bootstrap": "latest",
     "angular-bootstrap": "0.10.0",
     "angular-ui-router": "#master",
-    "jquery-backstretch": "~2.0.4",
-    "masonry": "~3.1.5",
-    "lodash": "~2.4.1"
+    "jquery-backstretch": "latest",
+    "lodash": "~2.4.1",
+    "angular-animate": "latest",
+    "angular-masonry": "~0.8.1"
+  },
+  "resolutions": {
+    "jquery": "~1.9.1"
   }
 }
