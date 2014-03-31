@@ -11,6 +11,19 @@ var mongoose = require('mongoose'),
     _ = require("lodash"),
     config = require('./config');
 
+//function to check if skills exists
+function ifExist(value) {
+    if (value !== undefined) {
+        console.log("skills:", value)
+        return value.values.map(function(skill) {
+                return skill.skill.name;
+        }).join(", ")
+    }
+    else {
+        console.log('user has no skills listed to be mapped. Skills set to empty string  ')
+        return ''
+    }
+};
 
 var parseLinkedIn = function(profile) {
 	return {
@@ -20,11 +33,10 @@ var parseLinkedIn = function(profile) {
     work_experiences: profile._json.positions.values,
     educations: profile._json.educations.values,
     auth_methods: [{provider: 'linkedin', providerId: profile._json.id}],
-    skills: profile._json.skills.values.map(function(skill) { return skill.skill.name; }).join(", "),
+    skills: ifExist(profile._json.skills),
     linkedin: profile._json,
     linkedin_url: profile._json.siteStandardProfileRequest.url,
-    relocate: true,
-
+    relocate: true
   };
 };
 module.exports = function(passport) {

@@ -20,7 +20,8 @@ exports.all = function(req, res) {
 			'twitter_url': 1,
 			'summary': 1,
 			'relocate': 1,
-			'profile_picture': 1
+			'profile_picture': 1,
+			'funny_profile_picture': 1,
 		};
 
 	User.find({ roles: 'approved'}, fields).exec(function(err, developers){
