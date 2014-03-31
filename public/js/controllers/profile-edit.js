@@ -1,22 +1,28 @@
 'use strict';
 
 angular.module('mean.profile-edit', ['mean.directives'])
-  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work', 'Education', 'Project', '_',
-    function ($scope, Global, ProfileEditSrvc, Work, Education, Project, _) {
+  .controller('ProfileEditCtrl', ['$scope','Global', 'ProfileEditSrvc', 'Work', 'Education', 'Project', '_','$timeout',
+    function ($scope, Global, ProfileEditSrvc, Work, Education, Project, _, $timeout) {
       // $scope.global = Global;
       $scope.Work = Work;
       $scope.Education = Education;
       $scope.Project = Project;
       $scope.new_project = {};
-
+      $scope.saveButtonText = 'SAVE PROFILE';
       ProfileEditSrvc.getProfile(function(data) {
         $scope.user = data;
         // $scope.skills = data.linkedin.skills.values;
       });
 
       $scope.submitForm = function() {
+      	$scope.saveButtonText = 'Saving...';
         ProfileEditSrvc.editProfile($scope.user, function(data) {
           $scope.user = data;
+          $scope.saveButtonText = 'Saved.';
+          $timeout(function(){
+          	$scope.saveButtonText = 'SAVE PROFILE';
+          },
+          1000);
         })
       };
 
