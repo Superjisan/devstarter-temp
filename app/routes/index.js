@@ -9,6 +9,8 @@ module.exports = function(app) {
     var seed = require('../controllers/seed')
     app.get('/', index.render);
     app.get('/test', authorization.requiresLogin, index.test_route);
-    app.get('/seed', seed.seed)
+    if(process.env.NODE_ENV === "development") {
+      app.get('/seed', seed.seed)
+    }
 
 };

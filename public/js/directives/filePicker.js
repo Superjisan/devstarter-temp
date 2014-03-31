@@ -46,9 +46,12 @@ angular.module('mean.directives')
                 $('#modalContent').html('<h1>Saving to Filepicker...</h1>');
 
                 saveCrop(options, function(filepickerCropUrl){
-                  // debugger;
-                  if (!$scope.$eval($attrs.resource)[options.attachment]) {
-                    $scope.$eval($attrs.resource)[options.attachment] = { crops: {}};
+
+                  var obj_resource = $scope.$eval($attrs.resource)[options.attachment];
+                  if (!obj_resource) {
+                    obj_resource = { crops: {}};
+                  } else if(!obj_resource.crops) {
+                    obj_resource.crops = {};
                   }
 
                   $scope.$eval($attrs.resource)[options.attachment].crops['_'+options.size] = filepickerCropUrl;
@@ -129,9 +132,11 @@ angular.module('mean.directives')
             }, function (InkBlobs){
 
               inkBlob = InkBlobs[0];
-
-              if (!$scope.$eval($attrs.resource)[$attrs.attachment]) {
-                $scope.$eval($attrs.resource)[$attrs.attachment] = { original: inkBlob.url, crops: {}};
+              var obj_resource = $scope.$eval($attrs.resource);
+              if (!obj_resource[$attrs.attachment]) {
+                obj_resource[$attrs.attachment] = { original: inkBlob.url, crops: {}};
+              } else if(!obj_resource[$attrs.attachment].crops) {
+                obj_resource[$attrs.attachment].crops = {};
               }
 
               if ($attrs.cropSize) {

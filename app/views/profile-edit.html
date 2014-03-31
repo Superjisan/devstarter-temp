@@ -10,13 +10,13 @@
 <div class="row" ng-controller="ProfileEditCtrl">
 
 	<!-- Sidebar -->
-	<div class='mini-profile-edit' style="margin-left:12px">
+	<div class='mini-profile-edit' style="margin-left:10px">
 	  <div class='info'>
-    	<a href="#personal-info"><button class="btn btn-primary btn-large btn-block">Personal Info</button></a>
-    	<a href="#work-experience"><button class="btn btn-primary btn-large btn-block">Work Experience</button></a>
-    	<a href="#education"><button class="btn btn-primary btn-large btn-block">Education</button></a>
-    	<a href="#project"><button class="btn btn-primary btn-large btn-block">Projects</button></a>
-	    <button type="submit" class="btn btn-large btn-success btn-block" ng-click="submitForm(basicForm.$valid)">Save Profile</button>
+    	<a href="#personal-info"><button class="btn btn-primary btn-large btn-block">PERSONAL INFO</button></a>
+    	<a href="#work-experience"><button class="btn btn-primary btn-large btn-block">WORK EXPERIENCE</button></a>
+    	<a href="#education"><button class="btn btn-primary btn-large btn-block">EDUCATION</button></a>
+    	<a href="#project"><button class="btn btn-primary btn-large btn-block">PROJECTS</button></a>
+	    <button type="submit" class="btn btn-large btn-success btn-block" ng-click="submitForm(basicForm.$valid)">SAVE PROFILE</button>
 	  </div>
 	</div>
 	<!-- end sidebar -->
@@ -28,12 +28,12 @@
 
   <div class="col-lg-9">
 
-    <form name="basicForm" class="form-horizontal form-bordered" novalidate>
+    <form name="basicForm" class="form-horizontal" novalidate>
 
       <div class="panel panel-default">
 
         <div class="panel-heading" id="personal-info">
-          <h1 class="panel-title">Personal Info</h1>
+          <h1 class="panel-title">PERSONAL INFO</h1>
           <p>Please provide your name, email address, location, and a resume.</p>
         </div>
 
@@ -43,7 +43,7 @@
             <label class="col-sm-3 control-label">Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.profile_picture'>
-                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
+                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.profile_picture'>
                 <img class="img-responsive col-md-5" ng-src="[[user.profile_picture.crops._200x200]]" />
@@ -57,7 +57,7 @@
             <label class="col-sm-3 control-label">Funny Profile Picture <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <div ng-hide='user.funny_profile_picture'>
-                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/#aa0036:#fff/text:Add Picture"><br/><br/></a>
+                <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/200x200/text:Add Picture"><br/><br/></a>
               </div>
               <div ng-show='user.funny_profile_picture'>
 
@@ -76,23 +76,9 @@
           </div>
 
           <div class="form-group">
-            <label class="col-sm-3 control-label">Video URL</label>
-            <div class="col-sm-9">
-              <input ng-model="user.video_url" type="text" name="video_url" placeholder="https://www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
-            </div>
-          </div>
-
-          <div class="form-group">
             <label class="col-sm-3 control-label">Email <span class="asterisk">*</span></label>
             <div class="col-sm-9">
               <input ng-model="user.email" type="email" name="email" class="form-control" placeholder="Type your email..." required />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Headline</label>
-            <div class="col-sm-9">
-              <input ng-model="user.linkedin.headline" type="text" name="headline" class="form-control" placeholder="e.g. Web Developer, Software Engineer, Chipotle Fanatic, etc." />
             </div>
           </div>
 
@@ -108,6 +94,20 @@
           </div>
 
           <div class="form-group">
+            <label class="col-sm-3 control-label">Headline</label>
+            <div class="col-sm-9">
+              <input ng-model="user.linkedin.headline" type="text" name="headline" class="form-control" placeholder="e.g. Web Developer, Software Engineer, Chipotle Fanatic, etc." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Video URL</label>
+            <div class="col-sm-9">
+              <input ng-model="user.video_url" type="text" name="video_url" placeholder="https://www.youtube.com/embed/ab3NscEJ80s" class="form-control" />
+            </div>
+          </div>
+
+          <div class="form-group">
             <label class="col-sm-3 control-label">Twitter URL</label>
             <div class="col-sm-9">
               <input ng-model="user.twitter_url" type="text" name="twitter_url" class="form-control" />
@@ -117,7 +117,7 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Github URL</label>
             <div class="col-sm-9">
-              <input ng-model="user.github_url" type="text" name="github_url" class="form-control" />
+              <input ng-model="user.github_url" type="text" name="github_url" class="form-control tooltips" data-toggle="tooltip" data-trigger="hover" data-original-title="Comma separated values., e.g. 'Angular, Node.js, Express'" />
             </div>
           </div>
 
@@ -125,14 +125,14 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Summary </label>
             <div class="col-sm-9">
-              <textarea ng-model="user.summary" rows="5" class="form-control" placeholder="Tell us about yourself..."></textarea>
+              <textarea ng-model="user.summary" rows="5" class="form-control" placeholder="Tell us about yourself. Other than being an awesome developer, what makes you stand out?"></textarea>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Skill Tags </label>
             <div class="col-sm-9">
-              <textarea ng-model="user.skills" rows="5" class="form-control" placeholder="Comma Separated Values: e.g. 'Angular, Node.js, Express'"></textarea>
+              <textarea ng-model="user.skills" rows="5" class="form-control tooltips" placeholder="What stacks, technologies, and languages are you familiar with? Comma separated values, e.g. 'Angular, Node.js, Express'" data-toggle="tooltip" data-trigger="hover" data-original-title="Comma separated values., e.g. 'Angular, Node.js, Express'"></textarea>
             </div>
           </div>
 
@@ -143,7 +143,7 @@
                 <button ng-click='pickFiles($event)' class="btn btn-default">Add Resume</button>
               </div>
               <div ng-show='user.resume'>
-                <a href="[[user.resume]]"><span class="fa fa-file-text"></span> Resume</a><br /><br />
+                <a href="[[user.resume]]"><span class="fa fa-file-text"></span> Résumé</a><br /><br />
                 <button ng-click='pickFiles($event)'>Change Resume</button>
               </div>
             </div>
@@ -161,7 +161,7 @@
 		<div class="panel panel-default" novalidate>
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title" id="work-experience">Work Experience</h1>
+		      <h1 class="panel-title" id="work-experience">WORK EXPERIENCE</h1>
 		      <p>List work experience that would be applicable to your future development career.</p>
 		    </div>
 
@@ -174,7 +174,7 @@
                   <td><input type="text" class="form-control " ng-model="new_work.title" placeholder="Title"></td>
                   <td><input type="text" class="form-control " datepicker-popup ng-model="new_work.startDate" placeholder="Start Date"></td>
                   <td><input type="text" class="form-control " datepicker-popup ng-model="new_work.endDate" placeholder="End Date"></td>
-                  <td><a href="" ng-click="addWork()" class=""><i class="fa fa-plus"></i></a></td>
+                  <td><a href="" ng-click="addWork()" class=""><i class="fa fa-plus" style="margin-top: 12px"></i></a></td>
                 </tr>
 		            <tr ng-repeat="work in user.work_experiences | orderBy:'startDate.year':true">
 		              <td>[[work.company.name]]</td>
@@ -200,7 +200,7 @@
 		<div class="panel panel-default" novalidate>
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title" id="education">Education</h1>
+		      <h1 class="panel-title" id="education">EDUCATION</h1>
 
 		    </div>
 
@@ -214,7 +214,7 @@
                   <td><input type="text" class="form-control" ng-model="new_education.fieldOfStudy" placeholder="Study"></td>
                   <td><input type="text" class="form-control" datepicker-popup ng-model="new_education.startDate" placeholder="Start Date"></td>
                   <td><input type="text" class="form-control" datepicker-popup ng-model="new_education.endDate" placeholder="End Date"></td>
-                  <td><a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus"></i></a></td>
+                  <td><a href="" ng-click="addEducation()" class="delete-row"><i class="fa fa-plus" style="margin-top: 12px"></i></a></td>
                 </tr>
 		            <tr ng-repeat="college in user.educations | orderBy:'startDate.year':true">
 		              <td>[[college.schoolName]]</td>
@@ -242,7 +242,7 @@
 		<div class="panel panel-default">
 
 		    <div class="panel-heading">
-		      <h1 class="panel-title" id="project">Project</h1>
+		      <h1 class="panel-title" id="project">PROJECT</h1>
 
 		    </div>
 
@@ -278,26 +278,26 @@
             <div class="form-group">
               <label class="col-sm-3 control-label">Tech Stack Tags </label>
               <div class="col-sm-9">
-                <textarea ng-model="new_project.tech_tags" rows="5" class="form-control" placeholder="Comma Separated Values... like 'Angular, Node.js, Express'"></textarea>
+                <textarea ng-model="new_project.tech_tags" rows="5" class="form-control" placeholder="What libraries, stacks, and frameworks did you use to build this project? Comma separated values, e.g. 'Angular, Node.js, Express'"></textarea>
               </div>
             </div>
 
 		        <div class="form-group">
 		          <label class="col-sm-3 control-label">Description <span class="asterisk">*</span></label>
 		          <div class="col-sm-9">
-		          	<textarea type="text" rows="5" class="form-control" ng-model="new_project.description" placeholder="Describe your project"></textarea>
+		          	<textarea type="text" rows="5" class="form-control" ng-model="new_project.description" placeholder="Describe your project."></textarea>
 		          </div>
 		        </div>
             <div class="form-group">
               <label class="col-sm-3 control-label">Your Role <span class="asterisk">*</span></label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" ng-model="new_project.role" placeholder="Front End Developer, Backend, Scraping....">
+                <input type="text" class="form-control" ng-model="new_project.role" placeholder="Backend Developer, Web Designer, Web-scraper, etc.">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-3 control-label">Video <span class="asterisk">*</span></label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" ng-model="new_project.video" placeholder="//www.youtube.com/embed/ab3NscEJ80s">
+                <input type="text" class="form-control" ng-model="new_project.video" placeholder="https://www.youtube.com/embed/ab3NscEJ80s">
               </div>
             </div>
 
@@ -306,8 +306,8 @@
               <label class="col-sm-3 control-label">Project Picture <span class="asterisk">*</span></label>
               <div class="col-sm-9">
                 <div ng-hide='new_project.image.original'>
-                  <img data-src="holder.js/150x150"><br/><br/>
-                  <button ng-click='pickFiles($event)'>Add Picture</button>
+                  <a href="" ng-click='pickFiles($event)'><img data-src="holder.js/150x150/text:Add Picture"></a><br/><br/>
+                  <!-- <button ng-click='pickFiles($event)'>Add Picture</button> -->
                 </div>
                 <div ng-show='new_project.image.original'>
                   <img class="img-responsive col-md-5" ng-src="[[new_project.image.crops._150x150]]" />
@@ -316,7 +316,7 @@
                 </div>
               </div>
             </div>
-            <button ng-click="addOrSaveProject()" class=" btn btn-large btn-success" ng-hide="new_project._id">Create Project</button>
+            <button  ng-click="addOrSaveProject()" class=" btn btn-large btn-success" ng-hide="new_project._id">Create Project</button>
             <button ng-click="addOrSaveProject()" class=" btn btn-large btn-success" ng-show="new_project._id">Update Project</button>
             <button ng-click="new_project={}" class=" btn btn-large btn-error" ng-show="new_project._id">Cancel</button>
 
