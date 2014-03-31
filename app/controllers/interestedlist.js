@@ -17,7 +17,7 @@ var findFollowers = function (namesArray, interestedArray, i) {
 
 // loops over all id's in the interested attribute in db and collects relevant data
 exports.all = function (req, res) {
-	res.render('interested');
+	res.render('interested', {title: "Hire @ Fullstack Academy"});
 };
 
 exports.index = function(req, res) {

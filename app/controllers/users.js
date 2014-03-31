@@ -19,13 +19,13 @@ exports.authCallback = function(req, res) {
 	// } else {
   // console.log(req);
   // console.log(res);
-  
+
   if (config.showAgreement && !req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
   	res.redirect('/agreement');
   } else {
   	res.redirect('/developers');
   }
-	
+
 	// }
 };
 
@@ -187,6 +187,7 @@ exports.profile = function(req, res) {
 		// console.log("this is req.developer: ", req.developer)
 		req.developer = developer;
 		res.render('profile', {
+			title: req.developer.name+"'s profile @ Hire.FullstackAcademy",
 			developer: req.developer,
 			user: req.user
 		});
