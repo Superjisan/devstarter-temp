@@ -17,7 +17,12 @@ angular.module('mean.directives')
 
             $button.addClass('button-loading');
 
+            if(window.featherEditor) {
+              window.featherEditor.close();
+            }
+
             $('#filepickerModal').modal('show');
+
 
             var featherEditor = window.featherEditor = new Aviary.Feather({
               apiKey: '00a8f855dcd6e4ff',
@@ -37,6 +42,9 @@ angular.module('mean.directives')
                   size: $attrs.cropSize
                 };
 
+                featherEditor.close();
+                $('#modalContent').html('<h1>Saving to Filepicker...</h1>');
+
                 saveCrop(options, function(filepickerCropUrl){
                   debugger;
                   if (!$scope.$eval($attrs.resource)[options.attachment]) {
@@ -44,7 +52,8 @@ angular.module('mean.directives')
                   }
 
                   $scope.$eval($attrs.resource)[options.attachment].crops['_'+options.size] = filepickerCropUrl;
-                  featherEditor.close();
+
+                  resetModal();
                 });
               },
               appendTo: 'modalContent'
