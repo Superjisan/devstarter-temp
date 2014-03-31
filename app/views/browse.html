@@ -34,7 +34,11 @@
                 <a href="#" class="pull-left"></a>
 
                 <div class="media-body">
-                  <div class="pull-right" > <img class="img-responsive"  src="[[developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl ]]"</div>
+                  <div class="pull-right" >
+                    <img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="[[developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl]]" style="height: 100px; width: 100px " />
+                    <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="[[developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200]]" style="height: 100px; width: 100px ">
+
+                  </div>
                   <a href="/profile/[[developer._id.toString()]]">
                   <h4 class="person-name">[[developer.name]]</h4> </a>
 
@@ -42,7 +46,7 @@
 
 
                    <div class="text-muted" ng-if="developer.location"><i class="fa fa-map-marker" ></i>
-                    <span ng-repeat="location in developer.location" >[[developer.location]] </span>
+                    <span>[[developer.location]] </span>
                   </div>
 
                   <ul class="social-list">
