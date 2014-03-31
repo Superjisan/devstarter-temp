@@ -22,7 +22,9 @@ var EventsSchema = new Schema({
 								},
 	start_time: {type: Date},
 	end_time: {type: Date},
-	clicks: [ClicksSchema]
+	clicks: {url: String,
+					 time_clicked: {type: Date}
+	}
 });
 
 var ProfileVisitsSchema = new Schema({

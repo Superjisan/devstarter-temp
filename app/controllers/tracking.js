@@ -33,9 +33,13 @@ exports.record_clicks = function(req, res){
   console.log('hello')
       var redirect_url = req.query.url;
       var developer_id = req.params.developerId;
-      var clickObj = {};
       var date = new Date();
 
+      var clickObj = {};
+      clickObj.clicks = {
+        url : req.params.service,
+        time_clicked : date
+      };
       clickObj.url = req.params.service;
       clickObj.visited_by = {};
       var userInfo = clickObj.visited_by;
@@ -43,7 +47,6 @@ exports.record_clicks = function(req, res){
       userInfo.name = req.user.name;
       userInfo.organization = req.user.work_experiences[0].company.name;
       userInfo.time_visited = date;
-
       console.log(clickObj)
 
       User.findOne({"_id": developer_id}, function(err, user){

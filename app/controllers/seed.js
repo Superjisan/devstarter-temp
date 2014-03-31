@@ -9,7 +9,7 @@ exports.seed = function(req, res) {
 
 //Migi's Data
 User.create(
-{
+{  "linkedin_url": "http://www.linkedin.com/profile/view?id=238483169&authType=name&authToken=X4Qw&trk=api*a3226473*s3299743*",
   "location": 'Phillippines',
   "relocate": true,
   "auth_methods" : [
