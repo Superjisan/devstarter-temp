@@ -6,7 +6,8 @@
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
 		mailer = require('../lib/mailer'),
-    _ = require("lodash");
+    _ = require("lodash"),
+    config = require('../../config/config');
 
 /**
  * Auth callback
@@ -19,7 +20,7 @@ exports.authCallback = function(req, res) {
   // console.log(req);
   // console.log(res);
   
-  if (!req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
+  if (config.showAgreement && !req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
   	res.redirect('/agreement');
   } else {
   	res.redirect('/developers');

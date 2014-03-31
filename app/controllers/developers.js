@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-  User = mongoose.model('User');
+  User = mongoose.model('User'),
+  config = require('../../config/config');
 
 exports.all = function(req, res) {
     var fields = {
@@ -30,7 +31,7 @@ exports.all = function(req, res) {
         status: 500
       });
     } else {
-      if (req.user && req.user.roles.length && req.user.roles.indexOf('employer') > -1 && !req.user.signed_employer_agreement) {
+      if (config.showAgreement && req.user && req.user.roles.length && req.user.roles.indexOf('employer') > -1 && !req.user.signed_employer_agreement) {
         res.redirect('/agreement');
       } else {
         res.render('browse', {developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'});
