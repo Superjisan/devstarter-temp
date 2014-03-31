@@ -26,7 +26,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #000;
   h2 {
     color: white  ;
   }
@@ -159,4 +159,30 @@ body {
   .cover-container {
     width: 800px;
   }
+}
+
+#big-mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	min-width: 100%;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	background: url(http://chocolate.dream-demo.com/wp/wp-content/themes/dt-chocolate/images/home-bg.png) repeat;
+	background-color: rgba(0,0,0,.3);
+}
+
+.backstretch img {
+/*  opacity: .5;*/
+  z-index: 0;
+}
+
+.inner, .masthead, .mastfoot {
+  z-index:4;
+}
+
+.inner {
+  position: relative;
 }
