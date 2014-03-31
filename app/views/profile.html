@@ -9,7 +9,7 @@
     <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="{{developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200 }}" />
 
     <h3 class='mini-header'>{{developer.name}}</h3>
-    <h4 class='extra-info'><span class="fa fa-map-marker"></span> {{developer.location}}
+    <h4 class='extra-info'><span class="fa fa-map-marker"></span> {{developer.location || 'New York, NY'}}
 			{% if developer.relocate %}
 	    	<span class='mini-profile-span'><span class="fa fa-check">Willing to Relocate</span>
 
@@ -75,9 +75,7 @@
 					<h1 class='header'>{{developer.name}}</h1>
 
 					<div class="panel-body">
-						{% if developer.location %}
-						<h4><span class="fa fa-map-marker"></span> {{developer.location }};
-						{% endif %}
+						<h4><span class="fa fa-map-marker"></span> {{developer.location || 'New York, NY' }};
 						{% if developer.relocate %}
 							<span class='relocate'>Willing to relocate</span>
 
