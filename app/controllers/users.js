@@ -19,13 +19,13 @@ exports.authCallback = function(req, res) {
 	// } else {
   // console.log(req);
   // console.log(res);
-  
+
   if (config.showAgreement && !req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
   	res.redirect('/agreement');
   } else {
   	res.redirect('/developers');
   }
-	
+
 	// }
 };
 
@@ -138,19 +138,19 @@ exports.approve = function(req, res){
 		if (err){
 			return err;
 		}
-		mailer.smtpTransport.sendMail({
-			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
-			to: user.name+' <'+user.email+'>',
-			subject: "Your profile has been approved!",
-			text: "View your profile at http://hire.fullstackacademy.com"
-		}, function(error, response){
-			if (error){
-				console.log(error)
-			} else {
-				console.log('Success:', user.roles);
-			}
-			mailer.smtpTransport.close();
-		})
+		// mailer.smtpTransport.sendMail({
+		// 	from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+		// 	to: user.name+' <'+user.email+'>',
+		// 	subject: "Your profile has been approved!",
+		// 	text: "View your profile at http://hire.fullstackacademy.com"
+		// }, function(error, response){
+		// 	if (error){
+		// 		console.log(error)
+		// 	} else {
+		// 		console.log('Success:', user.roles);
+		// 	}
+		// 	mailer.smtpTransport.close();
+		// })
 	})
 }
 

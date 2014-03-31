@@ -24,7 +24,7 @@
 		    	<a href="{{developer.twitter_url}}"><span class="fa fa-twitter"></span></a>
 		    {% endif %}
 	    	{% if developer.linkedin_url %}
-	  	  	<a href="{{developer.linkedin_url}}"><span class="fa fa-linkedin"></span></a>
+	  	  	<a href="/r/{{developer._id.toString()}}/linkedin/?url={{developer.linkedin_url.toString()}}"f><span class="fa fa-linkedin"></span></a>
 	  	  {% endif %}
 	    </h3>
     {% endif %}

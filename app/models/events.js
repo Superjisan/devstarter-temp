@@ -10,7 +10,7 @@ var ClicksSchema = new Schema({
 })
 
 var EventsSchema = new Schema({
-	visited_users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
+	visited_by: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
 									name: {type: String, ref: 'Users'},
 									organization: {type: String, ref: 'Users'},
 									time_visited: Date

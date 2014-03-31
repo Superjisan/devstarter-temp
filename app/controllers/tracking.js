@@ -28,3 +28,32 @@ exports.visitedByCreate = function(req, res){
     })
   })
 };
+
+exports.record_clicks = function(req, res){
+  console.log('hello')
+      var redirect_url = req.query.url;
+      var developer_id = req.params.developerId;
+      var clickObj = {};
+      var date = new Date();
+
+      clickObj.url = req.params.service;
+      clickObj.visited_by = {};
+      var userInfo = clickObj.visited_by;
+      userInfo.id = req.user._id;
+      userInfo.name = req.user.name;
+      userInfo.organization = req.user.work_experiences[0].company.name;
+      userInfo.time_visited = date;
+
+      console.log(clickObj)
+
+      User.findOne({"_id": developer_id}, function(err, user){
+          user.events.push(clickObj)
+          user.save(function(err){
+            if(err) console.log(err);
+            console.log("I am going to:", redirect_url)
+            res.redirect(redirect_url)
+          })
+      })
+
+
+}
