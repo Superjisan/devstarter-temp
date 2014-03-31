@@ -17,6 +17,7 @@
 			"public/brackets/js/jquery-1.10.2.min.js",
 			"public/lib/lodash/dist/lodash.js",
 			"public/lib/angular/angular.js",
+			"public/lib/angular/angular-animate.min.js",
 			"public/lib/angular-cookies/angular-cookies.js",
 			"public/lib/angular-resource/angular-resource.js",
 			"public/lib/angular-ui-router/release/angular-ui-router.js",
