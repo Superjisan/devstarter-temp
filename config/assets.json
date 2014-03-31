@@ -9,7 +9,9 @@
 			"public/brackets/css/roboto.css",
 			"public/brackets/css/style.default.css",
 			"public/brackets/css/jquery.tagsinput.css",
-			"public/brackets/css/style.default.css"
+			"public/brackets/css/style.default.css",
+			"public/brackets/css/jquery.datatables.css"
+
 		]
 	},
 	"js": {
