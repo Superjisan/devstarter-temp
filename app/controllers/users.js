@@ -187,6 +187,7 @@ exports.profile = function(req, res) {
 		// console.log("this is req.developer: ", req.developer)
 		req.developer = developer;
 		res.render('profile', {
+			title: req.developer.name+"'s profile @ Hire.FullstackAcademy",
 			developer: req.developer,
 			user: req.user
 		});

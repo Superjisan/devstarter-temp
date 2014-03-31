@@ -2,16 +2,6 @@
 
 
 {% block pageheader %}
-
-<h2><i class="fa fa-user"></i> <a href="/">hire fullstack </a> <span> Find your next Fullstack developer... </span></h2>
-<div class="breadcrumb-wrapper">
-	<span class="label">You are here:</span>
-	<ol class="breadcrumb">
-		<li><a href="/">Home</a></li>
-		<li><a href="/developers">Search</a></li>
-		<li><a href="/profile/{{req.user._id.toString()}}"> Profile</a></li>
-	</ol>
-</div>
 {% endblock %}
 
 {% block content %}
@@ -24,10 +14,21 @@
 						<div class="people-item">
 							<div class="media">
 								<div class="media-body">
-									<!-- <div class="pull-right"> <img class="img-responsive" src="[[developer.linkedin.pictureUrl]]"> </div> -->
+									<div class="pull-right" >
+										<img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="[[user.profile_picture.crops._200x200 || user.linkedin.pictureUrl]]" style="height: 100px; width: 100px " />
+										<img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="[[user.funny_profile_picture.crops._200x200 || user.profile_picture.crops._200x200 || user.linkedin.pictureUrl]]" style="height: 100px; width: 100px ">
+									</div>
 									<a href="/profile/[[user._id]]">
 									<h4 class="person-name">[[user.name]]</h4></a>
-									<div class="text-muted"><i class="fa fa-briefcase"></i> [[user.email]]</a></div>
+									<div class="text-muted" ng-if="user.linkedin.headline"><i class="fa fa-briefcase"></i> [[user.linkedin.headline]]</a></div>
+									<div class="text-muted" ng-if="user.location"><i class="fa fa-map-marker" ></i>
+										<span>[[user.location]] </span>
+									</div>
+									<ul class="social-list">
+										<li ng-show="user.twitter_url"><a href="[[user.twitter_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-twitter"></i></a></li>
+										<li ng-show="user.github_url"><a href="[[user.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+										<li ng-show="user.linkedin_url"><a href="[[user.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
 									<button class="btn" ng-click="removeInterest($event, user._id)">Remove</btn>
 								</div>
 							</div>

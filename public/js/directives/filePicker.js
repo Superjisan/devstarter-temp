@@ -46,6 +46,7 @@ angular.module('mean.directives')
                 $('#modalContent').html('<h1>Saving to Filepicker...</h1>');
 
                 saveCrop(options, function(filepickerCropUrl){
+
                   var obj_resource = $scope.$eval($attrs.resource)[options.attachment];
                   if (!obj_resource) {
                     obj_resource = { crops: {}};

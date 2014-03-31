@@ -3,7 +3,59 @@
 
 {% block content %}
 
-<div class='mini-profile' data-ng-controller="TrackingController" ng-init="startTracking()">
+<div class='mini-profile ' data-ng-controller="TrackingController" ng-init="startTracking()">
+  <div class='info'>
+    <img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
+    <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="{{developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl }}" />
+    <h3 class='mini-header'>{{developer.name}}</h3>
+    <h4 class='extra-info'><span class="fa fa-map-marker"></span> {{developer.location || 'New York, NY'}}
+			{% if developer.relocate %}
+	    	<span class='mini-profile-span'><span class="fa fa-check">Willing to Relocate</span>
+
+			{% endif %}
+			</h4>
+    {% if developer.github_url || developer.linkedin_url || developer.twitter_url %}
+	    <h3 class="social-icons">
+	    	{% if developer.github_url %}
+		    	<a href="{{developer.github_url}}"><span class="fa fa-github"></span></a>
+	    	{% endif %}
+	    	{% if developer.twitter_url %}
+		    	<a href="{{developer.twitter_url}}"><span class="fa fa-twitter"></span></a>
+		    {% endif %}
+	    	{% if developer.linkedin_url %}
+	  	  	<a href="{{developer.linkedin_url}}"><span class="fa fa-linkedin"></span></a>
+	  	  {% endif %}
+	    </h3>
+    {% endif %}
+
+    {% if developer.resume %}
+	    <p>
+	    	<a class="resume-link" href="{{developer.resume}}"><span class="fa fa-file-text"></span> Resume</a>
+	    </p>
+    {% endif %}
+		{% if user.interested.indexOf(developer.id) === -1 %}
+    <p>
+	    <a class="btn btn-success" id="follow">
+	      <i class="fa fa-check-circle-o"></i> I'm interested
+	    </a>
+    </p>
+    {% else %}
+    <p>
+	    <a class="btn btn-primary">
+	      <i class="fa fa-check-circle-o"></i> Marked as interested
+      </a>
+    </p>
+    {% endif %}
+
+    {% if developer._id.toString() === user._id.toString() %}
+    	<p><a href="/profile/edit" class="btn btn-warning">Edit My Profile</a></p>
+	  {% endif %}
+
+  </div>
+</div>
+
+<!-- mini-profile
+<div class='mini-profile hidden-xs' data-ng-controller="TrackingController" ng-init="startTracking()">
   <div class='info'>
     <img ng-hide="showFunny" ng-mouseenter="showFunny = true" class='img-responsive profile-img' src="{{developer.profile_picture.crops._200x200 || developer.linkedin.pictureUrl}}" />
     <img ng-cloak ng-show="showFunny" ng-mouseleave="showFunny=false" class='img-responsive profile-img' src="{{developer.funny_profile_picture.crops._200x200 || developer.profile_picture.crops._200x200 }}" />
@@ -54,6 +106,8 @@
 
   </div>
 </div>
+-->
+
 <!-- space for sidebar -->
 <div class="col-sm-3" >
 
@@ -62,7 +116,7 @@
 
 <!-- content panel -->
 
-<div class="col-sm-9" style="padding-left:20px">
+<div class="col-xs-12 col-sm-9" style="padding-left:20px">
 	{% if developer.video_url %}
 	<div class="video-container"><!-- fix for video responsive container -->
 		<iframe id="userVid" width="725" height="480" src="{{ developer.video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
@@ -75,7 +129,7 @@
 					<h1 class='header'>{{developer.name}}</h1>
 
 					<div class="panel-body">
-						<h4><span class="fa fa-map-marker"></span> New York, NY;
+						<h4><span class="fa fa-map-marker"></span> {{developer.location || 'New York, NY' }};
 						{% if developer.relocate %}
 							<span class='relocate'>Willing to relocate</span>
 
