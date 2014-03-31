@@ -63,12 +63,18 @@ angular.module('mean.directives')
               var preview = $('<img id="preview" alt="Preview" style="display: none">').get(0);
               preview.src = inkBlob.url;
 
-              featherEditor.launch({
-                image: preview,
-                url: inkBlob.url,
-                forceCropPreset: ['Square','200x200'],
-                forceCropMessage: 'Crop your picture:'
-              });
+              try {
+
+                featherEditor.launch({
+                  image: preview,
+                  url: inkBlob.url,
+                  forceCropPreset: ['Square','200x200'],
+                  forceCropMessage: 'Crop your picture:'
+                });
+              } catch(e) {
+                console.log("error launching", e);
+                launchEditor(inkBlob);
+              }
             }
 
             function saveCrop(options, cb) {
@@ -123,7 +129,6 @@ angular.module('mean.directives')
             }, function (InkBlobs){
 
               inkBlob = InkBlobs[0];
-              debugger;
 
               if (!$scope.$eval($attrs.resource)[$attrs.attachment]) {
                 $scope.$eval($attrs.resource)[$attrs.attachment] = { original: inkBlob.url, crops: {}};
