@@ -116,11 +116,33 @@
 
 <!-- content panel -->
 
-<div class="col-xs-12 col-sm-9" style="padding-left:20px">
-	{% if developer.video_url %}
-	<div class="video-container"><!-- fix for video responsive container -->
-		<iframe id="userVid" width="725" height="480" src="{{ developer.video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+<div class="col-sm-9" style="padding-left:20px">
+	{% if developer.intro_video_url || developer.project_video_url || developer.future_video_url %}
+	<div class="text-muted"><h3 class='headings' style="margin-top:0px">VIDEOS</h3></div>
+	<ul class="nav nav-tabs nav-justified">
+	{% if developer.intro_video_url %}
+	<li class="active"><a href="#intro" data-toggle="tab"><strong>Intro</strong></a></li>
+	{% endif %}
+	{% if developer.project_video_url %}
+	<li class=""><a href="#projectsVid" data-toggle="tab"><strong>Projects</strong></a></li>
+	{% endif %}
+	{% if developer.future_video_url %}
+	<li class=""><a href="#about3" data-toggle="tab"><strong>The Future</strong></a></li>
+	{% endif %}
+</ul>
+<div class="video-container">
+<div class="tab-content">
+	<div class="tab-pane active" id="intro">
+			<iframe id="userVid" width="725" height="480" src="{{ developer.intro_video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 	</div>
+	<div class="tab-pane" id="projectsVid">
+			<iframe id="userVid" width="725" height="480" src="{{ developer.project_video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="tab-pane" id="about3">
+		<iframe id="userVid" width="725" height="480" src="{{ developer.future_video_url }}?autoplay=0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+</div>
 	{% endif %}
 	<div class="text-muted"><h3 class='headings' style="margin-top:0px">ABOUT</h3></div>
 	<div class="panel panel-default panel-timeline">
