@@ -19,13 +19,13 @@ exports.authCallback = function(req, res) {
 	// } else {
   // console.log(req);
   // console.log(res);
-  
+
   if (config.showAgreement && !req.user.signed_employer_agreement && req.user.roles.indexOf('employer')>-1) {
   	res.redirect('/agreement');
   } else {
   	res.redirect('/developers');
   }
-	
+
 	// }
 };
 
@@ -217,7 +217,9 @@ exports.apiProfileEdit = function(req, res) {
 		"location",
 		"relocate",
 		"summary",
-		"video_url",
+		"intro_video_url",
+		"project_video_url",
+		"future_video_url",
 		"twitter_url",
 		"github_url",
 		"skills",
