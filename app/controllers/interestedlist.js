@@ -66,7 +66,7 @@ exports.add = function(req, res) {
 				from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
 				to: viewUser.name+' <'+viewUser.email+'>',
 				subject: "An interested user has clicked your profile",
-				text: myUser.name+' is possibly interested in hiring you.'
+				text: myUser.name+' has expressed interest in your profile.'
 			}, function(error, response){
 				if (error){
 					console.log(error)
