@@ -34,7 +34,7 @@ exports.all = function(req, res) {
       if (config.showAgreement && req.user && req.user.roles.length && req.user.roles.indexOf('employer') > -1 && !req.user.signed_employer_agreement) {
         res.redirect('/agreement');
       } else {
-        res.render('browse', {developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'});
+        res.render('browse', {title: "Devs for Hire @ Fullstack Academy", developers: developers, user: req.user ? JSON.stringify(req.user) : 'null'});
       }
     }
   });
