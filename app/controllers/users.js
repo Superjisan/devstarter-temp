@@ -160,19 +160,19 @@ exports.deny = function(req, res){
 		if (err){
 			return err;
 		}
-		mailer.smtpTransport.sendMail({
-			from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
-			to: user.name+' <'+user.email+'>',
-			subject: "Your profile has been denied.",
-			text: "Sorry, we cannot accept your profile at this time."
-		}, function(error, response){
-			if (error){
-				console.log(error)
-			} else {
-				console.log('Success:', user.roles);
-			}
-			mailer.smtpTransport.close();
-		})
+		// mailer.smtpTransport.sendMail({
+		// 	from: "Hire Fullstack <hirefullstackacademy@gmail.com>",
+		// 	to: user.name+' <'+user.email+'>',
+		// 	subject: "Your profile has been denied.",
+		// 	text: "Sorry, we cannot accept your profile at this time."
+		// }, function(error, response){
+		// 	if (error){
+		// 		console.log(error)
+		// 	} else {
+		// 		console.log('Success:', user.roles);
+		// 	}
+		// 	mailer.smtpTransport.close();
+		// })
 	})
 }
 
