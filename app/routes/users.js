@@ -23,6 +23,9 @@ module.exports = function(app, passport) {
 		})
 	})
 
+//tracking_clicks
+app.get('/r/:developerId/:service', tracker.record_clicks)
+
 
 	// Setting up the users api
 	// app.post('/users', users.create);
@@ -56,6 +59,9 @@ module.exports = function(app, passport) {
 
 	// end api calls
 	//=====================================================================
+
+
+
 
 
 

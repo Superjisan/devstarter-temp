@@ -17,13 +17,13 @@
     {% if developer.github_url || developer.linkedin_url || developer.twitter_url %}
 	    <h3 class="social-icons">
 	    	{% if developer.github_url %}
-		    	<a href="{{developer.github_url}}"><span class="fa fa-github"></span></a>
+		    	<a href="/r/{{developer._id.toString()}}/github/?url={{developer.github_url.toString()}}"><span class="fa fa-github"></span></a>
 	    	{% endif %}
 	    	{% if developer.twitter_url %}
-		    	<a href="{{developer.twitter_url}}"><span class="fa fa-twitter"></span></a>
+		    	<a href="/r/{{developer._id.toString()}}/twitter/?url={{developer.twitter_url.toString()}}"><span class="fa fa-twitter"></span></a>
 		    {% endif %}
 	    	{% if developer.linkedin_url %}
-	  	  	<a href="{{developer.linkedin_url}}"><span class="fa fa-linkedin"></span></a>
+	  	  	<a href="/r/{{developer._id.toString()}}/linkedin/?url={{developer.linkedin_url.toString()}}"f><span class="fa fa-linkedin"></span></a>
 	  	  {% endif %}
 	    </h3>
     {% endif %}
@@ -70,13 +70,13 @@
     {% if developer.github_url || developer.linkedin_url || developer.twitter_url %}
 	    <h3 class="social-icons">
 	    	{% if developer.github_url %}
-		    	<a href="{{developer.github_url}}"><span class="fa fa-github"></span></a>
+		    	<a href="/r/{{developer._id.toString()}}/github/?url={{developer.github_url.toString()}}"><span class="fa fa-github"></span></a>
 	    	{% endif %}
 	    	{% if developer.twitter_url %}
-		    	<a href="{{developer.twitter_url}}"><span class="fa fa-twitter"></span></a>
+		    	<a href="/r/{{developer._id.toString()}}/twitter/?url={{developer.twitter_url.toString()}}"><span class="fa fa-twitter"></span></a>
 		    {% endif %}
 	    	{% if developer.linkedin_url %}
-	  	  	<a href="{{developer.linkedin_url}}"><span class="fa fa-linkedin"></span></a>
+	  	  	<a href="/r/{{developer._id.toString()}}/linkedin/?url={{developer.linkedin_url.toString()}}"f><span class="fa fa-linkedin"></span></a>
 	  	  {% endif %}
 	    </h3>
     {% endif %}

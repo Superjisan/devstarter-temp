@@ -50,9 +50,9 @@
                   </div>
 
                   <ul class="social-list">
-                    <li ng-show="developer.twitter_url"><a href="[[developer.twitter_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-twitter"></i></a></li>
-                    <li ng-show="developer.github_url"><a href="[[developer.github_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
-                    <li ng-show="developer.linkedin_url"><a href="[[developer.linkedin_url]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                    <li ng-show="developer.twitter_url"><a href="/r/[[developer._id.toString()]]/twitter/?url=[[developer.twitter_url.toString()]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-twitter"></i></a></li>
+                    <li ng-show="developer.github_url"><a href="/r/[[developer._id.toString()]]/github/?url=[[developer.github_url.toString()]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="github"><i class="fa fa-github"></i></a></li>
+                    <li ng-show="developer.linkedin_url"><a href="/r/[[developer._id.toString()]]/linkedin/?url=[[developer.linkedin_url.toString()]]" class="tooltips" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 
                   </ul>
                   <p ng-if="developer.summary || developer.linkedin.summary">[[developer.summary || developer.linkedin.summary]] </p>

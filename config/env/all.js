@@ -8,7 +8,7 @@ module.exports = {
 	port: process.env.PORT || 3000,
 	db: process.env.MONGOHQ_URL,
 	templateEngine: 'swig',
-  showAgreement: false,
+  showAgreement: true,
 	// The secret should be set to a non-guessable string that
 	// is used to compute a session hash
 	sessionSecret: 'MEAN',
