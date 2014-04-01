@@ -213,8 +213,7 @@ exports.apiProfileEdit = function(req, res) {
 	var clean_values = [
 		"name",
 		"email",
-		"linkedin.headline",
-		"linkedin.skills.values",
+		"linkedin",
 		"location",
 		"relocate",
 		"summary",
