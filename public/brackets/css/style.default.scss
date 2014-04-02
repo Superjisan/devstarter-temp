@@ -4112,6 +4112,11 @@ div.error label.error:before {
       float: none;
    }
 
+  .masonry-brick.col-md-6 {
+    width: 100%;
+  }
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -4144,6 +4149,7 @@ div.error label.error:before {
    display: block;
    content: '';
   }
+
 
    .searchform {
       position: relative;
