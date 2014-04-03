@@ -138,6 +138,7 @@ angular.module('mean.profile-edit', ['mean.directives'])
   ])
   .filter('workDate', function() {
     function convertMonth(number) {
+    	console.log(number);
       return ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Nov", "Dec"][number-1];
     }
 
