@@ -73,7 +73,7 @@
             <tbody>
               <tr ng-repeat="event in user.events" >
                 <th>[[$index + 1]]</th>
-                <td><a href="/profile/[[event.users.id]]">[[event.visited_by.name]]</a></td>
+                <td><a href="/profile/[[event.visited_by.id]]">[[event.visited_by.name]]</a></td>
                 <td>[[event.visited_by.organization]]</td>
                 <td>[[event.clicks.url]]</td>
                 <td>[[ISOdate.format(event.visited_by.time_visited)]]</td>
