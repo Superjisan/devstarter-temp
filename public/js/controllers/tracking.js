@@ -16,12 +16,12 @@ angular.module('mean.tracking')
 
 
 
-				$scope.user = $window.user;
-      	$scope.developer = $window.developer;
+		$scope.user = $window.user;
+		$scope.developer = $window.developer;
 
-    $scope.toLocalTime = function(date) {
-    	return date.toLocaleString()
-    }
+		$scope.toLocalTime = function(date) {
+			return date.toLocaleString();
+		};
 
 
 		$scope.startTimer = function(){

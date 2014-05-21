@@ -28,19 +28,18 @@ var EventsSchema = new Schema({
 });
 
 var ProfileVisitsSchema = new Schema({
-	users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
-									name: {type: String, ref: 'Users'},
+  id: {type: Schema.Types.ObjectId, ref: 'Users'},
+									name: {type: String},
 									organization: {type: String, ref: 'Users'},
 									time_visited: Date
-								}
+
 });
 
 var VisitedProfilesSchema = new Schema({
-	users: {id: {type: Schema.Types.ObjectId, ref: 'Users'},
-								name: {type: String, ref: 'Users'},
-								organization: {type: String, ref: 'Users'},
-								time_visited: Date
-								}
+	id: { type: Schema.Types.ObjectId, ref: 'Users'},
+	name: String,
+	organization: String,
+	time_visited: Date
 })
 
 exports.ClicksSchema = ClicksSchema;

@@ -1,8 +1,12 @@
 {% extends '../layouts/theme.html' %}
 
 {% block content %}
-	<div> Hello, {{ user.name }} This is the admin page. </div>
+	<div> Hello, {{ user.name }}. This is the admin page. </div>
 	<div>
+<a href="/users/admin/globalVisited"><h3>Global Tracking Events Page</h3></a>
+
+<h3> New users awaiting approval. </h3>
+{% if users.length > 0 %}
 	<table>
 	{% for developer in users %}
 		<tr>
@@ -17,6 +21,9 @@
 	</table>
 	</div>
 	<h1></h1>
+	{% else %}
+	<h5> There are currently no user profiles pending approval.</h5>
+	{% endif %}
 {% endblock %}
 
 {% block js_footer %}

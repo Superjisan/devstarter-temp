@@ -42,7 +42,9 @@ var UserSchema = new Schema({
     projects: [ProjectSchema],
     auth_methods: [{provider: String, providerId: String, accessToken: String, refreshToken: String}],
     events: [EventsSchema],
+    // this is profiles you visited
     profiles_visited: [VisitedProfilesSchema],
+    // this is profiles that have visited you
     visited_profiles: [ProfileVisitsSchema],
     location: String,
     resume: String,

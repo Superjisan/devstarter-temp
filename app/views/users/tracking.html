@@ -3,64 +3,65 @@
 {% block content %}
 
 <div class="contentpanel" ng-controller="TrackingController">
-  <div class="col-md-6">
-          <h5 class="subtitle mb5">Your Profile Visits</h5>
+	<div class="col-md-6">
+		<h5 class="subtitle mb5">Your Profile Visits</h5>
 
-          <div class="table-responsive">
-          <table class="table table-striped mb30">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Organization</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="event in user.visited_profiles" >
-                <th>[[$index + 1]]</th>
-                <td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
-                <td>[[event.users.organization]]</td>
-                <td>[[ISOdate.format(event.users.time_visited)]]</td>              </tr>
+		<div class="table-responsive">
+			<table class="table table-striped mb30">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Organization</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="event in user.visited_profiles" >
+						<th>[[$index + 1]]</th>
+						<td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
+						<td>[[event.users.organization]]</td>
+						<td>[[ISOdate.format(event.users.time_visited)]]</td>
+					</tr>
 
-            </tbody>
-          </table>
-          </div><!-- table-responsive -->
-        </div><!-- col-md-6 -->
+				</tbody>
+			</table>
+		</div><!-- table-responsive -->
+	</div><!-- col-md-6 -->
 
 
 
-  <div class="col-md-6">
-          <h5 class="subtitle mb5">Profiles You Viewed</h5>
+	<div class="col-md-6">
+		<h5 class="subtitle mb5">Profiles You Viewed</h5>
 
-          <div class="table-responsive">
-          <table class="table table-striped mb30">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Profiles Visited</th>
-                <th>Organization</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="event in user.profiles_visited" >
-                <th>[[$index + 1]]</th>
-                <td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
-                <td>[[event.users.organization]]</td>
-                <td>[[ISOdate.format(event.users.time_visited)]]</td>
-              </tr>
+		<div class="table-responsive">
+			<table class="table table-striped mb30">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Profiles Visited</th>
+						<th>Organization</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="event in user.profiles_visited" >
+						<th>[[$index + 1]]</th>
+						<td><a href="/profile/[[event.users.id]]">[[event.users.name]]</a></td>
+						<td>[[event.users.organization]]</td>
+						<td>[[ISOdate.format(event.users.time_visited)]]</td>
+					</tr>
 
-            </tbody>
-          </table>
-          </div><!-- table-responsive -->
-        </div><!-- col-md-6 -->
+				</tbody>
+			</table>
+		</div><!-- table-responsive -->
+	</div><!-- col-md-6 -->
 
-        <div class="col-md-6">
-          <h5 class="subtitle mb5">Profile Links Visited</h5>
+<!-- 	<div class="col-md-6">
+		<h5 class="subtitle mb5">Profile Links Visited</h5>
 
-          <div class="table-responsive">
-          <table class="table table-striped mb30">
+		<div class="table-responsive">
+			<table class="table table-striped mb30">
             <thead>
               <tr>
                 <th>#</th>
@@ -85,6 +86,6 @@
         </div><!-- col-md-6 -->
 
 
-</div>
+</div> -->
 
 {%endblock %}

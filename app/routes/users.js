@@ -1,7 +1,7 @@
 'use strict';
 
 // User routes use users controller
-var tracker = require('../controllers/tracking.js')
+var tracker = require('../controllers/tracking.js');
 var users = require('../controllers/users');
 var authorization = require('./middlewares/authorization');
 
@@ -20,11 +20,14 @@ module.exports = function(app, passport) {
 		res.render('users/tracking', {
 			title: 'Tracking Page',
 			user: req.user
-		})
-	})
+		});
+	});
+
+	app.get('/users/admin/globalVisited', authorization.isAdmin, tracker.trackingGlobalVisits);
+	app.get('/cleaning', tracker.cleaningUpData);
 
 //tracking_clicks
-app.get('/r/:developerId/:service', tracker.record_clicks)
+	app.get('/r/:developerId/:service', tracker.record_clicks);
 
 
 	// Setting up the users api
@@ -97,8 +100,8 @@ app.get('/r/:developerId/:service', tracker.record_clicks)
 		}), users.authCallback);
 
 	//Events post events
-	app.post("/api/events", authorization.requiresLogin, tracker.visitedCreate)
-	app.post("/api/events/developer", authorization.requiresLogin, tracker.visitedByCreate)
+	app.post('/api/events', authorization.requiresLogin, tracker.visitedCreate);
+	app.post('/api/events/developer', authorization.requiresLogin, tracker.visitedByCreate);
 
 };
 
