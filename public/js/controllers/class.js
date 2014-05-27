@@ -63,7 +63,10 @@ angular.module('mean.classes')
 				}
 			}
 
-			if (cohort !== 'All Students' && cohort !== dev.cohort) {
+			if (cohort === 'Not Yet Set' && dev.cohort) {
+				cohort_val = false;
+			}
+			else if (cohort !== 'All Students' && cohort !== 'Not Yet Set' && cohort !== dev.cohort) {
 				cohort_val = false;
 			}
 
