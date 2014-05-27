@@ -22,8 +22,17 @@ module.exports = function(app, passport) {
 			user: req.user
 		});
 	});
-
+	// global tracking routes
 	app.get('/users/admin/globalVisited', authorization.isAdmin, tracker.trackingGlobalVisits);
+
+	// class sort routes
+
+	app.get('/users/admin/classSort', authorization.isAdmin, tracker.classSort);
+	app.get('/class', authorization.isAdmin, tracker.classGet);
+	app.post('/saveClassData/:id', authorization.isAdmin, tracker.saveClassData);
+
+
+
 	app.get('/cleaning', tracker.cleaningUpData);
 
 //tracking_clicks

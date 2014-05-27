@@ -1,0 +1,91 @@
+{% extends '../layouts/theme.html' %}
+
+{% block content %}
+<div class="contentpanel" ng-controller='ClassController' ng-init='getDevs()'>
+<h1>This is it: [[$scope.cohortSelect]]</h1>
+
+	<h5 class="subtitle mb5">All Students</h5>
+	<p class="mb20"> Sort by cohort and adjust settings.</p>
+
+	<div class="col-md-3 col-lg-3" style="padding-left:0px">
+		<input type="text" class="form-control" name="keyword" placeholder="Search" ng-model="search.name"/>
+	</div>
+	<div class="col-md-3 col-lg-3">
+		<select ng-model='search.cohort' class="form-control input-sm mb15">
+			<option selected>All Students</option>
+			<option>January 2014</option>
+			<option>April 2014</option>
+			<option>Not Yet Set</option>
+		</select>
+	</div>
+	<div class="col-md-3 col-lg-3">
+		<select ng-model='search.hired' class="form-control input-sm mb15">
+			<option selected>All Students</option>
+			<option>Hired</option>
+			<option>Looking</option>
+		</select>
+	</div>
+
+<h1></h1>
+
+		<div class="table-responsive">
+			<table class="table table-striped mb30">
+				<thead>
+					<tr>
+						<th>Picture</th>
+						<th>Name</th>
+						<th>Cohort</th>
+					</tr>
+				</thead>
+				<tbody ng-repeat='dev in devs | filter: searchFn'>
+					<tr>
+						<td><img class='img-responsive profile-img' src="[[dev.profile_picture.crops._200x200 || dev.linkedin.pictureUrl]]" style="height: 100px; width: 100px " /></td>
+						<td>[[dev.name]]</td>
+						<td>[[dev.cohort || 'Not Yet Defined' ]]</td>
+						<td class="table-action">
+							<button class="btn btn-primary mr5" data-toggle="modal" data-target=".[[dev._id]]">Edit User</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!-- table-responsive -->
+
+
+	<div ng-repeat='dev1 in devs' class="modal fade bs-example-modal-sm [[dev1._id]]" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+					<h4 class="modal-title">[[dev1.name]]</h4>
+				</div>
+				<div class="modal-body">
+
+					<form name='saveForm' class="form-inline">
+						<div class="form-group">
+							<select ng-model='formData.cohortSelect' class="form-control input-sm mb15">
+								<option selected>[[dev1.cohort || 'Not Yet Defined']]</option>
+								<option>January 2014</option>
+								<option>April 2014</option>
+								<option>Not Yet Set</option>
+							</select>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input ng-model='formData.hired' type="checkbox"/> Hired!
+							</label>
+						</div>
+
+						<input type="text" class="form-control" name="keyword" placeholder="test" ng-model="formData.test"/>
+
+						<button type='submit' ng-click='saveInfo(dev1._id)'class="btn btn-primary" data-dismiss='modal'>Save</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+{%endblock %}

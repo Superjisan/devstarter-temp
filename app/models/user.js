@@ -57,7 +57,9 @@ var UserSchema = new Schema({
       crops: Object,
       original: String
     },
-    summary: String
+    summary: String,
+    cohort: String,
+    hired: Boolean
 
 });
 

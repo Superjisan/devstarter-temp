@@ -51,6 +51,43 @@ exports.trackingGlobalVisits = function(req,res) {
 	});
 };
 
+// swig way
+exports.classSort = function(req, res) {
+	User.find({ roles: 'approved'}, function(err, devs) {
+		// console.log(devs);
+		res.render('admin/classSort', {title: 'Class Sorting Page'});
+	});
+};
+
+// Angular way (actually being used right now)
+exports.classGet = function (req, res) {
+	User.find(function(err, devs) {
+		if (err) {
+			console.log(err);
+		}
+		else {
+			res.jsonp(devs);
+		}
+	});
+};
+
+exports.saveClassData = function (req, res) {
+	User.findOne({ '_id': req.params.id},
+		function(err,dev) {
+			if (err) {
+				console.log(err);
+			}
+			else {
+				dev.cohort = req.body.cohortSelect;
+				dev.hired = req.body.hired || false;
+				dev.save();
+			}
+		}
+	);
+	console.log(req.body);
+	console.log(req.params.id);
+};
+
 // the next two functinos are single use to clean up the self viewed profile visits in the tracking
 
 function searchUsers(user, arr){
